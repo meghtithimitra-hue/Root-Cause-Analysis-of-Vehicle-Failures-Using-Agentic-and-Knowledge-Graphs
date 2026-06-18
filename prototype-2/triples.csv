@@ -1,0 +1,989 @@
+subject,predicate,object
+ABS System,HAS_COMPONENT,ABS Control Module
+ABS Control Module,SHOWS_SYMPTOM,ABS warning light on
+ABS Control Module,SHOWS_SYMPTOM,Brake pedal pulsation
+ABS Control Module,DIAGNOSED_BY,Check ABS fuse
+Check ABS fuse,HAS_RESULT,Blown
+Check ABS fuse,HAS_RESULT,Intact
+ABS Control Module,DIAGNOSED_BY,Inspect wiring to ABS module
+Inspect wiring to ABS module,HAS_RESULT,Faulty wiring
+Inspect wiring to ABS module,HAS_RESULT,Good wiring
+ABS Control Module,REQUIRES_FIX,Replace ABS Control Module
+ABS System,HAS_COMPONENT,ABS Wheel Speed Sensor
+ABS Wheel Speed Sensor,SHOWS_SYMPTOM,ABS light stays on
+ABS Wheel Speed Sensor,SHOWS_SYMPTOM,Erratic speedometer
+ABS Wheel Speed Sensor,DIAGNOSED_BY,Inspect wheel speed sensor connections
+Inspect wheel speed sensor connections,HAS_RESULT,Loose connections
+Inspect wheel speed sensor connections,HAS_RESULT,Secure connections
+ABS Wheel Speed Sensor,DIAGNOSED_BY,Check wheel speed sensor for debris or damage
+Check wheel speed sensor for debris or damage,HAS_RESULT,Dirty/damaged
+Check wheel speed sensor for debris or damage,HAS_RESULT,Clean/intact
+ABS Wheel Speed Sensor,REQUIRES_FIX,Replace ABS Wheel Speed Sensor
+ABS System,HAS_COMPONENT,Brake Booster
+Brake Booster,SHOWS_SYMPTOM,Spongy brake pedal
+Brake Booster,SHOWS_SYMPTOM,Hard brake pedal
+Brake Booster,DIAGNOSED_BY,Check brake booster vacuum hose
+Check brake booster vacuum hose,HAS_RESULT,Leaking
+Check brake booster vacuum hose,HAS_RESULT,Intact
+Brake Booster,DIAGNOSED_BY,Test brake booster vacuum pressure
+Test brake booster vacuum pressure,HAS_RESULT,Low vacuum pressure
+Test brake booster vacuum pressure,HAS_RESULT,Normal vacuum pressure
+Brake Booster,REQUIRES_FIX,Replace Brake Booster
+ABS System,HAS_COMPONENT,Brake Caliper
+Brake Caliper,SHOWS_SYMPTOM,Brake pulling to one side
+Brake Caliper,SHOWS_SYMPTOM,Brake dragging
+Brake Caliper,DIAGNOSED_BY,Inspect brake caliper for leaks
+Inspect brake caliper for leaks,HAS_RESULT,Leaking fluid
+Inspect brake caliper for leaks,HAS_RESULT,No leaks
+Brake Caliper,DIAGNOSED_BY,Check brake caliper piston operation
+Check brake caliper piston operation,HAS_RESULT,Stuck piston
+Check brake caliper piston operation,HAS_RESULT,Free-moving piston
+Brake Caliper,REQUIRES_FIX,Replace Brake Caliper
+ABS System,HAS_COMPONENT,Brake Hose
+Brake Hose,SHOWS_SYMPTOM,Brake fluid leak
+Brake Hose,SHOWS_SYMPTOM,Soft brake pedal
+Brake Hose,DIAGNOSED_BY,Inspect brake hose for cracks or leaks
+Inspect brake hose for cracks or leaks,HAS_RESULT,Cracked/leaking hose
+Inspect brake hose for cracks or leaks,HAS_RESULT,Intact hose
+Brake Hose,DIAGNOSED_BY,Pressure test brake hose
+Pressure test brake hose,HAS_RESULT,Failed pressure test
+Pressure test brake hose,HAS_RESULT,Passes pressure test
+Brake Hose,REQUIRES_FIX,Replace Brake Hose
+ABS System,HAS_COMPONENT,Brake Master Cylinder
+Brake Master Cylinder,SHOWS_SYMPTOM,Spongy brake pedal
+Brake Master Cylinder,SHOWS_SYMPTOM,Brake fluid leaks
+Brake Master Cylinder,DIAGNOSED_BY,Check brake fluid level in master cylinder
+Check brake fluid level in master cylinder,HAS_RESULT,Low fluid level
+Check brake fluid level in master cylinder,HAS_RESULT,Normal fluid level
+Brake Master Cylinder,DIAGNOSED_BY,Inspect master cylinder for leaks or damage
+Inspect master cylinder for leaks or damage,HAS_RESULT,Leaking/damaged
+Inspect master cylinder for leaks or damage,HAS_RESULT,Intact
+Brake Master Cylinder,REQUIRES_FIX,Replace Brake Master Cylinder
+ABS System,HAS_COMPONENT,Brake Pad
+Brake Pad,SHOWS_SYMPTOM,Squealing brakes
+Brake Pad,SHOWS_SYMPTOM,Brake pedal pulsation
+Brake Pad,DIAGNOSED_BY,Check brake pad thickness
+Check brake pad thickness,HAS_RESULT,Worn pads
+Check brake pad thickness,HAS_RESULT,Sufficient thickness pads
+Brake Pad,DIAGNOSED_BY,Inspect brake pad condition
+Inspect brake pad condition,HAS_RESULT,Worn/damaged pads
+Inspect brake pad condition,HAS_RESULT,Good condition pads
+Brake Pad,REQUIRES_FIX,Replace Brake Pad
+ABS System,HAS_COMPONENT,Brake Rotor
+Brake Rotor,SHOWS_SYMPTOM,Brake pedal pulsation
+Brake Rotor,SHOWS_SYMPTOM,Steering wheel vibration
+Brake Rotor,DIAGNOSED_BY,Measure brake rotor thickness
+Measure brake rotor thickness,HAS_RESULT,Thin rotor
+Measure brake rotor thickness,HAS_RESULT,Sufficient thickness rotor
+Brake Rotor,DIAGNOSED_BY,Inspect brake rotor for scoring or warping
+Inspect brake rotor for scoring or warping,HAS_RESULT,Scored/warped rotor
+Inspect brake rotor for scoring or warping,HAS_RESULT,Smooth rotor
+Brake Rotor,REQUIRES_FIX,Replace Brake Rotor
+ABS System,HAS_COMPONENT,Brake Shoe & Drum
+Brake Shoe & Drum,SHOWS_SYMPTOM,Spongy brake pedal
+Brake Shoe & Drum,SHOWS_SYMPTOM,Brake dragging
+Brake Shoe & Drum,DIAGNOSED_BY,Inspect brake shoes for wear
+Inspect brake shoes for wear,HAS_RESULT,Worn shoes
+Inspect brake shoes for wear,HAS_RESULT,Good condition shoes
+Brake Shoe & Drum,DIAGNOSED_BY,Check brake drum for scoring or cracks
+Check brake drum for scoring or cracks,HAS_RESULT,Scored/cracked drum
+Check brake drum for scoring or cracks,HAS_RESULT,Smooth drum
+Brake Shoe & Drum,REQUIRES_FIX,Replace Brake Shoe & Drum
+Air Conditioning System,HAS_COMPONENT,AC Compressor
+AC Compressor,SHOWS_SYMPTOM,No cold air from vents
+AC Compressor,SHOWS_SYMPTOM,Loud noise when AC is on
+AC Compressor,DIAGNOSED_BY,Check AC compressor clutch operation
+Check AC compressor clutch operation,HAS_RESULT,Clutch not engaging
+Check AC compressor clutch operation,HAS_RESULT,Clutch engages properly
+AC Compressor,DIAGNOSED_BY,Inspect AC compressor for leaks or damage
+Inspect AC compressor for leaks or damage,HAS_RESULT,Leaking/damaged compressor
+Inspect AC compressor for leaks or damage,HAS_RESULT,Intact compressor
+AC Compressor,REQUIRES_FIX,Replace AC Compressor
+Air Conditioning System,HAS_COMPONENT,AC Condenser
+AC Condenser,SHOWS_SYMPTOM,Warm air from AC vents
+AC Condenser,SHOWS_SYMPTOM,AC system not cooling
+AC Condenser,DIAGNOSED_BY,Inspect AC condenser for debris or blockage
+Inspect AC condenser for debris or blockage,HAS_RESULT,Debris/blockage present
+Inspect AC condenser for debris or blockage,HAS_RESULT,Clean/clear condenser
+AC Condenser,DIAGNOSED_BY,Check for leaks in AC condenser
+Check for leaks in AC condenser,HAS_RESULT,Leaking condenser
+Check for leaks in AC condenser,HAS_RESULT,No leaks
+AC Condenser,REQUIRES_FIX,Replace AC Condenser
+Air Conditioning System,HAS_COMPONENT,AC Evaporator
+AC Evaporator,SHOWS_SYMPTOM,Musty odor from vents
+AC Evaporator,SHOWS_SYMPTOM,Weak airflow from vents
+AC Evaporator,DIAGNOSED_BY,Inspect AC evaporator for mold or mildew buildup
+Inspect AC evaporator for mold or mildew buildup,HAS_RESULT,Mold/mildew present
+Inspect AC evaporator for mold or mildew buildup,HAS_RESULT,Clean evaporator
+AC Evaporator,DIAGNOSED_BY,Check AC evaporator temperature sensor
+Check AC evaporator temperature sensor,HAS_RESULT,Faulty sensor
+Check AC evaporator temperature sensor,HAS_RESULT,Good sensor
+AC Evaporator,REQUIRES_FIX,Replace AC Evaporator
+Air Conditioning System,HAS_COMPONENT,AC Recharge
+AC Recharge,SHOWS_SYMPTOM,Warm air from vents
+AC Recharge,SHOWS_SYMPTOM,Low AC system pressure
+AC Recharge,DIAGNOSED_BY,Check AC system pressure with gauge
+Check AC system pressure with gauge,HAS_RESULT,Low pressure
+Check AC system pressure with gauge,HAS_RESULT,Normal pressure
+AC Recharge,DIAGNOSED_BY,Inspect for leaks in AC system
+Inspect for leaks in AC system,HAS_RESULT,Leaking system
+Inspect for leaks in AC system,HAS_RESULT,No leaks
+AC Recharge,REQUIRES_FIX,Replace AC Recharge
+Air Conditioning System,HAS_COMPONENT,Air Conditioning Diagnosis
+Air Conditioning Diagnosis,SHOWS_SYMPTOM,AC system not working
+Air Conditioning Diagnosis,SHOWS_SYMPTOM,Unusual noise from AC system
+Air Conditioning Diagnosis,DIAGNOSED_BY,Perform AC system diagnostic scan
+Perform AC system diagnostic scan,HAS_RESULT,Error codes present
+Perform AC system diagnostic scan,HAS_RESULT,No error codes
+Air Conditioning Diagnosis,DIAGNOSED_BY,Check AC system components for proper operation
+Check AC system components for proper operation,HAS_RESULT,Component failure
+Check AC system components for proper operation,HAS_RESULT,Components working properly
+Air Conditioning Diagnosis,REQUIRES_FIX,Replace Air Conditioning Diagnosis
+Air Conditioning System,HAS_COMPONENT,Cabin Air Filter
+Cabin Air Filter,SHOWS_SYMPTOM,Musty odor from vents
+Cabin Air Filter,SHOWS_SYMPTOM,Reduced airflow from vents
+Cabin Air Filter,DIAGNOSED_BY,Inspect and replace cabin air filter
+Inspect and replace cabin air filter,HAS_RESULT,Dirty/clogged filter
+Inspect and replace cabin air filter,HAS_RESULT,Clean/new filter
+Cabin Air Filter,DIAGNOSED_BY,Check for debris in cabin air intake
+Check for debris in cabin air intake,HAS_RESULT,Debris in intake
+Check for debris in cabin air intake,HAS_RESULT,Clear intake
+Cabin Air Filter,REQUIRES_FIX,Replace Cabin Air Filter
+Air Conditioning System,HAS_COMPONENT,Heater Blower Motor
+Heater Blower Motor,SHOWS_SYMPTOM,No air from vents
+Heater Blower Motor,SHOWS_SYMPTOM,Loud noise from HVAC system
+Heater Blower Motor,DIAGNOSED_BY,Test blower motor operation
+Test blower motor operation,HAS_RESULT,Motor not running
+Test blower motor operation,HAS_RESULT,Motor running properly
+Heater Blower Motor,DIAGNOSED_BY,Inspect blower motor for debris or damage
+Inspect blower motor for debris or damage,HAS_RESULT,Debris/damage present
+Inspect blower motor for debris or damage,HAS_RESULT,Clean/intact motor
+Heater Blower Motor,REQUIRES_FIX,Replace Heater Blower Motor
+Air Conditioning System,HAS_COMPONENT,Heater Blower Motor Resistor
+Heater Blower Motor Resistor,SHOWS_SYMPTOM,HVAC fan speed erratic
+Heater Blower Motor Resistor,SHOWS_SYMPTOM,HVAC fan only works on certain settings
+Heater Blower Motor Resistor,DIAGNOSED_BY,Test blower motor resistor continuity
+Test blower motor resistor continuity,HAS_RESULT,Resistor failure
+Test blower motor resistor continuity,HAS_RESULT,Resistor working properly
+Heater Blower Motor Resistor,DIAGNOSED_BY,Inspect resistor for overheating or burn marks
+Inspect resistor for overheating or burn marks,HAS_RESULT,Overheated/burned resistor
+Inspect resistor for overheating or burn marks,HAS_RESULT,Good condition resistor
+Heater Blower Motor Resistor,REQUIRES_FIX,Replace Heater Blower Motor Resistor
+Cooling System,HAS_COMPONENT,Coolant/Antifreeze
+Coolant/Antifreeze,SHOWS_SYMPTOM,Engine overheating
+Coolant/Antifreeze,SHOWS_SYMPTOM,Coolant leaks under the vehicle
+Coolant/Antifreeze,DIAGNOSED_BY,Check coolant level and condition
+Check coolant level and condition,HAS_RESULT,Low/dirty coolant
+Check coolant level and condition,HAS_RESULT,Sufficient/clean coolant
+Coolant/Antifreeze,DIAGNOSED_BY,Inspect radiator and hoses for leaks
+Inspect radiator and hoses for leaks,HAS_RESULT,Leaking radiator/hoses
+Inspect radiator and hoses for leaks,HAS_RESULT,No leaks
+Coolant/Antifreeze,REQUIRES_FIX,Replace Coolant/Antifreeze
+Cooling System,HAS_COMPONENT,Coolant Leak Diagnosis
+Coolant Leak Diagnosis,SHOWS_SYMPTOM,Visible coolant puddle under vehicle
+Coolant Leak Diagnosis,SHOWS_SYMPTOM,Coolant odor in cabin
+Coolant Leak Diagnosis,DIAGNOSED_BY,Pressure test cooling system
+Pressure test cooling system,HAS_RESULT,Leaking system
+Pressure test cooling system,HAS_RESULT,No leaks detected
+Coolant Leak Diagnosis,DIAGNOSED_BY,"Inspect radiator, hoses, and water pump for leaks"
+"Inspect radiator, hoses, and water pump for leaks",HAS_RESULT,Leaking component found
+"Inspect radiator, hoses, and water pump for leaks",HAS_RESULT,Components are intact
+Coolant Leak Diagnosis,REQUIRES_FIX,Replace Coolant Leak Diagnosis
+Cooling System,HAS_COMPONENT,Engine Cooling System
+Engine Cooling System,SHOWS_SYMPTOM,Engine overheating
+Engine Cooling System,SHOWS_SYMPTOM,Temperature gauge in red zone
+Engine Cooling System,DIAGNOSED_BY,Check radiator for blockage or damage
+Check radiator for blockage or damage,HAS_RESULT,Blocked/damaged radiator
+Check radiator for blockage or damage,HAS_RESULT,Clear/intact radiator
+Engine Cooling System,DIAGNOSED_BY,Test thermostat operation
+Test thermostat operation,HAS_RESULT,Faulty thermostat
+Test thermostat operation,HAS_RESULT,Thermostat functioning properly
+Engine Cooling System,REQUIRES_FIX,Replace Engine Cooling System
+Cooling System,HAS_COMPONENT,Heater Core
+Heater Core,SHOWS_SYMPTOM,No heat from vents
+Heater Core,SHOWS_SYMPTOM,Sweet smell in cabin
+Heater Core,DIAGNOSED_BY,Inspect heater core for leaks
+Inspect heater core for leaks,HAS_RESULT,Leaking heater core
+Inspect heater core for leaks,HAS_RESULT,No leaks detected
+Heater Core,DIAGNOSED_BY,Check coolant flow through heater core
+Check coolant flow through heater core,HAS_RESULT,Restricted flow
+Check coolant flow through heater core,HAS_RESULT,Good coolant flow
+Heater Core,REQUIRES_FIX,Replace Heater Core
+Cooling System,HAS_COMPONENT,Heater Hose
+Heater Hose,SHOWS_SYMPTOM,Coolant odor in cabin
+Heater Hose,SHOWS_SYMPTOM,Visible coolant leak under vehicle
+Heater Hose,DIAGNOSED_BY,Inspect heater hose connections
+Inspect heater hose connections,HAS_RESULT,Loose/damaged connections
+Inspect heater hose connections,HAS_RESULT,Secure/intact connections
+Heater Hose,DIAGNOSED_BY,Pressure test heater hoses
+Pressure test heater hoses,HAS_RESULT,Leaking hose detected
+Pressure test heater hoses,HAS_RESULT,No leaks found
+Heater Hose,REQUIRES_FIX,Replace Heater Hose
+Cooling System,HAS_COMPONENT,Radiator/Cooling Fan
+Radiator/Cooling Fan,SHOWS_SYMPTOM,Engine overheating
+Radiator/Cooling Fan,SHOWS_SYMPTOM,AC not cooling at idle
+Radiator/Cooling Fan,DIAGNOSED_BY,Test radiator fan operation
+Test radiator fan operation,HAS_RESULT,Fan not spinning
+Test radiator fan operation,HAS_RESULT,Fan operates correctly
+Radiator/Cooling Fan,DIAGNOSED_BY,Inspect radiator fan motor and relay
+Inspect radiator fan motor and relay,HAS_RESULT,Faulty motor/relay
+Inspect radiator fan motor and relay,HAS_RESULT,Motor/relay functioning properly
+Radiator/Cooling Fan,REQUIRES_FIX,Replace Radiator/Cooling Fan
+Cooling System,HAS_COMPONENT,Radiator Hose
+Radiator Hose,SHOWS_SYMPTOM,Coolant leak under vehicle
+Radiator Hose,SHOWS_SYMPTOM,Visible wear/cracks on hoses
+Radiator Hose,DIAGNOSED_BY,Inspect radiator hoses for damage
+Inspect radiator hoses for damage,HAS_RESULT,Damaged hoses found
+Inspect radiator hoses for damage,HAS_RESULT,Hoses are in good condition
+Radiator Hose,DIAGNOSED_BY,Check hose connections for leaks
+Check hose connections for leaks,HAS_RESULT,Leaking connections
+Check hose connections for leaks,HAS_RESULT,No leaks detected
+Radiator Hose,REQUIRES_FIX,Replace Radiator Hose
+Cooling System,HAS_COMPONENT,Water Pump
+Water Pump,SHOWS_SYMPTOM,Engine overheating
+Water Pump,SHOWS_SYMPTOM,Coolant leak near front of engine
+Water Pump,DIAGNOSED_BY,Inspect water pump for leaks
+Inspect water pump for leaks,HAS_RESULT,Leaking pump
+Inspect water pump for leaks,HAS_RESULT,No leaks detected
+Water Pump,DIAGNOSED_BY,Test water pump for proper operation
+Test water pump for proper operation,HAS_RESULT,Faulty pump
+Test water pump for proper operation,HAS_RESULT,Pump working correctly
+Water Pump,REQUIRES_FIX,Replace Water Pump
+Drivetrain,HAS_COMPONENT,Bevel Gears
+Bevel Gears,SHOWS_SYMPTOM,Whining noise from drivetrain
+Bevel Gears,SHOWS_SYMPTOM,Difficulty shifting gears
+Bevel Gears,DIAGNOSED_BY,Inspect bevel gears for wear or damage
+Inspect bevel gears for wear or damage,HAS_RESULT,Worn/damaged gears
+Inspect bevel gears for wear or damage,HAS_RESULT,Gears in good condition
+Bevel Gears,DIAGNOSED_BY,Check gear oil level and condition
+Check gear oil level and condition,HAS_RESULT,Low/dirty gear oil
+Check gear oil level and condition,HAS_RESULT,Sufficient/clean gear oil
+Bevel Gears,REQUIRES_FIX,Replace Bevel Gears
+Drivetrain,HAS_COMPONENT,Center Differential
+Center Differential,SHOWS_SYMPTOM,Vehicle binding on turns
+Center Differential,SHOWS_SYMPTOM,Noise from drivetrain while turning
+Center Differential,DIAGNOSED_BY,Inspect center differential fluid
+Inspect center differential fluid,HAS_RESULT,Low/dirty fluid
+Inspect center differential fluid,HAS_RESULT,Clean/sufficient fluid
+Center Differential,DIAGNOSED_BY,Check for excessive play in center differential
+Check for excessive play in center differential,HAS_RESULT,Excessive play detected
+Check for excessive play in center differential,HAS_RESULT,No excessive play
+Center Differential,REQUIRES_FIX,Replace Center Differential
+Drivetrain,HAS_COMPONENT,Clutch Cable
+Clutch Cable,SHOWS_SYMPTOM,Clutch pedal feels loose
+Clutch Cable,SHOWS_SYMPTOM,Difficulty engaging gears
+Clutch Cable,DIAGNOSED_BY,Inspect clutch cable for fraying or stretching
+Inspect clutch cable for fraying or stretching,HAS_RESULT,Damaged cable
+Inspect clutch cable for fraying or stretching,HAS_RESULT,Intact cable
+Clutch Cable,DIAGNOSED_BY,Adjust clutch cable tension
+Adjust clutch cable tension,HAS_RESULT,Incorrect tension
+Adjust clutch cable tension,HAS_RESULT,Correct tension
+Clutch Cable,REQUIRES_FIX,Replace Clutch Cable
+Drivetrain,HAS_COMPONENT,Clutch Slave Cylinder
+Clutch Slave Cylinder,SHOWS_SYMPTOM,Clutch pedal feels spongy
+Clutch Slave Cylinder,SHOWS_SYMPTOM,Fluid leak near clutch pedal
+Clutch Slave Cylinder,DIAGNOSED_BY,Check clutch slave cylinder for leaks
+Check clutch slave cylinder for leaks,HAS_RESULT,Leaking cylinder
+Check clutch slave cylinder for leaks,HAS_RESULT,No leaks detected
+Clutch Slave Cylinder,DIAGNOSED_BY,Inspect clutch fluid level and condition
+Inspect clutch fluid level and condition,HAS_RESULT,Low/dirty fluid
+Inspect clutch fluid level and condition,HAS_RESULT,Sufficient/clean fluid
+Clutch Slave Cylinder,REQUIRES_FIX,Replace Clutch Slave Cylinder
+Drivetrain,HAS_COMPONENT,Differential
+Differential,SHOWS_SYMPTOM,Whining noise from rear end
+Differential,SHOWS_SYMPTOM,Vehicle vibration at high speeds
+Differential,DIAGNOSED_BY,Inspect differential fluid level and condition
+Inspect differential fluid level and condition,HAS_RESULT,Low/dirty fluid
+Inspect differential fluid level and condition,HAS_RESULT,Clean/sufficient fluid
+Differential,DIAGNOSED_BY,Check for differential bearing wear
+Check for differential bearing wear,HAS_RESULT,Worn bearings
+Check for differential bearing wear,HAS_RESULT,Bearings in good condition
+Differential,REQUIRES_FIX,Replace Differential
+Drivetrain,HAS_COMPONENT,Live Axle
+Live Axle,SHOWS_SYMPTOM,Axle noise while turning
+Live Axle,SHOWS_SYMPTOM,Vehicle leans to one side
+Live Axle,DIAGNOSED_BY,Inspect live axle for cracks or bending
+Inspect live axle for cracks or bending,HAS_RESULT,Cracked/bent axle
+Inspect live axle for cracks or bending,HAS_RESULT,Axle is intact
+Live Axle,DIAGNOSED_BY,Check axle bearings for wear
+Check axle bearings for wear,HAS_RESULT,Worn bearings
+Check axle bearings for wear,HAS_RESULT,Bearings in good condition
+Live Axle,REQUIRES_FIX,Replace Live Axle
+Drivetrain,HAS_COMPONENT,Rigid Axle
+Rigid Axle,SHOWS_SYMPTOM,Vehicle bounces over bumps
+Rigid Axle,SHOWS_SYMPTOM,Loud noise from rear axle
+Rigid Axle,DIAGNOSED_BY,Inspect rigid axle for cracks or damage
+Inspect rigid axle for cracks or damage,HAS_RESULT,Cracked/damaged axle
+Inspect rigid axle for cracks or damage,HAS_RESULT,Axle in good condition
+Rigid Axle,DIAGNOSED_BY,Check axle bearings for wear
+Check axle bearings for wear,HAS_RESULT,Worn bearings
+Check axle bearings for wear,HAS_RESULT,Bearings in good condition
+Rigid Axle,REQUIRES_FIX,Replace Rigid Axle
+Drivetrain,HAS_COMPONENT,Slushbox
+Slushbox,SHOWS_SYMPTOM,Transmission slipping
+Slushbox,SHOWS_SYMPTOM,Delay in gear engagement
+Slushbox,DIAGNOSED_BY,Check transmission fluid level and condition
+Check transmission fluid level and condition,HAS_RESULT,Low/dirty fluid
+Check transmission fluid level and condition,HAS_RESULT,Clean/sufficient fluid
+Slushbox,DIAGNOSED_BY,Inspect transmission for leaks
+Inspect transmission for leaks,HAS_RESULT,Leaking transmission
+Inspect transmission for leaks,HAS_RESULT,No leaks detected
+Slushbox,REQUIRES_FIX,Replace Slushbox
+Drivetrain,HAS_COMPONENT,Universal Joint
+Universal Joint,SHOWS_SYMPTOM,Driveline vibration
+Universal Joint,SHOWS_SYMPTOM,Clunking noise when shifting
+Universal Joint,DIAGNOSED_BY,Inspect universal joint for wear or play
+Inspect universal joint for wear or play,HAS_RESULT,Worn/play detected
+Inspect universal joint for wear or play,HAS_RESULT,Joint in good condition
+Universal Joint,DIAGNOSED_BY,Check driveline alignment
+Check driveline alignment,HAS_RESULT,Misaligned driveline
+Check driveline alignment,HAS_RESULT,Properly aligned driveline
+Universal Joint,REQUIRES_FIX,Replace Universal Joint
+Drivetrain,HAS_COMPONENT,Viscous Coupling
+Viscous Coupling,SHOWS_SYMPTOM,Vehicle binding during turns
+Viscous Coupling,SHOWS_SYMPTOM,Noise from drivetrain while turning
+Viscous Coupling,DIAGNOSED_BY,Test viscous coupling operation
+Test viscous coupling operation,HAS_RESULT,Coupling failure
+Test viscous coupling operation,HAS_RESULT,Coupling functioning properly
+Viscous Coupling,DIAGNOSED_BY,Inspect viscous coupling fluid
+Inspect viscous coupling fluid,HAS_RESULT,Low/dirty fluid
+Inspect viscous coupling fluid,HAS_RESULT,Clean/sufficient fluid
+Viscous Coupling,REQUIRES_FIX,Replace Viscous Coupling
+Electrical System,HAS_COMPONENT,Battery Replacement
+Battery Replacement,SHOWS_SYMPTOM,Engine cranks slowly
+Battery Replacement,SHOWS_SYMPTOM,Clicking sound when starting
+Battery Replacement,DIAGNOSED_BY,Test battery voltage
+Test battery voltage,HAS_RESULT,Low voltage
+Test battery voltage,HAS_RESULT,Sufficient voltage
+Battery Replacement,DIAGNOSED_BY,Inspect battery terminals for corrosion
+Inspect battery terminals for corrosion,HAS_RESULT,Corroded terminals
+Inspect battery terminals for corrosion,HAS_RESULT,Clean terminals
+Battery Replacement,REQUIRES_FIX,Replace Battery Replacement
+Electrical System,HAS_COMPONENT,Charging System
+Charging System,SHOWS_SYMPTOM,Battery warning light on
+Charging System,SHOWS_SYMPTOM,Dim headlights
+Charging System,DIAGNOSED_BY,Test alternator output
+Test alternator output,HAS_RESULT,Low output
+Test alternator output,HAS_RESULT,Normal output
+Charging System,DIAGNOSED_BY,Check alternator belt tension
+Check alternator belt tension,HAS_RESULT,Loose belt
+Check alternator belt tension,HAS_RESULT,Properly tensioned belt
+Charging System,REQUIRES_FIX,Replace Charging System
+Electrical System,HAS_COMPONENT,Check Engine Light Diagnosis
+Check Engine Light Diagnosis,SHOWS_SYMPTOM,Check engine light on
+Check Engine Light Diagnosis,SHOWS_SYMPTOM,Poor engine performance
+Check Engine Light Diagnosis,DIAGNOSED_BY,Scan for diagnostic trouble codes (DTCs)
+Scan for diagnostic trouble codes (DTCs),HAS_RESULT,DTCs present
+Scan for diagnostic trouble codes (DTCs),HAS_RESULT,No DTCs
+Check Engine Light Diagnosis,DIAGNOSED_BY,Check sensors related to DTCs
+Check sensors related to DTCs,HAS_RESULT,Faulty sensor
+Check sensors related to DTCs,HAS_RESULT,Sensor working properly
+Check Engine Light Diagnosis,REQUIRES_FIX,Replace Check Engine Light Diagnosis
+Electrical System,HAS_COMPONENT,Door Window Motor
+Door Window Motor,SHOWS_SYMPTOM,Window does not move
+Door Window Motor,SHOWS_SYMPTOM,Window moves intermittently
+Door Window Motor,DIAGNOSED_BY,Test power to window motor
+Test power to window motor,HAS_RESULT,No power
+Test power to window motor,HAS_RESULT,Power present
+Door Window Motor,DIAGNOSED_BY,Inspect window regulator for damage
+Inspect window regulator for damage,HAS_RESULT,Damaged regulator
+Inspect window regulator for damage,HAS_RESULT,Regulator intact
+Door Window Motor,REQUIRES_FIX,Replace Door Window Motor
+Electrical System,HAS_COMPONENT,Door Window Regulator
+Door Window Regulator,SHOWS_SYMPTOM,Window off track
+Door Window Regulator,SHOWS_SYMPTOM,Window stuck in one position
+Door Window Regulator,DIAGNOSED_BY,Inspect window regulator mechanism
+Inspect window regulator mechanism,HAS_RESULT,Mechanism jammed
+Inspect window regulator mechanism,HAS_RESULT,Mechanism functioning
+Door Window Regulator,DIAGNOSED_BY,Check window alignment in tracks
+Check window alignment in tracks,HAS_RESULT,Misaligned window
+Check window alignment in tracks,HAS_RESULT,Properly aligned window
+Door Window Regulator,REQUIRES_FIX,Replace Door Window Regulator
+Electrical System,HAS_COMPONENT,Headlamp Bulb
+Headlamp Bulb,SHOWS_SYMPTOM,Headlight not working
+Headlamp Bulb,SHOWS_SYMPTOM,Dim headlight
+Headlamp Bulb,DIAGNOSED_BY,Inspect headlamp bulb for filament condition
+Inspect headlamp bulb for filament condition,HAS_RESULT,Burnt out filament
+Inspect headlamp bulb for filament condition,HAS_RESULT,Filament intact
+Headlamp Bulb,DIAGNOSED_BY,Check headlamp socket for corrosion
+Check headlamp socket for corrosion,HAS_RESULT,Corroded socket
+Check headlamp socket for corrosion,HAS_RESULT,Clean socket
+Headlamp Bulb,REQUIRES_FIX,Replace Headlamp Bulb
+Electrical System,HAS_COMPONENT,Ignition Distributor Cap
+Ignition Distributor Cap,SHOWS_SYMPTOM,Engine misfires
+Ignition Distributor Cap,SHOWS_SYMPTOM,Difficulty starting engine
+Ignition Distributor Cap,DIAGNOSED_BY,Inspect distributor cap for cracks or carbon tracks
+Inspect distributor cap for cracks or carbon tracks,HAS_RESULT,Cracked/damaged cap
+Inspect distributor cap for cracks or carbon tracks,HAS_RESULT,Cap in good condition
+Ignition Distributor Cap,DIAGNOSED_BY,Check distributor rotor for wear
+Check distributor rotor for wear,HAS_RESULT,Worn rotor
+Check distributor rotor for wear,HAS_RESULT,Rotor in good condition
+Ignition Distributor Cap,REQUIRES_FIX,Replace Ignition Distributor Cap
+Electrical System,HAS_COMPONENT,Ignition Wire Set
+Ignition Wire Set,SHOWS_SYMPTOM,Engine misfires
+Ignition Wire Set,SHOWS_SYMPTOM,Poor fuel economy
+Ignition Wire Set,DIAGNOSED_BY,Test ignition wires for continuity
+Test ignition wires for continuity,HAS_RESULT,Broken wire
+Test ignition wires for continuity,HAS_RESULT,Wires intact
+Ignition Wire Set,DIAGNOSED_BY,Inspect spark plug boots for damage
+Inspect spark plug boots for damage,HAS_RESULT,Damaged boots
+Inspect spark plug boots for damage,HAS_RESULT,Intact boots
+Ignition Wire Set,REQUIRES_FIX,Replace Ignition Wire Set
+Electrical System,HAS_COMPONENT,Power Door Lock Actuator
+Power Door Lock Actuator,SHOWS_SYMPTOM,Door lock not responding
+Power Door Lock Actuator,SHOWS_SYMPTOM,Clicking sound from door
+Power Door Lock Actuator,DIAGNOSED_BY,Test power to door lock actuator
+Test power to door lock actuator,HAS_RESULT,No power
+Test power to door lock actuator,HAS_RESULT,Power present
+Power Door Lock Actuator,DIAGNOSED_BY,Inspect actuator mechanism for obstruction
+Inspect actuator mechanism for obstruction,HAS_RESULT,Obstructed mechanism
+Inspect actuator mechanism for obstruction,HAS_RESULT,Clear mechanism
+Power Door Lock Actuator,REQUIRES_FIX,Replace Power Door Lock Actuator
+Electrical System,HAS_COMPONENT,Starter Motor
+Starter Motor,SHOWS_SYMPTOM,Engine does not crank
+Starter Motor,SHOWS_SYMPTOM,Clicking sound when key is turned
+Starter Motor,DIAGNOSED_BY,Test starter motor solenoid
+Test starter motor solenoid,HAS_RESULT,Faulty solenoid
+Test starter motor solenoid,HAS_RESULT,Solenoid working properly
+Starter Motor,DIAGNOSED_BY,Inspect starter motor brushes for wear
+Inspect starter motor brushes for wear,HAS_RESULT,Worn brushes
+Inspect starter motor brushes for wear,HAS_RESULT,Brushes in good condition
+Starter Motor,REQUIRES_FIX,Replace Starter Motor
+Electrical System,HAS_COMPONENT,Windshield Washer Pump
+Windshield Washer Pump,SHOWS_SYMPTOM,No washer fluid spray
+Windshield Washer Pump,SHOWS_SYMPTOM,Weak washer fluid spray
+Windshield Washer Pump,DIAGNOSED_BY,Test power to washer pump
+Test power to washer pump,HAS_RESULT,No power
+Test power to washer pump,HAS_RESULT,Power present
+Windshield Washer Pump,DIAGNOSED_BY,Inspect washer pump for clogs or damage
+Inspect washer pump for clogs or damage,HAS_RESULT,Clogged/damaged pump
+Inspect washer pump for clogs or damage,HAS_RESULT,Clean/intact pump
+Windshield Washer Pump,REQUIRES_FIX,Replace Windshield Washer Pump
+Electrical System,HAS_COMPONENT,Wiper Motor
+Wiper Motor,SHOWS_SYMPTOM,Wipers not working
+Wiper Motor,SHOWS_SYMPTOM,Wipers operate intermittently
+Wiper Motor,DIAGNOSED_BY,Test power to wiper motor
+Test power to wiper motor,HAS_RESULT,No power
+Test power to wiper motor,HAS_RESULT,Power present
+Wiper Motor,DIAGNOSED_BY,Inspect wiper motor linkage for wear
+Inspect wiper motor linkage for wear,HAS_RESULT,Worn linkage
+Inspect wiper motor linkage for wear,HAS_RESULT,Intact linkage
+Wiper Motor,REQUIRES_FIX,Replace Wiper Motor
+Emissions System,HAS_COMPONENT,Canister Purge Valve
+Canister Purge Valve,SHOWS_SYMPTOM,Check engine light on
+Canister Purge Valve,SHOWS_SYMPTOM,Rough idle
+Canister Purge Valve,DIAGNOSED_BY,Test canister purge valve operation
+Test canister purge valve operation,HAS_RESULT,Valve stuck open/closed
+Test canister purge valve operation,HAS_RESULT,Valve operates correctly
+Canister Purge Valve,DIAGNOSED_BY,Check for leaks in purge valve hoses
+Check for leaks in purge valve hoses,HAS_RESULT,Leaking hoses
+Check for leaks in purge valve hoses,HAS_RESULT,No leaks
+Canister Purge Valve,REQUIRES_FIX,Replace Canister Purge Valve
+Emissions System,HAS_COMPONENT,Catalytic Converter
+Catalytic Converter,SHOWS_SYMPTOM,Rotten egg smell from exhaust
+Catalytic Converter,SHOWS_SYMPTOM,Check engine light on
+Catalytic Converter,DIAGNOSED_BY,Inspect catalytic converter for physical damage
+Inspect catalytic converter for physical damage,HAS_RESULT,Damaged converter
+Inspect catalytic converter for physical damage,HAS_RESULT,Converter intact
+Catalytic Converter,DIAGNOSED_BY,Check catalytic converter efficiency
+Check catalytic converter efficiency,HAS_RESULT,Low efficiency
+Check catalytic converter efficiency,HAS_RESULT,High efficiency
+Catalytic Converter,REQUIRES_FIX,Replace Catalytic Converter
+Emissions System,HAS_COMPONENT,Charcoal Canister
+Charcoal Canister,SHOWS_SYMPTOM,Fuel odor from vehicle
+Charcoal Canister,SHOWS_SYMPTOM,Check engine light on
+Charcoal Canister,DIAGNOSED_BY,Test charcoal canister purge valve
+Test charcoal canister purge valve,HAS_RESULT,Valve stuck open/closed
+Test charcoal canister purge valve,HAS_RESULT,Valve operates correctly
+Charcoal Canister,DIAGNOSED_BY,Inspect canister for cracks or damage
+Inspect canister for cracks or damage,HAS_RESULT,Cracked/damaged canister
+Inspect canister for cracks or damage,HAS_RESULT,Intact canister
+Charcoal Canister,REQUIRES_FIX,Replace Charcoal Canister
+Emissions System,HAS_COMPONENT,Exhaust Manifold
+Exhaust Manifold,SHOWS_SYMPTOM,Loud exhaust noise
+Exhaust Manifold,SHOWS_SYMPTOM,Exhaust smell in cabin
+Exhaust Manifold,DIAGNOSED_BY,Inspect exhaust manifold for cracks or leaks
+Inspect exhaust manifold for cracks or leaks,HAS_RESULT,Cracked/leaking manifold
+Inspect exhaust manifold for cracks or leaks,HAS_RESULT,Intact manifold
+Exhaust Manifold,DIAGNOSED_BY,Check exhaust manifold gasket for leaks
+Check exhaust manifold gasket for leaks,HAS_RESULT,Leaking gasket
+Check exhaust manifold gasket for leaks,HAS_RESULT,Good gasket
+Exhaust Manifold,REQUIRES_FIX,Replace Exhaust Manifold
+Emissions System,HAS_COMPONENT,Exhaust Manifold Gasket
+Exhaust Manifold Gasket,SHOWS_SYMPTOM,Loud exhaust noise
+Exhaust Manifold Gasket,SHOWS_SYMPTOM,Visible exhaust leaks
+Exhaust Manifold Gasket,DIAGNOSED_BY,Inspect exhaust manifold gasket for leaks
+Inspect exhaust manifold gasket for leaks,HAS_RESULT,Leaking gasket
+Inspect exhaust manifold gasket for leaks,HAS_RESULT,Good gasket
+Exhaust Manifold Gasket,DIAGNOSED_BY,Check exhaust manifold bolts for tightness
+Check exhaust manifold bolts for tightness,HAS_RESULT,Loose bolts
+Check exhaust manifold bolts for tightness,HAS_RESULT,Tight bolts
+Exhaust Manifold Gasket,REQUIRES_FIX,Replace Exhaust Manifold Gasket
+Emissions System,HAS_COMPONENT,Fuel Tank Pressure Sensor
+Fuel Tank Pressure Sensor,SHOWS_SYMPTOM,Check engine light on
+Fuel Tank Pressure Sensor,SHOWS_SYMPTOM,Gas cap warning light
+Fuel Tank Pressure Sensor,DIAGNOSED_BY,Test fuel tank pressure sensor
+Test fuel tank pressure sensor,HAS_RESULT,Faulty sensor
+Test fuel tank pressure sensor,HAS_RESULT,Sensor working properly
+Fuel Tank Pressure Sensor,DIAGNOSED_BY,Check fuel tank cap for proper seal
+Check fuel tank cap for proper seal,HAS_RESULT,Loose cap
+Check fuel tank cap for proper seal,HAS_RESULT,Sealed cap
+Fuel Tank Pressure Sensor,REQUIRES_FIX,Replace Fuel Tank Pressure Sensor
+Emissions System,HAS_COMPONENT,Knock Sensor
+Knock Sensor,SHOWS_SYMPTOM,Engine knocking/pinging
+Knock Sensor,SHOWS_SYMPTOM,Poor fuel economy
+Knock Sensor,DIAGNOSED_BY,Test knock sensor operation
+Test knock sensor operation,HAS_RESULT,Faulty sensor
+Test knock sensor operation,HAS_RESULT,Sensor working properly
+Knock Sensor,DIAGNOSED_BY,Inspect for engine misfire codes
+Inspect for engine misfire codes,HAS_RESULT,Misfire codes present
+Inspect for engine misfire codes,HAS_RESULT,No misfire codes
+Knock Sensor,REQUIRES_FIX,Replace Knock Sensor
+Emissions System,HAS_COMPONENT,M.A.P. Sensor
+M.A.P. Sensor,SHOWS_SYMPTOM,Check engine light on
+M.A.P. Sensor,SHOWS_SYMPTOM,Rough idle
+M.A.P. Sensor,DIAGNOSED_BY,Test M.A.P. sensor voltage
+Test M.A.P. sensor voltage,HAS_RESULT,Low voltage
+Test M.A.P. sensor voltage,HAS_RESULT,Normal voltage
+M.A.P. Sensor,DIAGNOSED_BY,Inspect M.A.P. sensor vacuum hose
+Inspect M.A.P. sensor vacuum hose,HAS_RESULT,Leaking hose
+Inspect M.A.P. sensor vacuum hose,HAS_RESULT,Intact hose
+M.A.P. Sensor,REQUIRES_FIX,Replace M.A.P. Sensor
+Emissions System,HAS_COMPONENT,Oxygen Sensor
+Oxygen Sensor,SHOWS_SYMPTOM,Check engine light on
+Oxygen Sensor,SHOWS_SYMPTOM,Poor fuel economy
+Oxygen Sensor,DIAGNOSED_BY,Test oxygen sensor voltage
+Test oxygen sensor voltage,HAS_RESULT,Low voltage
+Test oxygen sensor voltage,HAS_RESULT,Normal voltage
+Oxygen Sensor,DIAGNOSED_BY,Inspect oxygen sensor wiring for damage
+Inspect oxygen sensor wiring for damage,HAS_RESULT,Damaged wiring
+Inspect oxygen sensor wiring for damage,HAS_RESULT,Intact wiring
+Oxygen Sensor,REQUIRES_FIX,Replace Oxygen Sensor
+Engine Components,HAS_COMPONENT,Balance Shaft
+Balance Shaft,SHOWS_SYMPTOM,Engine vibration
+Balance Shaft,SHOWS_SYMPTOM,Rough idle
+Balance Shaft,DIAGNOSED_BY,Inspect balance shaft for wear or damage
+Inspect balance shaft for wear or damage,HAS_RESULT,Worn/damaged shaft
+Inspect balance shaft for wear or damage,HAS_RESULT,Shaft in good condition
+Balance Shaft,DIAGNOSED_BY,Check balance shaft alignment
+Check balance shaft alignment,HAS_RESULT,Misaligned shaft
+Check balance shaft alignment,HAS_RESULT,Properly aligned shaft
+Balance Shaft,REQUIRES_FIX,Replace Balance Shaft
+Engine Components,HAS_COMPONENT,Boost Pressure
+Boost Pressure,SHOWS_SYMPTOM,Loss of power
+Boost Pressure,SHOWS_SYMPTOM,Turbo lag
+Boost Pressure,DIAGNOSED_BY,Check boost pressure with gauge
+Check boost pressure with gauge,HAS_RESULT,Low boost pressure
+Check boost pressure with gauge,HAS_RESULT,Normal boost pressure
+Boost Pressure,DIAGNOSED_BY,Inspect intercooler for leaks or damage
+Inspect intercooler for leaks or damage,HAS_RESULT,Leaking/damaged intercooler
+Inspect intercooler for leaks or damage,HAS_RESULT,Intact intercooler
+Boost Pressure,REQUIRES_FIX,Replace Boost Pressure
+Engine Components,HAS_COMPONENT,Diesel Injection Pump
+Diesel Injection Pump,SHOWS_SYMPTOM,Engine misfires
+Diesel Injection Pump,SHOWS_SYMPTOM,Black smoke from exhaust
+Diesel Injection Pump,DIAGNOSED_BY,Test diesel injection pump pressure
+Test diesel injection pump pressure,HAS_RESULT,Low pressure
+Test diesel injection pump pressure,HAS_RESULT,Normal pressure
+Diesel Injection Pump,DIAGNOSED_BY,Inspect diesel injectors for leaks or clogs
+Inspect diesel injectors for leaks or clogs,HAS_RESULT,Leaking/clogged injectors
+Inspect diesel injectors for leaks or clogs,HAS_RESULT,Clean/in-tolerance injectors
+Diesel Injection Pump,REQUIRES_FIX,Replace Diesel Injection Pump
+Engine Components,HAS_COMPONENT,Diesel Glow Plug
+Diesel Glow Plug,SHOWS_SYMPTOM,Hard starting in cold weather
+Diesel Glow Plug,SHOWS_SYMPTOM,Glow plug indicator light stays on
+Diesel Glow Plug,DIAGNOSED_BY,Test glow plug resistance
+Test glow plug resistance,HAS_RESULT,High resistance
+Test glow plug resistance,HAS_RESULT,Normal resistance
+Diesel Glow Plug,DIAGNOSED_BY,Inspect glow plug for carbon buildup
+Inspect glow plug for carbon buildup,HAS_RESULT,Carbon buildup
+Inspect glow plug for carbon buildup,HAS_RESULT,Clean plug
+Diesel Glow Plug,REQUIRES_FIX,Replace Diesel Glow Plug
+Engine Components,HAS_COMPONENT,Engine Mounts
+Engine Mounts,SHOWS_SYMPTOM,Excessive engine movement
+Engine Mounts,SHOWS_SYMPTOM,Clunking noise when accelerating
+Engine Mounts,DIAGNOSED_BY,Inspect engine mounts for wear or damage
+Inspect engine mounts for wear or damage,HAS_RESULT,Worn/damaged mounts
+Inspect engine mounts for wear or damage,HAS_RESULT,Mounts in good condition
+Engine Mounts,DIAGNOSED_BY,Check mounting bolts for tightness
+Check mounting bolts for tightness,HAS_RESULT,Loose bolts
+Check mounting bolts for tightness,HAS_RESULT,Tight bolts
+Engine Mounts,REQUIRES_FIX,Replace Engine Mounts
+Engine Components,HAS_COMPONENT,Exhaust Valve
+Exhaust Valve,SHOWS_SYMPTOM,Engine misfires
+Exhaust Valve,SHOWS_SYMPTOM,Rough idle
+Exhaust Valve,DIAGNOSED_BY,Inspect exhaust valve for carbon buildup
+Inspect exhaust valve for carbon buildup,HAS_RESULT,Buildup on valve
+Inspect exhaust valve for carbon buildup,HAS_RESULT,Clean valve
+Exhaust Valve,DIAGNOSED_BY,Check valve clearance
+Check valve clearance,HAS_RESULT,Incorrect clearance
+Check valve clearance,HAS_RESULT,Correct clearance
+Exhaust Valve,REQUIRES_FIX,Replace Exhaust Valve
+Engine Components,HAS_COMPONENT,Fuel Injector
+Fuel Injector,SHOWS_SYMPTOM,Engine misfires
+Fuel Injector,SHOWS_SYMPTOM,Poor fuel economy
+Fuel Injector,DIAGNOSED_BY,Test fuel injector spray pattern
+Test fuel injector spray pattern,HAS_RESULT,Irregular spray pattern
+Test fuel injector spray pattern,HAS_RESULT,Uniform spray pattern
+Fuel Injector,DIAGNOSED_BY,Inspect injector for leaks or clogs
+Inspect injector for leaks or clogs,HAS_RESULT,Leaking/clogged injector
+Inspect injector for leaks or clogs,HAS_RESULT,Clean/in-tolerance injector
+Fuel Injector,REQUIRES_FIX,Replace Fuel Injector
+Engine Components,HAS_COMPONENT,Idle Air Control Valve
+Idle Air Control Valve,SHOWS_SYMPTOM,Erratic idle speed
+Idle Air Control Valve,SHOWS_SYMPTOM,Stalling at idle
+Idle Air Control Valve,DIAGNOSED_BY,Test IAC valve for proper operation
+Test IAC valve for proper operation,HAS_RESULT,Valve stuck open/closed
+Test IAC valve for proper operation,HAS_RESULT,Valve operates correctly
+Idle Air Control Valve,DIAGNOSED_BY,Clean throttle body and IAC valve
+Clean throttle body and IAC valve,HAS_RESULT,Dirty components
+Clean throttle body and IAC valve,HAS_RESULT,Clean components
+Idle Air Control Valve,REQUIRES_FIX,Replace Idle Air Control Valve
+Engine Components,HAS_COMPONENT,Intake Valve
+Intake Valve,SHOWS_SYMPTOM,Engine misfires
+Intake Valve,SHOWS_SYMPTOM,Rough idle
+Intake Valve,DIAGNOSED_BY,Inspect intake valve for carbon buildup
+Inspect intake valve for carbon buildup,HAS_RESULT,Buildup on valve
+Inspect intake valve for carbon buildup,HAS_RESULT,Clean valve
+Intake Valve,DIAGNOSED_BY,Check valve clearance
+Check valve clearance,HAS_RESULT,Incorrect clearance
+Check valve clearance,HAS_RESULT,Correct clearance
+Intake Valve,REQUIRES_FIX,Replace Intake Valve
+Engine Components,HAS_COMPONENT,Oil Pump
+Oil Pump,SHOWS_SYMPTOM,Low oil pressure warning light
+Oil Pump,SHOWS_SYMPTOM,Engine knocking noise
+Oil Pump,DIAGNOSED_BY,Test oil pressure with gauge
+Test oil pressure with gauge,HAS_RESULT,Low oil pressure
+Test oil pressure with gauge,HAS_RESULT,Normal oil pressure
+Oil Pump,DIAGNOSED_BY,Inspect oil pump for wear or damage
+Inspect oil pump for wear or damage,HAS_RESULT,Worn/damaged pump
+Inspect oil pump for wear or damage,HAS_RESULT,Pump in good condition
+Oil Pump,REQUIRES_FIX,Replace Oil Pump
+Engine Components,HAS_COMPONENT,Piston Rings
+Piston Rings,SHOWS_SYMPTOM,Blue smoke from exhaust
+Piston Rings,SHOWS_SYMPTOM,Loss of engine power
+Piston Rings,DIAGNOSED_BY,Perform compression test
+Perform compression test,HAS_RESULT,Low compression
+Perform compression test,HAS_RESULT,Good compression
+Piston Rings,DIAGNOSED_BY,Inspect piston rings for wear or damage
+Inspect piston rings for wear or damage,HAS_RESULT,Worn/damaged rings
+Inspect piston rings for wear or damage,HAS_RESULT,Rings in good condition
+Piston Rings,REQUIRES_FIX,Replace Piston Rings
+Engine Components,HAS_COMPONENT,Timing Belt
+Timing Belt,SHOWS_SYMPTOM,Engine misfires
+Timing Belt,SHOWS_SYMPTOM,Engine won't start
+Timing Belt,DIAGNOSED_BY,Inspect timing belt for wear or damage
+Inspect timing belt for wear or damage,HAS_RESULT,Worn/damaged belt
+Inspect timing belt for wear or damage,HAS_RESULT,Belt in good condition
+Timing Belt,DIAGNOSED_BY,Check timing marks for alignment
+Check timing marks for alignment,HAS_RESULT,Misaligned timing marks
+Check timing marks for alignment,HAS_RESULT,Properly aligned marks
+Timing Belt,REQUIRES_FIX,Replace Timing Belt
+Engine Components,HAS_COMPONENT,Valve Cover Gasket
+Valve Cover Gasket,SHOWS_SYMPTOM,Oil leak around valve cover
+Valve Cover Gasket,SHOWS_SYMPTOM,Burning oil smell from engine bay
+Valve Cover Gasket,DIAGNOSED_BY,Inspect valve cover gasket for leaks
+Inspect valve cover gasket for leaks,HAS_RESULT,Leaking gasket
+Inspect valve cover gasket for leaks,HAS_RESULT,Good gasket seal
+Valve Cover Gasket,DIAGNOSED_BY,Check valve cover bolts for tightness
+Check valve cover bolts for tightness,HAS_RESULT,Loose bolts
+Check valve cover bolts for tightness,HAS_RESULT,Tight bolts
+Valve Cover Gasket,REQUIRES_FIX,Replace Valve Cover Gasket
+Engine Components,HAS_COMPONENT,Fan Belt
+Fan Belt,SHOWS_SYMPTOM,Engine overheating
+Fan Belt,SHOWS_SYMPTOM,Squealing noise from engine bay
+Fan Belt,DIAGNOSED_BY,Inspect fan belt for cuts or wear
+Inspect fan belt for cuts or wear,HAS_RESULT,Cut/worn belt
+Inspect fan belt for cuts or wear,HAS_RESULT,Belt in good condition
+Fan Belt,DIAGNOSED_BY,Check belt tension and alignment
+Check belt tension and alignment,HAS_RESULT,Loose/misaligned belt
+Check belt tension and alignment,HAS_RESULT,Properly tensioned/aligned belt
+Fan Belt,REQUIRES_FIX,Replace Fan Belt
+Electrical System,HAS_COMPONENT,Horn
+Horn,SHOWS_SYMPTOM,No sound when horn button pressed
+Horn,DIAGNOSED_BY,Check horn fuse
+Check horn fuse,HAS_RESULT,Blown fuse
+Check horn fuse,HAS_RESULT,Fuse intact
+Horn,DIAGNOSED_BY,Test horn relay for operation
+Test horn relay for operation,HAS_RESULT,Faulty relay
+Test horn relay for operation,HAS_RESULT,Relay working properly
+Horn,REQUIRES_FIX,Replace Horn
+Electrical System,HAS_COMPONENT,Battery Charging
+Battery Charging,SHOWS_SYMPTOM,Battery warning light on
+Battery Charging,SHOWS_SYMPTOM,Low voltage
+Battery Charging,DIAGNOSED_BY,Test battery voltage
+Test battery voltage,HAS_RESULT,Low voltage
+Test battery voltage,HAS_RESULT,Normal voltage
+Battery Charging,DIAGNOSED_BY,Inspect alternator for proper operation
+Inspect alternator for proper operation,HAS_RESULT,Faulty alternator
+Inspect alternator for proper operation,HAS_RESULT,Alternator working correctly
+Battery Charging,REQUIRES_FIX,Replace Battery Charging
+Engine Components,HAS_COMPONENT,Engine Belt
+Engine Belt,SHOWS_SYMPTOM,Engine performance issues
+Engine Belt,SHOWS_SYMPTOM,Squealing noise from engine bay
+Engine Belt,DIAGNOSED_BY,Inspect engine belt for cuts or wear
+Inspect engine belt for cuts or wear,HAS_RESULT,Cut/worn belt
+Inspect engine belt for cuts or wear,HAS_RESULT,Belt in good condition
+Engine Belt,DIAGNOSED_BY,Check belt tension and alignment
+Check belt tension and alignment,HAS_RESULT,Loose/misaligned belt
+Check belt tension and alignment,HAS_RESULT,Properly tensioned/aligned belt
+Engine Belt,REQUIRES_FIX,Replace Engine Belt
+Steering,HAS_COMPONENT,Steering Noise
+Steering Noise,SHOWS_SYMPTOM,Noise when turning steering wheel
+Steering Noise,DIAGNOSED_BY,Inspect power steering fluid level
+Inspect power steering fluid level,HAS_RESULT,Low fluid level
+Inspect power steering fluid level,HAS_RESULT,Sufficient fluid level
+Steering Noise,DIAGNOSED_BY,Check power steering pump and hoses for leaks
+Check power steering pump and hoses for leaks,HAS_RESULT,Leaking pump/hoses
+Check power steering pump and hoses for leaks,HAS_RESULT,Pump and hoses in good condition
+Steering Noise,REQUIRES_FIX,Replace Steering Noise
+Drivetrain,HAS_COMPONENT,Shaft and Tires
+Shaft and Tires,SHOWS_SYMPTOM,Uneven tire wear
+Shaft and Tires,SHOWS_SYMPTOM,Vibration while driving
+Shaft and Tires,DIAGNOSED_BY,Inspect shaft for balance and alignment
+Inspect shaft for balance and alignment,HAS_RESULT,Imbalanced/misaligned shaft
+Inspect shaft for balance and alignment,HAS_RESULT,Properly balanced/aligned shaft
+Shaft and Tires,DIAGNOSED_BY,Check tire pressure and condition
+Check tire pressure and condition,HAS_RESULT,Low/inappropriate pressure
+Check tire pressure and condition,HAS_RESULT,Correct tire pressure and condition
+Shaft and Tires,REQUIRES_FIX,Replace Shaft and Tires
+Engine Compartment,HAS_COMPONENT,Air Filter
+Air Filter,SHOWS_SYMPTOM,Decreased engine performance
+Air Filter,SHOWS_SYMPTOM,Black smoke from exhaust
+Air Filter,DIAGNOSED_BY,Inspect air filter for clogs or dirt
+Inspect air filter for clogs or dirt,HAS_RESULT,Clogged/dirty filter
+Inspect air filter for clogs or dirt,HAS_RESULT,Clean filter
+Air Filter,DIAGNOSED_BY,Replace air filter if necessary
+Replace air filter if necessary,HAS_RESULT,Replace filter
+Replace air filter if necessary,HAS_RESULT,Filter in good condition
+Air Filter,REQUIRES_FIX,Replace Air Filter
+Engine Compartment,HAS_COMPONENT,Engine Control Unit (ECU)
+Engine Control Unit (ECU),SHOWS_SYMPTOM,Engine misfires
+Engine Control Unit (ECU),SHOWS_SYMPTOM,Poor fuel economy
+Engine Control Unit (ECU),DIAGNOSED_BY,Check ECU for fault codes
+Check ECU for fault codes,HAS_RESULT,Fault codes present
+Check ECU for fault codes,HAS_RESULT,No fault codes
+Engine Control Unit (ECU),DIAGNOSED_BY,Inspect ECU wiring harness for damage
+Inspect ECU wiring harness for damage,HAS_RESULT,Damaged harness
+Inspect ECU wiring harness for damage,HAS_RESULT,Intact harness
+Engine Control Unit (ECU),REQUIRES_FIX,Replace Engine Control Unit (ECU)
+Engine Compartment,HAS_COMPONENT,Engine Oil
+Engine Oil,SHOWS_SYMPTOM,Low oil pressure warning light
+Engine Oil,SHOWS_SYMPTOM,Loud engine noise
+Engine Oil,DIAGNOSED_BY,Check engine oil level and condition
+Check engine oil level and condition,HAS_RESULT,Low/dirty oil
+Check engine oil level and condition,HAS_RESULT,Clean/sufficient oil
+Engine Oil,DIAGNOSED_BY,Inspect for oil leaks
+Inspect for oil leaks,HAS_RESULT,Oil leaks present
+Inspect for oil leaks,HAS_RESULT,No leaks detected
+Engine Oil,REQUIRES_FIX,Replace Engine Oil
+Engine Compartment,HAS_COMPONENT,Fuel Filter
+Fuel Filter,SHOWS_SYMPTOM,Engine stalls at high speeds
+Fuel Filter,SHOWS_SYMPTOM,Poor acceleration
+Fuel Filter,DIAGNOSED_BY,Inspect fuel filter for clogs or debris
+Inspect fuel filter for clogs or debris,HAS_RESULT,Clogged/dirty filter
+Inspect fuel filter for clogs or debris,HAS_RESULT,Clean filter
+Fuel Filter,DIAGNOSED_BY,Replace fuel filter if necessary
+Replace fuel filter if necessary,HAS_RESULT,Replace filter
+Replace fuel filter if necessary,HAS_RESULT,Filter in good condition
+Fuel Filter,REQUIRES_FIX,Replace Fuel Filter
+Engine Compartment,HAS_COMPONENT,PCV Valve
+PCV Valve,SHOWS_SYMPTOM,Oil leaks
+PCV Valve,SHOWS_SYMPTOM,Rough idle
+PCV Valve,DIAGNOSED_BY,Inspect PCV valve for clogs
+Inspect PCV valve for clogs,HAS_RESULT,Clogged valve
+Inspect PCV valve for clogs,HAS_RESULT,Valve clear
+PCV Valve,DIAGNOSED_BY,Check PCV valve hose for cracks
+Check PCV valve hose for cracks,HAS_RESULT,Cracked hose
+Check PCV valve hose for cracks,HAS_RESULT,Intact hose
+PCV Valve,REQUIRES_FIX,Replace PCV Valve
+Engine Compartment,HAS_COMPONENT,Throttle Body
+Throttle Body,SHOWS_SYMPTOM,Poor acceleration
+Throttle Body,SHOWS_SYMPTOM,Stalling at idle
+Throttle Body,DIAGNOSED_BY,Inspect throttle body for carbon buildup
+Inspect throttle body for carbon buildup,HAS_RESULT,Buildup present
+Inspect throttle body for carbon buildup,HAS_RESULT,Clean throttle body
+Throttle Body,DIAGNOSED_BY,Test throttle position sensor (TPS)
+Test throttle position sensor (TPS),HAS_RESULT,Faulty TPS
+Test throttle position sensor (TPS),HAS_RESULT,TPS working correctly
+Throttle Body,REQUIRES_FIX,Replace Throttle Body
+Fuel System,HAS_COMPONENT,Fuel Injector
+Fuel Injector,SHOWS_SYMPTOM,Engine misfires
+Fuel Injector,SHOWS_SYMPTOM,Poor fuel economy
+Fuel Injector,DIAGNOSED_BY,Test fuel injector spray pattern
+Test fuel injector spray pattern,HAS_RESULT,Irregular spray pattern
+Test fuel injector spray pattern,HAS_RESULT,Uniform spray pattern
+Fuel Injector,DIAGNOSED_BY,Inspect injector for leaks or clogs
+Inspect injector for leaks or clogs,HAS_RESULT,Leaking/clogged injector
+Inspect injector for leaks or clogs,HAS_RESULT,Clean/in-tolerance injector
+Fuel Injector,REQUIRES_FIX,Replace Fuel Injector
+Fuel System,HAS_COMPONENT,Fuel Pressure Regulator
+Fuel Pressure Regulator,SHOWS_SYMPTOM,Engine stalls
+Fuel Pressure Regulator,SHOWS_SYMPTOM,Black smoke from exhaust
+Fuel Pressure Regulator,DIAGNOSED_BY,Test fuel pressure regulator operation
+Test fuel pressure regulator operation,HAS_RESULT,Regulator malfunction
+Test fuel pressure regulator operation,HAS_RESULT,Regulator functions correctly
+Fuel Pressure Regulator,DIAGNOSED_BY,Check fuel pressure at regulator
+Check fuel pressure at regulator,HAS_RESULT,Low/high pressure
+Check fuel pressure at regulator,HAS_RESULT,Correct pressure
+Fuel Pressure Regulator,REQUIRES_FIX,Replace Fuel Pressure Regulator
+Fuel System,HAS_COMPONENT,Fuel Pump
+Fuel Pump,SHOWS_SYMPTOM,Engine sputters at high speeds
+Fuel Pump,SHOWS_SYMPTOM,Loss of power
+Fuel Pump,DIAGNOSED_BY,Test fuel pump pressure
+Test fuel pump pressure,HAS_RESULT,Low pressure
+Test fuel pump pressure,HAS_RESULT,Normal pressure
+Fuel Pump,DIAGNOSED_BY,Inspect fuel pump for leaks or damage
+Inspect fuel pump for leaks or damage,HAS_RESULT,Leaking/damaged pump
+Inspect fuel pump for leaks or damage,HAS_RESULT,Intact pump
+Fuel Pump,REQUIRES_FIX,Replace Fuel Pump
+Fuel System,HAS_COMPONENT,Fuel Tank
+Fuel Tank,SHOWS_SYMPTOM,Fuel odor inside vehicle
+Fuel Tank,SHOWS_SYMPTOM,Visible fuel leak under vehicle
+Fuel Tank,DIAGNOSED_BY,Inspect fuel tank for leaks or damage
+Inspect fuel tank for leaks or damage,HAS_RESULT,Leaking/damaged tank
+Inspect fuel tank for leaks or damage,HAS_RESULT,Tank in good condition
+Fuel Tank,DIAGNOSED_BY,Check fuel filler cap for seal
+Check fuel filler cap for seal,HAS_RESULT,Loose/broken cap
+Check fuel filler cap for seal,HAS_RESULT,Cap seals properly
+Fuel Tank,REQUIRES_FIX,Replace Fuel Tank
+Fuel System,HAS_COMPONENT,Throttle Position Sensor
+Throttle Position Sensor,SHOWS_SYMPTOM,Engine hesitates on acceleration
+Throttle Position Sensor,SHOWS_SYMPTOM,Stalling at idle
+Throttle Position Sensor,DIAGNOSED_BY,Test throttle position sensor (TPS) voltage
+Test throttle position sensor (TPS) voltage,HAS_RESULT,Low voltage
+Test throttle position sensor (TPS) voltage,HAS_RESULT,Normal voltage
+Throttle Position Sensor,DIAGNOSED_BY,Inspect TPS wiring for damage or corrosion
+Inspect TPS wiring for damage or corrosion,HAS_RESULT,Damaged/corroded wiring
+Inspect TPS wiring for damage or corrosion,HAS_RESULT,Intact wiring
+Throttle Position Sensor,REQUIRES_FIX,Replace Throttle Position Sensor
+Liquid Systems,HAS_COMPONENT,Brake Fluid
+Brake Fluid,SHOWS_SYMPTOM,Soft brake pedal
+Brake Fluid,SHOWS_SYMPTOM,Brake warning light on
+Brake Fluid,DIAGNOSED_BY,Check brake fluid level and condition
+Check brake fluid level and condition,HAS_RESULT,Low/dirty fluid
+Check brake fluid level and condition,HAS_RESULT,Clean/sufficient fluid
+Brake Fluid,DIAGNOSED_BY,Inspect brake lines for leaks
+Inspect brake lines for leaks,HAS_RESULT,Leaking lines
+Inspect brake lines for leaks,HAS_RESULT,Lines in good condition
+Brake Fluid,REQUIRES_FIX,Replace Brake Fluid
+Liquid Systems,HAS_COMPONENT,Coolant Reservoir
+Coolant Reservoir,SHOWS_SYMPTOM,Engine overheating
+Coolant Reservoir,SHOWS_SYMPTOM,Low coolant warning light
+Coolant Reservoir,DIAGNOSED_BY,Check coolant level in reservoir
+Check coolant level in reservoir,HAS_RESULT,Low coolant level
+Check coolant level in reservoir,HAS_RESULT,Sufficient coolant level
+Coolant Reservoir,DIAGNOSED_BY,Inspect reservoir for cracks or leaks
+Inspect reservoir for cracks or leaks,HAS_RESULT,Cracked/leaking reservoir
+Inspect reservoir for cracks or leaks,HAS_RESULT,Intact reservoir
+Coolant Reservoir,REQUIRES_FIX,Replace Coolant Reservoir
+Liquid Systems,HAS_COMPONENT,Power Steering Fluid
+Power Steering Fluid,SHOWS_SYMPTOM,Whining noise when turning
+Power Steering Fluid,SHOWS_SYMPTOM,Stiff steering wheel
+Power Steering Fluid,DIAGNOSED_BY,Check power steering fluid level
+Check power steering fluid level,HAS_RESULT,Low fluid level
+Check power steering fluid level,HAS_RESULT,Sufficient fluid level
+Power Steering Fluid,DIAGNOSED_BY,Inspect power steering hoses for leaks
+Inspect power steering hoses for leaks,HAS_RESULT,Leaking hoses
+Inspect power steering hoses for leaks,HAS_RESULT,Hoses in good condition
+Power Steering Fluid,REQUIRES_FIX,Replace Power Steering Fluid
+Liquid Systems,HAS_COMPONENT,Radiator
+Radiator,SHOWS_SYMPTOM,Engine overheating
+Radiator,SHOWS_SYMPTOM,Coolant leak
+Radiator,DIAGNOSED_BY,Inspect radiator for leaks or damage
+Inspect radiator for leaks or damage,HAS_RESULT,Leaking/damaged radiator
+Inspect radiator for leaks or damage,HAS_RESULT,Radiator in good condition
+Radiator,DIAGNOSED_BY,Check radiator cap for proper seal
+Check radiator cap for proper seal,HAS_RESULT,Loose/broken cap
+Check radiator cap for proper seal,HAS_RESULT,Cap seals properly
+Radiator,REQUIRES_FIX,Replace Radiator
+Liquid Systems,HAS_COMPONENT,Windshield Washer Fluid
+Windshield Washer Fluid,SHOWS_SYMPTOM,No washer fluid spray
+Windshield Washer Fluid,SHOWS_SYMPTOM,Weak washer fluid spray
+Windshield Washer Fluid,DIAGNOSED_BY,Check washer fluid level
+Check washer fluid level,HAS_RESULT,Low fluid level
+Check washer fluid level,HAS_RESULT,Sufficient fluid level
+Windshield Washer Fluid,DIAGNOSED_BY,Inspect washer fluid pump for operation
+Inspect washer fluid pump for operation,HAS_RESULT,Faulty pump
+Inspect washer fluid pump for operation,HAS_RESULT,Pump operates correctly
+Windshield Washer Fluid,REQUIRES_FIX,Replace Windshield Washer Fluid
+Transmission,HAS_COMPONENT,Clutch Master Cylinder
+Clutch Master Cylinder,SHOWS_SYMPTOM,Soft clutch pedal
+Clutch Master Cylinder,SHOWS_SYMPTOM,Clutch slipping
+Clutch Master Cylinder,DIAGNOSED_BY,Check clutch fluid level
+Check clutch fluid level,HAS_RESULT,Low fluid level
+Check clutch fluid level,HAS_RESULT,Sufficient fluid level
+Clutch Master Cylinder,DIAGNOSED_BY,Inspect master cylinder for leaks
+Inspect master cylinder for leaks,HAS_RESULT,Leaking cylinder
+Inspect master cylinder for leaks,HAS_RESULT,Cylinder in good condition
+Clutch Master Cylinder,REQUIRES_FIX,Replace Clutch Master Cylinder
+Transmission,HAS_COMPONENT,Torque Converter
+Torque Converter,SHOWS_SYMPTOM,Slipping gears
+Torque Converter,SHOWS_SYMPTOM,Shuddering during acceleration
+Torque Converter,DIAGNOSED_BY,Inspect torque converter for leaks or damage
+Inspect torque converter for leaks or damage,HAS_RESULT,Leaking/damaged converter
+Inspect torque converter for leaks or damage,HAS_RESULT,Converter in good condition
+Torque Converter,DIAGNOSED_BY,Check transmission fluid level and condition
+Check transmission fluid level and condition,HAS_RESULT,Low/dirty fluid
+Check transmission fluid level and condition,HAS_RESULT,Clean/sufficient fluid
+Torque Converter,REQUIRES_FIX,Replace Torque Converter
+Transmission,HAS_COMPONENT,Transmission Fluid
+Transmission Fluid,SHOWS_SYMPTOM,Gears slipping
+Transmission Fluid,SHOWS_SYMPTOM,Transmission overheating
+Transmission Fluid,DIAGNOSED_BY,Check transmission fluid level and condition
+Check transmission fluid level and condition,HAS_RESULT,Low/dirty fluid
+Check transmission fluid level and condition,HAS_RESULT,Clean/sufficient fluid
+Transmission Fluid,DIAGNOSED_BY,Inspect transmission pan and seals for leaks
+Inspect transmission pan and seals for leaks,HAS_RESULT,Leaking pan/seals
+Inspect transmission pan and seals for leaks,HAS_RESULT,Pan/seals in good condition
+Transmission Fluid,REQUIRES_FIX,Replace Transmission Fluid
+Transmission,HAS_COMPONENT,Transmission Filter
+Transmission Filter,SHOWS_SYMPTOM,Delayed shifting
+Transmission Filter,SHOWS_SYMPTOM,Transmission slipping
+Transmission Filter,DIAGNOSED_BY,Inspect transmission filter for clogs or debris
+Inspect transmission filter for clogs or debris,HAS_RESULT,Clogged/dirty filter
+Inspect transmission filter for clogs or debris,HAS_RESULT,Clean filter
+Transmission Filter,DIAGNOSED_BY,Replace transmission filter if necessary
+Replace transmission filter if necessary,HAS_RESULT,Replace filter
+Replace transmission filter if necessary,HAS_RESULT,Filter in good condition
+Transmission Filter,REQUIRES_FIX,Replace Transmission Filter
+Transmission,HAS_COMPONENT,Transmission Solenoid
+Transmission Solenoid,SHOWS_SYMPTOM,Erratic shifting
+Transmission Solenoid,SHOWS_SYMPTOM,Transmission won't shift gears
+Transmission Solenoid,DIAGNOSED_BY,Test transmission solenoids for electrical continuity
+Test transmission solenoids for electrical continuity,HAS_RESULT,Faulty solenoid
+Test transmission solenoids for electrical continuity,HAS_RESULT,Solenoid working correctly
+Transmission Solenoid,DIAGNOSED_BY,Inspect wiring harness for damage or corrosion
+Inspect wiring harness for damage or corrosion,HAS_RESULT,Damaged/corroded wiring
+Inspect wiring harness for damage or corrosion,HAS_RESULT,Intact wiring
+Transmission Solenoid,REQUIRES_FIX,Replace Transmission Solenoid
+Wheels & Tires,HAS_COMPONENT,Wheel Bearing
+Wheel Bearing,SHOWS_SYMPTOM,Grinding noise from wheels
+Wheel Bearing,SHOWS_SYMPTOM,Uneven tire wear
+Wheel Bearing,DIAGNOSED_BY,Check wheel bearing for play
+Check wheel bearing for play,HAS_RESULT,Loose/worn bearing
+Check wheel bearing for play,HAS_RESULT,Bearing in good condition
+Wheel Bearing,DIAGNOSED_BY,Inspect bearing for signs of damage or corrosion
+Inspect bearing for signs of damage or corrosion,HAS_RESULT,Damaged/corroded bearing
+Inspect bearing for signs of damage or corrosion,HAS_RESULT,Clean/intact bearing
+Wheel Bearing,REQUIRES_FIX,Replace Wheel Bearing
+Wheels & Tires,HAS_COMPONENT,Tire Pressure Monitoring System (TPMS)
+Tire Pressure Monitoring System (TPMS),SHOWS_SYMPTOM,TPMS warning light on
+Tire Pressure Monitoring System (TPMS),SHOWS_SYMPTOM,Low tire pressure
+Tire Pressure Monitoring System (TPMS),DIAGNOSED_BY,Check tire pressures with gauge
+Check tire pressures with gauge,HAS_RESULT,Low/high pressure
+Check tire pressures with gauge,HAS_RESULT,Correct pressure
+Tire Pressure Monitoring System (TPMS),DIAGNOSED_BY,Inspect TPMS sensors for damage or corrosion
+Inspect TPMS sensors for damage or corrosion,HAS_RESULT,Damaged/corroded sensors
+Inspect TPMS sensors for damage or corrosion,HAS_RESULT,Clean/intact sensors
+Tire Pressure Monitoring System (TPMS),REQUIRES_FIX,Replace Tire Pressure Monitoring System (TPMS)
+Wheels & Tires,HAS_COMPONENT,Wheel Hub
+Wheel Hub,SHOWS_SYMPTOM,Clicking or popping noise when turning
+Wheel Hub,SHOWS_SYMPTOM,Wheel wobbling
+Wheel Hub,DIAGNOSED_BY,Inspect wheel hub for play or bearing noise
+Inspect wheel hub for play or bearing noise,HAS_RESULT,Loose/worn hub
+Inspect wheel hub for play or bearing noise,HAS_RESULT,Hub in good condition
+Wheel Hub,DIAGNOSED_BY,Check wheel bearings for wear
+Check wheel bearings for wear,HAS_RESULT,Worn bearings
+Check wheel bearings for wear,HAS_RESULT,Bearings in good condition
+Wheel Hub,REQUIRES_FIX,Replace Wheel Hub

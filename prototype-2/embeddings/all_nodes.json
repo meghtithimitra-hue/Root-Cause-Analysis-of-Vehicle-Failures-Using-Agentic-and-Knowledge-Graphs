@@ -1,0 +1,4916 @@
+[
+  {
+    "name": "ABS Control Module",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "ABS warning light on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Brake pedal pulsation",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check ABS fuse",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Blown",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect wiring to ABS module",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty wiring",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good wiring",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace ABS Control Module",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "ABS Wheel Speed Sensor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "ABS light stays on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Erratic speedometer",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect wheel speed sensor connections",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose connections",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Secure connections",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check wheel speed sensor for debris or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Dirty/damaged",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace ABS Wheel Speed Sensor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Booster",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Spongy brake pedal",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Hard brake pedal",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check brake booster vacuum hose",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Test brake booster vacuum pressure",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low vacuum pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal vacuum pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Booster",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Caliper",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Brake pulling to one side",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Brake dragging",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect brake caliper for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking fluid",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No leaks",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check brake caliper piston operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Stuck piston",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Free-moving piston",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Caliper",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Hose",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Brake fluid leak",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Soft brake pedal",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect brake hose for cracks or leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/leaking hose",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact hose",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Pressure test brake hose",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Failed pressure test",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Passes pressure test",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Hose",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Master Cylinder",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Brake fluid leaks",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check brake fluid level in master cylinder",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low fluid level",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal fluid level",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect master cylinder for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Master Cylinder",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Pad",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Squealing brakes",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check brake pad thickness",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn pads",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sufficient thickness pads",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect brake pad condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged pads",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good condition pads",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Pad",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Rotor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Steering wheel vibration",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Measure brake rotor thickness",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Thin rotor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sufficient thickness rotor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect brake rotor for scoring or warping",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Scored/warped rotor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Smooth rotor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Rotor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Shoe & Drum",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Inspect brake shoes for wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn shoes",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good condition shoes",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check brake drum for scoring or cracks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Scored/cracked drum",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Smooth drum",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Shoe & Drum",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "AC Compressor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "No cold air from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Loud noise when AC is on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check AC compressor clutch operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Clutch not engaging",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clutch engages properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect AC compressor for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged compressor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact compressor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace AC Compressor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "AC Condenser",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Warm air from AC vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "AC system not cooling",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect AC condenser for debris or blockage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Debris/blockage present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/clear condenser",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check for leaks in AC condenser",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking condenser",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace AC Condenser",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "AC Evaporator",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Musty odor from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Weak airflow from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect AC evaporator for mold or mildew buildup",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Mold/mildew present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean evaporator",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check AC evaporator temperature sensor",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty sensor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good sensor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace AC Evaporator",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "AC Recharge",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Warm air from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Low AC system pressure",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check AC system pressure with gauge",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect for leaks in AC system",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking system",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace AC Recharge",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Air Conditioning Diagnosis",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "AC system not working",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Unusual noise from AC system",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Perform AC system diagnostic scan",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Error codes present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No error codes",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check AC system components for proper operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Component failure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Components working properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Air Conditioning Diagnosis",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Cabin Air Filter",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Reduced airflow from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect and replace cabin air filter",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Dirty/clogged filter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/new filter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check for debris in cabin air intake",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Debris in intake",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clear intake",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Cabin Air Filter",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Heater Blower Motor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "No air from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Loud noise from HVAC system",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test blower motor operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Motor not running",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Motor running properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect blower motor for debris or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Debris/damage present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/intact motor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Heater Blower Motor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Heater Blower Motor Resistor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "HVAC fan speed erratic",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "HVAC fan only works on certain settings",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test blower motor resistor continuity",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Resistor failure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Resistor working properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect resistor for overheating or burn marks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Overheated/burned resistor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good condition resistor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Heater Blower Motor Resistor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Coolant/Antifreeze",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine overheating",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Coolant leaks under the vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check coolant level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low/dirty coolant",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sufficient/clean coolant",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect radiator and hoses for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking radiator/hoses",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Coolant/Antifreeze",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Coolant Leak Diagnosis",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Visible coolant puddle under vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Coolant odor in cabin",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Pressure test cooling system",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "No leaks detected",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect radiator, hoses, and water pump for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking component found",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Components are intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Coolant Leak Diagnosis",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Engine Cooling System",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Temperature gauge in red zone",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check radiator for blockage or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Blocked/damaged radiator",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clear/intact radiator",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Test thermostat operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty thermostat",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Thermostat functioning properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Engine Cooling System",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Heater Core",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "No heat from vents",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Sweet smell in cabin",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect heater core for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking heater core",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check coolant flow through heater core",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Restricted flow",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good coolant flow",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Heater Core",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Heater Hose",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Visible coolant leak under vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect heater hose connections",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose/damaged connections",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Secure/intact connections",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Pressure test heater hoses",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking hose detected",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No leaks found",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Heater Hose",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Radiator/Cooling Fan",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "AC not cooling at idle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test radiator fan operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Fan not spinning",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Fan operates correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect radiator fan motor and relay",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty motor/relay",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Motor/relay functioning properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Radiator/Cooling Fan",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Radiator Hose",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Coolant leak under vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Visible wear/cracks on hoses",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect radiator hoses for damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged hoses found",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Hoses are in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check hose connections for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking connections",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Radiator Hose",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Water Pump",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Coolant leak near front of engine",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect water pump for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Test water pump for proper operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Pump working correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Water Pump",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Bevel Gears",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Whining noise from drivetrain",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Difficulty shifting gears",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect bevel gears for wear or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged gears",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Gears in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check gear oil level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low/dirty gear oil",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sufficient/clean gear oil",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Bevel Gears",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Center Differential",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Vehicle binding on turns",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Noise from drivetrain while turning",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect center differential fluid",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low/dirty fluid",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/sufficient fluid",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check for excessive play in center differential",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Excessive play detected",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No excessive play",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Center Differential",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Clutch Cable",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Clutch pedal feels loose",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Difficulty engaging gears",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect clutch cable for fraying or stretching",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged cable",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact cable",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Adjust clutch cable tension",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Incorrect tension",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Correct tension",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Clutch Cable",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Clutch Slave Cylinder",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Clutch pedal feels spongy",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Fluid leak near clutch pedal",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check clutch slave cylinder for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking cylinder",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect clutch fluid level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Sufficient/clean fluid",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Clutch Slave Cylinder",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Differential",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Whining noise from rear end",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Vehicle vibration at high speeds",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect differential fluid level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Check for differential bearing wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn bearings",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Bearings in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Differential",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Live Axle",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Axle noise while turning",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Vehicle leans to one side",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect live axle for cracks or bending",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/bent axle",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Axle is intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check axle bearings for wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Live Axle",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Rigid Axle",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Vehicle bounces over bumps",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Loud noise from rear axle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect rigid axle for cracks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/damaged axle",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Axle in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Rigid Axle",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Slushbox",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Transmission slipping",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Delay in gear engagement",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check transmission fluid level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect transmission for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking transmission",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Slushbox",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Universal Joint",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Driveline vibration",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Clunking noise when shifting",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect universal joint for wear or play",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/play detected",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Joint in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check driveline alignment",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Misaligned driveline",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly aligned driveline",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Universal Joint",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Viscous Coupling",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Vehicle binding during turns",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test viscous coupling operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Coupling failure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Coupling functioning properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect viscous coupling fluid",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Viscous Coupling",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Battery Replacement",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine cranks slowly",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Clicking sound when starting",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test battery voltage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low voltage",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sufficient voltage",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect battery terminals for corrosion",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Corroded terminals",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean terminals",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Battery Replacement",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Charging System",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Battery warning light on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Dim headlights",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test alternator output",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low output",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal output",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check alternator belt tension",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose belt",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly tensioned belt",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Charging System",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Check Engine Light Diagnosis",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Check engine light on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Poor engine performance",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Scan for diagnostic trouble codes (DTCs)",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "DTCs present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No DTCs",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check sensors related to DTCs",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Sensor working properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Check Engine Light Diagnosis",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Door Window Motor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Window does not move",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Window moves intermittently",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test power to window motor",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "No power",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Power present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect window regulator for damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged regulator",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Regulator intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Door Window Motor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Door Window Regulator",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Window off track",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Window stuck in one position",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect window regulator mechanism",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Mechanism jammed",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Mechanism functioning",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check window alignment in tracks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Misaligned window",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly aligned window",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Door Window Regulator",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Headlamp Bulb",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Headlight not working",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Dim headlight",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect headlamp bulb for filament condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Burnt out filament",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Filament intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check headlamp socket for corrosion",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Corroded socket",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean socket",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Headlamp Bulb",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Ignition Distributor Cap",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine misfires",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Difficulty starting engine",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect distributor cap for cracks or carbon tracks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/damaged cap",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Cap in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check distributor rotor for wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn rotor",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Rotor in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Ignition Distributor Cap",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Ignition Wire Set",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Poor fuel economy",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test ignition wires for continuity",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Broken wire",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Wires intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect spark plug boots for damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged boots",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact boots",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Ignition Wire Set",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Power Door Lock Actuator",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Door lock not responding",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Clicking sound from door",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test power to door lock actuator",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect actuator mechanism for obstruction",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Obstructed mechanism",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clear mechanism",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Power Door Lock Actuator",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Starter Motor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine does not crank",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Clicking sound when key is turned",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test starter motor solenoid",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty solenoid",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Solenoid working properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect starter motor brushes for wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn brushes",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Brushes in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Starter Motor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Windshield Washer Pump",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "No washer fluid spray",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Weak washer fluid spray",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test power to washer pump",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect washer pump for clogs or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Clogged/damaged pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/intact pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Windshield Washer Pump",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Wiper Motor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Wipers not working",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Wipers operate intermittently",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test power to wiper motor",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect wiper motor linkage for wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn linkage",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact linkage",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Wiper Motor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Canister Purge Valve",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Rough idle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test canister purge valve operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Valve stuck open/closed",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Valve operates correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check for leaks in purge valve hoses",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking hoses",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Canister Purge Valve",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Catalytic Converter",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Rotten egg smell from exhaust",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect catalytic converter for physical damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged converter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Converter intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check catalytic converter efficiency",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low efficiency",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "High efficiency",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Catalytic Converter",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Charcoal Canister",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Fuel odor from vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test charcoal canister purge valve",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect canister for cracks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/damaged canister",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact canister",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Charcoal Canister",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Exhaust Manifold",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Loud exhaust noise",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Exhaust smell in cabin",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect exhaust manifold for cracks or leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/leaking manifold",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact manifold",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check exhaust manifold gasket for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking gasket",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good gasket",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Exhaust Manifold",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Exhaust Manifold Gasket",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Visible exhaust leaks",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect exhaust manifold gasket for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Check exhaust manifold bolts for tightness",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose bolts",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Tight bolts",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Exhaust Manifold Gasket",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fuel Tank Pressure Sensor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Gas cap warning light",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test fuel tank pressure sensor",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Check fuel tank cap for proper seal",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose cap",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sealed cap",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Fuel Tank Pressure Sensor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Knock Sensor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine knocking/pinging",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test knock sensor operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect for engine misfire codes",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Misfire codes present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No misfire codes",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Knock Sensor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "M.A.P. Sensor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Test M.A.P. sensor voltage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Normal voltage",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect M.A.P. sensor vacuum hose",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking hose",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace M.A.P. Sensor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Oxygen Sensor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Test oxygen sensor voltage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect oxygen sensor wiring for damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged wiring",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact wiring",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Oxygen Sensor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Balance Shaft",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine vibration",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect balance shaft for wear or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged shaft",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Shaft in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check balance shaft alignment",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Misaligned shaft",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly aligned shaft",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Balance Shaft",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Boost Pressure",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Loss of power",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Turbo lag",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check boost pressure with gauge",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low boost pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal boost pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect intercooler for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged intercooler",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact intercooler",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Boost Pressure",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Diesel Injection Pump",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Black smoke from exhaust",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test diesel injection pump pressure",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect diesel injectors for leaks or clogs",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/clogged injectors",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/in-tolerance injectors",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Diesel Injection Pump",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Diesel Glow Plug",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Hard starting in cold weather",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Glow plug indicator light stays on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test glow plug resistance",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "High resistance",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal resistance",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect glow plug for carbon buildup",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Carbon buildup",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean plug",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Diesel Glow Plug",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Engine Mounts",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Excessive engine movement",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Clunking noise when accelerating",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect engine mounts for wear or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged mounts",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Mounts in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check mounting bolts for tightness",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Engine Mounts",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Exhaust Valve",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Inspect exhaust valve for carbon buildup",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Buildup on valve",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean valve",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check valve clearance",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Incorrect clearance",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Correct clearance",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Exhaust Valve",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fuel Injector",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Test fuel injector spray pattern",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Irregular spray pattern",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Uniform spray pattern",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect injector for leaks or clogs",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/clogged injector",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/in-tolerance injector",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Fuel Injector",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Idle Air Control Valve",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Erratic idle speed",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Stalling at idle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test IAC valve for proper operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Clean throttle body and IAC valve",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Dirty components",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean components",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Idle Air Control Valve",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Intake Valve",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Inspect intake valve for carbon buildup",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Intake Valve",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Oil Pump",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Low oil pressure warning light",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Engine knocking noise",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test oil pressure with gauge",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low oil pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Normal oil pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect oil pump for wear or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Pump in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Oil Pump",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Piston Rings",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Blue smoke from exhaust",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Loss of engine power",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Perform compression test",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low compression",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Good compression",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect piston rings for wear or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged rings",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Rings in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Piston Rings",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Timing Belt",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine won't start",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect timing belt for wear or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Worn/damaged belt",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Belt in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check timing marks for alignment",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Misaligned timing marks",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly aligned marks",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Timing Belt",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Valve Cover Gasket",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Oil leak around valve cover",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Burning oil smell from engine bay",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect valve cover gasket for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Good gasket seal",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check valve cover bolts for tightness",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Valve Cover Gasket",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fan Belt",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Squealing noise from engine bay",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect fan belt for cuts or wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cut/worn belt",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check belt tension and alignment",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose/misaligned belt",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly tensioned/aligned belt",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Fan Belt",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Horn",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "No sound when horn button pressed",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check horn fuse",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Blown fuse",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Fuse intact",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Test horn relay for operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty relay",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Relay working properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Horn",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Battery Charging",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Low voltage",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect alternator for proper operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty alternator",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Alternator working correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Battery Charging",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Engine Belt",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine performance issues",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect engine belt for cuts or wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Engine Belt",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Steering Noise",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Noise when turning steering wheel",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect power steering fluid level",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Sufficient fluid level",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check power steering pump and hoses for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking pump/hoses",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Pump and hoses in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Steering Noise",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Shaft and Tires",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Uneven tire wear",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Vibration while driving",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect shaft for balance and alignment",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Imbalanced/misaligned shaft",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Properly balanced/aligned shaft",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check tire pressure and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low/inappropriate pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Correct tire pressure and condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Shaft and Tires",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Air Filter",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Decreased engine performance",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect air filter for clogs or dirt",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Clogged/dirty filter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean filter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace air filter if necessary",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace filter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Filter in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Air Filter",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Engine Control Unit (ECU)",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Check ECU for fault codes",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Fault codes present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "No fault codes",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect ECU wiring harness for damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged harness",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact harness",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Engine Control Unit (ECU)",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Engine Oil",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Loud engine noise",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check engine oil level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low/dirty oil",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/sufficient oil",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect for oil leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Oil leaks present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Engine Oil",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fuel Filter",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine stalls at high speeds",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Poor acceleration",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect fuel filter for clogs or debris",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace fuel filter if necessary",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Fuel Filter",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "PCV Valve",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Oil leaks",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect PCV valve for clogs",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Clogged valve",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Valve clear",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check PCV valve hose for cracks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked hose",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace PCV Valve",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Throttle Body",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Inspect throttle body for carbon buildup",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Buildup present",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean throttle body",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Test throttle position sensor (TPS)",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Faulty TPS",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "TPS working correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Throttle Body",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fuel Pressure Regulator",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine stalls",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test fuel pressure regulator operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Regulator malfunction",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Regulator functions correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check fuel pressure at regulator",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low/high pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Correct pressure",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Fuel Pressure Regulator",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fuel Pump",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine sputters at high speeds",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test fuel pump pressure",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect fuel pump for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact pump",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Fuel Pump",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Fuel Tank",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Fuel odor inside vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Visible fuel leak under vehicle",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect fuel tank for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged tank",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Tank in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check fuel filler cap for seal",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose/broken cap",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Cap seals properly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Fuel Tank",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Throttle Position Sensor",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Engine hesitates on acceleration",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test throttle position sensor (TPS) voltage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect TPS wiring for damage or corrosion",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged/corroded wiring",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Throttle Position Sensor",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Brake Fluid",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Brake warning light on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check brake fluid level and condition",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect brake lines for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking lines",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Lines in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Brake Fluid",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Coolant Reservoir",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Low coolant warning light",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check coolant level in reservoir",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Low coolant level",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Sufficient coolant level",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect reservoir for cracks or leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cracked/leaking reservoir",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Intact reservoir",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Coolant Reservoir",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Power Steering Fluid",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Whining noise when turning",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Stiff steering wheel",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check power steering fluid level",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect power steering hoses for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Hoses in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Power Steering Fluid",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Radiator",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Coolant leak",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect radiator for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged radiator",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Radiator in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check radiator cap for proper seal",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Radiator",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Windshield Washer Fluid",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Check washer fluid level",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect washer fluid pump for operation",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Pump operates correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Windshield Washer Fluid",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Clutch Master Cylinder",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Soft clutch pedal",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Clutch slipping",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check clutch fluid level",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect master cylinder for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Cylinder in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Clutch Master Cylinder",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Torque Converter",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Slipping gears",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Shuddering during acceleration",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect torque converter for leaks or damage",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking/damaged converter",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Converter in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Torque Converter",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Transmission Fluid",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Gears slipping",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Transmission overheating",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect transmission pan and seals for leaks",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Leaking pan/seals",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Pan/seals in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Transmission Fluid",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Transmission Filter",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Delayed shifting",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect transmission filter for clogs or debris",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace transmission filter if necessary",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Transmission Filter",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Transmission Solenoid",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Erratic shifting",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Transmission won't shift gears",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Test transmission solenoids for electrical continuity",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Solenoid working correctly",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect wiring harness for damage or corrosion",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Transmission Solenoid",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Wheel Bearing",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Grinding noise from wheels",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check wheel bearing for play",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose/worn bearing",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Bearing in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Inspect bearing for signs of damage or corrosion",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged/corroded bearing",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/intact bearing",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Wheel Bearing",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Tire Pressure Monitoring System (TPMS)",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "TPMS warning light on",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Low tire pressure",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Check tire pressures with gauge",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Inspect TPMS sensors for damage or corrosion",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Damaged/corroded sensors",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Clean/intact sensors",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Replace Tire Pressure Monitoring System (TPMS)",
+    "labels": [
+      "RepairAction"
+    ]
+  },
+  {
+    "name": "Wheel Hub",
+    "labels": [
+      "Component"
+    ]
+  },
+  {
+    "name": "Clicking or popping noise when turning",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Wheel wobbling",
+    "labels": [
+      "Symptom"
+    ]
+  },
+  {
+    "name": "Inspect wheel hub for play or bearing noise",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Loose/worn hub",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Hub in good condition",
+    "labels": [
+      "Result"
+    ]
+  },
+  {
+    "name": "Check wheel bearings for wear",
+    "labels": [
+      "DiagnosticTest"
+    ]
+  },
+  {
+    "name": "Replace Wheel Hub",
+    "labels": [
+      "RepairAction"
+    ]
+  }
+]

@@ -1,0 +1,1309 @@
+{
+  "0": {
+    "label": "Emissions System",
+    "cohesion": 0.0546,
+    "size": 47,
+    "members": [
+      "Alternator working correctly",
+      "Battery Charging",
+      "Battery warning light on",
+      "Canister Purge Valve",
+      "Catalytic Converter",
+      "Charcoal Canister",
+      "Check catalytic converter efficiency",
+      "Check engine light on",
+      "Check fuel tank cap for proper seal",
+      "Converter intact",
+      "Cracked/damaged canister",
+      "Damaged converter",
+      "Emissions System",
+      "Faulty alternator",
+      "Fuel Tank Pressure Sensor",
+      "Fuel odor from vehicle",
+      "Gas cap warning light",
+      "High efficiency",
+      "Inspect alternator for proper operation",
+      "Inspect canister for cracks or damage",
+      "Inspect catalytic converter for physical damage",
+      "Intact canister",
+      "Loose cap",
+      "Low efficiency",
+      "Low voltage",
+      "M.A.P. Sensor",
+      "Normal voltage",
+      "Oxygen Sensor",
+      "Replace Battery Charging",
+      "Replace Canister Purge Valve",
+      "Replace Catalytic Converter",
+      "Replace Charcoal Canister",
+      "Replace Fuel Tank Pressure Sensor",
+      "Replace M.A.P. Sensor",
+      "Replace Oxygen Sensor",
+      "Rotten egg smell from exhaust",
+      "Sealed cap",
+      "Sufficient voltage",
+      "Test IAC valve for proper operation",
+      "Test M.A.P. sensor voltage",
+      "Test battery voltage",
+      "Test canister purge valve operation",
+      "Test charcoal canister purge valve",
+      "Test oxygen sensor voltage",
+      "Test throttle position sensor (TPS) voltage",
+      "Valve operates correctly",
+      "Valve stuck open/closed"
+    ]
+  },
+  "1": {
+    "label": "Transmission",
+    "cohesion": 0.0529,
+    "size": 44,
+    "members": [
+      "Center Differential",
+      "Check brake fluid level and condition",
+      "Check for excessive play in center differential",
+      "Check transmission fluid level and condition",
+      "Clean/sufficient fluid",
+      "Converter in good condition",
+      "Coupling failure",
+      "Coupling functioning properly",
+      "Delay in gear engagement",
+      "Delayed shifting",
+      "Excessive play detected",
+      "Gears slipping",
+      "Inspect center differential fluid",
+      "Inspect differential fluid level and condition",
+      "Inspect torque converter for leaks or damage",
+      "Inspect transmission for leaks",
+      "Inspect transmission pan and seals for leaks",
+      "Inspect viscous coupling fluid",
+      "Leaking pan/seals",
+      "Leaking transmission",
+      "Leaking/damaged converter",
+      "Low/dirty fluid",
+      "No excessive play",
+      "Noise from drivetrain while turning",
+      "Pan/seals in good condition",
+      "Replace Center Differential",
+      "Replace Slushbox",
+      "Replace Torque Converter",
+      "Replace Transmission Filter",
+      "Replace Transmission Fluid",
+      "Replace Viscous Coupling",
+      "Shuddering during acceleration",
+      "Slipping gears",
+      "Slushbox",
+      "Test viscous coupling operation",
+      "Torque Converter",
+      "Transmission",
+      "Transmission Filter",
+      "Transmission Fluid",
+      "Transmission overheating",
+      "Transmission slipping",
+      "Vehicle binding during turns",
+      "Vehicle binding on turns",
+      "Viscous Coupling"
+    ]
+  },
+  "2": {
+    "label": "Fuel System",
+    "cohesion": 0.0555,
+    "size": 38,
+    "members": [
+      "Boost Pressure",
+      "Cap seals properly",
+      "Check boost pressure with gauge",
+      "Check fuel filler cap for seal",
+      "Check fuel pressure at regulator",
+      "Check radiator cap for proper seal",
+      "Check tire pressures with gauge",
+      "Correct pressure",
+      "Engine sputters at high speeds",
+      "Engine stalls",
+      "Fuel Pressure Regulator",
+      "Fuel Pump",
+      "Fuel System",
+      "Fuel Tank",
+      "Fuel odor inside vehicle",
+      "Inspect fuel pump for leaks or damage",
+      "Inspect fuel tank for leaks or damage",
+      "Inspect intercooler for leaks or damage",
+      "Intact intercooler",
+      "Intact pump",
+      "Leaking/damaged intercooler",
+      "Leaking/damaged pump",
+      "Leaking/damaged tank",
+      "Loose/broken cap",
+      "Loss of power",
+      "Low boost pressure",
+      "Low/high pressure",
+      "Normal boost pressure",
+      "Regulator functions correctly",
+      "Regulator malfunction",
+      "Replace Boost Pressure",
+      "Replace Fuel Pressure Regulator",
+      "Replace Fuel Pump",
+      "Replace Fuel Tank",
+      "Tank in good condition",
+      "Test fuel pressure regulator operation",
+      "Turbo lag",
+      "Visible fuel leak under vehicle"
+    ]
+  },
+  "3": {
+    "label": "Result Cluster",
+    "cohesion": 0.0587,
+    "size": 36,
+    "members": [
+      "Broken wire",
+      "Check AC evaporator temperature sensor",
+      "Check ECU for fault codes",
+      "Check Engine Light Diagnosis",
+      "Check sensors related to DTCs",
+      "DTCs present",
+      "Damaged boots",
+      "Damaged harness",
+      "Engine Control Unit (ECU)",
+      "Engine knocking/pinging",
+      "Fault codes present",
+      "Faulty sensor",
+      "Good sensor",
+      "Ignition Wire Set",
+      "Inspect ECU wiring harness for damage",
+      "Inspect for engine misfire codes",
+      "Inspect spark plug boots for damage",
+      "Intact boots",
+      "Intact harness",
+      "Knock Sensor",
+      "Misfire codes present",
+      "No DTCs",
+      "No fault codes",
+      "No misfire codes",
+      "Poor engine performance",
+      "Poor fuel economy",
+      "Replace Check Engine Light Diagnosis",
+      "Replace Engine Control Unit (ECU)",
+      "Replace Ignition Wire Set",
+      "Replace Knock Sensor",
+      "Scan for diagnostic trouble codes (DTCs)",
+      "Sensor working properly",
+      "Test fuel tank pressure sensor",
+      "Test ignition wires for continuity",
+      "Test knock sensor operation",
+      "Wires intact"
+    ]
+  },
+  "4": {
+    "label": "Result Cluster",
+    "cohesion": 0.0726,
+    "size": 32,
+    "members": [
+      "Burning oil smell from engine bay",
+      "Check exhaust manifold bolts for tightness",
+      "Check exhaust manifold gasket for leaks",
+      "Check mounting bolts for tightness",
+      "Check valve cover bolts for tightness",
+      "Clunking noise when accelerating",
+      "Cracked/leaking manifold",
+      "Engine Mounts",
+      "Excessive engine movement",
+      "Exhaust Manifold",
+      "Exhaust Manifold Gasket",
+      "Exhaust smell in cabin",
+      "Good gasket",
+      "Good gasket seal",
+      "Inspect engine mounts for wear or damage",
+      "Inspect exhaust manifold for cracks or leaks",
+      "Inspect exhaust manifold gasket for leaks",
+      "Inspect valve cover gasket for leaks",
+      "Intact manifold",
+      "Leaking gasket",
+      "Loose bolts",
+      "Loud exhaust noise",
+      "Mounts in good condition",
+      "Oil leak around valve cover",
+      "Replace Engine Mounts",
+      "Replace Exhaust Manifold",
+      "Replace Exhaust Manifold Gasket",
+      "Replace Valve Cover Gasket",
+      "Tight bolts",
+      "Valve Cover Gasket",
+      "Visible exhaust leaks",
+      "Worn/damaged mounts"
+    ]
+  },
+  "5": {
+    "label": "Steering",
+    "cohesion": 0.0764,
+    "size": 29,
+    "members": [
+      "Check brake fluid level in master cylinder",
+      "Check clutch fluid level",
+      "Check clutch slave cylinder for leaks",
+      "Check power steering fluid level",
+      "Check power steering pump and hoses for leaks",
+      "Check washer fluid level",
+      "Clutch Master Cylinder",
+      "Clutch Slave Cylinder",
+      "Clutch pedal feels spongy",
+      "Clutch slipping",
+      "Cylinder in good condition",
+      "Fluid leak near clutch pedal",
+      "Inspect clutch fluid level and condition",
+      "Inspect master cylinder for leaks",
+      "Inspect power steering fluid level",
+      "Leaking cylinder",
+      "Leaking pump/hoses",
+      "Low fluid level",
+      "Noise when turning steering wheel",
+      "Normal fluid level",
+      "Pump and hoses in good condition",
+      "Replace Clutch Master Cylinder",
+      "Replace Clutch Slave Cylinder",
+      "Replace Steering Noise",
+      "Soft clutch pedal",
+      "Steering",
+      "Steering Noise",
+      "Sufficient fluid level",
+      "Sufficient/clean fluid"
+    ]
+  },
+  "6": {
+    "label": "Result Cluster",
+    "cohesion": 0.0767,
+    "size": 28,
+    "members": [
+      "AC Recharge",
+      "Check AC system pressure with gauge",
+      "Components are intact",
+      "Coolant Leak Diagnosis",
+      "Coolant odor in cabin",
+      "Heater Hose",
+      "Inspect for leaks in AC system",
+      "Inspect heater hose connections",
+      "Inspect radiator, hoses, and water pump for leaks",
+      "Leaking component found",
+      "Leaking hose detected",
+      "Leaking system",
+      "Loose/damaged connections",
+      "Low AC system pressure",
+      "Low pressure",
+      "No leaks found",
+      "Normal pressure",
+      "Pressure test cooling system",
+      "Pressure test heater hoses",
+      "Replace AC Recharge",
+      "Replace Coolant Leak Diagnosis",
+      "Replace Heater Hose",
+      "Secure/intact connections",
+      "Test diesel injection pump pressure",
+      "Test fuel pump pressure",
+      "Visible coolant leak under vehicle",
+      "Visible coolant puddle under vehicle",
+      "Warm air from vents"
+    ]
+  },
+  "7": {
+    "label": "Result Cluster",
+    "cohesion": 0.0826,
+    "size": 27,
+    "members": [
+      "Clear mechanism",
+      "Clicking sound from door",
+      "Damaged regulator",
+      "Door Window Motor",
+      "Door lock not responding",
+      "Inspect actuator mechanism for obstruction",
+      "Inspect window regulator for damage",
+      "Inspect wiper motor linkage for wear",
+      "Intact linkage",
+      "No power",
+      "Obstructed mechanism",
+      "Power Door Lock Actuator",
+      "Power present",
+      "Regulator intact",
+      "Replace Door Window Motor",
+      "Replace Power Door Lock Actuator",
+      "Replace Wiper Motor",
+      "Test power to door lock actuator",
+      "Test power to washer pump",
+      "Test power to window motor",
+      "Test power to wiper motor",
+      "Window does not move",
+      "Window moves intermittently",
+      "Wiper Motor",
+      "Wipers not working",
+      "Wipers operate intermittently",
+      "Worn linkage"
+    ]
+  },
+  "8": {
+    "label": "Wheels & Tires",
+    "cohesion": 0.08,
+    "size": 25,
+    "members": [
+      "Bearing in good condition",
+      "Check wheel bearing for play",
+      "Clean/intact bearing",
+      "Clean/intact sensors",
+      "Clicking or popping noise when turning",
+      "Damaged/corroded bearing",
+      "Damaged/corroded sensors",
+      "Grinding noise from wheels",
+      "Hub in good condition",
+      "Inspect TPMS sensors for damage or corrosion",
+      "Inspect bearing for signs of damage or corrosion",
+      "Inspect wheel hub for play or bearing noise",
+      "Loose/worn bearing",
+      "Loose/worn hub",
+      "Low tire pressure",
+      "Replace Tire Pressure Monitoring System (TPMS)",
+      "Replace Wheel Bearing",
+      "Replace Wheel Hub",
+      "TPMS warning light on",
+      "Tire Pressure Monitoring System (TPMS)",
+      "Uneven tire wear",
+      "Wheel Bearing",
+      "Wheel Hub",
+      "Wheel wobbling",
+      "Wheels & Tires"
+    ]
+  },
+  "9": {
+    "label": "Result Cluster",
+    "cohesion": 0.0833,
+    "size": 25,
+    "members": [
+      "Brushes in good condition",
+      "Clicking sound when key is turned",
+      "Damaged wiring",
+      "Damaged/corroded wiring",
+      "Engine does not crank",
+      "Engine hesitates on acceleration",
+      "Erratic shifting",
+      "Faulty solenoid",
+      "Inspect TPS wiring for damage or corrosion",
+      "Inspect oxygen sensor wiring for damage",
+      "Inspect starter motor brushes for wear",
+      "Inspect wiring harness for damage or corrosion",
+      "Intact wiring",
+      "Replace Starter Motor",
+      "Replace Throttle Position Sensor",
+      "Replace Transmission Solenoid",
+      "Solenoid working correctly",
+      "Solenoid working properly",
+      "Starter Motor",
+      "Test starter motor solenoid",
+      "Test transmission solenoids for electrical continuity",
+      "Throttle Position Sensor",
+      "Transmission Solenoid",
+      "Transmission won't shift gears",
+      "Worn brushes"
+    ]
+  },
+  "10": {
+    "label": "Result Cluster",
+    "cohesion": 0.0909,
+    "size": 22,
+    "members": [
+      "AC Condenser",
+      "AC system not cooling",
+      "Check for leaks in AC condenser",
+      "Check for leaks in purge valve hoses",
+      "Clean/clear condenser",
+      "Debris/blockage present",
+      "Hoses in good condition",
+      "Inspect AC condenser for debris or blockage",
+      "Inspect brake caliper for leaks",
+      "Inspect power steering hoses for leaks",
+      "Inspect radiator and hoses for leaks",
+      "Leaking condenser",
+      "Leaking fluid",
+      "Leaking hoses",
+      "Leaking radiator/hoses",
+      "No leaks",
+      "Power Steering Fluid",
+      "Replace AC Condenser",
+      "Replace Power Steering Fluid",
+      "Stiff steering wheel",
+      "Warm air from AC vents",
+      "Whining noise when turning"
+    ]
+  },
+  "11": {
+    "label": "Result Cluster",
+    "cohesion": 0.1,
+    "size": 20,
+    "members": [
+      "Brake Fluid",
+      "Brake Hose",
+      "Brake fluid leak",
+      "Brake warning light on",
+      "Check PCV valve hose for cracks",
+      "Cracked hose",
+      "Cracked/leaking hose",
+      "Failed pressure test",
+      "Inspect M.A.P. sensor vacuum hose",
+      "Inspect brake hose for cracks or leaks",
+      "Inspect brake lines for leaks",
+      "Intact hose",
+      "Leaking hose",
+      "Leaking lines",
+      "Lines in good condition",
+      "Passes pressure test",
+      "Pressure test brake hose",
+      "Replace Brake Fluid",
+      "Replace Brake Hose",
+      "Soft brake pedal"
+    ]
+  },
+  "12": {
+    "label": "Result Cluster",
+    "cohesion": 0.1538,
+    "size": 14,
+    "members": [
+      "Clean/intact pump",
+      "Clogged/damaged pump",
+      "Faulty pump",
+      "Inspect washer fluid pump for operation",
+      "Inspect washer pump for clogs or damage",
+      "No washer fluid spray",
+      "Pump operates correctly",
+      "Pump working correctly",
+      "Replace Windshield Washer Fluid",
+      "Replace Windshield Washer Pump",
+      "Test water pump for proper operation",
+      "Weak washer fluid spray",
+      "Windshield Washer Fluid",
+      "Windshield Washer Pump"
+    ]
+  },
+  "13": {
+    "label": "Result Cluster",
+    "cohesion": 0.2121,
+    "size": 12,
+    "members": [
+      "Buildup on valve",
+      "Check valve clearance",
+      "Clean valve",
+      "Correct clearance",
+      "Exhaust Valve",
+      "Incorrect clearance",
+      "Inspect exhaust valve for carbon buildup",
+      "Inspect intake valve for carbon buildup",
+      "Intake Valve",
+      "Replace Exhaust Valve",
+      "Replace Intake Valve",
+      "Rough idle"
+    ]
+  },
+  "14": {
+    "label": "Cooling System",
+    "cohesion": 0.2,
+    "size": 11,
+    "members": [
+      "Check coolant level and condition",
+      "Coolant leak near front of engine",
+      "Coolant leaks under the vehicle",
+      "Coolant/Antifreeze",
+      "Cooling System",
+      "Engine overheating",
+      "Low/dirty coolant",
+      "Replace Coolant/Antifreeze",
+      "Replace Water Pump",
+      "Sufficient/clean coolant",
+      "Water Pump"
+    ]
+  },
+  "15": {
+    "label": "ABS System",
+    "cohesion": 0.2222,
+    "size": 10,
+    "members": [
+      "ABS System",
+      "Brake Master Cylinder",
+      "Brake Shoe & Drum",
+      "Brake fluid leaks",
+      "Check brake drum for scoring or cracks",
+      "Replace Brake Master Cylinder",
+      "Replace Brake Shoe & Drum",
+      "Scored/cracked drum",
+      "Smooth drum",
+      "Spongy brake pedal"
+    ]
+  },
+  "16": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "ABS Wheel Speed Sensor",
+      "ABS light stays on",
+      "Check wheel speed sensor for debris or damage",
+      "Clean/intact",
+      "Dirty/damaged",
+      "Erratic speedometer",
+      "Inspect wheel speed sensor connections",
+      "Loose connections",
+      "Replace ABS Wheel Speed Sensor",
+      "Secure connections"
+    ]
+  },
+  "17": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "AC Compressor",
+      "Check AC compressor clutch operation",
+      "Clutch engages properly",
+      "Clutch not engaging",
+      "Inspect AC compressor for leaks or damage",
+      "Intact compressor",
+      "Leaking/damaged compressor",
+      "Loud noise when AC is on",
+      "No cold air from vents",
+      "Replace AC Compressor"
+    ]
+  },
+  "18": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "AC system not working",
+      "Air Conditioning Diagnosis",
+      "Check AC system components for proper operation",
+      "Component failure",
+      "Components working properly",
+      "Error codes present",
+      "No error codes",
+      "Perform AC system diagnostic scan",
+      "Replace Air Conditioning Diagnosis",
+      "Unusual noise from AC system"
+    ]
+  },
+  "19": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Adjust clutch cable tension",
+      "Clutch Cable",
+      "Clutch pedal feels loose",
+      "Correct tension",
+      "Damaged cable",
+      "Difficulty engaging gears",
+      "Incorrect tension",
+      "Inspect clutch cable for fraying or stretching",
+      "Intact cable",
+      "Replace Clutch Cable"
+    ]
+  },
+  "20": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Bevel Gears",
+      "Check gear oil level and condition",
+      "Difficulty shifting gears",
+      "Gears in good condition",
+      "Inspect bevel gears for wear or damage",
+      "Low/dirty gear oil",
+      "Replace Bevel Gears",
+      "Sufficient/clean gear oil",
+      "Whining noise from drivetrain",
+      "Worn/damaged gears"
+    ]
+  },
+  "21": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Blue smoke from exhaust",
+      "Good compression",
+      "Inspect piston rings for wear or damage",
+      "Loss of engine power",
+      "Low compression",
+      "Perform compression test",
+      "Piston Rings",
+      "Replace Piston Rings",
+      "Rings in good condition",
+      "Worn/damaged rings"
+    ]
+  },
+  "22": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Burnt out filament",
+      "Check headlamp socket for corrosion",
+      "Clean socket",
+      "Corroded socket",
+      "Dim headlight",
+      "Filament intact",
+      "Headlamp Bulb",
+      "Headlight not working",
+      "Inspect headlamp bulb for filament condition",
+      "Replace Headlamp Bulb"
+    ]
+  },
+  "23": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Carbon buildup",
+      "Clean plug",
+      "Diesel Glow Plug",
+      "Glow plug indicator light stays on",
+      "Hard starting in cold weather",
+      "High resistance",
+      "Inspect glow plug for carbon buildup",
+      "Normal resistance",
+      "Replace Diesel Glow Plug",
+      "Test glow plug resistance"
+    ]
+  },
+  "24": {
+    "label": "Electrical System",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Charging System",
+      "Check alternator belt tension",
+      "Dim headlights",
+      "Electrical System",
+      "Loose belt",
+      "Low output",
+      "Normal output",
+      "Properly tensioned belt",
+      "Replace Charging System",
+      "Test alternator output"
+    ]
+  },
+  "25": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Check driveline alignment",
+      "Clunking noise when shifting",
+      "Driveline vibration",
+      "Inspect universal joint for wear or play",
+      "Joint in good condition",
+      "Misaligned driveline",
+      "Properly aligned driveline",
+      "Replace Universal Joint",
+      "Universal Joint",
+      "Worn/play detected"
+    ]
+  },
+  "26": {
+    "label": "Drivetrain",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Check tire pressure and condition",
+      "Correct tire pressure and condition",
+      "Drivetrain",
+      "Imbalanced/misaligned shaft",
+      "Inspect shaft for balance and alignment",
+      "Low/inappropriate pressure",
+      "Properly balanced/aligned shaft",
+      "Replace Shaft and Tires",
+      "Shaft and Tires",
+      "Vibration while driving"
+    ]
+  },
+  "27": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Check window alignment in tracks",
+      "Door Window Regulator",
+      "Inspect window regulator mechanism",
+      "Mechanism functioning",
+      "Mechanism jammed",
+      "Misaligned window",
+      "Properly aligned window",
+      "Replace Door Window Regulator",
+      "Window off track",
+      "Window stuck in one position"
+    ]
+  },
+  "28": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Clean/intact motor",
+      "Debris/damage present",
+      "Heater Blower Motor",
+      "Inspect blower motor for debris or damage",
+      "Loud noise from HVAC system",
+      "Motor not running",
+      "Motor running properly",
+      "No air from vents",
+      "Replace Heater Blower Motor",
+      "Test blower motor operation"
+    ]
+  },
+  "29": {
+    "label": "Result Cluster",
+    "cohesion": 0.2,
+    "size": 10,
+    "members": [
+      "Good condition resistor",
+      "HVAC fan only works on certain settings",
+      "HVAC fan speed erratic",
+      "Heater Blower Motor Resistor",
+      "Inspect resistor for overheating or burn marks",
+      "Overheated/burned resistor",
+      "Replace Heater Blower Motor Resistor",
+      "Resistor failure",
+      "Resistor working properly",
+      "Test blower motor resistor continuity"
+    ]
+  },
+  "30": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "AC not cooling at idle",
+      "Fan not spinning",
+      "Fan operates correctly",
+      "Faulty motor/relay",
+      "Inspect radiator fan motor and relay",
+      "Motor/relay functioning properly",
+      "Radiator/Cooling Fan",
+      "Replace Radiator/Cooling Fan",
+      "Test radiator fan operation"
+    ]
+  },
+  "31": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Balance Shaft",
+      "Check balance shaft alignment",
+      "Engine vibration",
+      "Inspect balance shaft for wear or damage",
+      "Misaligned shaft",
+      "Properly aligned shaft",
+      "Replace Balance Shaft",
+      "Shaft in good condition",
+      "Worn/damaged shaft"
+    ]
+  },
+  "32": {
+    "label": "DiagnosticTest Cluster",
+    "cohesion": 0.2778,
+    "size": 9,
+    "members": [
+      "Bearings in good condition",
+      "Check axle bearings for wear",
+      "Check for differential bearing wear",
+      "Check wheel bearings for wear",
+      "Differential",
+      "Replace Differential",
+      "Vehicle vibration at high speeds",
+      "Whining noise from rear end",
+      "Worn bearings"
+    ]
+  },
+  "33": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Blocked/damaged radiator",
+      "Check radiator for blockage or damage",
+      "Clear/intact radiator",
+      "Engine Cooling System",
+      "Faulty thermostat",
+      "Replace Engine Cooling System",
+      "Temperature gauge in red zone",
+      "Test thermostat operation",
+      "Thermostat functioning properly"
+    ]
+  },
+  "34": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Blown fuse",
+      "Check horn fuse",
+      "Faulty relay",
+      "Fuse intact",
+      "Horn",
+      "No sound when horn button pressed",
+      "Relay working properly",
+      "Replace Horn",
+      "Test horn relay for operation"
+    ]
+  },
+  "35": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Brake Pad",
+      "Check brake pad thickness",
+      "Good condition pads",
+      "Inspect brake pad condition",
+      "Replace Brake Pad",
+      "Squealing brakes",
+      "Sufficient thickness pads",
+      "Worn pads",
+      "Worn/damaged pads"
+    ]
+  },
+  "36": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Brake Rotor",
+      "Inspect brake rotor for scoring or warping",
+      "Measure brake rotor thickness",
+      "Replace Brake Rotor",
+      "Scored/warped rotor",
+      "Smooth rotor",
+      "Steering wheel vibration",
+      "Sufficient thickness rotor",
+      "Thin rotor"
+    ]
+  },
+  "37": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Buildup present",
+      "Clean throttle body",
+      "Faulty TPS",
+      "Inspect throttle body for carbon buildup",
+      "Poor acceleration",
+      "Replace Throttle Body",
+      "TPS working correctly",
+      "Test throttle position sensor (TPS)",
+      "Throttle Body"
+    ]
+  },
+  "38": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Cap in good condition",
+      "Check distributor rotor for wear",
+      "Cracked/damaged cap",
+      "Difficulty starting engine",
+      "Ignition Distributor Cap",
+      "Inspect distributor cap for cracks or carbon tracks",
+      "Replace Ignition Distributor Cap",
+      "Rotor in good condition",
+      "Worn rotor"
+    ]
+  },
+  "39": {
+    "label": "Component Cluster",
+    "cohesion": 0.25,
+    "size": 9,
+    "members": [
+      "Check belt tension and alignment",
+      "Engine Belt",
+      "Engine performance issues",
+      "Fan Belt",
+      "Loose/misaligned belt",
+      "Properly tensioned/aligned belt",
+      "Replace Engine Belt",
+      "Replace Fan Belt",
+      "Squealing noise from engine bay"
+    ]
+  },
+  "40": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Check coolant level in reservoir",
+      "Coolant Reservoir",
+      "Cracked/leaking reservoir",
+      "Inspect reservoir for cracks or leaks",
+      "Intact reservoir",
+      "Low coolant level",
+      "Low coolant warning light",
+      "Replace Coolant Reservoir",
+      "Sufficient coolant level"
+    ]
+  },
+  "41": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Check hose connections for leaks",
+      "Coolant leak under vehicle",
+      "Damaged hoses found",
+      "Hoses are in good condition",
+      "Inspect radiator hoses for damage",
+      "Leaking connections",
+      "Radiator Hose",
+      "Replace Radiator Hose",
+      "Visible wear/cracks on hoses"
+    ]
+  },
+  "42": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Clean/in-tolerance injector",
+      "Engine misfires",
+      "Fuel Injector",
+      "Inspect injector for leaks or clogs",
+      "Irregular spray pattern",
+      "Leaking/clogged injector",
+      "Replace Fuel Injector",
+      "Test fuel injector spray pattern",
+      "Uniform spray pattern"
+    ]
+  },
+  "43": {
+    "label": "Result Cluster",
+    "cohesion": 0.2222,
+    "size": 9,
+    "members": [
+      "Engine knocking noise",
+      "Inspect oil pump for wear or damage",
+      "Low oil pressure",
+      "Normal oil pressure",
+      "Oil Pump",
+      "Pump in good condition",
+      "Replace Oil Pump",
+      "Test oil pressure with gauge",
+      "Worn/damaged pump"
+    ]
+  },
+  "44": {
+    "label": "Air Conditioning System",
+    "cohesion": 0.2857,
+    "size": 8,
+    "members": [
+      "AC Evaporator",
+      "Air Conditioning System",
+      "Cabin Air Filter",
+      "Musty odor from vents",
+      "Reduced airflow from vents",
+      "Replace AC Evaporator",
+      "Replace Cabin Air Filter",
+      "Weak airflow from vents"
+    ]
+  },
+  "45": {
+    "label": "DiagnosticTest Cluster",
+    "cohesion": 0.3214,
+    "size": 8,
+    "members": [
+      "Engine stalls at high speeds",
+      "Filter in good condition",
+      "Fuel Filter",
+      "Replace Fuel Filter",
+      "Replace air filter if necessary",
+      "Replace filter",
+      "Replace fuel filter if necessary",
+      "Replace transmission filter if necessary"
+    ]
+  },
+  "46": {
+    "label": "Symptom Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "ABS Control Module",
+      "ABS warning light on",
+      "Brake pedal pulsation",
+      "Faulty wiring",
+      "Good wiring",
+      "Inspect wiring to ABS module",
+      "Replace ABS Control Module"
+    ]
+  },
+  "47": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Axle in good condition",
+      "Cracked/damaged axle",
+      "Inspect rigid axle for cracks or damage",
+      "Loud noise from rear axle",
+      "Replace Rigid Axle",
+      "Rigid Axle",
+      "Vehicle bounces over bumps"
+    ]
+  },
+  "48": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Axle is intact",
+      "Axle noise while turning",
+      "Cracked/bent axle",
+      "Inspect live axle for cracks or bending",
+      "Live Axle",
+      "Replace Live Axle",
+      "Vehicle leans to one side"
+    ]
+  },
+  "49": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Battery Replacement",
+      "Clean terminals",
+      "Clicking sound when starting",
+      "Corroded terminals",
+      "Engine cranks slowly",
+      "Inspect battery terminals for corrosion",
+      "Replace Battery Replacement"
+    ]
+  },
+  "50": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Blown",
+      "Check ABS fuse",
+      "Check brake booster vacuum hose",
+      "Inspect master cylinder for leaks or damage",
+      "Intact",
+      "Leaking",
+      "Leaking/damaged"
+    ]
+  },
+  "51": {
+    "label": "Symptom Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Brake Caliper",
+      "Brake dragging",
+      "Brake pulling to one side",
+      "Check brake caliper piston operation",
+      "Free-moving piston",
+      "Replace Brake Caliper",
+      "Stuck piston"
+    ]
+  },
+  "52": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Check coolant flow through heater core",
+      "Good coolant flow",
+      "Heater Core",
+      "No heat from vents",
+      "Replace Heater Core",
+      "Restricted flow",
+      "Sweet smell in cabin"
+    ]
+  },
+  "53": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Check engine oil level and condition",
+      "Clean/sufficient oil",
+      "Engine Oil",
+      "Loud engine noise",
+      "Low oil pressure warning light",
+      "Low/dirty oil",
+      "Replace Engine Oil"
+    ]
+  },
+  "54": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Clean components",
+      "Clean throttle body and IAC valve",
+      "Dirty components",
+      "Erratic idle speed",
+      "Idle Air Control Valve",
+      "Replace Idle Air Control Valve",
+      "Stalling at idle"
+    ]
+  },
+  "55": {
+    "label": "Engine Compartment",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Clogged valve",
+      "Engine Compartment",
+      "Inspect PCV valve for clogs",
+      "Oil leaks",
+      "PCV Valve",
+      "Replace PCV Valve",
+      "Valve clear"
+    ]
+  },
+  "56": {
+    "label": "Liquid Systems",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Coolant leak",
+      "Inspect radiator for leaks or damage",
+      "Leaking/damaged radiator",
+      "Liquid Systems",
+      "Radiator",
+      "Radiator in good condition",
+      "Replace Radiator"
+    ]
+  },
+  "57": {
+    "label": "Result Cluster",
+    "cohesion": 0.2857,
+    "size": 7,
+    "members": [
+      "Inspect for oil leaks",
+      "Inspect heater core for leaks",
+      "Inspect water pump for leaks",
+      "Leaking heater core",
+      "Leaking pump",
+      "No leaks detected",
+      "Oil leaks present"
+    ]
+  },
+  "58": {
+    "label": "Result Cluster",
+    "cohesion": 0.4,
+    "size": 6,
+    "members": [
+      "Belt in good condition",
+      "Cut/worn belt",
+      "Inspect engine belt for cuts or wear",
+      "Inspect fan belt for cuts or wear",
+      "Inspect timing belt for wear or damage",
+      "Worn/damaged belt"
+    ]
+  },
+  "59": {
+    "label": "Result Cluster",
+    "cohesion": 0.3333,
+    "size": 6,
+    "members": [
+      "Brake Booster",
+      "Hard brake pedal",
+      "Low vacuum pressure",
+      "Normal vacuum pressure",
+      "Replace Brake Booster",
+      "Test brake booster vacuum pressure"
+    ]
+  },
+  "60": {
+    "label": "Result Cluster",
+    "cohesion": 0.3333,
+    "size": 6,
+    "members": [
+      "Check timing marks for alignment",
+      "Engine won't start",
+      "Misaligned timing marks",
+      "Properly aligned marks",
+      "Replace Timing Belt",
+      "Timing Belt"
+    ]
+  },
+  "61": {
+    "label": "Engine Components",
+    "cohesion": 0.3333,
+    "size": 6,
+    "members": [
+      "Clean/in-tolerance injectors",
+      "Diesel Injection Pump",
+      "Engine Components",
+      "Inspect diesel injectors for leaks or clogs",
+      "Leaking/clogged injectors",
+      "Replace Diesel Injection Pump"
+    ]
+  },
+  "62": {
+    "label": "DiagnosticTest Cluster",
+    "cohesion": 0.6,
+    "size": 5,
+    "members": [
+      "Clean filter",
+      "Clogged/dirty filter",
+      "Inspect air filter for clogs or dirt",
+      "Inspect fuel filter for clogs or debris",
+      "Inspect transmission filter for clogs or debris"
+    ]
+  },
+  "63": {
+    "label": "Symptom Cluster",
+    "cohesion": 0.5,
+    "size": 4,
+    "members": [
+      "Air Filter",
+      "Black smoke from exhaust",
+      "Decreased engine performance",
+      "Replace Air Filter"
+    ]
+  },
+  "64": {
+    "label": "Result Cluster",
+    "cohesion": 0.6667,
+    "size": 3,
+    "members": [
+      "Check for debris in cabin air intake",
+      "Clear intake",
+      "Debris in intake"
+    ]
+  },
+  "65": {
+    "label": "Result Cluster",
+    "cohesion": 0.6667,
+    "size": 3,
+    "members": [
+      "Clean evaporator",
+      "Inspect AC evaporator for mold or mildew buildup",
+      "Mold/mildew present"
+    ]
+  },
+  "66": {
+    "label": "Result Cluster",
+    "cohesion": 0.6667,
+    "size": 3,
+    "members": [
+      "Clean/new filter",
+      "Dirty/clogged filter",
+      "Inspect and replace cabin air filter"
+    ]
+  },
+  "67": {
+    "label": "Result Cluster",
+    "cohesion": 0.6667,
+    "size": 3,
+    "members": [
+      "Good condition shoes",
+      "Inspect brake shoes for wear",
+      "Worn shoes"
+    ]
+  }
+}
