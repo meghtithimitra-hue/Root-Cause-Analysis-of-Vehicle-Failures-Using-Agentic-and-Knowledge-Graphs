@@ -58,6 +58,11 @@ def run_pipeline(
     step3 = _scorer.score_candidates(step2, skip_allowed=skip_clarification)
     step4 = _path_builder.build_reasoning_path(step3)
     step5 = _answer_gen.generate_answer(step4, step3)
+    step5["top_category"] = step4.get("top_category")
+    step5["top_subcategory"] = step4.get("top_subcategory")
+    step5["matched_symptoms"] = step4.get("matched_symptoms", [])
+    step5["diagnosis_steps"] = step4.get("diagnosis_steps", [])
+    step5["reasoning_chain"] = step4.get("reasoning_chain", [])
     return step5
 
 

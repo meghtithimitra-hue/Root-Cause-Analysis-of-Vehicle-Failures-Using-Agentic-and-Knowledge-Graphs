@@ -153,13 +153,18 @@ def generate_answer(
             "clarifying_question": None,
         }
 
-    # -- AMBIGUOUS + skip → LLM fallback ------------------------------------
+    # -- AMBIGUOUS + skip → no-match response --------------------------------
+    FIXED_NO_MATCH = (
+        "No confident match found in the knowledge graph. "
+        "Please describe your vehicle fault in more detail "
+        "\u2014 include the symptom, when it occurs and any warning lights."
+    )
     if skip_allowed:
-        llm_answer = _call_ollama(query, candidates, model=llm_model)
         return {
             "mode": mode,
-            "answer": llm_answer,
-            "source": "llm",
+            "answer": FIXED_NO_MATCH,
+            "source": "no_match",
+            "llm_fallback_answer": FIXED_NO_MATCH,
             "clarifying_question": None,
         }
 
