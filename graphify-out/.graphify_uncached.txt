@@ -1,0 +1,14 @@
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\_index.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\abs_system.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\air_conditioning_system.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\cooling_system.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\drivetrain.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\electrical_system.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\emissions_system.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\engine_compartment.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\engine_components.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\fuel_system.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\liquid_systems.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\steering.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\transmission.md
+C:\Users\Shreyasi\Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs\data\corpus\wheels_tires.md
