@@ -1,0 +1,6 @@
+﻿.venv/
+data/chroma_db/
+graphify-out/cache/
+graphify-out/cost.json
+__pycache__/
+*.pyc
