@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Automotive Fault Knowledge Graph — graphify tree viewer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      margin: 20px 0 0 24px;
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #1e3a56;
+    }
+    .controls {
+      margin: 20px 0 15px 24px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 8px 18px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    button:active {
+      background: #004085;
+    }
+    #tree-container {
+      width: calc(100vw - 48px); /* Adjust for body margin/padding */
+      height: 85vh;
+      overflow: auto;
+      border-radius: 8px;
+      background: #fff;
+      margin-left: 24px;
+      margin-right: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border: 1px solid #ddd;
+    }
+    svg {
+      background: #fff;
+      border-radius: 8px;
+      display: block; /* Important for D3 */
+    }
+    .node circle {
+      stroke-width: 2.5px;
+    }
+    .node text { /* Base style for the <text> container */
+      font: 13px 'Segoe UI', sans-serif;
+      paint-order: stroke fill; /* Ensures text is readable over lines */
+      stroke: #fff; /* White halo */
+      stroke-width: 3px; /* Halo thickness */
+      stroke-linejoin: round;
+      stroke-opacity: 0.85; /* Halo opacity */
+    }
+    .link {
+      fill: none;
+      stroke-opacity: 0.7;
+      stroke-width: 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Automotive Fault Knowledge Graph — Knowledge Graph</h1>
+  <div class="controls">
+    <button onclick="expandAll()">Expand All</button>
+    <button onclick="collapseAll()">Collapse All</button>
+    <button onclick="resetView()">Reset View</button>
+  </div>
+  <div id="tree-container">
+    <svg id="tree-svg" width="6000" height="8000"></svg>
+  </div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const initialJsonData = {"name":"Automotive Fault Knowledge Graph","total_count":444,"children":[{"name":"abs_system","total_count":40,"children":[{"name":"abs_control_module.md","total_count":5,"children":[{"name":"ABS Control Module","total_count":1,"children":[]},{"name":"ABS warning light on","total_count":1,"children":[]},{"name":"Brake pedal pulsation","total_count":1,"children":[]},{"name":"Check ABS fuse","total_count":1,"children":[]},{"name":"Inspect wiring to ABS module","total_count":1,"children":[]}]},{"name":"abs_wheel_speed_sensor.md","total_count":5,"children":[{"name":"ABS light stays on","total_count":1,"children":[]},{"name":"ABS Wheel Speed Sensor","total_count":1,"children":[]},{"name":"Check wheel speed sensor for debris or damage","total_count":1,"children":[]},{"name":"Erratic speedometer","total_count":1,"children":[]},{"name":"Inspect wheel speed sensor connections","total_count":1,"children":[]}]},{"name":"brake_booster.md","total_count":5,"children":[{"name":"Brake Booster","total_count":1,"children":[]},{"name":"Check brake booster vacuum hose","total_count":1,"children":[]},{"name":"Hard brake pedal","total_count":1,"children":[]},{"name":"Spongy brake pedal","total_count":1,"children":[]},{"name":"Test brake booster vacuum pressure","total_count":1,"children":[]}]},{"name":"brake_caliper.md","total_count":5,"children":[{"name":"Brake Caliper","total_count":1,"children":[]},{"name":"Brake dragging","total_count":1,"children":[]},{"name":"Brake pulling to one side","total_count":1,"children":[]},{"name":"Check brake caliper piston operation","total_count":1,"children":[]},{"name":"Inspect brake caliper for leaks","total_count":1,"children":[]}]},{"name":"brake_hose.md","total_count":5,"children":[{"name":"Brake fluid leak","total_count":1,"children":[]},{"name":"Brake Hose","total_count":1,"children":[]},{"name":"Inspect brake hose for cracks or leaks","total_count":1,"children":[]},{"name":"Pressure test brake hose","total_count":1,"children":[]},{"name":"Soft brake pedal","total_count":1,"children":[]}]},{"name":"brake_master_cylinder.md","total_count":4,"children":[{"name":"Brake fluid leaks","total_count":1,"children":[]},{"name":"Brake Master Cylinder","total_count":1,"children":[]},{"name":"Check brake fluid level in master cylinder","total_count":1,"children":[]},{"name":"Inspect master cylinder for leaks or damage","total_count":1,"children":[]}]},{"name":"brake_pad.md","total_count":4,"children":[{"name":"Brake Pad","total_count":1,"children":[]},{"name":"Check brake pad thickness","total_count":1,"children":[]},{"name":"Inspect brake pad condition","total_count":1,"children":[]},{"name":"Squealing brakes","total_count":1,"children":[]}]},{"name":"brake_rotor.md","total_count":4,"children":[{"name":"Brake Rotor","total_count":1,"children":[]},{"name":"Inspect brake rotor for scoring or warping","total_count":1,"children":[]},{"name":"Measure brake rotor thickness","total_count":1,"children":[]},{"name":"Steering wheel vibration","total_count":1,"children":[]}]},{"name":"brake_shoe_drum.md","total_count":3,"children":[{"name":"Brake Shoe & Drum","total_count":1,"children":[]},{"name":"Check brake drum for scoring or cracks","total_count":1,"children":[]},{"name":"Inspect brake shoes for wear","total_count":1,"children":[]}]}]},{"name":"abs_system.md","total_count":1,"children":[{"name":"ABS System","total_count":1,"children":[]}]},{"name":"air_conditioning_system","total_count":39,"children":[{"name":"ac_compressor.md","total_count":5,"children":[{"name":"AC Compressor","total_count":1,"children":[]},{"name":"Check AC compressor clutch operation","total_count":1,"children":[]},{"name":"Inspect AC compressor for leaks or damage","total_count":1,"children":[]},{"name":"Loud noise when AC is on","total_count":1,"children":[]},{"name":"No cold air from vents","total_count":1,"children":[]}]},{"name":"ac_condenser.md","total_count":5,"children":[{"name":"AC Condenser","total_count":1,"children":[]},{"name":"AC system not cooling","total_count":1,"children":[]},{"name":"Check for leaks in AC condenser","total_count":1,"children":[]},{"name":"Inspect AC condenser for debris or blockage","total_count":1,"children":[]},{"name":"Warm air from AC vents","total_count":1,"children":[]}]},{"name":"ac_evaporator.md","total_count":5,"children":[{"name":"AC Evaporator","total_count":1,"children":[]},{"name":"Check AC evaporator temperature sensor","total_count":1,"children":[]},{"name":"Inspect AC evaporator for mold or mildew buildup","total_count":1,"children":[]},{"name":"Musty odor from vents","total_count":1,"children":[]},{"name":"Weak airflow from vents","total_count":1,"children":[]}]},{"name":"ac_recharge.md","total_count":5,"children":[{"name":"AC Recharge","total_count":1,"children":[]},{"name":"Check AC system pressure with gauge","total_count":1,"children":[]},{"name":"Inspect for leaks in AC system","total_count":1,"children":[]},{"name":"Low AC system pressure","total_count":1,"children":[]},{"name":"Warm air from vents","total_count":1,"children":[]}]},{"name":"air_conditioning_diagnosis.md","total_count":5,"children":[{"name":"AC system not working","total_count":1,"children":[]},{"name":"Air Conditioning Diagnosis","total_count":1,"children":[]},{"name":"Check AC system components for proper operation","total_count":1,"children":[]},{"name":"Perform AC system diagnostic scan","total_count":1,"children":[]},{"name":"Unusual noise from AC system","total_count":1,"children":[]}]},{"name":"cabin_air_filter.md","total_count":4,"children":[{"name":"Cabin Air Filter","total_count":1,"children":[]},{"name":"Check for debris in cabin air intake","total_count":1,"children":[]},{"name":"Inspect and replace cabin air filter","total_count":1,"children":[]},{"name":"Reduced airflow from vents","total_count":1,"children":[]}]},{"name":"heater_blower_motor.md","total_count":5,"children":[{"name":"Heater Blower Motor","total_count":1,"children":[]},{"name":"Inspect blower motor for debris or damage","total_count":1,"children":[]},{"name":"Loud noise from HVAC system","total_count":1,"children":[]},{"name":"No air from vents","total_count":1,"children":[]},{"name":"Test blower motor operation","total_count":1,"children":[]}]},{"name":"heater_blower_motor_resistor.md","total_count":5,"children":[{"name":"Heater Blower Motor Resistor","total_count":1,"children":[]},{"name":"HVAC fan only works on certain settings","total_count":1,"children":[]},{"name":"HVAC fan speed erratic","total_count":1,"children":[]},{"name":"Inspect resistor for overheating or burn marks","total_count":1,"children":[]},{"name":"Test blower motor resistor continuity","total_count":1,"children":[]}]}]},{"name":"air_conditioning_system.md","total_count":1,"children":[{"name":"Air Conditioning System","total_count":1,"children":[]}]},{"name":"cooling_system","total_count":36,"children":[{"name":"coolant_antifreeze.md","total_count":5,"children":[{"name":"Check coolant level and condition","total_count":1,"children":[]},{"name":"Coolant leaks under the vehicle","total_count":1,"children":[]},{"name":"Coolant/Antifreeze","total_count":1,"children":[]},{"name":"Engine overheating","total_count":1,"children":[]},{"name":"Inspect radiator and hoses for leaks","total_count":1,"children":[]}]},{"name":"coolant_leak_diagnosis.md","total_count":5,"children":[{"name":"Coolant Leak Diagnosis","total_count":1,"children":[]},{"name":"Coolant odor in cabin","total_count":1,"children":[]},{"name":"Inspect radiator, hoses, and water pump for leaks","total_count":1,"children":[]},{"name":"Pressure test cooling system","total_count":1,"children":[]},{"name":"Visible coolant puddle under vehicle","total_count":1,"children":[]}]},{"name":"engine_cooling_system.md","total_count":4,"children":[{"name":"Check radiator for blockage or damage","total_count":1,"children":[]},{"name":"Engine Cooling System","total_count":1,"children":[]},{"name":"Temperature gauge in red zone","total_count":1,"children":[]},{"name":"Test thermostat operation","total_count":1,"children":[]}]},{"name":"heater_core.md","total_count":5,"children":[{"name":"Check coolant flow through heater core","total_count":1,"children":[]},{"name":"Heater Core","total_count":1,"children":[]},{"name":"Inspect heater core for leaks","total_count":1,"children":[]},{"name":"No heat from vents","total_count":1,"children":[]},{"name":"Sweet smell in cabin","total_count":1,"children":[]}]},{"name":"heater_hose.md","total_count":4,"children":[{"name":"Heater Hose","total_count":1,"children":[]},{"name":"Inspect heater hose connections","total_count":1,"children":[]},{"name":"Pressure test heater hoses","total_count":1,"children":[]},{"name":"Visible coolant leak under vehicle","total_count":1,"children":[]}]},{"name":"radiator_cooling_fan.md","total_count":4,"children":[{"name":"AC not cooling at idle","total_count":1,"children":[]},{"name":"Inspect radiator fan motor and relay","total_count":1,"children":[]},{"name":"Radiator/Cooling Fan","total_count":1,"children":[]},{"name":"Test radiator fan operation","total_count":1,"children":[]}]},{"name":"radiator_hose.md","total_count":5,"children":[{"name":"Check hose connections for leaks","total_count":1,"children":[]},{"name":"Coolant leak under vehicle","total_count":1,"children":[]},{"name":"Inspect radiator hoses for damage","total_count":1,"children":[]},{"name":"Radiator Hose","total_count":1,"children":[]},{"name":"Visible wear/cracks on hoses","total_count":1,"children":[]}]},{"name":"water_pump.md","total_count":4,"children":[{"name":"Coolant leak near front of engine","total_count":1,"children":[]},{"name":"Inspect water pump for leaks","total_count":1,"children":[]},{"name":"Test water pump for proper operation","total_count":1,"children":[]},{"name":"Water Pump","total_count":1,"children":[]}]}]},{"name":"cooling_system.md","total_count":1,"children":[{"name":"Cooling System","total_count":1,"children":[]}]},{"name":"drivetrain","total_count":53,"children":[{"name":"bevel_gears.md","total_count":5,"children":[{"name":"Bevel Gears","total_count":1,"children":[]},{"name":"Check gear oil level and condition","total_count":1,"children":[]},{"name":"Difficulty shifting gears","total_count":1,"children":[]},{"name":"Inspect bevel gears for wear or damage","total_count":1,"children":[]},{"name":"Whining noise from drivetrain","total_count":1,"children":[]}]},{"name":"center_differential.md","total_count":5,"children":[{"name":"Center Differential","total_count":1,"children":[]},{"name":"Check for excessive play in center differential","total_count":1,"children":[]},{"name":"Inspect center differential fluid","total_count":1,"children":[]},{"name":"Noise from drivetrain while turning","total_count":1,"children":[]},{"name":"Vehicle binding on turns","total_count":1,"children":[]}]},{"name":"clutch_cable.md","total_count":5,"children":[{"name":"Adjust clutch cable tension","total_count":1,"children":[]},{"name":"Clutch Cable","total_count":1,"children":[]},{"name":"Clutch pedal feels loose","total_count":1,"children":[]},{"name":"Difficulty engaging gears","total_count":1,"children":[]},{"name":"Inspect clutch cable for fraying or stretching","total_count":1,"children":[]}]},{"name":"clutch_slave_cylinder.md","total_count":5,"children":[{"name":"Check clutch slave cylinder for leaks","total_count":1,"children":[]},{"name":"Clutch pedal feels spongy","total_count":1,"children":[]},{"name":"Clutch Slave Cylinder","total_count":1,"children":[]},{"name":"Fluid leak near clutch pedal","total_count":1,"children":[]},{"name":"Inspect clutch fluid level and condition","total_count":1,"children":[]}]},{"name":"differential.md","total_count":5,"children":[{"name":"Check for differential bearing wear","total_count":1,"children":[]},{"name":"Differential","total_count":1,"children":[]},{"name":"Inspect differential fluid level and condition","total_count":1,"children":[]},{"name":"Vehicle vibration at high speeds","total_count":1,"children":[]},{"name":"Whining noise from rear end","total_count":1,"children":[]}]},{"name":"live_axle.md","total_count":5,"children":[{"name":"Axle noise while turning","total_count":1,"children":[]},{"name":"Check axle bearings for wear","total_count":1,"children":[]},{"name":"Inspect live axle for cracks or bending","total_count":1,"children":[]},{"name":"Live Axle","total_count":1,"children":[]},{"name":"Vehicle leans to one side","total_count":1,"children":[]}]},{"name":"rigid_axle.md","total_count":4,"children":[{"name":"Inspect rigid axle for cracks or damage","total_count":1,"children":[]},{"name":"Loud noise from rear axle","total_count":1,"children":[]},{"name":"Rigid Axle","total_count":1,"children":[]},{"name":"Vehicle bounces over bumps","total_count":1,"children":[]}]},{"name":"shaft_and_tires.md","total_count":5,"children":[{"name":"Check tire pressure and condition","total_count":1,"children":[]},{"name":"Inspect shaft for balance and alignment","total_count":1,"children":[]},{"name":"Shaft and Tires","total_count":1,"children":[]},{"name":"Uneven tire wear","total_count":1,"children":[]},{"name":"Vibration while driving","total_count":1,"children":[]}]},{"name":"slushbox.md","total_count":5,"children":[{"name":"Check transmission fluid level and condition","total_count":1,"children":[]},{"name":"Delay in gear engagement","total_count":1,"children":[]},{"name":"Inspect transmission for leaks","total_count":1,"children":[]},{"name":"Slushbox","total_count":1,"children":[]},{"name":"Transmission slipping","total_count":1,"children":[]}]},{"name":"universal_joint.md","total_count":5,"children":[{"name":"Check driveline alignment","total_count":1,"children":[]},{"name":"Clunking noise when shifting","total_count":1,"children":[]},{"name":"Driveline vibration","total_count":1,"children":[]},{"name":"Inspect universal joint for wear or play","total_count":1,"children":[]},{"name":"Universal Joint","total_count":1,"children":[]}]},{"name":"viscous_coupling.md","total_count":4,"children":[{"name":"Inspect viscous coupling fluid","total_count":1,"children":[]},{"name":"Test viscous coupling operation","total_count":1,"children":[]},{"name":"Vehicle binding during turns","total_count":1,"children":[]},{"name":"Viscous Coupling","total_count":1,"children":[]}]}]},{"name":"drivetrain.md","total_count":1,"children":[{"name":"Drivetrain","total_count":1,"children":[]}]},{"name":"electrical_system","total_count":66,"children":[{"name":"battery_charging.md","total_count":3,"children":[{"name":"Battery Charging","total_count":1,"children":[]},{"name":"Inspect alternator for proper operation","total_count":1,"children":[]},{"name":"Low voltage","total_count":1,"children":[]}]},{"name":"battery_replacement.md","total_count":5,"children":[{"name":"Battery Replacement","total_count":1,"children":[]},{"name":"Clicking sound when starting","total_count":1,"children":[]},{"name":"Engine cranks slowly","total_count":1,"children":[]},{"name":"Inspect battery terminals for corrosion","total_count":1,"children":[]},{"name":"Test battery voltage","total_count":1,"children":[]}]},{"name":"charging_system.md","total_count":5,"children":[{"name":"Battery warning light on","total_count":1,"children":[]},{"name":"Charging System","total_count":1,"children":[]},{"name":"Check alternator belt tension","total_count":1,"children":[]},{"name":"Dim headlights","total_count":1,"children":[]},{"name":"Test alternator output","total_count":1,"children":[]}]},{"name":"check_engine_light_diagnosis.md","total_count":5,"children":[{"name":"Check Engine Light Diagnosis","total_count":1,"children":[]},{"name":"Check engine light on","total_count":1,"children":[]},{"name":"Check sensors related to DTCs","total_count":1,"children":[]},{"name":"Poor engine performance","total_count":1,"children":[]},{"name":"Scan for diagnostic trouble codes (DTCs)","total_count":1,"children":[]}]},{"name":"door_window_motor.md","total_count":5,"children":[{"name":"Door Window Motor","total_count":1,"children":[]},{"name":"Inspect window regulator for damage","total_count":1,"children":[]},{"name":"Test power to window motor","total_count":1,"children":[]},{"name":"Window does not move","total_count":1,"children":[]},{"name":"Window moves intermittently","total_count":1,"children":[]}]},{"name":"door_window_regulator.md","total_count":5,"children":[{"name":"Check window alignment in tracks","total_count":1,"children":[]},{"name":"Door Window Regulator","total_count":1,"children":[]},{"name":"Inspect window regulator mechanism","total_count":1,"children":[]},{"name":"Window off track","total_count":1,"children":[]},{"name":"Window stuck in one position","total_count":1,"children":[]}]},{"name":"headlamp_bulb.md","total_count":5,"children":[{"name":"Check headlamp socket for corrosion","total_count":1,"children":[]},{"name":"Dim headlight","total_count":1,"children":[]},{"name":"Headlamp Bulb","total_count":1,"children":[]},{"name":"Headlight not working","total_count":1,"children":[]},{"name":"Inspect headlamp bulb for filament condition","total_count":1,"children":[]}]},{"name":"horn.md","total_count":4,"children":[{"name":"Check horn fuse","total_count":1,"children":[]},{"name":"Horn","total_count":1,"children":[]},{"name":"No sound when horn button pressed","total_count":1,"children":[]},{"name":"Test horn relay for operation","total_count":1,"children":[]}]},{"name":"ignition_distributor_cap.md","total_count":5,"children":[{"name":"Check distributor rotor for wear","total_count":1,"children":[]},{"name":"Difficulty starting engine","total_count":1,"children":[]},{"name":"Engine misfires","total_count":1,"children":[]},{"name":"Ignition Distributor Cap","total_count":1,"children":[]},{"name":"Inspect distributor cap for cracks or carbon tracks","total_count":1,"children":[]}]},{"name":"ignition_wire_set.md","total_count":4,"children":[{"name":"Ignition Wire Set","total_count":1,"children":[]},{"name":"Inspect spark plug boots for damage","total_count":1,"children":[]},{"name":"Poor fuel economy","total_count":1,"children":[]},{"name":"Test ignition wires for continuity","total_count":1,"children":[]}]},{"name":"power_door_lock_actuator.md","total_count":5,"children":[{"name":"Clicking sound from door","total_count":1,"children":[]},{"name":"Door lock not responding","total_count":1,"children":[]},{"name":"Inspect actuator mechanism for obstruction","total_count":1,"children":[]},{"name":"Power Door Lock Actuator","total_count":1,"children":[]},{"name":"Test power to door lock actuator","total_count":1,"children":[]}]},{"name":"starter_motor.md","total_count":5,"children":[{"name":"Clicking sound when key is turned","total_count":1,"children":[]},{"name":"Engine does not crank","total_count":1,"children":[]},{"name":"Inspect starter motor brushes for wear","total_count":1,"children":[]},{"name":"Starter Motor","total_count":1,"children":[]},{"name":"Test starter motor solenoid","total_count":1,"children":[]}]},{"name":"windshield_washer_pump.md","total_count":5,"children":[{"name":"Inspect washer pump for clogs or damage","total_count":1,"children":[]},{"name":"No washer fluid spray","total_count":1,"children":[]},{"name":"Test power to washer pump","total_count":1,"children":[]},{"name":"Weak washer fluid spray","total_count":1,"children":[]},{"name":"Windshield Washer Pump","total_count":1,"children":[]}]},{"name":"wiper_motor.md","total_count":5,"children":[{"name":"Inspect wiper motor linkage for wear","total_count":1,"children":[]},{"name":"Test power to wiper motor","total_count":1,"children":[]},{"name":"Wiper Motor","total_count":1,"children":[]},{"name":"Wipers not working","total_count":1,"children":[]},{"name":"Wipers operate intermittently","total_count":1,"children":[]}]}]},{"name":"electrical_system.md","total_count":1,"children":[{"name":"Electrical System","total_count":1,"children":[]}]},{"name":"emissions_system","total_count":35,"children":[{"name":"canister_purge_valve.md","total_count":4,"children":[{"name":"Canister Purge Valve","total_count":1,"children":[]},{"name":"Check for leaks in purge valve hoses","total_count":1,"children":[]},{"name":"Rough idle","total_count":1,"children":[]},{"name":"Test canister purge valve operation","total_count":1,"children":[]}]},{"name":"catalytic_converter.md","total_count":4,"children":[{"name":"Catalytic Converter","total_count":1,"children":[]},{"name":"Check catalytic converter efficiency","total_count":1,"children":[]},{"name":"Inspect catalytic converter for physical damage","total_count":1,"children":[]},{"name":"Rotten egg smell from exhaust","total_count":1,"children":[]}]},{"name":"charcoal_canister.md","total_count":4,"children":[{"name":"Charcoal Canister","total_count":1,"children":[]},{"name":"Fuel odor from vehicle","total_count":1,"children":[]},{"name":"Inspect canister for cracks or damage","total_count":1,"children":[]},{"name":"Test charcoal canister purge valve","total_count":1,"children":[]}]},{"name":"exhaust_manifold.md","total_count":5,"children":[{"name":"Check exhaust manifold gasket for leaks","total_count":1,"children":[]},{"name":"Exhaust Manifold","total_count":1,"children":[]},{"name":"Exhaust smell in cabin","total_count":1,"children":[]},{"name":"Inspect exhaust manifold for cracks or leaks","total_count":1,"children":[]},{"name":"Loud exhaust noise","total_count":1,"children":[]}]},{"name":"exhaust_manifold_gasket.md","total_count":4,"children":[{"name":"Check exhaust manifold bolts for tightness","total_count":1,"children":[]},{"name":"Exhaust Manifold Gasket","total_count":1,"children":[]},{"name":"Inspect exhaust manifold gasket for leaks","total_count":1,"children":[]},{"name":"Visible exhaust leaks","total_count":1,"children":[]}]},{"name":"fuel_tank_pressure_sensor.md","total_count":4,"children":[{"name":"Check fuel tank cap for proper seal","total_count":1,"children":[]},{"name":"Fuel Tank Pressure Sensor","total_count":1,"children":[]},{"name":"Gas cap warning light","total_count":1,"children":[]},{"name":"Test fuel tank pressure sensor","total_count":1,"children":[]}]},{"name":"knock_sensor.md","total_count":4,"children":[{"name":"Engine knocking/pinging","total_count":1,"children":[]},{"name":"Inspect for engine misfire codes","total_count":1,"children":[]},{"name":"Knock Sensor","total_count":1,"children":[]},{"name":"Test knock sensor operation","total_count":1,"children":[]}]},{"name":"m_a_p_sensor.md","total_count":3,"children":[{"name":"Inspect M.A.P. sensor vacuum hose","total_count":1,"children":[]},{"name":"M.A.P. Sensor","total_count":1,"children":[]},{"name":"Test M.A.P. sensor voltage","total_count":1,"children":[]}]},{"name":"oxygen_sensor.md","total_count":3,"children":[{"name":"Inspect oxygen sensor wiring for damage","total_count":1,"children":[]},{"name":"Oxygen Sensor","total_count":1,"children":[]},{"name":"Test oxygen sensor voltage","total_count":1,"children":[]}]}]},{"name":"emissions_system.md","total_count":1,"children":[{"name":"Emissions System","total_count":1,"children":[]}]},{"name":"engine_compartment","total_count":23,"children":[{"name":"air_filter.md","total_count":4,"children":[{"name":"Air Filter","total_count":1,"children":[]},{"name":"Decreased engine performance","total_count":1,"children":[]},{"name":"Inspect air filter for clogs or dirt","total_count":1,"children":[]},{"name":"Replace air filter if necessary","total_count":1,"children":[]}]},{"name":"engine_control_unit_ecu.md","total_count":3,"children":[{"name":"Check ECU for fault codes","total_count":1,"children":[]},{"name":"Engine Control Unit (ECU)","total_count":1,"children":[]},{"name":"Inspect ECU wiring harness for damage","total_count":1,"children":[]}]},{"name":"engine_oil.md","total_count":4,"children":[{"name":"Check engine oil level and condition","total_count":1,"children":[]},{"name":"Engine Oil","total_count":1,"children":[]},{"name":"Inspect for oil leaks","total_count":1,"children":[]},{"name":"Loud engine noise","total_count":1,"children":[]}]},{"name":"fuel_filter.md","total_count":5,"children":[{"name":"Engine stalls at high speeds","total_count":1,"children":[]},{"name":"Fuel Filter","total_count":1,"children":[]},{"name":"Inspect fuel filter for clogs or debris","total_count":1,"children":[]},{"name":"Poor acceleration","total_count":1,"children":[]},{"name":"Replace fuel filter if necessary","total_count":1,"children":[]}]},{"name":"pcv_valve.md","total_count":4,"children":[{"name":"Check PCV valve hose for cracks","total_count":1,"children":[]},{"name":"Inspect PCV valve for clogs","total_count":1,"children":[]},{"name":"Oil leaks","total_count":1,"children":[]},{"name":"PCV Valve","total_count":1,"children":[]}]},{"name":"throttle_body.md","total_count":3,"children":[{"name":"Inspect throttle body for carbon buildup","total_count":1,"children":[]},{"name":"Test throttle position sensor (TPS)","total_count":1,"children":[]},{"name":"Throttle Body","total_count":1,"children":[]}]}]},{"name":"engine_compartment.md","total_count":1,"children":[{"name":"Engine Compartment","total_count":1,"children":[]}]},{"name":"engine_components","total_count":62,"children":[{"name":"balance_shaft.md","total_count":4,"children":[{"name":"Balance Shaft","total_count":1,"children":[]},{"name":"Check balance shaft alignment","total_count":1,"children":[]},{"name":"Engine vibration","total_count":1,"children":[]},{"name":"Inspect balance shaft for wear or damage","total_count":1,"children":[]}]},{"name":"boost_pressure.md","total_count":5,"children":[{"name":"Boost Pressure","total_count":1,"children":[]},{"name":"Check boost pressure with gauge","total_count":1,"children":[]},{"name":"Inspect intercooler for leaks or damage","total_count":1,"children":[]},{"name":"Loss of power","total_count":1,"children":[]},{"name":"Turbo lag","total_count":1,"children":[]}]},{"name":"diesel_glow_plug.md","total_count":5,"children":[{"name":"Diesel Glow Plug","total_count":1,"children":[]},{"name":"Glow plug indicator light stays on","total_count":1,"children":[]},{"name":"Hard starting in cold weather","total_count":1,"children":[]},{"name":"Inspect glow plug for carbon buildup","total_count":1,"children":[]},{"name":"Test glow plug resistance","total_count":1,"children":[]}]},{"name":"diesel_injection_pump.md","total_count":4,"children":[{"name":"Black smoke from exhaust","total_count":1,"children":[]},{"name":"Diesel Injection Pump","total_count":1,"children":[]},{"name":"Inspect diesel injectors for leaks or clogs","total_count":1,"children":[]},{"name":"Test diesel injection pump pressure","total_count":1,"children":[]}]},{"name":"engine_belt.md","total_count":3,"children":[{"name":"Engine Belt","total_count":1,"children":[]},{"name":"Engine performance issues","total_count":1,"children":[]},{"name":"Inspect engine belt for cuts or wear","total_count":1,"children":[]}]},{"name":"engine_mounts.md","total_count":5,"children":[{"name":"Check mounting bolts for tightness","total_count":1,"children":[]},{"name":"Clunking noise when accelerating","total_count":1,"children":[]},{"name":"Engine Mounts","total_count":1,"children":[]},{"name":"Excessive engine movement","total_count":1,"children":[]},{"name":"Inspect engine mounts for wear or damage","total_count":1,"children":[]}]},{"name":"exhaust_valve.md","total_count":3,"children":[{"name":"Check valve clearance","total_count":1,"children":[]},{"name":"Exhaust Valve","total_count":1,"children":[]},{"name":"Inspect exhaust valve for carbon buildup","total_count":1,"children":[]}]},{"name":"fan_belt.md","total_count":4,"children":[{"name":"Check belt tension and alignment","total_count":1,"children":[]},{"name":"Fan Belt","total_count":1,"children":[]},{"name":"Inspect fan belt for cuts or wear","total_count":1,"children":[]},{"name":"Squealing noise from engine bay","total_count":1,"children":[]}]},{"name":"fuel_injector.md","total_count":3,"children":[{"name":"Fuel Injector","total_count":1,"children":[]},{"name":"Inspect injector for leaks or clogs","total_count":1,"children":[]},{"name":"Test fuel injector spray pattern","total_count":1,"children":[]}]},{"name":"idle_air_control_valve.md","total_count":5,"children":[{"name":"Clean throttle body and IAC valve","total_count":1,"children":[]},{"name":"Erratic idle speed","total_count":1,"children":[]},{"name":"Idle Air Control Valve","total_count":1,"children":[]},{"name":"Stalling at idle","total_count":1,"children":[]},{"name":"Test IAC valve for proper operation","total_count":1,"children":[]}]},{"name":"intake_valve.md","total_count":2,"children":[{"name":"Inspect intake valve for carbon buildup","total_count":1,"children":[]},{"name":"Intake Valve","total_count":1,"children":[]}]},{"name":"oil_pump.md","total_count":5,"children":[{"name":"Engine knocking noise","total_count":1,"children":[]},{"name":"Inspect oil pump for wear or damage","total_count":1,"children":[]},{"name":"Low oil pressure warning light","total_count":1,"children":[]},{"name":"Oil Pump","total_count":1,"children":[]},{"name":"Test oil pressure with gauge","total_count":1,"children":[]}]},{"name":"piston_rings.md","total_count":5,"children":[{"name":"Blue smoke from exhaust","total_count":1,"children":[]},{"name":"Inspect piston rings for wear or damage","total_count":1,"children":[]},{"name":"Loss of engine power","total_count":1,"children":[]},{"name":"Perform compression test","total_count":1,"children":[]},{"name":"Piston Rings","total_count":1,"children":[]}]},{"name":"timing_belt.md","total_count":4,"children":[{"name":"Check timing marks for alignment","total_count":1,"children":[]},{"name":"Engine won't start","total_count":1,"children":[]},{"name":"Inspect timing belt for wear or damage","total_count":1,"children":[]},{"name":"Timing Belt","total_count":1,"children":[]}]},{"name":"valve_cover_gasket.md","total_count":5,"children":[{"name":"Burning oil smell from engine bay","total_count":1,"children":[]},{"name":"Check valve cover bolts for tightness","total_count":1,"children":[]},{"name":"Inspect valve cover gasket for leaks","total_count":1,"children":[]},{"name":"Oil leak around valve cover","total_count":1,"children":[]},{"name":"Valve Cover Gasket","total_count":1,"children":[]}]}]},{"name":"engine_components.md","total_count":1,"children":[{"name":"Engine Components","total_count":1,"children":[]}]},{"name":"fuel_system","total_count":17,"children":[{"name":"fuel_pressure_regulator.md","total_count":4,"children":[{"name":"Check fuel pressure at regulator","total_count":1,"children":[]},{"name":"Engine stalls","total_count":1,"children":[]},{"name":"Fuel Pressure Regulator","total_count":1,"children":[]},{"name":"Test fuel pressure regulator operation","total_count":1,"children":[]}]},{"name":"fuel_pump.md","total_count":4,"children":[{"name":"Engine sputters at high speeds","total_count":1,"children":[]},{"name":"Fuel Pump","total_count":1,"children":[]},{"name":"Inspect fuel pump for leaks or damage","total_count":1,"children":[]},{"name":"Test fuel pump pressure","total_count":1,"children":[]}]},{"name":"fuel_tank.md","total_count":5,"children":[{"name":"Check fuel filler cap for seal","total_count":1,"children":[]},{"name":"Fuel odor inside vehicle","total_count":1,"children":[]},{"name":"Fuel Tank","total_count":1,"children":[]},{"name":"Inspect fuel tank for leaks or damage","total_count":1,"children":[]},{"name":"Visible fuel leak under vehicle","total_count":1,"children":[]}]},{"name":"throttle_position_sensor.md","total_count":4,"children":[{"name":"Engine hesitates on acceleration","total_count":1,"children":[]},{"name":"Inspect TPS wiring for damage or corrosion","total_count":1,"children":[]},{"name":"Test throttle position sensor (TPS) voltage","total_count":1,"children":[]},{"name":"Throttle Position Sensor","total_count":1,"children":[]}]}]},{"name":"fuel_system.md","total_count":1,"children":[{"name":"Fuel System","total_count":1,"children":[]}]},{"name":"liquid_systems","total_count":20,"children":[{"name":"brake_fluid.md","total_count":4,"children":[{"name":"Brake Fluid","total_count":1,"children":[]},{"name":"Brake warning light on","total_count":1,"children":[]},{"name":"Check brake fluid level and condition","total_count":1,"children":[]},{"name":"Inspect brake lines for leaks","total_count":1,"children":[]}]},{"name":"coolant_reservoir.md","total_count":4,"children":[{"name":"Check coolant level in reservoir","total_count":1,"children":[]},{"name":"Coolant Reservoir","total_count":1,"children":[]},{"name":"Inspect reservoir for cracks or leaks","total_count":1,"children":[]},{"name":"Low coolant warning light","total_count":1,"children":[]}]},{"name":"power_steering_fluid.md","total_count":5,"children":[{"name":"Check power steering fluid level","total_count":1,"children":[]},{"name":"Inspect power steering hoses for leaks","total_count":1,"children":[]},{"name":"Power Steering Fluid","total_count":1,"children":[]},{"name":"Stiff steering wheel","total_count":1,"children":[]},{"name":"Whining noise when turning","total_count":1,"children":[]}]},{"name":"radiator.md","total_count":4,"children":[{"name":"Check radiator cap for proper seal","total_count":1,"children":[]},{"name":"Coolant leak","total_count":1,"children":[]},{"name":"Inspect radiator for leaks or damage","total_count":1,"children":[]},{"name":"Radiator","total_count":1,"children":[]}]},{"name":"windshield_washer_fluid.md","total_count":3,"children":[{"name":"Check washer fluid level","total_count":1,"children":[]},{"name":"Inspect washer fluid pump for operation","total_count":1,"children":[]},{"name":"Windshield Washer Fluid","total_count":1,"children":[]}]}]},{"name":"liquid_systems.md","total_count":1,"children":[{"name":"Liquid Systems","total_count":1,"children":[]}]},{"name":"steering","total_count":4,"children":[{"name":"steering_noise.md","total_count":4,"children":[{"name":"Check power steering pump and hoses for leaks","total_count":1,"children":[]},{"name":"Inspect power steering fluid level","total_count":1,"children":[]},{"name":"Noise when turning steering wheel","total_count":1,"children":[]},{"name":"Steering Noise","total_count":1,"children":[]}]}]},{"name":"steering.md","total_count":1,"children":[{"name":"Steering","total_count":1,"children":[]}]},{"name":"transmission","total_count":22,"children":[{"name":"clutch_master_cylinder.md","total_count":5,"children":[{"name":"Check clutch fluid level","total_count":1,"children":[]},{"name":"Clutch Master Cylinder","total_count":1,"children":[]},{"name":"Clutch slipping","total_count":1,"children":[]},{"name":"Inspect master cylinder for leaks","total_count":1,"children":[]},{"name":"Soft clutch pedal","total_count":1,"children":[]}]},{"name":"torque_converter.md","total_count":4,"children":[{"name":"Inspect torque converter for leaks or damage","total_count":1,"children":[]},{"name":"Shuddering during acceleration","total_count":1,"children":[]},{"name":"Slipping gears","total_count":1,"children":[]},{"name":"Torque Converter","total_count":1,"children":[]}]},{"name":"transmission_filter.md","total_count":4,"children":[{"name":"Delayed shifting","total_count":1,"children":[]},{"name":"Inspect transmission filter for clogs or debris","total_count":1,"children":[]},{"name":"Replace transmission filter if necessary","total_count":1,"children":[]},{"name":"Transmission Filter","total_count":1,"children":[]}]},{"name":"transmission_fluid.md","total_count":4,"children":[{"name":"Gears slipping","total_count":1,"children":[]},{"name":"Inspect transmission pan and seals for leaks","total_count":1,"children":[]},{"name":"Transmission Fluid","total_count":1,"children":[]},{"name":"Transmission overheating","total_count":1,"children":[]}]},{"name":"transmission_solenoid.md","total_count":5,"children":[{"name":"Erratic shifting","total_count":1,"children":[]},{"name":"Inspect wiring harness for damage or corrosion","total_count":1,"children":[]},{"name":"Test transmission solenoids for electrical continuity","total_count":1,"children":[]},{"name":"Transmission Solenoid","total_count":1,"children":[]},{"name":"Transmission won't shift gears","total_count":1,"children":[]}]}]},{"name":"transmission.md","total_count":1,"children":[{"name":"Transmission","total_count":1,"children":[]}]},{"name":"wheels_tires","total_count":14,"children":[{"name":"tire_pressure_monitoring_system_tpms.md","total_count":5,"children":[{"name":"Check tire pressures with gauge","total_count":1,"children":[]},{"name":"Inspect TPMS sensors for damage or corrosion","total_count":1,"children":[]},{"name":"Low tire pressure","total_count":1,"children":[]},{"name":"Tire Pressure Monitoring System (TPMS)","total_count":1,"children":[]},{"name":"TPMS warning light on","total_count":1,"children":[]}]},{"name":"wheel_bearing.md","total_count":4,"children":[{"name":"Check wheel bearing for play","total_count":1,"children":[]},{"name":"Grinding noise from wheels","total_count":1,"children":[]},{"name":"Inspect bearing for signs of damage or corrosion","total_count":1,"children":[]},{"name":"Wheel Bearing","total_count":1,"children":[]}]},{"name":"wheel_hub.md","total_count":5,"children":[{"name":"Check wheel bearings for wear","total_count":1,"children":[]},{"name":"Clicking or popping noise when turning","total_count":1,"children":[]},{"name":"Inspect wheel hub for play or bearing noise","total_count":1,"children":[]},{"name":"Wheel Hub","total_count":1,"children":[]},{"name":"Wheel wobbling","total_count":1,"children":[]}]}]},{"name":"wheels_tires.md","total_count":1,"children":[{"name":"Wheels & Tires","total_count":1,"children":[]}]}]};
+
+    function transformData(jsonData) {
+        // Helper function to recursively build the children structure
+        function processNode(node, parentL1StageName) {
+            let displayName = node.name;
+            // Append total_count if it exists and is not already in the name
+            if (node.total_count !== undefined) {
+                if (!/\(Total Count: \d+\)$/.test(displayName)) {
+                    displayName += ` (Total Count: ${node.total_count})`;
+                }
+            }
+
+            const newNode = { name: displayName };
+
+            if (parentL1StageName === "Root") {
+                 newNode.originalStageName = node.name;
+            } else {
+                newNode.originalStageName = parentL1StageName;
+            }
+
+            if (node.children && node.children.length > 0) {
+                const stageNameToPass = (parentL1StageName === "Root") ? node.name : parentL1StageName;
+                newNode.children = node.children.map(child => processNode(child, stageNameToPass));
+            }
+
+            return newNode;
+        }
+
+        let rootDisplayName = jsonData.name;
+        if (jsonData.total_count !== undefined && !/\(Total Count: \d+\)$/.test(rootDisplayName)) {
+            rootDisplayName += ` (Total Count: ${jsonData.total_count})`;
+        }
+
+        return {
+            name: rootDisplayName,
+            originalStageName: "Root",
+            children: (jsonData.children || []).map(child => processNode(child, "Root"))
+        };
+    }
+
+    const treeData = transformData(initialJsonData);
+
+    // Auto-populated phaseColors: every depth-1 child of the root gets
+    // a stable colour from a bigger palette so all top-level dirs are
+    // distinguishable.
+    const PALETTE = [
+      ["#3498DB","#2980B9","#AED6F1"], ["#2ECC71","#27AE60","#A9DFBF"],
+      ["#E74C3C","#C0392B","#F5B7B1"], ["#9B59B6","#8E44AD","#D7BDE2"],
+      ["#F39C12","#D68910","#FAD7A0"], ["#1ABC9C","#117864","#A2D9CE"],
+      ["#34495E","#1B2631","#ABB2B9"], ["#E67E22","#BA4A00","#F5CBA7"],
+      ["#16A085","#0E6655","#A2D9CE"], ["#D35400","#A04000","#EDBB99"],
+      ["#7F8C8D","#566573","#D5DBDB"], ["#C0392B","#7B241C","#F5B7B1"],
+      ["#2E86C1","#1B4F72","#A9CCE3"], ["#28B463","#196F3D","#A9DFBF"],
+      ["#AF7AC5","#6C3483","#D2B4DE"],
+    ];
+    const phaseColors = { "Root": { fill: "#4A4A4A", stroke: "#333333", collapsedFill: "#6C757D" },
+                          "Default": { fill: "#BDC3C7", stroke: "#95A5A6", collapsedFill: "#ECF0F1" } };
+    (initialJsonData.children || []).forEach((c, i) => {
+      const pal = PALETTE[i % PALETTE.length];
+      phaseColors[c.name] = { fill: pal[0], stroke: pal[1], collapsedFill: pal[2] };
+    });
+
+    const levelSpecificPalettes = {
+      0: { fill: "#4A4A4A", stroke: "#333333", collapsedFill: "#6C757D" },
+      2: { fill: "#6ab04c", stroke: "#508a38", collapsedFill: "#a3d391" },
+      3: { fill: "#f0932b", stroke: "#d0730f", collapsedFill: "#f6c07e" },
+      4: { fill: "#be2edd", stroke: "#a01cb3", collapsedFill: "#e08bf2" },
+      5: { fill: "#00a8ff", stroke: "#007ac1", collapsedFill: "#74d2ff" },
+      6: { fill: "#e55039", stroke: "#c23620", collapsedFill: "#f09a8d" },
+      default: { fill: "#747d8c", stroke: "#57606f", collapsedFill: "#a4b0be" }
+    };
+
+    const svgElement = d3.select("#tree-svg");
+    const initialSvgWidth = +svgElement.attr("width");
+    const initialSvgHeight = +svgElement.attr("height");
+    const margin = { top: 40, right: 120, bottom: 80, left: 450 };
+    let width = initialSvgWidth - margin.left - margin.right;
+    let height = initialSvgHeight - margin.top - margin.bottom;
+    const duration = 500;
+    let nodeCounter = 0;
+    const g = svgElement.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+    const treemap = d3.tree().nodeSize([40, 0]);
+    let rootNode = d3.hierarchy(treeData, d => d.children);
+    rootNode.x0 = 0;
+    rootNode.y0 = 0;
+
+    if (rootNode.children) {
+      rootNode.children.forEach(d_child => {
+        if (d_child.children) { collapseBranch(d_child); }
+      });
+    }
+    updateTree(rootNode);
+
+    function collapseBranch(d) { if (d.children) { d._children = d.children; d._children.forEach(collapseBranch); d.children = null; } }
+    function expandBranch(d) { if (d._children) { d.children = d._children; d._children = null; } if (d.children) { d.children.forEach(expandBranch); } }
+    window.expandAll = () => { expandBranch(rootNode); updateTree(rootNode); };
+    window.collapseAll = () => { if (rootNode.children) { rootNode.children.forEach(collapseBranch); } updateTree(rootNode); };
+    window.resetView = () => { if (rootNode.children) { rootNode.children.forEach(d_child => { if (d_child.children || d_child._children) { collapseBranch(d_child); } }); } if (rootNode._children && !rootNode.children) { rootNode.children = rootNode._children; rootNode._children = null; } updateTree(rootNode); };
+
+    function updateTree(source) {
+      const treeLayoutData = treemap(rootNode);
+      let nodes = treeLayoutData.descendants();
+      let links = treeLayoutData.descendants().slice(1);
+
+      let minX = 0;
+      let maxX = 0;
+      if (nodes.length > 0) {
+        minX = d3.min(nodes, d => d.x);
+        maxX = d3.max(nodes, d => d.x);
+      }
+
+      let neededHeight = Math.max(initialSvgHeight, maxX - minX + margin.top + margin.bottom + 100);
+      svgElement.transition().duration(duration / 2).attr("height", neededHeight);
+      g.transition().duration(duration / 2).attr("transform", `translate(${margin.left},${margin.top - minX + 40})`);
+
+      nodes.forEach(d => { d.y = d.depth * 400; }); // Adjust horizontal separation if needed
+
+      const node = g.selectAll('g.node').data(nodes, d => d.id || (d.id = ++nodeCounter));
+      const nodeEnter = node.enter().append('g')
+        .attr('class', d => "node" + (d.children || d._children ? " node--internal" : " node--leaf") + (d._children ? " _children" : ""))
+        .attr('transform', d => `translate(${source.y0},${source.x0})`)
+        .on('click', (event, d) => { if (d.children) { d._children = d.children; d.children = null; } else if (d._children) { d.children = d._children; d._children = null; } updateTree(d); })
+        .style('cursor', d => (d.children || d._children) ? 'pointer' : 'default');
+
+      nodeEnter.append('circle').attr('r', 1e-6);
+
+      nodeEnter.append('text')
+        .attr('dy', '.35em')
+        .attr('x', d => d.children || d._children ? -14 : 14)
+        .attr('text-anchor', d => d.children || d._children ? 'end' : 'start')
+        .style("fill-opacity", 1e-6)
+        .call(wrapText, 380);
+
+      const nodeUpdate = nodeEnter.merge(node);
+      nodeUpdate.transition().duration(duration)
+        .attr('transform', d => `translate(${d.y},${d.x})`)
+        .attr('class', d => "node" + (d.children ? " node--internal" : " node--leaf") + (d._children ? " node--internal _children" : ""));
+
+      nodeUpdate.select('circle').attr('r', 8.5)
+        .style('fill', d => {
+            let palette;
+            if (d.depth === 0) {
+                palette = levelSpecificPalettes[0];
+            } else if (d.depth === 1) {
+                palette = phaseColors[d.data.originalStageName] || phaseColors.Default;
+            } else {
+                palette = levelSpecificPalettes[d.depth] || levelSpecificPalettes.default;
+            }
+            if (d._children) return palette.collapsedFill;
+            if (d.children) return palette.fill;
+            return "#fff";
+        })
+        .style('stroke', d => {
+            let palette;
+            if (d.depth === 0) {
+                palette = levelSpecificPalettes[0];
+            } else if (d.depth === 1) {
+                palette = phaseColors[d.data.originalStageName] || phaseColors.Default;
+            } else {
+                palette = levelSpecificPalettes[d.depth] || levelSpecificPalettes.default;
+            }
+            return palette.stroke;
+        });
+      nodeUpdate.select('text').style("fill-opacity", 1).call(wrapText, 380);
+
+      const nodeExit = node.exit().transition().duration(duration).attr('transform', d => `translate(${source.y},${source.x})`).remove();
+      nodeExit.select('circle').attr('r', 1e-6);
+      nodeExit.select('text').style('fill-opacity', 1e-6);
+
+      const link = g.selectAll('path.link').data(links, d => d.id);
+      const linkEnter = link.enter().insert('path', "g").attr('class', 'link').attr('d', d => { const o = { x: source.x0, y: source.y0 }; return diagonal(o, o); });
+
+      linkEnter.merge(link).transition().duration(duration).attr('d', d => diagonal(d, d.parent))
+        .style('stroke', d => {
+            const sourceNode = d.parent;
+            if (!sourceNode) return phaseColors.Default.stroke;
+            const l1AncestorName = sourceNode.data.originalStageName;
+            const colorPalette = phaseColors[l1AncestorName] || phaseColors.Default;
+            return colorPalette.stroke;
+        });
+      link.exit().transition().duration(duration).attr('d', d => { const o = { x: source.x, y: source.y }; return diagonal(o, o); }).remove();
+      nodes.forEach(d => { d.x0 = d.x; d.y0 = d.y; });
+    }
+
+    function diagonal(s, d) { return `M ${s.y} ${s.x} C ${(s.y + d.y) / 2} ${s.x}, ${(s.y + d.y) / 2} ${d.x}, ${d.y} ${d.x}`; }
+
+    function wrapText(textElements, maxWidth) {
+        const textPartColors = {
+            name: '#343a40',
+            count: '#0056b3'
+        };
+        const countRegex = /(\s\(Total Count: \d+\))$/;
+
+        textElements.each(function () {
+            const textD3 = d3.select(this);
+            const originalNodeText = textD3.datum().data.name;
+            const x = parseFloat(textD3.attr("x") || 0);
+            const initialDy = textD3.attr("dy");
+            const textAnchor = textD3.attr("text-anchor");
+            const lineHeight = 1.1;
+
+            textD3.text(null);
+
+            let namePart = originalNodeText;
+            let countPartText = "";
+
+            const countMatch = originalNodeText.match(countRegex);
+            if (countMatch && originalNodeText.endsWith(countMatch[0])) {
+                namePart = originalNodeText.substring(0, originalNodeText.length - countMatch[0].length).trim();
+                countPartText = countMatch[0].trim();
+            }
+
+            const tokens = [];
+            namePart.split(/\s+/).filter(Boolean).forEach(word => {
+                tokens.push({ text: word, type: 'name' });
+            });
+            if (countPartText) {
+                tokens.push({ text: countPartText, type: 'count' });
+            }
+
+            if (tokens.length === 0 && originalNodeText) {
+                tokens.push({ text: originalNodeText, type: 'name' });
+            }
+
+            let currentTspan = textD3.append("tspan").attr("x", x).attr("dy", initialDy);
+            if (textAnchor === "end") currentTspan.attr("text-anchor", "end");
+
+            let lineTokens = [];
+
+            for (let i = 0; i < tokens.length; i++) {
+                const tokenObj = tokens[i];
+
+                lineTokens.push(tokenObj);
+                currentTspan.text(lineTokens.map(t => t.text).join(" "));
+
+                if (currentTspan.node().getComputedTextLength() > maxWidth && lineTokens.length > 1) {
+                    lineTokens.pop();
+
+                    currentTspan.text(null);
+                    lineTokens.forEach((prevToken, idx) => {
+                        currentTspan.append("tspan")
+                            .text((idx > 0 ? " " : "") + prevToken.text)
+                            .style("fill", textPartColors[prevToken.type] || textPartColors.name)
+                            .style("font-weight", prevToken.type === 'count' ? "bold" : "normal");
+                    });
+
+                    lineTokens = [tokenObj];
+                    currentTspan = textD3.append("tspan").attr("x", x).attr("dy", lineHeight + "em");
+                    if (textAnchor === "end") currentTspan.attr("text-anchor", "end");
+                }
+            }
+
+            currentTspan.text(null);
+            lineTokens.forEach((token, idx) => {
+                currentTspan.append("tspan")
+                    .text((idx > 0 ? " " : "") + token.text)
+                    .style("fill", textPartColors[token.type] || textPartColors.name)
+                    .style("font-weight", token.type === 'count' ? "bold" : "normal");
+            });
+
+            if (textD3.selectAll("tspan > tspan").empty() && textD3.select("tspan").text().length === 0 && originalNodeText) {
+                let t = textD3.select("tspan");
+                let displayText = originalNodeText;
+                t.text(displayText).style("fill", textPartColors.name);
+                if (t.node() && t.node().getComputedTextLength() > maxWidth && displayText.length > 20) {
+                    let estimatedChars = Math.floor(maxWidth / (t.node().getComputedTextLength()/displayText.length) );
+                    displayText = displayText.substring(0, Math.max(0, estimatedChars - 3)) + "...";
+                    t.text(displayText);
+                }
+            }
+        });
+    }
+  </script>
+</body>
+</html>

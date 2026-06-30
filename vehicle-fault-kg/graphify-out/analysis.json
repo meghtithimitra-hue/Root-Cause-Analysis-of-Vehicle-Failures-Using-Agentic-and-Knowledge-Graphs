@@ -1,0 +1,112 @@
+{
+  "god_nodes": [
+    {
+      "id": "subcat_fuel_injector_59ec8d7f",
+      "label": "Fuel Injector",
+      "degree": 17
+    },
+    {
+      "id": "cat_engine_components_dd60acb1",
+      "label": "Engine Components",
+      "degree": 15
+    },
+    {
+      "id": "cat_electrical_system_7a1b3240",
+      "label": "Electrical System",
+      "degree": 14
+    },
+    {
+      "id": "subcat_engine_control_unit_ecu_5b6902c5",
+      "label": "Engine Control Unit (ECU)",
+      "degree": 14
+    },
+    {
+      "id": "subcat_ignition_wire_set_b3d9b4b6",
+      "label": "Ignition Wire Set",
+      "degree": 13
+    },
+    {
+      "id": "subcat_exhaust_valve_5d4a0786",
+      "label": "Exhaust Valve",
+      "degree": 12
+    },
+    {
+      "id": "subcat_intake_valve_7f4dad61",
+      "label": "Intake Valve",
+      "degree": 12
+    },
+    {
+      "id": "cat_drivetrain_2edad178",
+      "label": "Drivetrain",
+      "degree": 11
+    },
+    {
+      "id": "subcat_check_engine_light_diagnosis_2615355f",
+      "label": "Check Engine Light Diagnosis",
+      "degree": 11
+    },
+    {
+      "id": "subcat_ignition_distributor_cap_2ae3c268",
+      "label": "Ignition Distributor Cap",
+      "degree": 11
+    }
+  ],
+  "surprising_connections": [
+    {
+      "source": "Brake Hose",
+      "target": "Brake Fluid",
+      "source_files": [
+        "data/corpus/abs_system/brake_hose.md",
+        "data/corpus/liquid_systems/brake_fluid.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "Brake Shoe & Drum",
+      "target": "Brake dragging",
+      "source_files": [
+        "data/corpus/abs_system/brake_shoe_drum.md",
+        "data/corpus/abs_system/brake_caliper.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "HAS_SYMPTOM",
+      "why": "peripheral node `Brake dragging` unexpectedly reaches hub `Brake Shoe & Drum`"
+    },
+    {
+      "source": "Cabin Air Filter",
+      "target": "Musty odor from vents",
+      "source_files": [
+        "data/corpus/air_conditioning_system/cabin_air_filter.md",
+        "data/corpus/air_conditioning_system/ac_evaporator.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "HAS_SYMPTOM",
+      "why": "peripheral node `Musty odor from vents` unexpectedly reaches hub `Cabin Air Filter`"
+    },
+    {
+      "source": "Coolant/Antifreeze",
+      "target": "Coolant Reservoir",
+      "source_files": [
+        "data/corpus/cooling_system/coolant_antifreeze.md",
+        "data/corpus/liquid_systems/coolant_reservoir.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "Coolant/Antifreeze",
+      "target": "Fan Belt",
+      "source_files": [
+        "data/corpus/cooling_system/coolant_antifreeze.md",
+        "data/corpus/engine_components/fan_belt.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "suggested_questions": []
+}
