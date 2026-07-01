@@ -1,16 +1,24 @@
-"""Streamlit UI for the KG decision pipeline."""
+"""Streamlit UI for the KG decision pipeline (vehicle-fault-kg)."""
 
+import importlib
+import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+# Ensure working directory is vehicle-fault-kg/ so relative paths in
+# the retrieval layer resolve correctly.
+_HERE = Path(__file__).resolve().parent
+_VFK_ROOT = _HERE.parent
+os.chdir(str(_VFK_ROOT))
 
-import importlib
+sys.path.insert(0, str(_VFK_ROOT))
 
 import streamlit as st
-from kg_decision_pipeline.pipeline import run_pipeline
 
-_answer_gen = importlib.import_module("kg_decision_pipeline.04_answer_generator")
+_pipeline = importlib.import_module("kg_decision.pipeline")
+_answer_gen = importlib.import_module("kg_decision.04_answer_generator")
+
+run_pipeline = _pipeline.run_pipeline
 format_graph_answer = _answer_gen.format_graph_answer
 
 MODE_COLORS = {"EXTRACTED": "green", "INFERRED": "orange", "AMBIGUOUS": "red"}
@@ -22,7 +30,7 @@ def _run(query: str, skip: bool) -> dict:
 
 
 def main():
-    st.set_page_config(page_title="KG Decision Pipeline", layout="wide")
+    st.set_page_config(page_title="KG Decision Pipeline — vehicle-fault-kg", layout="wide")
     st.title("🔧 Root-Cause Analysis — KG Decision Pipeline")
 
     if "result" not in st.session_state:
