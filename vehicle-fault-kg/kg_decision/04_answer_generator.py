@@ -13,9 +13,14 @@ from the scorer is returned as-is.
 If mode is AMBIGUOUS and *skip_allowed* is True, the module calls Ollama
 (``llama3.1:8b``) via HTTP POST and returns the LLM response.
 
+Reused from the original kg_decision_pipeline with no contract changes.
+The mode-based dispatch, graph answer formatting, and LLM fallback are all
+independent of how candidates were retrieved.
+
 Usage:
-    from kg_decision_pipeline.04_answer_generator import generate_answer
-    answer = generate_answer(reasoning_path, scored_result)
+    import importlib
+    _gen = importlib.import_module("kg_decision.04_answer_generator")
+    answer = _gen.generate_answer(reasoning_path, scored_result)
 """
 
 import json
@@ -225,21 +230,23 @@ def generate_answer(
 # __main__ smoke test
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    import sys
     import importlib
+    import sys
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
     from scripts.pipeline.hybrid_retrieval import hybrid_retrieve
-    expander = importlib.import_module("kg_decision_pipeline.01_community_expander")
-    scorer = importlib.import_module("kg_decision_pipeline.02_confidence_scorer")
-    path_builder = importlib.import_module("kg_decision_pipeline.03_reasoning_path")
+    _cal = importlib.import_module("kg_decision.00_score_calibrator")
+    _scr = importlib.import_module("kg_decision.02_confidence_scorer")
+    _rpb = importlib.import_module("kg_decision.03_reasoning_path")
+    calibrate_scores = _cal.calibrate_scores
+    score_candidates = _scr.score_candidates
+    build_reasoning_path = _rpb.build_reasoning_path
 
     query = "brake warning light is on and pedal feels soft"
     raw = hybrid_retrieve(query, top_k=10)
-    expanded = expander.expand_candidates(raw)
-    scored = scorer.score_candidates(expanded)
-    rpath = path_builder.build_reasoning_path(scored)
+    calibrated = calibrate_scores(raw)
+    scored = score_candidates(calibrated)
+    rpath = build_reasoning_path(scored)
     answer = generate_answer(rpath, scored)
 
     print(f"Mode: {answer['mode']}")

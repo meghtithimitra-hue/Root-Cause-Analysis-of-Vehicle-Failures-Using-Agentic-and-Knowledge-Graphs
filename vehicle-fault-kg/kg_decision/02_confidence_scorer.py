@@ -1,28 +1,39 @@
 """
 02_confidence_scorer.py
 
-Takes the expanded candidate list from expand_candidates() and produces a
+Takes the calibrated candidate list from calibrate_scores() and produces a
 confidence score, per-candidate mode tag, and an overall decision mode for
-the retrieval result.  Supports LLM fallback via Ollama when the result
-is AMBIGUOUS.
+the retrieval result.
 
-Modes (per candidate, based on source × score):
-    +------------------+-----------+------------------+
-    | source           | score     | tag              |
-    +------------------+-----------+------------------+
-    | "both"           |  > 1.0    | EXTRACTED        |
-    | "both"           |  0.6–1.0  | INFERRED         |
-    | anything else    |  any      | AMBIGUOUS        |
-    +------------------+-----------+------------------+
+This redesigned scorer separates *ranking* from *decision*:
+  - The calibrator produces the ranking score (calibrated relevance).
+  - The scorer computes an *effective confidence* by combining the calibrated
+    score with a *path-confidence factor* derived from the retrieval evidence
+    (found_by, source, community metadata).
 
-Overall mode uses the top candidate's tag.  When mode is AMBIGUOUS a
-clarifying question is generated; if skip_allowed is True or the question
-cannot resolve, the pipeline falls back to llama3.1:8b via Ollama.
+The path factor discounts evidence that is structurally correlated (e.g.,
+graph and community both derive from the same graph) or comes from a single
+path.  This prevents noisy-OR overconfidence when evidence sources are not
+fully independent.
+
+Modes (per candidate):
+  +----------------------+-----------+------------------+
+  | source               | effective | tag              |
+  +----------------------+-----------+------------------+
+  | all (3 paths)        |  >= 0.75  | EXTRACTED        |
+  | vector+graph         |  >= 0.75  | EXTRACTED        |
+  | vector+community     |  >= 0.75  | EXTRACTED        |
+  | any multi-path       |  0.55-0.74| INFERRED         |
+  | multi-cat community  |  >= 0.55  | INFERRED         |
+  | single-path          |  < 0.55   | AMBIGUOUS        |
+  +----------------------+-----------+------------------+
+
+Supports LLM fallback via Ollama when the result is AMBIGUOUS.
 
 Usage:
-    from kg_decision_pipeline import expand_candidates, score_candidates
-    expanded = expand_candidates(hybrid_retrieve("brake pedal spongy"))
-    result = score_candidates(expanded, skip_allowed=False)
+    import importlib
+    _scr = importlib.import_module("kg_decision.02_confidence_scorer")
+    result = _scr.score_candidates(calibrated_result, skip_allowed=False)
 """
 
 import json
@@ -32,18 +43,65 @@ from typing import Any
 OLLAMA_MODEL = "llama3.1:8b"
 OLLAMA_TIMEOUT = 60
 
+# ---------------------------------------------------------------------------
+# Path-confidence factors
+#
+# This reflects how much independent evidence the retrieval paths provide.
+#
+# NOTE: The path factors here work in concert with the calibrator offsets in
+# 00_score_calibrator.py.  If the retrieval's cumulative boost behavior
+# changes (see WARNING in 00_score_calibrator.py::SOURCE_OFFSETS["all"]),
+# the effective-confidence values and mode thresholds may need adjustment.
+# ---------------------------------------------------------------------------
+PATH_CONFIDENCE = {
+    "all":                1.00,   # 3 independent paths — highest confidence
+    "vector+graph":       0.95,   # vector (semantic) + graph (structural) — orthogonal, near-full confidence
+    "vector+community":   0.85,   # vector + community (partially correlated w/ graph)
+    "graph+community":    0.70,   # both structural — correlated, no semantic evidence
+    "vector":             0.55,   # single semantic path only
+    "community":          0.45,   # single community path only
+    "graph":              0.35,   # single structural path only
+}
+
+# Bonus for multi-category communities (they represent genuine cross-system
+# fault relationships and are higher quality clusters).
+MULTI_CAT_COMMUNITY_BONUS = 0.10
+
+# Thresholds for mode assignment (applied to effective_confidence)
+EXTRACTED_THRESHOLD = 0.75
+INFERRED_THRESHOLD = 0.55
+
 
 # ---------------------------------------------------------------------------
 # Candidate tagging
 # ---------------------------------------------------------------------------
-def _tag_candidate(candidate: dict) -> str:
-    """Return EXTRACTED / INFERRED / AMBIGUOUS for a single candidate."""
+def _effective_confidence(candidate: dict) -> float:
+    """Compute effective confidence = calibrated_score x path factor.
+
+    The path factor is looked up from PATH_CONFIDENCE by source, with an
+    optional bonus for multi-category community candidates.
+    """
     source = candidate.get("source", "")
     score = candidate.get("score", 0.0)
+    is_multi = candidate.get("is_multi_category", "False") == "True"
+    # Also accept boolean from community-map if present
+    if isinstance(candidate.get("is_multi_category"), bool):
+        is_multi = candidate["is_multi_category"]
 
-    if source == "both" and score >= 0.80:
+    pc = PATH_CONFIDENCE.get(source, 0.30)
+    if source == "community" and is_multi:
+        pc += MULTI_CAT_COMMUNITY_BONUS
+
+    return score * pc
+
+
+def _tag_candidate(candidate: dict) -> str:
+    """Return EXTRACTED / INFERRED / AMBIGUOUS for a single candidate."""
+    effective = _effective_confidence(candidate)
+
+    if effective >= EXTRACTED_THRESHOLD:
         return "EXTRACTED"
-    if source == "both" and score >= 0.55:
+    if effective >= INFERRED_THRESHOLD:
         return "INFERRED"
     return "AMBIGUOUS"
 
@@ -60,8 +118,8 @@ def _generate_clarifying_question(query: str, candidates: list[dict]) -> str:
     labels_text = ", ".join(f'"{l}"' for l in top_labels) if top_labels else "(none)"
 
     return (
-        f"The query \"{query}\" matched ambiguous results "
-        f"(top labels: {labels_text}). "
+        f'The query "{query}" matched ambiguous results '
+        f'(top labels: {labels_text}). '
         "Can you provide more detail — e.g. type of symptom, "
         "when it occurs (starting/idling/driving), any warning lights, "
         "or recent repairs?"
@@ -123,23 +181,11 @@ def _call_ollama(
         return f"LLM fallback error: {exc}"
 
 
-def _format_candidates_for_llm(candidates: list[dict]) -> str:
-    rows = []
-    for i, c in enumerate(candidates[:5], 1):
-        rows.append(
-            f"  {i}. [{c.get('source','?')}] "
-            f"score={c.get('score',0):.3f}  "
-            f"type={c.get('node_type','?')}  "
-            f"label={c.get('label','?')}"
-        )
-    return "\n".join(rows)
-
-
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
 def score_candidates(
-    expanded_result: dict,
+    calibrated_result: dict,
     skip_allowed: bool = False,
     llm_model: str = OLLAMA_MODEL,
 ) -> dict[str, Any]:
@@ -148,9 +194,10 @@ def score_candidates(
 
     Parameters
     ----------
-    expanded_result : dict
-        Output of *expand_candidates()* — must have keys *query* (str) and
-        *candidates* (list of dicts with at least *score*, *source*, *label*).
+    calibrated_result : dict
+        Output of *calibrate_scores()* — must have keys *query* (str) and
+        *candidates* (list of dicts with at least *score*, *source*, *label*,
+        *node_type*, *is_multi_category*).
     skip_allowed : bool
         If True, bypass candidate-scoring and go straight to LLM fallback.
     llm_model : str
@@ -160,14 +207,14 @@ def score_candidates(
     -------
     dict with keys:
         mode                str   — "EXTRACTED" | "INFERRED" | "AMBIGUOUS"
-        confidence          float — top candidate's score (or 0.0 if empty)
+        confidence          float — top candidate's effective confidence (or 0.0)
         candidates_scored   list  — each candidate with an added "tag" field
         clarifying_question str | None
         skip_allowed        bool
         llm_fallback_answer str | None
     """
-    query = expanded_result["query"]
-    candidates = expanded_result["candidates"]
+    query = calibrated_result["query"]
+    candidates = calibrated_result["candidates"]
 
     # -- Skip bypass: go straight to LLM ------------------------------------
     if skip_allowed:
@@ -184,7 +231,7 @@ def score_candidates(
     # -- Tag every candidate ------------------------------------------------
     candidates_scored = []
     for c in candidates:
-        tagged = dict(c)  # shallow copy
+        tagged = dict(c)
         tagged["tag"] = _tag_candidate(c)
         candidates_scored.append(tagged)
 
@@ -200,7 +247,7 @@ def score_candidates(
         }
 
     top = candidates_scored[0]
-    confidence = top.get("score", 0.0)
+    confidence = _effective_confidence(top)
     mode = top["tag"]
 
     clarifying_question = None
@@ -224,21 +271,18 @@ def score_candidates(
 # __main__ smoke test
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    import sys
     import importlib
+    import sys
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
     from scripts.pipeline.hybrid_retrieval import hybrid_retrieve
-    expander = importlib.import_module(
-        "kg_decision_pipeline.01_community_expander"
-    )
-    expand_candidates = expander.expand_candidates
+    _cal = importlib.import_module("kg_decision.00_score_calibrator")
+    calibrate_scores = _cal.calibrate_scores
 
     query = "brake warning light is on and pedal feels soft"
     raw = hybrid_retrieve(query, top_k=10)
-    expanded = expand_candidates(raw)
-    result = score_candidates(expanded)
+    calibrated = calibrate_scores(raw)
+    result = score_candidates(calibrated)
 
     print(f"Query: {result.get('mode', '?')}  "
           f"(confidence={result.get('confidence', 0):.3f})")
@@ -248,10 +292,13 @@ if __name__ == "__main__":
         print(f"Clarifying question: {result['clarifying_question']}")
     if result.get("llm_fallback_answer"):
         print(f"LLM fallback: {result['llm_fallback_answer'][:200]}...")
-    print(f"\n{'Rank':<5} {'Tag':<12} {'Score':<6} {'Source':<10} {'Label'}")
-    print("-" * 100)
+    print(f"\n{'Rank':<5} {'Tag':<12} {'Score':<7} {'Eff':<7} {'Source':<20} {'Label'}")
+    print("-" * 110)
     for i, c in enumerate(result.get("candidates_scored", []), 1):
+        tag = c.get('tag', '?')
+        score = c.get('score', 0.0)
+        eff = _effective_confidence(c)
         print(
-            f"{i:<5} {c.get('tag','?'):<12} {c['score']:<6.3f} "
-            f"{c.get('source','?'):<10} {c['label'][:55]}"
+            f"{i:<5} {tag:<12} {score:<7.3f} {eff:<7.3f} "
+            f"{c.get('source','?'):<20} {c['label'][:55]}"
         )

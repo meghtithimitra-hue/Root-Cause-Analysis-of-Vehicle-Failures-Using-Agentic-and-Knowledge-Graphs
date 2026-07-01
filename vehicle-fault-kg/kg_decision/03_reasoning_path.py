@@ -7,16 +7,23 @@ data/processed/hierarchical_graph.json to walk from each matched node up
 to its Subcategory and Category parents, collects sibling Symptoms and
 DiagnosisSteps, and produces a human-readable chain of reasoning.
 
+Adapted from the original kg_decision_pipeline.  The hierarchical graph
+schema (node types, edge relations, direction) is identical between the old
+and new pipelines, so only import paths changed.
+
 Usage:
-    from kg_decision_pipeline.03_reasoning_path import build_reasoning_path
-    path = build_reasoning_path(scored_result)
+    import importlib
+    _rpb = importlib.import_module("kg_decision.03_reasoning_path")
+    path = _rpb.build_reasoning_path(scored_result)
 """
 
 import json
 from collections import defaultdict
+from pathlib import Path
 from typing import Any
 
-HIERARCHICAL_GRAPH_PATH = "data/processed/hierarchical_graph.json"
+_HERE = Path(__file__).resolve().parent
+HIERARCHICAL_GRAPH_PATH = str(_HERE.parent / "data" / "processed" / "hierarchical_graph.json")
 
 # ---------------------------------------------------------------------------
 # Lazy-loaded indexes
@@ -72,6 +79,7 @@ def _walk_up(
 
     nt = current.get("node_type", "")
     chain = []
+    subcat = None
 
     # -- Subcategory or above ------------------------------------------------
     if nt == "Subcategory":
@@ -80,16 +88,14 @@ def _walk_up(
         return None, current, [f"Category '{current['label']}' is the root."]
     elif nt in ("Symptom", "DiagnosisStep"):
         p_ids = parents.get(node_id, [])
-        subcat_node = None
         for pid in p_ids:
             pn = nodes.get(pid)
             if pn and pn.get("node_type") == "Subcategory":
-                subcat_node = pn
+                subcat = pn
                 chain.append(
                     f"{nt} '{current['label']}' matched — "
                     f"under Subcategory '{pn['label']}'."
                 )
-                subcat = pn
                 break
         else:
             chain.append(
@@ -247,23 +253,20 @@ def build_reasoning_path(
 # __main__ smoke test
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    import sys
     import importlib
+    import sys
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-
     from scripts.pipeline.hybrid_retrieval import hybrid_retrieve
-    expander = importlib.import_module(
-        "kg_decision_pipeline.01_community_expander"
-    )
-    scorer = importlib.import_module(
-        "kg_decision_pipeline.02_confidence_scorer"
-    )
+    _cal = importlib.import_module("kg_decision.00_score_calibrator")
+    _scr = importlib.import_module("kg_decision.02_confidence_scorer")
+    calibrate_scores = _cal.calibrate_scores
+    score_candidates = _scr.score_candidates
 
     query = "brake warning light is on and pedal feels soft"
     raw = hybrid_retrieve(query, top_k=10)
-    expanded = expander.expand_candidates(raw)
-    scored = scorer.score_candidates(expanded)
+    calibrated = calibrate_scores(raw)
+    scored = score_candidates(calibrated)
     path = build_reasoning_path(scored)
 
     print(f"Query: {path['query']}")
