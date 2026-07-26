@@ -1,0 +1,5 @@
+Rows               : 14743
+Columns            : 34
+Missing Values     : 0
+Duplicate Rows     : 0
+Numeric Columns    : 34
