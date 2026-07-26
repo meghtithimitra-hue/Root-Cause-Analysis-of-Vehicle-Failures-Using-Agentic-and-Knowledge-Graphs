@@ -78,7 +78,7 @@ def main():
             )
             st.rerun()
 
-        if st.button("Skip — use LLM fallback", key="skip_btn"):
+        if st.button("Skip", key="skip_btn"):
             st.session_state.result = _run(
                 result.get("query", ""), skip=True,
             )

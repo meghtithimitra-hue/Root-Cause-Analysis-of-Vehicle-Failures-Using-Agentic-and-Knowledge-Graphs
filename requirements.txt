@@ -1,0 +1,21 @@
+# Vehicle Fault Diagnosis System - Dependencies
+# Core
+streamlit>=1.28.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# NLP / Embeddings
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# Search
+rank-bm25>=0.2.2
+
+# Graph
+neo4j>=5.0.0
+
+# LLM (optional)
+requests>=2.31.0
+
+# Utilities
+python-dotenv>=1.0.0
