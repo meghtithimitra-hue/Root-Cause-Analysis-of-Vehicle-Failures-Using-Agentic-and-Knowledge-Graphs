@@ -1,12 +1,11 @@
 """Explanation generator for the decision engine.
 
-Converts a diagnostic report into natural language explanations.
-Uses LLM (Ollama) when available, with deterministic template fallback.
-
-Also handles the AI-Assisted Analysis path for AMBIGUOUS skip.
+Generates plain-English diagnosis summaries and AI-assisted
+analysis.  Uses LLM (Ollama) when available, with deterministic
+template fallback.
 
 This module is the **single source of truth** for all diagnosis
-summaries and explanations.  The Streamlit UI (``app.py``) only
+summaries displayed in the UI.  The Streamlit UI (``app.py``) only
 renders what this module produces — it never generates its own
 diagnosis text.
 """
@@ -20,21 +19,14 @@ from typing import Any, Dict, List, Optional
 # System prompts for LLM calls
 # ---------------------------------------------------------------------------
 
-_EXPLANATION_SYSTEM_PROMPT = (
-    "You are an automotive diagnostic assistant. Explain the diagnosis "
-    "clearly and concceely. Use the provided reasoning chain and evidence "
-    "to justify your explanation. Be factual — do not speculate beyond "
-    "the evidence."
-)
-
 _DIAGNOSIS_SUMMARY_SYSTEM_PROMPT = (
     "You are an automotive diagnostic assistant. Using ONLY the "
     "provided knowledge graph data, write a concise plain-English "
-    "diagnosis summary. Explain what the most likely fault is, why "
-    "the system selected it based on the matched symptoms, and what "
-    "the recommended next inspection steps are. Do NOT mention "
-    "confidence scores, retrieval scores, embeddings, calibration, "
-    "or any implementation details. Keep it under 150 words."
+    "diagnosis summary. Explain what the most likely fault is and "
+    "why the system selected it based on the matched symptoms. "
+    "Do NOT mention recommended inspection steps, confidence scores, "
+    "retrieval scores, embeddings, calibration, or any implementation "
+    "details. Keep it under 100 words."
 )
 
 _AI_ASSISTED_SYSTEM_PROMPT = (
@@ -100,50 +92,6 @@ def _lookup_diagnosis_steps(subcategory_label: str) -> List[str]:
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
-
-def generate_explanation(
-    mode: str,
-    top_candidate: Dict[str, Any],
-    display_candidates: List[Dict[str, Any]],
-    reasoning_chain: List[Dict[str, Any]],
-    sensor_evidence: Dict[str, Any],
-    llm_provider=None,
-) -> str:
-    """Generate a natural language explanation for the diagnosis.
-
-    Parameters
-    ----------
-    mode : str
-        EXTRACTED, INFERRED, or AMBIGUOUS.
-    top_candidate : dict
-        The top-ranked candidate with confidence and metadata.
-    display_candidates : list[dict]
-        All candidates shown to the user (within mode band).
-    reasoning_chain : list[dict]
-        Output of ``build_reasoning_chain()``.
-    sensor_evidence : dict
-        Per-fault sensor validation results.
-    llm_provider : optional
-        ``LLMProvider`` instance, or None for template-only.
-
-    Returns
-    -------
-    str
-        Natural language explanation.
-    """
-    context = _build_context(
-        mode, top_candidate, display_candidates,
-        reasoning_chain, sensor_evidence,
-    )
-
-    if llm_provider is not None and llm_provider.is_available():
-        prompt = _build_explanation_prompt(mode, context)
-        response = llm_provider.generate(prompt, _EXPLANATION_SYSTEM_PROMPT)
-        if response:
-            return response
-
-    return _template_explanation(mode, context)
-
 
 def generate_brief_summary(
     mode: str,
@@ -224,9 +172,6 @@ def generate_diagnosis_summary(
     category = top_candidate.get("category", "")
     subcategory = top_candidate.get("subcategory", "")
 
-    # Diagnosis steps from KG
-    steps = _lookup_diagnosis_steps(subcategory)
-
     # Sensor evidence
     sensor_detail = _format_sensor_detail(fault, sensor_evidence)
 
@@ -241,9 +186,6 @@ def generate_diagnosis_summary(
         f"Knowledge graph subcategory: {subcategory}\n"
         f"Matched symptoms: {symptoms_text}\n"
     )
-    if steps:
-        context += "Recommended inspection steps:\n"
-        context += "\n".join(f"- {s}" for s in steps[:4]) + "\n"
     if sensor_detail:
         context += f"Sensor evidence: {sensor_detail}\n"
 
@@ -261,7 +203,7 @@ def generate_diagnosis_summary(
     # Template fallback
     return _template_diagnosis_summary(
         mode, label, category, subcategory,
-        symptoms_text, steps, sensor_detail,
+        symptoms_text, sensor_detail,
     )
 
 
@@ -324,19 +266,6 @@ def generate_ai_assisted_analysis(
 # Context builders
 # ---------------------------------------------------------------------------
 
-def _build_context(
-    mode, top_candidate, display_candidates, reasoning_chain, sensor_evidence,
-):
-    """Build a context dict for template/LLM generation."""
-    return {
-        "mode": mode,
-        "top_candidate": top_candidate,
-        "display_candidates": display_candidates,
-        "reasoning_chain": reasoning_chain,
-        "sensor_evidence": sensor_evidence,
-    }
-
-
 def _build_ai_assisted_context(symptoms, candidates):
     """Build context for AI-assisted analysis."""
     candidate_summaries = []
@@ -358,38 +287,38 @@ def _build_ai_assisted_context(symptoms, candidates):
 # ---------------------------------------------------------------------------
 
 def _format_sensor_detail(fault, sensor_evidence):
-    """Format sensor evidence into a human-readable string."""
+    """Format sensor evidence into a human-readable string.
+
+    Uses the sensor dictionary to present display names and
+    descriptions alongside raw INCA names.
+    """
     if not fault or fault not in sensor_evidence:
         return ""
+
+    from .sensor_explanation import enrich_sensor
+
     se = sensor_evidence[fault]
-    critical = se.get("critical", [])
-    warning = se.get("warning", [])
-    if critical:
-        return f"Sensor readings flagged critical issues: {', '.join(critical)}."
-    elif warning:
-        return f"Sensor readings showed warnings: {', '.join(warning)}."
-    return "Sensor readings are within normal range."
+    parts = []
+
+    for level, label in [("critical", "CRITICAL"), ("warning", "WARNING")]:
+        sensors = se.get(level, [])
+        if sensors:
+            for s in sensors:
+                info = enrich_sensor(s)
+                desc = info["description"]
+                desc_str = f" — {desc}" if desc else ""
+                parts.append(
+                    f"{info['display_name']} ({s}): {label}{desc_str}"
+                )
+
+    if parts:
+        return "; ".join(parts)
+    return "All sensor readings are within the normal range."
 
 
 # ---------------------------------------------------------------------------
 # Prompt builders
 # ---------------------------------------------------------------------------
-
-def _build_explanation_prompt(mode, context):
-    """Build the LLM prompt for explanation generation."""
-    top = context["top_candidate"]
-    chain_text = "\n".join(
-        f"- {s['step']}: {s['detail']}" for s in context["reasoning_chain"]
-    )
-
-    prompt = f"Mode: {mode}\n"
-    prompt += f"Top diagnosis: {top.get('label', 'Unknown')} "
-    prompt += f"(confidence: {top.get('confidence', 0.0):.0%})\n"
-    prompt += f"Reasoning chain:\n{chain_text}\n"
-    prompt += "\nProvide a clear explanation of this diagnosis."
-
-    return prompt
-
 
 def _build_ai_assisted_prompt(context):
     """Build the LLM prompt for AI-assisted analysis."""
@@ -411,95 +340,9 @@ def _build_ai_assisted_prompt(context):
 # Template fallbacks
 # ---------------------------------------------------------------------------
 
-def _template_explanation(mode, context):
-    """Dispatch to mode-specific template."""
-    templates = {
-        "EXTRACTED": _template_extracted,
-        "INFERRED": _template_inferred,
-        "AMBIGUOUS": _template_ambiguous,
-    }
-    template_fn = templates.get(mode, _template_ambiguous)
-    return template_fn(context)
-
-
-def _template_extracted(context):
-    top = context["top_candidate"]
-    label = top.get("label", "Unknown")
-    fault = top.get("navic_fault", "")
-
-    text = f"**Diagnosis: {label}**\n\n"
-    text += "The system has high confidence in this diagnosis "
-    text += "based on strong evidence from the knowledge graph.\n\n"
-
-    chain = context["reasoning_chain"]
-    if chain:
-        text += "**Reasoning:**\n"
-        for s in chain:
-            text += f"- {s['detail']}\n"
-        text += "\n"
-
-    sensor = context.get("sensor_evidence", {})
-    if fault and fault in sensor:
-        si = sensor[fault]
-        if si.get("critical") or si.get("warning"):
-            text += "**Sensor confirmation:** Sensor data supports this diagnosis.\n"
-        else:
-            text += "**Sensor status:** No strong sensor confirmation available.\n"
-    else:
-        text += "**Sensor status:** No numerical sensor data available for this fault.\n"
-
-    return text.strip()
-
-
-def _template_inferred(context):
-    top = context["top_candidate"]
-    label = top.get("label", "Unknown")
-
-    text = f"**Best guess: {label}**\n\n"
-    text += "This is the most likely fault based on available evidence, "
-    text += "but additional information could improve certainty.\n\n"
-
-    alts = context["display_candidates"]
-    if len(alts) > 1:
-        text += "**Alternative possibilities:**\n"
-        for c in alts[1:3]:
-            text += f"- {c.get('label', '')}\n"
-        text += "\n"
-
-    chain = context["reasoning_chain"]
-    if chain:
-        text += "**Reasoning:**\n"
-        for s in chain:
-            text += f"- {s['detail']}\n"
-        text += "\n"
-
-    text += "You can provide additional symptoms to refine this diagnosis, "
-    text += "or accept it as-is."
-
-    return text.strip()
-
-
-def _template_ambiguous(context):
-    top = context["top_candidate"]
-
-    text = "**Insufficient evidence for a confident diagnosis.**\n\n"
-
-    if top and top.get("confidence", 0) > 0:
-        label = top.get("label", "Unknown")
-        text += f"The closest match is \"{label}\", "
-        text += "but this does not meet the threshold for a reliable diagnosis.\n\n"
-
-    text += "Please provide more details about your symptoms, such as:\n"
-    text += "- When the issue occurs (e.g., at specific speeds, temperatures)\n"
-    text += "- Any error codes displayed\n"
-    text += "- Additional symptoms you have noticed\n"
-
-    return text.strip()
-
-
 def _template_diagnosis_summary(
     mode, label, category, subcategory,
-    symptoms_text, steps, sensor_detail,
+    symptoms_text, sensor_detail,
 ):
     """Deterministic template for the diagnosis summary."""
     parts = []
@@ -522,11 +365,6 @@ def _template_diagnosis_summary(
             f"The reported symptoms ({symptoms_text}) are consistent "
             f"with this type of fault."
         )
-
-    if steps:
-        parts.append("**Recommended next steps:**")
-        for s in steps[:3]:
-            parts.append(f"- {s}")
 
     if sensor_detail:
         parts.append(f"**Sensor status:** {sensor_detail}")

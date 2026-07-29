@@ -297,8 +297,6 @@ def main():
         print(f"Confidence: {report.confidence:.0%}")
         print(f"{'='*60}")
         print(report.summary)
-        print()
-        print(report.explanation)
 
 
 if __name__ == "__main__":

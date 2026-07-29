@@ -25,7 +25,14 @@ if str(NUM_PIPELINE_DIR / "scripts") not in sys.path:
 import streamlit as st
 import pandas as pd
 from num_pipeline.scripts.decision_engine.engine import DiagnosticReport
+from num_pipeline.scripts.decision_engine.explanation import _lookup_diagnosis_steps
 from num_pipeline.scripts.run_diagnostic import run_diagnostic
+from num_pipeline.scripts.decision_engine.sensor_explanation import (
+    enrich_sensor,
+    build_sensor_interpretations,
+    generate_sensor_histogram,
+    get_sensor_boxplot_path,
+)
 
 
 # ─── Page Config ───────────────────────────────────────────────────
@@ -73,6 +80,7 @@ st.markdown("""
     .kg-subcat { background: #d6eaf8; color: #2471a3; }
     .kg-symptom { background: #d5f5e3; color: #1e8449; }
     .kg-candidate { background: #fdebd0; color: #ca6f1e; }
+    .kg-step { background: #fadbd8; color: #943126; }
     .kg-arrow { color: #aaa; font-size: 0.9em; }
     .badge-top {
         display: inline-block;
@@ -110,6 +118,8 @@ if "ai_assisted_text" not in st.session_state:
     st.session_state.ai_assisted_text = ""
 if "engine_speed" not in st.session_state:
     st.session_state.engine_speed = 1000
+if "refinement_comparison" not in st.session_state:
+    st.session_state.refinement_comparison = None
 
 
 # ─── Main App ──────────────────────────────────────────────────────
@@ -124,7 +134,7 @@ def main():
 
     st.markdown("**Quick Examples:**")
     example_symptoms = [
-        "Brake pedal feels spongy",
+        "Clutch pedal feels spongy",
         "ABS warning light on, brake pedal pulsation",
         "Engine overheating, coolant loss",
         "Steering pulls to the left",
@@ -208,6 +218,10 @@ def main():
 
     report = st.session_state.report
 
+    if st.session_state.refinement_comparison:
+        _display_refinement_comparison(st.session_state.refinement_comparison)
+        return
+
     if report:
         display_diagnosis(report)
 
@@ -258,9 +272,6 @@ def display_diagnosis(report: DiagnosticReport):
     if report.diagnosis_summary:
         st.markdown(report.diagnosis_summary)
 
-    # ── Explanation (from engine) ─────────────────────────────────
-    if report.explanation:
-        st.markdown(report.explanation)
 
     # ── Recommended inspection steps (from engine) ────────────────
     if report.inspection_steps:
@@ -292,7 +303,6 @@ def display_diagnosis(report: DiagnosticReport):
                             metric_items.append(f"{k}: {v}")
                     if metric_items:
                         st.caption(" · ".join(metric_items))
-
         # ── Sensor Validation Debug (temporary) ──────────────────
         sd = getattr(report, "sensor_debug", {})
         if sd:
@@ -332,6 +342,7 @@ def _build_kg_chain(candidate: dict) -> str:
     - Subcategory:  blue
     - Symptom:      green
     - Candidate:    orange
+    - Diagnosis Step: red
     """
     label = candidate.get("label", "")
     subcategory = candidate.get("subcategory", "")
@@ -348,6 +359,10 @@ def _build_kg_chain(candidate: dict) -> str:
     if len(nodes) < 2:
         return ""
 
+    diagnosis_steps = _lookup_diagnosis_steps(subcategory) if subcategory else []
+    for step_label in diagnosis_steps:
+        nodes.append(("kg-step", step_label))
+
     pills = []
     for i, (cls, text) in enumerate(nodes):
         if i > 0:
@@ -358,6 +373,16 @@ def _build_kg_chain(candidate: dict) -> str:
 
 
 # ─── Candidate Display ─────────────────────────────────────────────
+
+def _get_sensor_detail(sensor_name: str, report, fault_id: str) -> dict:
+    """Extract per-sensor detail from ``sensor_results_raw``."""
+    raw = getattr(report, "sensor_results_raw", {})
+    results = raw.get(fault_id, {}).get("sensor_results", [])
+    for entry in results:
+        if entry.get("sensor") == sensor_name:
+            return entry
+    return {}
+
 
 def _display_candidates(report: DiagnosticReport):
     """Display all candidates in the mode's threshold band."""
@@ -396,18 +421,108 @@ def _display_candidates(report: DiagnosticReport):
         if chain_html:
             st.markdown(chain_html, unsafe_allow_html=True)
 
-        # Expandable sensor detail
+        # Expandable sensor detail — interpretation narrative + EDA visuals
         fault = c.get("navic_fault", "")
         if has_sensor and fault and fault in report.sensor_evidence:
             se = report.sensor_evidence[fault]
             if se.get("critical") or se.get("warning"):
+                speed = getattr(report, "sensor_debug", {}).get("speed", 1000)
+
+                # Build grounded interpretations from existing data
+                interp_result = build_sensor_interpretations(
+                    fault_id=fault,
+                    sensor_results_raw=getattr(report, "sensor_results_raw", {}),
+                    sensor_evidence=report.sensor_evidence,
+                    speed=speed,
+                )
+
                 with st.expander(f"Sensor detail — {label}", expanded=False):
-                    for s in se.get("critical", []):
-                        st.markdown(f"🔴 **{s}**: CRITICAL")
-                    for s in se.get("warning", []):
-                        st.markdown(f"🟡 **{s}**: WARNING")
-                    for s in se.get("normal", []):
-                        st.markdown(f"⚪ {s}: Normal")
+
+                    # ── Overall narrative ─────────────────────────────
+                    st.markdown(interp_result["overall_narrative"])
+
+                    # ── Per-sensor evidence summaries ────────────────
+                    for s_name in se.get("critical", []):
+                        si = interp_result["interpretations"].get(s_name, {})
+                        st.markdown(
+                            f"🔴 **{si.get('display_name', s_name)}**: CRITICAL"
+                        )
+                        st.markdown(
+                            f"   *{si.get('abnormality', '')}*"
+                        )
+                        if si.get("relevance"):
+                            st.markdown(f"   **Relevance:** {si['relevance']}")
+                        if si.get("contribution"):
+                            st.markdown(f"   **Contribution:** {si['contribution']}")
+
+                    for s_name in se.get("warning", []):
+                        si = interp_result["interpretations"].get(s_name, {})
+                        st.markdown(
+                            f"🟡 **{si.get('display_name', s_name)}**: WARNING"
+                        )
+                        st.markdown(
+                            f"   *{si.get('abnormality', '')}*"
+                        )
+                        if si.get("relevance"):
+                            st.markdown(f"   **Relevance:** {si['relevance']}")
+                        if si.get("contribution"):
+                            st.markdown(f"   **Contribution:** {si['contribution']}")
+
+                    for s_name in se.get("normal", []):
+                        info = enrich_sensor(s_name)
+                        st.markdown(
+                            f"⚪ **{info['display_name']}** ({s_name}): Normal"
+                        )
+
+                    # ── Sensor visualisations (box plot + histogram) ──
+                    flagged = se.get("critical", []) + se.get("warning", [])
+                    sensor_vis = []
+                    for s_name in flagged:
+                        detail = _get_sensor_detail(
+                            s_name, report, fault,
+                        )
+                        cv = detail.get("current_value")
+                        nm = detail.get("nominal_mean")
+                        fig = generate_sensor_histogram(
+                            s_name, speed, cv, nm,
+                        )
+                        bx_path = get_sensor_boxplot_path(speed, s_name)
+                        if fig is not None:
+                            sensor_vis.append((s_name, fig, bx_path))
+
+                    if sensor_vis:
+                        st.markdown("---")
+                        st.markdown(
+                            "**Distributions of flagged sensors "
+                            "(nominal condition):**"
+                        )
+                        st.caption(
+                            "Box plots and histograms of the nominal dataset "
+                            "for each flagged sensor. "
+                            "Red dashed lines mark the current reading; "
+                            "green dashed lines mark the nominal mean. "
+                            "The visual distance between these markers "
+                            "reinforces the numerical z-score analysis above."
+                        )
+                        for s_name, fig, bx_path in sensor_vis:
+                            with st.expander(
+                                f"Distribution: {s_name}", expanded=False
+                            ):
+                                col_left, col_right = st.columns(2)
+                                with col_left:
+                                    if bx_path:
+                                        st.image(
+                                            bx_path,
+                                            caption=f"Box Plot — {s_name}",
+                                            use_container_width=True,
+                                        )
+                                    else:
+                                        st.caption(
+                                            "Box plot not available "
+                                            "for this sensor."
+                                        )
+                                with col_right:
+                                    st.pyplot(fig)
 
     if not has_sensor:
         st.info("No sensor data provided — sensor validation skipped.")
@@ -530,7 +645,6 @@ def _display_inferred_followup(report: DiagnosticReport):
         combined = f"{report.query_text}, {', '.join(new_symptoms)}"
         with st.spinner("Refining diagnosis..."):
             try:
-                original_conf = report.confidence
                 new_report = run_diagnostic(
                     symptoms_text=combined,
                     current_sample="simulated",
@@ -538,17 +652,20 @@ def _display_inferred_followup(report: DiagnosticReport):
                     verbose=False,
                 )
 
-                if new_report.confidence > original_conf:
-                    # Improved — show updated result
-                    st.session_state.report = new_report
-                    st.session_state.original_report = None
-                else:
-                    # Not improved — keep original, show message
-                    st.session_state.original_report = report
+                if new_report.mode == "AMBIGUOUS":
                     st.info(
-                        "The additional symptoms did not strengthen the "
-                        "diagnosis. Your original assessment is shown below."
+                        "The additional symptoms made the diagnosis ambiguous. "
+                        "Your original assessment is shown below."
                     )
+                elif (new_report.top_candidate.get("label")
+                      == report.top_candidate.get("label")
+                      and new_report.confidence > report.confidence):
+                    st.session_state.report = new_report
+                else:
+                    st.session_state.refinement_comparison = {
+                        "old": report,
+                        "new": new_report,
+                    }
 
                 st.session_state.interaction_history.append({
                     "input": combined,
@@ -593,6 +710,48 @@ def _display_extracted_followup(report: DiagnosticReport):
                     "original_symptoms": report.original_symptoms,
                     "query_text": report.query_text,
                 })
+
+
+# ─── Refinement Comparison ─────────────────────────────────────────
+
+def _display_refinement_comparison(comparison: dict):
+    """Show original and refined reports side by side for user choice."""
+    old_r = comparison["old"]
+    new_r = comparison["new"]
+    mode_labels = {
+        "AMBIGUOUS": "NEED MORE INFO",
+        "INFERRED": "BEST GUESS",
+        "EXTRACTED": "DIAGNOSIS",
+    }
+
+    st.markdown("### Refinement Result")
+    st.markdown(
+        "The top diagnosis changed with the added symptoms. "
+        "**Choose which diagnosis to continue with:**"
+    )
+
+    col1, col2 = st.columns(2)
+    for col, r, label in [
+        (col1, old_r, "Keep Original"),
+        (col2, new_r, "Use Refined"),
+    ]:
+        with col:
+            mode_label = mode_labels.get(r.mode, r.mode)
+            st.markdown(
+                f'<span class="mode-badge mode-{r.mode}">{mode_label}</span>'
+                f' &nbsp; confidence: {r.confidence:.1%}',
+                unsafe_allow_html=True,
+            )
+            top = r.top_candidate
+            st.markdown(f"**{top.get('label', 'N/A')}**")
+            chain_html = _build_kg_chain(top)
+            if chain_html:
+                st.markdown(chain_html, unsafe_allow_html=True)
+            if st.button(label, key=label.lower().replace(" ", "_"),
+                         use_container_width=True):
+                st.session_state.report = r
+                st.session_state.refinement_comparison = None
+                st.rerun()
 
 
 # ─── AI-Assisted Analysis ─────────────────────────────────────────
@@ -641,6 +800,7 @@ def _clear_session():
     """Reset all session state."""
     st.session_state.report = None
     st.session_state.original_report = None
+    st.session_state.refinement_comparison = None
     st.session_state.show_ai_analysis = False
     st.session_state.ai_assisted_text = ""
 

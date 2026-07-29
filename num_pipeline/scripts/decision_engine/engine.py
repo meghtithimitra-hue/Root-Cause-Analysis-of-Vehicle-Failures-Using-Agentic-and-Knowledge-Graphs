@@ -22,7 +22,6 @@ from .confidence import (
 from .mode_classifier import classify_mode, select_display_candidates
 from .reasoning_chain import build_reasoning_chain
 from .explanation import (
-    generate_explanation,
     generate_brief_summary,
     generate_diagnosis_summary,
     generate_inspection_steps,
@@ -55,8 +54,7 @@ class DiagnosticReport:
     # --- Reasoning ---
     reasoning_chain: List[Dict[str, Any]] = field(default_factory=list)
 
-    # --- Explanation ---
-    explanation: str = ""
+    # --- Summary ---
     summary: str = ""
     diagnosis_summary: str = ""
     inspection_steps: List[str] = field(default_factory=list)
@@ -66,6 +64,9 @@ class DiagnosticReport:
 
     # --- Sensor debug metadata (temporary) ---
     sensor_debug: Dict[str, Any] = field(default_factory=dict)
+
+    # --- Raw sensor results (for explanation enrichment) ---
+    sensor_results_raw: Dict[str, Any] = field(default_factory=dict)
 
     # --- Provenance ---
     original_symptoms: List[str] = field(default_factory=list)
@@ -169,9 +170,6 @@ def run_diagnostic_engine(
     # --- 7. Assemble report ---
     top = display[0] if display else {}
 
-    explanation = generate_explanation(
-        mode, top, display, chain, sensor_badges, llm_provider,
-    )
     summary = generate_brief_summary(mode, top, final_conf)
 
     diagnosis_summary = ""
@@ -189,11 +187,11 @@ def run_diagnostic_engine(
         confidence=final_conf,
         confidence_components=confidence_components,
         reasoning_chain=chain,
-        explanation=explanation,
         summary=summary,
         diagnosis_summary=diagnosis_summary,
         inspection_steps=inspection_steps_list,
         sensor_evidence=sensor_badges,
+        sensor_results_raw=sensor_results,
         original_symptoms=original_symptoms,
         query_text=query_text,
     )
