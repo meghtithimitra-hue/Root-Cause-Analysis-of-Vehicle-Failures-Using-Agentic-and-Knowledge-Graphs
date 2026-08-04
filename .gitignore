@@ -4,3 +4,4 @@ graphify-out/cache/
 graphify-out/cost.json
 __pycache__/
 *.pyc
+.pytest_cache/

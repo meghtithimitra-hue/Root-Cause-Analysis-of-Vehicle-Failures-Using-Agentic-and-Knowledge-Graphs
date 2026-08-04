@@ -1,0 +1,370 @@
+{
+  "_metadata": {
+    "title": "NavicEngine ECU Sensor Dictionary",
+    "description": "Human-readable interpretations for all 37 sensor variables found in the INCA ECU save-file CSV exports. Based on the NavicEngine README context (6-cylinder 7.6L DT diesel, dual-staged turbocharger, electro-hydraulic injectors) and standard ETAS INCA / ASCET naming conventions.",
+    "dataset": "NavicEngine \u2014 Diesel Engine Fault Diagnosis Dataset",
+    "sensor_count": 37,
+    "confidence_distribution": {
+      "HIGH": 16,
+      "MEDIUM": 16,
+      "LOW": 5
+    }
+  },
+  "sensors": {
+    "time": {
+      "display_name": "Time",
+      "description": "Elapsed time from start of data recording session",
+      "quantity": "Time",
+      "subsystem": "ECU / Data Acquisition",
+      "units": "seconds",
+      "confidence": "HIGH",
+      "note": "Standard ECU logging timestamp. Present in all CSV files."
+    },
+    "n": {
+      "display_name": "Engine Speed",
+      "description": "Engine rotational speed measured by the ECU",
+      "quantity": "Rotational Speed",
+      "subsystem": "ECU",
+      "units": "RPM",
+      "confidence": "HIGH",
+      "note": "Verified against CSV values: ~1003 at 1000 RPM setpoint, ~1195 at 1200 RPM setpoint."
+    },
+    "prs_tur_down": {
+      "display_name": "Turbocharger Downstream Pressure",
+      "description": "Air pressure measured downstream of the turbocharger turbine (exhaust side outlet)",
+      "quantity": "Pressure",
+      "subsystem": "Turbocharger / Exhaust",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "Convention: prs_=pressure, tur=turbocharger, down=downstream. Values near atmospheric (~984) at idle."
+    },
+    "prs_thr_up": {
+      "display_name": "Throttle Upstream Pressure",
+      "description": "Air pressure measured upstream of the throttle valve (intake manifold side)",
+      "quantity": "Pressure",
+      "subsystem": "Intake System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "Convention: prs_=pressure, thr=throttle, up=upstream."
+    },
+    "prs_thr_up_sp": {
+      "display_name": "Throttle Upstream Pressure Setpoint",
+      "description": "Target/commanded pressure upstream of the throttle valve from ECU",
+      "quantity": "Pressure",
+      "subsystem": "Intake System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "_sp suffix = setpoint (commanded value). Usually tracks prs_thr_up closely."
+    },
+    "prs_thr_down": {
+      "display_name": "Throttle Downstream Pressure",
+      "description": "Air pressure measured downstream of the throttle valve",
+      "quantity": "Pressure",
+      "subsystem": "Intake System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "Convention: thr=throttle, down=downstream."
+    },
+    "prs_bpa": {
+      "display_name": "Boost Pressure Absolute",
+      "description": "Absolute boost pressure (charge air pressure after turbocharger compressor)",
+      "quantity": "Pressure",
+      "subsystem": "Turbocharger / Intake",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "bpa = Boost Pressure Absolute. Key diagnostic variable for turbocharger performance."
+    },
+    "prs_sp_bpa": {
+      "display_name": "Boost Pressure Absolute Setpoint",
+      "description": "Target/commanded boost pressure absolute from ECU",
+      "quantity": "Pressure",
+      "subsystem": "Turbocharger / Intake",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "_sp suffix = setpoint. Comparison with prs_bpa reveals turbocharger system errors."
+    },
+    "prs_bpa_dif": {
+      "display_name": "Boost Pressure Differential",
+      "description": "Difference between actual and setpoint boost pressure (or across a restriction)",
+      "quantity": "Pressure Difference",
+      "subsystem": "Turbocharger / Intake",
+      "units": "mbar or hPa",
+      "confidence": "MEDIUM",
+      "note": "_dif = differential. Could be prs_bpa - prs_sp_bpa or pressure drop across intercooler. High importance in sensor_mapping.json for FAULT_INJ_PRS and FAULT_SOI at higher speeds."
+    },
+    "prs_cmpr_up": {
+      "display_name": "Compressor Upstream Pressure",
+      "description": "Air pressure measured upstream of the turbocharger compressor (fresh air inlet)",
+      "quantity": "Pressure",
+      "subsystem": "Turbocharger / Intake",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "cmpr = compressor. Upstream of compressor \u2248 atmospheric/ambient at the air filter inlet."
+    },
+    "prs_cmpr_down": {
+      "display_name": "Compressor Downstream Pressure",
+      "description": "Air pressure measured downstream of the turbocharger compressor outlet",
+      "quantity": "Pressure",
+      "subsystem": "Turbocharger / Intake",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "Compressor outlet pressure. Should correlate with prs_bpa (boost pressure) at similar locations."
+    },
+    "prs_up_cmp_prot[0]": {
+      "display_name": "Upstream Compressor Protection Pressure",
+      "description": "Pressure sensor for compressor protection monitoring (inlet side)",
+      "quantity": "Pressure",
+      "subsystem": "Turbocharger / Intake",
+      "units": "mbar or hPa",
+      "confidence": "MEDIUM",
+      "note": "prot = protection monitoring. Array [0] suggests single sensor. Used to detect compressor surge or restriction."
+    },
+    "prs_eg[0]": {
+      "display_name": "Exhaust Gas Pressure",
+      "description": "Pressure of exhaust gas in the exhaust manifold or system",
+      "quantity": "Pressure",
+      "subsystem": "Exhaust System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "eg = exhaust gas. Single sensor [0]. Key for detecting exhaust restriction or turbocharger turbine issues."
+    },
+    "prs_eg_mes[0]": {
+      "display_name": "Exhaust Gas Pressure Measured",
+      "description": "Measured exhaust gas pressure (sensor reading)",
+      "quantity": "Pressure",
+      "subsystem": "Exhaust System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "_mes = measured. Likely the same physical variable as prs_eg[0] but from a different sensor or after signal processing."
+    },
+    "egbp_mes[0]": {
+      "display_name": "Exhaust Gas Back Pressure Measured",
+      "description": "Measured back pressure in the exhaust system",
+      "quantity": "Pressure",
+      "subsystem": "Exhaust System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "egbp = Exhaust Gas Back Pressure. Measured downstream of turbine or after treatment system."
+    },
+    "fup_mes": {
+      "display_name": "Fuel Pressure Measured",
+      "description": "Fuel rail pressure measured by the ECU sensor",
+      "quantity": "Pressure",
+      "subsystem": "Fuel System",
+      "units": "10^5 Pa (bar \u00d7 100) or MPa \u00d7 10",
+      "confidence": "MEDIUM",
+      "note": "fup = Fuel (rail) Pressure. Values ~5.6-7.9; too low for bar, too high for MPa. Likely in some scaled unit. _mes = measured."
+    },
+    "fup": {
+      "display_name": "Fuel Pressure",
+      "description": "Fuel rail pressure (commanded or reported value)",
+      "quantity": "Pressure",
+      "subsystem": "Fuel System",
+      "units": "10^5 Pa (bar \u00d7 100) or MPa \u00d7 10",
+      "confidence": "MEDIUM",
+      "note": "Without _mes suffix, this may be the commanded/expected fuel pressure vs the measured one (fup_mes)."
+    },
+    "fup_sp": {
+      "display_name": "Fuel Pressure Setpoint",
+      "description": "Target fuel rail pressure commanded by ECU",
+      "quantity": "Pressure",
+      "subsystem": "Fuel System",
+      "units": "10^5 Pa (bar \u00d7 100) or MPa \u00d7 10",
+      "confidence": "MEDIUM",
+      "note": "_sp = setpoint. Comparison fup_sp vs fup_mes reveals fuel pressure control errors (relevant for FAULT_INJ_PRS)."
+    },
+    "pfu_mes": {
+      "display_name": "Pilot Fuel Quantity Measured",
+      "description": "Measured pilot injection fuel quantity or pressure",
+      "quantity": "Pressure or Volume",
+      "subsystem": "Fuel System / Injector",
+      "units": "uncertain (mm\u00b3/stroke or scaled pressure)",
+      "confidence": "LOW",
+      "note": "pfu may stand for 'Pilot Fuel' or 'Pressure Fuel'. Values (~5.2-8.5) overlap with fup_mes range, suggesting it could be a second fuel pressure sensor (low-pressure side) or pilot injection quantity."
+    },
+    "pfu_l_mes": {
+      "display_name": "Pilot Fuel Low Pressure Measured",
+      "description": "Low-pressure side fuel pressure or fuel quantity for pilot injection",
+      "quantity": "Pressure or Volume",
+      "subsystem": "Fuel System / Injector",
+      "units": "uncertain (scaled pressure or flow units)",
+      "confidence": "LOW",
+      "note": "Values ~3850-4000 are an order of magnitude higher than pfu_mes/fup_mes. '_l' could indicate 'low pressure' circuit or a different physical measurement entirely. Significantly affected by FAULT_INJ_PRS and FAULT_SOI per sensor_mapping.json."
+    },
+    "poil": {
+      "display_name": "Oil Pressure",
+      "description": "Engine oil/lubrication system pressure",
+      "quantity": "Pressure",
+      "subsystem": "Engine Lubrication",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "poil = Pressure Oil. Values ~6849-6855, consistent with typical diesel engine oil pressure (68-69 bar \u00d7 100 or 6.8-6.9 MPa)."
+    },
+    "map": {
+      "display_name": "Manifold Absolute Pressure",
+      "description": "Absolute pressure in the intake manifold",
+      "quantity": "Pressure",
+      "subsystem": "Intake System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "Standard automotive MAP sensor. Reads ~1225-1226 at 1000 RPM, consistent with 1.2 bar absolute at idle for a turbocharged diesel."
+    },
+    "map_mes": {
+      "display_name": "Manifold Absolute Pressure Measured",
+      "description": "Measured MAP sensor reading (possibly redundant or post-processed)",
+      "quantity": "Pressure",
+      "subsystem": "Intake System",
+      "units": "mbar or hPa",
+      "confidence": "HIGH",
+      "note": "_mes = measured. Likely redundant with map from a different sensor channel."
+    },
+    "soi_main1": {
+      "display_name": "Start of Injection Main 1",
+      "description": "Start of injection timing for the main injection event (cylinder 1 or reference)",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "soi = Start of Injection. Values ~0.63-0.68 in CSV \u2014 likely in ms or crank angle degrees \u00d7 scaling. _main1 = main injection (not pilot)."
+    },
+    "soi_main1_bas": {
+      "display_name": "Start of Injection Main 1 Base",
+      "description": "Base (calibrated) start of injection timing for main injection",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "_bas = base value from ECU calibration maps. Represents the nominal timing before corrections."
+    },
+    "soi_main1_tu": {
+      "display_name": "Start of Injection Main 1 Time Unit",
+      "description": "Start of injection timing expressed in time units or crank angle with per-cylinder correction",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "_tu = Time Unit or Timing Unit. May represent the final (corrected) commanded timing."
+    },
+    "soi_main1_chk_tu[0]": {
+      "display_name": "SOI Main 1 Check Time Unit \u2014 Cylinder 1",
+      "description": "Per-cylinder check of start of injection timing for cylinder 1",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "Array index [0] = Cylinder 1. _chk = check/monitor value. Used for cylinder-specific injection timing verification."
+    },
+    "soi_main1_chk_tu[1]": {
+      "display_name": "SOI Main 1 Check Time Unit \u2014 Cylinder 2",
+      "description": "Per-cylinder check of start of injection timing for cylinder 2",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "Array index [1] = Cylinder 2."
+    },
+    "soi_main1_chk_tu[2]": {
+      "display_name": "SOI Main 1 Check Time Unit \u2014 Cylinder 3",
+      "description": "Per-cylinder check of start of injection timing for cylinder 3",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "Array index [2] = Cylinder 3."
+    },
+    "soi_main1_chk_tu[3]": {
+      "display_name": "SOI Main 1 Check Time Unit \u2014 Cylinder 4",
+      "description": "Per-cylinder check of start of injection timing for cylinder 4",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "Array index [3] = Cylinder 4."
+    },
+    "soi_main1_chk_tu[4]": {
+      "display_name": "SOI Main 1 Check Time Unit \u2014 Cylinder 5",
+      "description": "Per-cylinder check of start of injection timing for cylinder 5",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "Array index [4] = Cylinder 5."
+    },
+    "soi_main1_chk_tu[5]": {
+      "display_name": "SOI Main 1 Check Time Unit \u2014 Cylinder 6",
+      "description": "Per-cylinder check of start of injection timing for cylinder 6",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "Array index [5] = Cylinder 6. The inline-6 DT engine has 6 cylinders corresponding to indices [0..5]."
+    },
+    "ti_main1_bas": {
+      "display_name": "Injection Timing Main 1 Base",
+      "description": "Base injection timing from ECU calibration for main injection",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "ti = Timing. _bas = base calibration value. Overlaps with soi_main1 \u2014 may represent a different representation of injection timing."
+    },
+    "ti_main1_tu": {
+      "display_name": "Injection Timing Main 1 Time Unit",
+      "description": "Injection timing for main injection expressed in time/crank-angle units",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "MEDIUM",
+      "note": "_tu = Time Unit. Present in FAULT_INJ_DUR CSVs at 1000/1200 RPM but absent in NOMINAL and other faults, suggesting it is an injection-duration-specific variable."
+    },
+    "ti_main1_tu_tmp": {
+      "display_name": "Injection Timing Main 1 Temporary",
+      "description": "Temporary/intermediate injection timing value for main injection",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "LOW",
+      "note": "_tmp = temporary. Likely an intermediate calculation variable in the ECU injection timing computation. Not a direct sensor measurement. Present only in NOMINAL and FAULT_INJ_DUR CSVs."
+    },
+    "ti_main1_tu_[0]": {
+      "display_name": "Injection Timing Main 1 Time Unit Array",
+      "description": "Per-cylinder injection timing for main injection (cylinder 1)",
+      "quantity": "Crank Angle or Time",
+      "subsystem": "Fuel System / Injector",
+      "units": "degrees BTDC or ms",
+      "confidence": "LOW",
+      "note": "Underscore before [0] suggests this is a different ECU variable from ti_main1_tu \u2014 possibly an internal monitored value. Present only in FAULT_INJ_DUR CSVs."
+    },
+    "amp_mes": {
+      "display_name": "Charge Air Pressure Measured (ambiguous)",
+      "description": "Measured pressure in the charge air / intake system \u2014 exact sensor identity unclear",
+      "quantity": "Pressure",
+      "subsystem": "Intake System",
+      "units": "mbar or hPa",
+      "confidence": "LOW",
+      "note": "The abbreviation 'amp' is ambiguous in the INCA context. Numeric values (~984 at idle) are identical to prs_tur_down, prs_cmpr_up, and prs_up_cmp_prot[0] at 1000 RPM nominal, suggesting proximity to compressor inlet/ambient. amp could stand for 'Ambient Pressure', 'Air Mass Pressure', 'Absolute Manifold Pressure' (redundant with MAP), or something else. It is NOT 'Amplitude' as the values are pressure-range. Cannot resolve without original INCA database metadata. Included because sensor_mapping.json ranks it as the #1 most important sensor across multiple fault types."
+    }
+  },
+  "ambiguous_variables": {
+    "amp_mes": {
+      "variable_name": "amp_mes",
+      "issue": "Abbreviation 'amp' has no standard INCA definition in the available documentation. Possible expansions include Ambient Pressure, Air Mass Pressure, or an internal ECU variable name. Values correlate perfectly with compressor upstream pressures at idle, but the sensor name alone is insufficient to determine the exact measurement point.",
+      "recommendation": "Requires original INCA database export metadata or ETAS ASAP2/A2L file to resolve the exact sensor label and measurement channel."
+    },
+    "pfu_mes": {
+      "variable_name": "pfu_mes",
+      "issue": "'pfu' could expand to 'Pilot Fuel' (injection parameter) or 'Pressure Fuel' (redundant with fup). Value range overlaps with fup_mes, making the distinction unclear. '_l' variant (pfu_l_mes) has 3-order-of-magnitude different values (~3900 vs ~5.7), suggesting fundamentally different physical quantities.",
+      "recommendation": "Requires A2L description or INCA measurement catalog to determine whether pfu refers to pressure, quantity, or an internal calculated value."
+    },
+    "ti_main1_tu_tmp": {
+      "variable_name": "ti_main1_tu_tmp",
+      "issue": "'_tmp' suffix suggests an intermediate ECU internal variable, not a direct sensor reading. Likely a temporary value in the injection timing calculation chain. Not a physical measurement.",
+      "recommendation": "Verify against ECU calibration data if this variable can be relied upon for diagnostics or if it should be excluded from sensor analysis."
+    },
+    "ti_main1_tu_[0]": {
+      "variable_name": "ti_main1_tu_[0]",
+      "issue": "The underscore before the array index (tu_[0] vs tu[0]) is non-standard and suggests this may be a different variable array than ti_main1_tu. Only present in FAULT_INJ_DUR CSV files, indicating it may be a fault-specific monitoring variable rather than a general sensor.",
+      "recommendation": "Confirm naming convention against INCA database export. Consider whether this should be treated as the same quantity as ti_main1_tu or a distinct variable."
+    }
+  }
+}

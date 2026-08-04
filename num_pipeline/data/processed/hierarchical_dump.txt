@@ -1,0 +1,518 @@
+## ABS System
+  ### ABS Control Module
+    - SYMPTOM: ABS warning light on
+    - SYMPTOM: Brake pedal pulsation
+    - STEP: Check ABS fuse  [Blown / Intact]
+    - STEP: Inspect wiring to ABS module  [Faulty wiring / Good wiring]
+  ### ABS Wheel Speed Sensor
+    - SYMPTOM: ABS light stays on
+    - SYMPTOM: Erratic speedometer
+    - STEP: Check wheel speed sensor for debris or damage  [Dirty/damaged / Clean/intact]
+    - STEP: Inspect wheel speed sensor connections  [Loose connections / Secure connections]
+  ### Brake Booster
+    - SYMPTOM: Hard brake pedal
+    - SYMPTOM: Spongy brake pedal
+    - STEP: Check brake booster vacuum hose  [Leaking / Intact]
+    - STEP: Test brake booster vacuum pressure  [Low vacuum pressure / Normal vacuum pressure]
+  ### Brake Caliper
+    - SYMPTOM: Brake dragging
+    - SYMPTOM: Brake pulling to one side
+    - STEP: Check brake caliper piston operation  [Stuck piston / Free-moving piston]
+    - STEP: Inspect brake caliper for leaks  [Leaking fluid / No leaks]
+  ### Brake Hose
+    - SYMPTOM: Brake fluid leak
+    - SYMPTOM: Soft brake pedal
+    - STEP: Inspect brake hose for cracks or leaks  [Cracked/leaking hose / Intact hose]
+    - STEP: Pressure test brake hose  [Failed pressure test / Passes pressure test]
+  ### Brake Master Cylinder
+    - SYMPTOM: Brake fluid leaks
+    - SYMPTOM: Spongy brake pedal
+    - STEP: Check brake fluid level in master cylinder  [Low fluid level / Normal fluid level]
+    - STEP: Inspect master cylinder for leaks or damage  [Leaking/damaged / Intact]
+  ### Brake Pad
+    - SYMPTOM: Brake pedal pulsation
+    - SYMPTOM: Squealing brakes
+    - STEP: Check brake pad thickness  [Worn pads / Sufficient thickness pads]
+    - STEP: Inspect brake pad condition  [Worn/damaged pads / Good condition pads]
+  ### Brake Rotor
+    - SYMPTOM: Brake pedal pulsation
+    - SYMPTOM: Steering wheel vibration
+    - STEP: Inspect brake rotor for scoring or warping  [Scored/warped rotor / Smooth rotor]
+    - STEP: Measure brake rotor thickness  [Thin rotor / Sufficient thickness rotor]
+  ### Brake Shoe & Drum
+    - SYMPTOM: Brake dragging
+    - SYMPTOM: Spongy brake pedal
+    - STEP: Check brake drum for scoring or cracks  [Scored/cracked drum / Smooth drum]
+    - STEP: Inspect brake shoes for wear  [Worn shoes / Good condition shoes]
+
+## Air Conditioning System
+  ### AC Compressor
+    - SYMPTOM: Loud noise when AC is on
+    - SYMPTOM: No cold air from vents
+    - STEP: Check AC compressor clutch operation  [Clutch not engaging / Clutch engages properly]
+    - STEP: Inspect AC compressor for leaks or damage  [Leaking/damaged compressor / Intact compressor]
+  ### AC Condenser
+    - SYMPTOM: AC system not cooling
+    - SYMPTOM: Warm air from AC vents
+    - STEP: Check for leaks in AC condenser  [Leaking condenser / No leaks]
+    - STEP: Inspect AC condenser for debris or blockage  [Debris/blockage present / Clean/clear condenser]
+  ### AC Evaporator
+    - SYMPTOM: Musty odor from vents
+    - SYMPTOM: Weak airflow from vents
+    - STEP: Check AC evaporator temperature sensor  [Faulty sensor / Good sensor]
+    - STEP: Inspect AC evaporator for mold or mildew buildup  [Mold/mildew present / Clean evaporator]
+  ### AC Recharge
+    - SYMPTOM: Low AC system pressure
+    - SYMPTOM: Warm air from vents
+    - STEP: Check AC system pressure with gauge  [Low pressure / Normal pressure]
+    - STEP: Inspect for leaks in AC system  [Leaking system / No leaks]
+  ### Air Conditioning Diagnosis
+    - SYMPTOM: AC system not working
+    - SYMPTOM: Unusual noise from AC system
+    - STEP: Check AC system components for proper operation  [Component failure / Components working properly]
+    - STEP: Perform AC system diagnostic scan  [Error codes present / No error codes]
+  ### Cabin Air Filter
+    - SYMPTOM: Musty odor from vents
+    - SYMPTOM: Reduced airflow from vents
+    - STEP: Check for debris in cabin air intake  [Debris in intake / Clear intake]
+    - STEP: Inspect and replace cabin air filter  [Dirty/clogged filter / Clean/new filter]
+  ### Heater Blower Motor
+    - SYMPTOM: Loud noise from HVAC system
+    - SYMPTOM: No air from vents
+    - STEP: Inspect blower motor for debris or damage  [Debris/damage present / Clean/intact motor]
+    - STEP: Test blower motor operation  [Motor not running / Motor running properly]
+  ### Heater Blower Motor Resistor
+    - SYMPTOM: HVAC fan only works on certain settings
+    - SYMPTOM: HVAC fan speed erratic
+    - STEP: Inspect resistor for overheating or burn marks  [Overheated/burned resistor / Good condition resistor]
+    - STEP: Test blower motor resistor continuity  [Resistor failure / Resistor working properly]
+
+## Cooling System
+  ### Coolant/Antifreeze
+    - SYMPTOM: Coolant leaks under the vehicle
+    - SYMPTOM: Engine overheating
+    - STEP: Check coolant level and condition  [Low/dirty coolant / Sufficient/clean coolant]
+    - STEP: Inspect radiator and hoses for leaks  [Leaking radiator/hoses / No leaks]
+  ### Coolant Leak Diagnosis
+    - SYMPTOM: Coolant odor in cabin
+    - SYMPTOM: Visible coolant puddle under vehicle
+    - STEP: Inspect radiator, hoses, and water pump for leaks  [Leaking component found / Components are intact]
+    - STEP: Pressure test cooling system  [Leaking system / No leaks detected]
+  ### Engine Cooling System
+    - SYMPTOM: Engine overheating
+    - SYMPTOM: Temperature gauge in red zone
+    - STEP: Check radiator for blockage or damage  [Blocked/damaged radiator / Clear/intact radiator]
+    - STEP: Test thermostat operation  [Faulty thermostat / Thermostat functioning properly]
+  ### Heater Core
+    - SYMPTOM: No heat from vents
+    - SYMPTOM: Sweet smell in cabin
+    - STEP: Check coolant flow through heater core  [Restricted flow / Good coolant flow]
+    - STEP: Inspect heater core for leaks  [Leaking heater core / No leaks detected]
+  ### Heater Hose
+    - SYMPTOM: Coolant odor in cabin
+    - SYMPTOM: Visible coolant leak under vehicle
+    - STEP: Inspect heater hose connections  [Loose/damaged connections / Secure/intact connections]
+    - STEP: Pressure test heater hoses  [Leaking hose detected / No leaks found]
+  ### Radiator/Cooling Fan
+    - SYMPTOM: AC not cooling at idle
+    - SYMPTOM: Engine overheating
+    - STEP: Inspect radiator fan motor and relay  [Faulty motor/relay / Motor/relay functioning properly]
+    - STEP: Test radiator fan operation  [Fan not spinning / Fan operates correctly]
+  ### Radiator Hose
+    - SYMPTOM: Coolant leak under vehicle
+    - SYMPTOM: Visible wear/cracks on hoses
+    - STEP: Check hose connections for leaks  [Leaking connections / No leaks detected]
+    - STEP: Inspect radiator hoses for damage  [Damaged hoses found / Hoses are in good condition]
+  ### Water Pump
+    - SYMPTOM: Coolant leak near front of engine
+    - SYMPTOM: Engine overheating
+    - STEP: Inspect water pump for leaks  [Leaking pump / No leaks detected]
+    - STEP: Test water pump for proper operation  [Faulty pump / Pump working correctly]
+
+## Drivetrain
+  ### Bevel Gears
+    - SYMPTOM: Difficulty shifting gears
+    - SYMPTOM: Whining noise from drivetrain
+    - STEP: Check gear oil level and condition  [Low/dirty gear oil / Sufficient/clean gear oil]
+    - STEP: Inspect bevel gears for wear or damage  [Worn/damaged gears / Gears in good condition]
+  ### Center Differential
+    - SYMPTOM: Noise from drivetrain while turning
+    - SYMPTOM: Vehicle binding on turns
+    - STEP: Check for excessive play in center differential  [Excessive play detected / No excessive play]
+    - STEP: Inspect center differential fluid  [Low/dirty fluid / Clean/sufficient fluid]
+  ### Clutch Cable
+    - SYMPTOM: Clutch pedal feels loose
+    - SYMPTOM: Difficulty engaging gears
+    - STEP: Adjust clutch cable tension  [Incorrect tension / Correct tension]
+    - STEP: Inspect clutch cable for fraying or stretching  [Damaged cable / Intact cable]
+  ### Clutch Slave Cylinder
+    - SYMPTOM: Clutch pedal feels spongy
+    - SYMPTOM: Fluid leak near clutch pedal
+    - STEP: Check clutch slave cylinder for leaks  [Leaking cylinder / No leaks detected]
+    - STEP: Inspect clutch fluid level and condition  [Low/dirty fluid / Sufficient/clean fluid]
+  ### Differential
+    - SYMPTOM: Vehicle vibration at high speeds
+    - SYMPTOM: Whining noise from rear end
+    - STEP: Check for differential bearing wear  [Worn bearings / Bearings in good condition]
+    - STEP: Inspect differential fluid level and condition  [Low/dirty fluid / Clean/sufficient fluid]
+  ### Live Axle
+    - SYMPTOM: Axle noise while turning
+    - SYMPTOM: Vehicle leans to one side
+    - STEP: Check axle bearings for wear  [Worn bearings / Bearings in good condition]
+    - STEP: Inspect live axle for cracks or bending  [Cracked/bent axle / Axle is intact]
+  ### Rigid Axle
+    - SYMPTOM: Loud noise from rear axle
+    - SYMPTOM: Vehicle bounces over bumps
+    - STEP: Check axle bearings for wear  [Worn bearings / Bearings in good condition]
+    - STEP: Inspect rigid axle for cracks or damage  [Cracked/damaged axle / Axle in good condition]
+  ### Shaft and Tires
+    - SYMPTOM: Uneven tire wear
+    - SYMPTOM: Vibration while driving
+    - STEP: Check tire pressure and condition  [Low/inappropriate pressure / Correct tire pressure and condition]
+    - STEP: Inspect shaft for balance and alignment  [Imbalanced/misaligned shaft / Properly balanced/aligned shaft]
+  ### Slushbox
+    - SYMPTOM: Delay in gear engagement
+    - SYMPTOM: Transmission slipping
+    - STEP: Check transmission fluid level and condition  [Low/dirty fluid / Clean/sufficient fluid]
+    - STEP: Inspect transmission for leaks  [Leaking transmission / No leaks detected]
+  ### Universal Joint
+    - SYMPTOM: Clunking noise when shifting
+    - SYMPTOM: Driveline vibration
+    - STEP: Check driveline alignment  [Misaligned driveline / Properly aligned driveline]
+    - STEP: Inspect universal joint for wear or play  [Worn/play detected / Joint in good condition]
+  ### Viscous Coupling
+    - SYMPTOM: Noise from drivetrain while turning
+    - SYMPTOM: Vehicle binding during turns
+    - STEP: Inspect viscous coupling fluid  [Low/dirty fluid / Clean/sufficient fluid]
+    - STEP: Test viscous coupling operation  [Coupling failure / Coupling functioning properly]
+
+## Electrical System
+  ### Battery Charging
+    - SYMPTOM: Battery warning light on
+    - SYMPTOM: Low voltage
+    - STEP: Inspect alternator for proper operation  [Faulty alternator / Alternator working correctly]
+    - STEP: Test battery voltage  [Low voltage / Sufficient voltage]
+  ### Battery Replacement
+    - SYMPTOM: Clicking sound when starting
+    - SYMPTOM: Engine cranks slowly
+    - STEP: Inspect battery terminals for corrosion  [Corroded terminals / Clean terminals]
+    - STEP: Test battery voltage  [Low voltage / Sufficient voltage]
+  ### Charging System
+    - SYMPTOM: Battery warning light on
+    - SYMPTOM: Dim headlights
+    - STEP: Check alternator belt tension  [Loose belt / Properly tensioned belt]
+    - STEP: Test alternator output  [Low output / Normal output]
+  ### Check Engine Light Diagnosis
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Poor engine performance
+    - STEP: Check sensors related to DTCs  [Faulty sensor / Sensor working properly]
+    - STEP: Scan for diagnostic trouble codes (DTCs)  [DTCs present / No DTCs]
+  ### Door Window Motor
+    - SYMPTOM: Window does not move
+    - SYMPTOM: Window moves intermittently
+    - STEP: Inspect window regulator for damage  [Damaged regulator / Regulator intact]
+    - STEP: Test power to window motor  [No power / Power present]
+  ### Door Window Regulator
+    - SYMPTOM: Window off track
+    - SYMPTOM: Window stuck in one position
+    - STEP: Check window alignment in tracks  [Misaligned window / Properly aligned window]
+    - STEP: Inspect window regulator mechanism  [Mechanism jammed / Mechanism functioning]
+  ### Headlamp Bulb
+    - SYMPTOM: Dim headlight
+    - SYMPTOM: Headlight not working
+    - STEP: Check headlamp socket for corrosion  [Corroded socket / Clean socket]
+    - STEP: Inspect headlamp bulb for filament condition  [Burnt out filament / Filament intact]
+  ### Horn
+    - SYMPTOM: No sound when horn button pressed
+    - STEP: Check horn fuse  [Blown fuse / Fuse intact]
+    - STEP: Test horn relay for operation  [Faulty relay / Relay working properly]
+  ### Ignition Distributor Cap
+    - SYMPTOM: Difficulty starting engine
+    - SYMPTOM: Engine misfires
+    - STEP: Check distributor rotor for wear  [Worn rotor / Rotor in good condition]
+    - STEP: Inspect distributor cap for cracks or carbon tracks  [Cracked/damaged cap / Cap in good condition]
+  ### Ignition Wire Set
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Poor fuel economy
+    - STEP: Inspect spark plug boots for damage  [Damaged boots / Intact boots]
+    - STEP: Test ignition wires for continuity  [Broken wire / Wires intact]
+  ### Power Door Lock Actuator
+    - SYMPTOM: Clicking sound from door
+    - SYMPTOM: Door lock not responding
+    - STEP: Inspect actuator mechanism for obstruction  [Obstructed mechanism / Clear mechanism]
+    - STEP: Test power to door lock actuator  [No power / Power present]
+  ### Starter Motor
+    - SYMPTOM: Clicking sound when key is turned
+    - SYMPTOM: Engine does not crank
+    - STEP: Inspect starter motor brushes for wear  [Worn brushes / Brushes in good condition]
+    - STEP: Test starter motor solenoid  [Faulty solenoid / Solenoid working properly]
+  ### Windshield Washer Pump
+    - SYMPTOM: No washer fluid spray
+    - SYMPTOM: Weak washer fluid spray
+    - STEP: Inspect washer pump for clogs or damage  [Clogged/damaged pump / Clean/intact pump]
+    - STEP: Test power to washer pump  [No power / Power present]
+  ### Wiper Motor
+    - SYMPTOM: Wipers not working
+    - SYMPTOM: Wipers operate intermittently
+    - STEP: Inspect wiper motor linkage for wear  [Worn linkage / Intact linkage]
+    - STEP: Test power to wiper motor  [No power / Power present]
+
+## Emissions System
+  ### Canister Purge Valve
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Rough idle
+    - STEP: Check for leaks in purge valve hoses  [Leaking hoses / No leaks]
+    - STEP: Test canister purge valve operation  [Valve stuck open/closed / Valve operates correctly]
+  ### Catalytic Converter
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Rotten egg smell from exhaust
+    - STEP: Check catalytic converter efficiency  [Low efficiency / High efficiency]
+    - STEP: Inspect catalytic converter for physical damage  [Damaged converter / Converter intact]
+  ### Charcoal Canister
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Fuel odor from vehicle
+    - STEP: Inspect canister for cracks or damage  [Cracked/damaged canister / Intact canister]
+    - STEP: Test charcoal canister purge valve  [Valve stuck open/closed / Valve operates correctly]
+  ### Exhaust Manifold
+    - SYMPTOM: Exhaust smell in cabin
+    - SYMPTOM: Loud exhaust noise
+    - STEP: Check exhaust manifold gasket for leaks  [Leaking gasket / Good gasket]
+    - STEP: Inspect exhaust manifold for cracks or leaks  [Cracked/leaking manifold / Intact manifold]
+  ### Exhaust Manifold Gasket
+    - SYMPTOM: Loud exhaust noise
+    - SYMPTOM: Visible exhaust leaks
+    - STEP: Check exhaust manifold bolts for tightness  [Loose bolts / Tight bolts]
+    - STEP: Inspect exhaust manifold gasket for leaks  [Leaking gasket / Good gasket]
+  ### Fuel Tank Pressure Sensor
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Gas cap warning light
+    - STEP: Check fuel tank cap for proper seal  [Loose cap / Sealed cap]
+    - STEP: Test fuel tank pressure sensor  [Faulty sensor / Sensor working properly]
+  ### Knock Sensor
+    - SYMPTOM: Engine knocking/pinging
+    - SYMPTOM: Poor fuel economy
+    - STEP: Inspect for engine misfire codes  [Misfire codes present / No misfire codes]
+    - STEP: Test knock sensor operation  [Faulty sensor / Sensor working properly]
+  ### M.A.P. Sensor
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Rough idle
+    - STEP: Inspect M.A.P. sensor vacuum hose  [Leaking hose / Intact hose]
+    - STEP: Test M.A.P. sensor voltage  [Low voltage / Normal voltage]
+  ### Oxygen Sensor
+    - SYMPTOM: Check engine light on
+    - SYMPTOM: Poor fuel economy
+    - STEP: Inspect oxygen sensor wiring for damage  [Damaged wiring / Intact wiring]
+    - STEP: Test oxygen sensor voltage  [Low voltage / Normal voltage]
+
+## Engine Components
+  ### Balance Shaft
+    - SYMPTOM: Engine vibration
+    - SYMPTOM: Rough idle
+    - STEP: Check balance shaft alignment  [Misaligned shaft / Properly aligned shaft]
+    - STEP: Inspect balance shaft for wear or damage  [Worn/damaged shaft / Shaft in good condition]
+  ### Boost Pressure
+    - SYMPTOM: Loss of power
+    - SYMPTOM: Turbo lag
+    - STEP: Check boost pressure with gauge  [Low boost pressure / Normal boost pressure]
+    - STEP: Inspect intercooler for leaks or damage  [Leaking/damaged intercooler / Intact intercooler]
+  ### Diesel Glow Plug
+    - SYMPTOM: Glow plug indicator light stays on
+    - SYMPTOM: Hard starting in cold weather
+    - STEP: Inspect glow plug for carbon buildup  [Carbon buildup / Clean plug]
+    - STEP: Test glow plug resistance  [High resistance / Normal resistance]
+  ### Diesel Injection Pump
+    - SYMPTOM: Black smoke from exhaust
+    - SYMPTOM: Engine misfires
+    - STEP: Inspect diesel injectors for leaks or clogs  [Leaking/clogged injectors / Clean/in-tolerance injectors]
+    - STEP: Test diesel injection pump pressure  [Low pressure / Normal pressure]
+  ### Engine Belt
+    - SYMPTOM: Engine performance issues
+    - SYMPTOM: Squealing noise from engine bay
+    - STEP: Check belt tension and alignment  [Loose/misaligned belt / Properly tensioned/aligned belt]
+    - STEP: Inspect engine belt for cuts or wear  [Cut/worn belt / Belt in good condition]
+  ### Engine Mounts
+    - SYMPTOM: Clunking noise when accelerating
+    - SYMPTOM: Excessive engine movement
+    - STEP: Check mounting bolts for tightness  [Loose bolts / Tight bolts]
+    - STEP: Inspect engine mounts for wear or damage  [Worn/damaged mounts / Mounts in good condition]
+  ### Exhaust Valve
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Rough idle
+    - STEP: Check valve clearance  [Incorrect clearance / Correct clearance]
+    - STEP: Inspect exhaust valve for carbon buildup  [Buildup on valve / Clean valve]
+  ### Fan Belt
+    - SYMPTOM: Engine overheating
+    - SYMPTOM: Squealing noise from engine bay
+    - STEP: Check belt tension and alignment  [Loose/misaligned belt / Properly tensioned/aligned belt]
+    - STEP: Inspect fan belt for cuts or wear  [Cut/worn belt / Belt in good condition]
+  ### Fuel Injector
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Poor fuel economy
+    - STEP: Inspect injector for leaks or clogs  [Leaking/clogged injector / Clean/in-tolerance injector]
+    - STEP: Test fuel injector spray pattern  [Irregular spray pattern / Uniform spray pattern]
+  ### Idle Air Control Valve
+    - SYMPTOM: Erratic idle speed
+    - SYMPTOM: Stalling at idle
+    - STEP: Clean throttle body and IAC valve  [Dirty components / Clean components]
+    - STEP: Test IAC valve for proper operation  [Valve stuck open/closed / Valve operates correctly]
+  ### Intake Valve
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Rough idle
+    - STEP: Check valve clearance  [Incorrect clearance / Correct clearance]
+    - STEP: Inspect intake valve for carbon buildup  [Buildup on valve / Clean valve]
+  ### Oil Pump
+    - SYMPTOM: Engine knocking noise
+    - SYMPTOM: Low oil pressure warning light
+    - STEP: Inspect oil pump for wear or damage  [Worn/damaged pump / Pump in good condition]
+    - STEP: Test oil pressure with gauge  [Low oil pressure / Normal oil pressure]
+  ### Piston Rings
+    - SYMPTOM: Blue smoke from exhaust
+    - SYMPTOM: Loss of engine power
+    - STEP: Inspect piston rings for wear or damage  [Worn/damaged rings / Rings in good condition]
+    - STEP: Perform compression test  [Low compression / Good compression]
+  ### Timing Belt
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Engine won't start
+    - STEP: Check timing marks for alignment  [Misaligned timing marks / Properly aligned marks]
+    - STEP: Inspect timing belt for wear or damage  [Worn/damaged belt / Belt in good condition]
+  ### Valve Cover Gasket
+    - SYMPTOM: Burning oil smell from engine bay
+    - SYMPTOM: Oil leak around valve cover
+    - STEP: Check valve cover bolts for tightness  [Loose bolts / Tight bolts]
+    - STEP: Inspect valve cover gasket for leaks  [Leaking gasket / Good gasket seal]
+
+## Steering
+  ### Steering Noise
+    - SYMPTOM: Noise when turning steering wheel
+    - STEP: Check power steering pump and hoses for leaks  [Leaking pump/hoses / Pump and hoses in good condition]
+    - STEP: Inspect power steering fluid level  [Low fluid level / Sufficient fluid level]
+
+## Engine Compartment
+  ### Air Filter
+    - SYMPTOM: Black smoke from exhaust
+    - SYMPTOM: Decreased engine performance
+    - STEP: Inspect air filter for clogs or dirt  [Clogged/dirty filter / Clean filter]
+    - STEP: Replace air filter if necessary  [Replace filter / Filter in good condition]
+  ### Engine Control Unit (ECU)
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Poor fuel economy
+    - STEP: Check ECU for fault codes  [Fault codes present / No fault codes]
+    - STEP: Inspect ECU wiring harness for damage  [Damaged harness / Intact harness]
+  ### Engine Oil
+    - SYMPTOM: Loud engine noise
+    - SYMPTOM: Low oil pressure warning light
+    - STEP: Check engine oil level and condition  [Low/dirty oil / Clean/sufficient oil]
+    - STEP: Inspect for oil leaks  [Oil leaks present / No leaks detected]
+  ### Fuel Filter
+    - SYMPTOM: Engine stalls at high speeds
+    - SYMPTOM: Poor acceleration
+    - STEP: Inspect fuel filter for clogs or debris  [Clogged/dirty filter / Clean filter]
+    - STEP: Replace fuel filter if necessary  [Replace filter / Filter in good condition]
+  ### PCV Valve
+    - SYMPTOM: Oil leaks
+    - SYMPTOM: Rough idle
+    - STEP: Check PCV valve hose for cracks  [Cracked hose / Intact hose]
+    - STEP: Inspect PCV valve for clogs  [Clogged valve / Valve clear]
+  ### Throttle Body
+    - SYMPTOM: Poor acceleration
+    - SYMPTOM: Stalling at idle
+    - STEP: Inspect throttle body for carbon buildup  [Buildup present / Clean throttle body]
+    - STEP: Test throttle position sensor (TPS)  [Faulty TPS / TPS working correctly]
+
+## Fuel System
+  ### Fuel Injector
+    - SYMPTOM: Engine misfires
+    - SYMPTOM: Poor fuel economy
+    - STEP: Inspect injector for leaks or clogs  [Leaking/clogged injector / Clean/in-tolerance injector]
+    - STEP: Test fuel injector spray pattern  [Irregular spray pattern / Uniform spray pattern]
+  ### Fuel Pressure Regulator
+    - SYMPTOM: Black smoke from exhaust
+    - SYMPTOM: Engine stalls
+    - STEP: Check fuel pressure at regulator  [Low/high pressure / Correct pressure]
+    - STEP: Test fuel pressure regulator operation  [Regulator malfunction / Regulator functions correctly]
+  ### Fuel Pump
+    - SYMPTOM: Engine sputters at high speeds
+    - SYMPTOM: Loss of power
+    - STEP: Inspect fuel pump for leaks or damage  [Leaking/damaged pump / Intact pump]
+    - STEP: Test fuel pump pressure  [Low pressure / Normal pressure]
+  ### Fuel Tank
+    - SYMPTOM: Fuel odor inside vehicle
+    - SYMPTOM: Visible fuel leak under vehicle
+    - STEP: Check fuel filler cap for seal  [Loose/broken cap / Cap seals properly]
+    - STEP: Inspect fuel tank for leaks or damage  [Leaking/damaged tank / Tank in good condition]
+  ### Throttle Position Sensor
+    - SYMPTOM: Engine hesitates on acceleration
+    - SYMPTOM: Stalling at idle
+    - STEP: Inspect TPS wiring for damage or corrosion  [Damaged/corroded wiring / Intact wiring]
+    - STEP: Test throttle position sensor (TPS) voltage  [Low voltage / Normal voltage]
+
+## Liquid Systems
+  ### Brake Fluid
+    - SYMPTOM: Brake warning light on
+    - SYMPTOM: Soft brake pedal
+    - STEP: Check brake fluid level and condition  [Low/dirty fluid / Clean/sufficient fluid]
+    - STEP: Inspect brake lines for leaks  [Leaking lines / Lines in good condition]
+  ### Coolant Reservoir
+    - SYMPTOM: Engine overheating
+    - SYMPTOM: Low coolant warning light
+    - STEP: Check coolant level in reservoir  [Low coolant level / Sufficient coolant level]
+    - STEP: Inspect reservoir for cracks or leaks  [Cracked/leaking reservoir / Intact reservoir]
+  ### Power Steering Fluid
+    - SYMPTOM: Stiff steering wheel
+    - SYMPTOM: Whining noise when turning
+    - STEP: Check power steering fluid level  [Low fluid level / Sufficient fluid level]
+    - STEP: Inspect power steering hoses for leaks  [Leaking hoses / Hoses in good condition]
+  ### Radiator
+    - SYMPTOM: Coolant leak
+    - SYMPTOM: Engine overheating
+    - STEP: Check radiator cap for proper seal  [Loose/broken cap / Cap seals properly]
+    - STEP: Inspect radiator for leaks or damage  [Leaking/damaged radiator / Radiator in good condition]
+  ### Windshield Washer Fluid
+    - SYMPTOM: No washer fluid spray
+    - SYMPTOM: Weak washer fluid spray
+    - STEP: Check washer fluid level  [Low fluid level / Sufficient fluid level]
+    - STEP: Inspect washer fluid pump for operation  [Faulty pump / Pump operates correctly]
+
+## Transmission
+  ### Clutch Master Cylinder
+    - SYMPTOM: Clutch slipping
+    - SYMPTOM: Soft clutch pedal
+    - STEP: Check clutch fluid level  [Low fluid level / Sufficient fluid level]
+    - STEP: Inspect master cylinder for leaks  [Leaking cylinder / Cylinder in good condition]
+  ### Torque Converter
+    - SYMPTOM: Shuddering during acceleration
+    - SYMPTOM: Slipping gears
+    - STEP: Check transmission fluid level and condition  [Low/dirty fluid / Clean/sufficient fluid]
+    - STEP: Inspect torque converter for leaks or damage  [Leaking/damaged converter / Converter in good condition]
+  ### Transmission Filter
+    - SYMPTOM: Delayed shifting
+    - SYMPTOM: Transmission slipping
+    - STEP: Inspect transmission filter for clogs or debris  [Clogged/dirty filter / Clean filter]
+    - STEP: Replace transmission filter if necessary  [Replace filter / Filter in good condition]
+  ### Transmission Fluid
+    - SYMPTOM: Gears slipping
+    - SYMPTOM: Transmission overheating
+    - STEP: Check transmission fluid level and condition  [Low/dirty fluid / Clean/sufficient fluid]
+    - STEP: Inspect transmission pan and seals for leaks  [Leaking pan/seals / Pan/seals in good condition]
+  ### Transmission Solenoid
+    - SYMPTOM: Erratic shifting
+    - SYMPTOM: Transmission won't shift gears
+    - STEP: Inspect wiring harness for damage or corrosion  [Damaged/corroded wiring / Intact wiring]
+    - STEP: Test transmission solenoids for electrical continuity  [Faulty solenoid / Solenoid working correctly]
+
+## Wheels & Tires
+  ### Tire Pressure Monitoring System (TPMS)
+    - SYMPTOM: Low tire pressure
+    - SYMPTOM: TPMS warning light on
+    - STEP: Check tire pressures with gauge  [Low/high pressure / Correct pressure]
+    - STEP: Inspect TPMS sensors for damage or corrosion  [Damaged/corroded sensors / Clean/intact sensors]
+  ### Wheel Bearing
+    - SYMPTOM: Grinding noise from wheels
+    - SYMPTOM: Uneven tire wear
+    - STEP: Check wheel bearing for play  [Loose/worn bearing / Bearing in good condition]
+    - STEP: Inspect bearing for signs of damage or corrosion  [Damaged/corroded bearing / Clean/intact bearing]
+  ### Wheel Hub
+    - SYMPTOM: Clicking or popping noise when turning
+    - SYMPTOM: Wheel wobbling
+    - STEP: Check wheel bearings for wear  [Worn bearings / Bearings in good condition]
+    - STEP: Inspect wheel hub for play or bearing noise  [Loose/worn hub / Hub in good condition]
