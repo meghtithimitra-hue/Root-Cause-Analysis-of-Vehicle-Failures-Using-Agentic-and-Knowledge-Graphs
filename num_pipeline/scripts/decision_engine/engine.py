@@ -174,7 +174,7 @@ def run_diagnostic_engine(
 
     diagnosis_summary = ""
     inspection_steps_list = []
-    if mode in ("EXTRACTED", "INFERRED") and top.get("label"):
+    if mode == "EXTRACTED" and top.get("label"):
         diagnosis_summary = generate_diagnosis_summary(
             mode, top, original_symptoms, sensor_badges, llm_provider,
         )

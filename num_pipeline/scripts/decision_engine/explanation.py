@@ -120,7 +120,6 @@ def generate_brief_summary(
 
     mode_labels = {
         "EXTRACTED": "Diagnosis",
-        "INFERRED": "Best guess",
         "AMBIGUOUS": "Insufficient evidence",
     }
     mode_label = mode_labels.get(mode, mode)
@@ -149,7 +148,7 @@ def generate_diagnosis_summary(
     Parameters
     ----------
     mode : str
-        EXTRACTED, INFERRED, or AMBIGUOUS.
+        EXTRACTED or AMBIGUOUS.
     top_candidate : dict
         The top-ranked candidate.
     original_symptoms : list[str]
@@ -349,8 +348,6 @@ def _template_diagnosis_summary(
 
     if mode == "EXTRACTED":
         parts.append(f"**Diagnosis:** {label}")
-    elif mode == "INFERRED":
-        parts.append(f"**Most likely fault:** {label}")
     else:
         return ""
 

@@ -1,9 +1,8 @@
 """
 app.py — Streamlit Vehicle Fault Diagnosis Assistant
 
-Three-mode diagnostic assistant:
+Two-mode diagnostic assistant:
 - AMBIGUOUS: needs more information
-- INFERRED: best guess, needs confirmation
 - EXTRACTED: high confidence diagnosis
 
 Run with: streamlit run app.py
@@ -30,8 +29,8 @@ from num_pipeline.scripts.run_diagnostic import run_diagnostic
 from num_pipeline.scripts.decision_engine.sensor_explanation import (
     enrich_sensor,
     build_sensor_interpretations,
-    generate_sensor_histogram,
     get_sensor_boxplot_path,
+    get_sensor_histogram_path,
 )
 
 
@@ -59,7 +58,6 @@ st.markdown("""
         font-size: 0.9em;
     }
     .mode-AMBIGUOUS { background: #fff3cd; color: #856404; }
-    .mode-INFERRED { background: #cce5ff; color: #004085; }
     .mode-EXTRACTED { background: #d4edda; color: #155724; }
     .kg-chain {
         display: flex;
@@ -148,8 +146,6 @@ def main():
                 st.rerun()
 
     prefill = st.session_state.get("symptoms_prefill", "")
-    if prefill:
-        st.session_state["symptoms_prefill"] = ""
 
     # ── Sensor Data (sidebar) ──────────────────────────────────
 
@@ -194,6 +190,7 @@ def main():
         else:
             current_sample = None
 
+        st.session_state["symptoms_prefill"] = ""
         with st.spinner("Analyzing symptoms..."):
             try:
                 report = run_diagnostic(
@@ -251,7 +248,6 @@ def display_diagnosis(report: DiagnosticReport):
 
     mode_labels = {
         "AMBIGUOUS": "NEED MORE INFO",
-        "INFERRED": "BEST GUESS",
         "EXTRACTED": "DIAGNOSIS",
     }
 
@@ -326,8 +322,6 @@ def display_diagnosis(report: DiagnosticReport):
     st.markdown("---")
     if mode == "AMBIGUOUS":
         _display_ambiguous_followup(report)
-    elif mode == "INFERRED":
-        _display_inferred_followup(report)
     elif mode == "EXTRACTED":
         _display_extracted_followup(report)
 
@@ -474,21 +468,15 @@ def _display_candidates(report: DiagnosticReport):
                             f"⚪ **{info['display_name']}** ({s_name}): Normal"
                         )
 
-                    # ── Sensor visualisations (box plot + histogram) ──
+                    # ── Sensor visualisations (pre-rendered PNGs) ──
                     flagged = se.get("critical", []) + se.get("warning", [])
                     sensor_vis = []
                     for s_name in flagged:
-                        detail = _get_sensor_detail(
-                            s_name, report, fault,
-                        )
-                        cv = detail.get("current_value")
-                        nm = detail.get("nominal_mean")
-                        fig = generate_sensor_histogram(
-                            s_name, speed, cv, nm,
-                        )
                         bx_path = get_sensor_boxplot_path(speed, s_name)
-                        if fig is not None:
-                            sensor_vis.append((s_name, fig, bx_path))
+                        hist_path = get_sensor_histogram_path(speed, s_name)
+                        detail = _get_sensor_detail(s_name, report, fault)
+                        if bx_path or hist_path:
+                            sensor_vis.append((s_name, bx_path, hist_path, detail))
 
                     if sensor_vis:
                         st.markdown("---")
@@ -497,23 +485,28 @@ def _display_candidates(report: DiagnosticReport):
                             "(nominal condition):**"
                         )
                         st.caption(
-                            "Box plots and histograms of the nominal dataset "
-                            "for each flagged sensor. "
-                            "Red dashed lines mark the current reading; "
-                            "green dashed lines mark the nominal mean. "
-                            "The visual distance between these markers "
-                            "reinforces the numerical z-score analysis above."
+                            "Box plots and histograms show the nominal "
+                            "distribution for each flagged sensor. "
+                            "The numerical metrics below (Current Reading, "
+                            "Nominal Mean, Deviation, Percentage Change, "
+                            "and Z-Score) provide the comparison between "
+                            "the current observation and the nominal condition."
                         )
-                        for s_name, fig, bx_path in sensor_vis:
-                            with st.expander(
-                                f"Distribution: {s_name}", expanded=False
-                            ):
+                        for s_name, bx_path, hist_path, detail in sensor_vis:
+                            sen_info = enrich_sensor(s_name)
+                            display_name = sen_info["display_name"]
+                            expander_label = (
+                                f"Distribution: {display_name} ({s_name})"
+                                if display_name != s_name
+                                else f"Distribution: {s_name}"
+                            )
+                            with st.expander(expander_label, expanded=False):
                                 col_left, col_right = st.columns(2)
                                 with col_left:
                                     if bx_path:
                                         st.image(
                                             bx_path,
-                                            caption=f"Box Plot — {s_name}",
+                                            caption=f"Box Plot — {display_name} ({s_name})",
                                             use_container_width=True,
                                         )
                                     else:
@@ -522,7 +515,40 @@ def _display_candidates(report: DiagnosticReport):
                                             "for this sensor."
                                         )
                                 with col_right:
-                                    st.pyplot(fig)
+                                    if hist_path:
+                                        st.image(
+                                            hist_path,
+                                            caption=f"Histogram — {display_name} ({s_name})",
+                                            use_container_width=True,
+                                        )
+                                    else:
+                                        st.caption(
+                                            "Histogram not available "
+                                            "for this sensor."
+                                        )
+                                cv = detail.get("current_value")
+                                nm = detail.get("nominal_mean")
+                                pct = detail.get("percent_change")
+                                z = detail.get("z_score")
+                                if any(x is not None for x in (cv, nm, pct, z)):
+                                    parts = []
+                                    if cv is not None and nm is not None:
+                                        diff = abs(cv - nm)
+                                        direction = "above" if cv > nm else "below"
+                                        parts.append(
+                                            f"Current: **{cv:.2f}** | "
+                                            f"Nominal: **{nm:.2f}** | "
+                                            f"Deviation: **{diff:.2f}** ({direction})"
+                                        )
+                                    elif cv is not None:
+                                        parts.append(f"Current: **{cv:.2f}**")
+                                    elif nm is not None:
+                                        parts.append(f"Nominal: **{nm:.2f}**")
+                                    if pct is not None:
+                                        parts.append(f"Change: **{pct:+.1f}%**")
+                                    if z is not None:
+                                        parts.append(f"Z-score: **{z:.2f}**")
+                                    st.markdown(" | ".join(parts))
 
     if not has_sensor:
         st.info("No sensor data provided — sensor validation skipped.")
@@ -590,93 +616,6 @@ def _display_ambiguous_followup(report: DiagnosticReport):
                 st.error(f"Re-analysis failed: {e}")
 
 
-# ─── INFERRED Follow-up ───────────────────────────────────────────
-
-def _display_inferred_followup(report: DiagnosticReport):
-    """Refinement form for INFERRED mode."""
-    st.markdown("### Refine Diagnosis")
-    st.markdown(
-        "Provide additional symptoms to narrow the diagnosis, "
-        "or use the current best guess as-is."
-    )
-
-    # Build checkbox options from the top candidate's neighborhood
-    # (placeholder — in a real scenario, these would come from the graph)
-    common_symptoms = [
-        "Brake noise when stopping",
-        "Vibration during braking",
-        "Vehicle pulls to one side",
-        "Dashboard warning light",
-        "Issue worsens at speed",
-    ]
-
-    with st.form("refine_form"):
-        st.markdown("**Additional symptoms (check all that apply):**")
-        checked = []
-        for sym in common_symptoms:
-            if st.checkbox(sym, key=f"refine_{sym}"):
-                checked.append(sym)
-
-        extra = st.text_area(
-            "Other symptoms (optional):",
-            placeholder="Describe any other symptoms",
-            height=60,
-        )
-        refine_submit = st.form_submit_button(
-            "Refine Diagnosis",
-            type="primary",
-            use_container_width=True,
-        )
-
-    # Skip button (outside form)
-    if st.button("Use Current Diagnosis", use_container_width=True):
-        st.session_state.original_report = None
-        st.rerun()
-
-    if refine_submit:
-        new_symptoms = list(checked)
-        if extra:
-            new_symptoms.append(extra)
-
-        if not new_symptoms:
-            st.info("No additional symptoms selected. Current diagnosis unchanged.")
-            return
-
-        combined = f"{report.query_text}, {', '.join(new_symptoms)}"
-        with st.spinner("Refining diagnosis..."):
-            try:
-                new_report = run_diagnostic(
-                    symptoms_text=combined,
-                    current_sample="simulated",
-                    speed=st.session_state.engine_speed,
-                    verbose=False,
-                )
-
-                if new_report.mode == "AMBIGUOUS":
-                    st.info(
-                        "The additional symptoms made the diagnosis ambiguous. "
-                        "Your original assessment is shown below."
-                    )
-                elif (new_report.top_candidate.get("label")
-                      == report.top_candidate.get("label")
-                      and new_report.confidence > report.confidence):
-                    st.session_state.report = new_report
-                else:
-                    st.session_state.refinement_comparison = {
-                        "old": report,
-                        "new": new_report,
-                    }
-
-                st.session_state.interaction_history.append({
-                    "input": combined,
-                    "mode": new_report.mode,
-                    "summary": new_report.summary,
-                })
-                st.rerun()
-            except Exception as e:
-                st.error(f"Refinement failed: {e}")
-
-
 # ─── EXTRACTED Follow-up ──────────────────────────────────────────
 
 def _display_extracted_followup(report: DiagnosticReport):
@@ -720,7 +659,6 @@ def _display_refinement_comparison(comparison: dict):
     new_r = comparison["new"]
     mode_labels = {
         "AMBIGUOUS": "NEED MORE INFO",
-        "INFERRED": "BEST GUESS",
         "EXTRACTED": "DIAGNOSIS",
     }
 

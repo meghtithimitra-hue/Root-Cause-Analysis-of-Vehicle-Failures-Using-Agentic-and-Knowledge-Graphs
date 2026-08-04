@@ -212,8 +212,8 @@ class TestComputeConfidence:
         )
         assert result == 0.0
 
-    def test_typical_inferred_range(self):
-        """Moderate inputs should land in the INFERRED band [0.40, 0.75)."""
+    def test_typical_extracted_range(self):
+        """Moderate inputs should land in the EXTRACTED range (>= 0.30)."""
         result = compute_confidence(
             retrieval_scores=[0.40, 0.35],
             original_symptoms=["brake pedal", "spongy"],
@@ -221,7 +221,7 @@ class TestComputeConfidence:
             sensor_results={},
             top_fault="",
         )
-        assert 0.40 <= result < 0.75
+        assert result >= 0.30
 
     def test_typical_extracted_range(self):
         """Strong inputs should reach EXTRACTED (>= 0.75)."""

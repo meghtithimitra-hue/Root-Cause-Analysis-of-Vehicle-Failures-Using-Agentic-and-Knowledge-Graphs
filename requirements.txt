@@ -11,8 +11,14 @@ torch>=2.0.0
 
 # Search
 rank-bm25>=0.2.2
+rapidfuzz>=3.0.0
 
-# Graph
+# Vector store & graph (required by hybrid_retrieval)
+chromadb>=0.4.0
+networkx>=3.0
+scipy>=1.10.0
+
+# Graph (historical - the current pipeline is file-based, Neo4j is NOT required)
 neo4j>=5.0.0
 
 # LLM (optional)

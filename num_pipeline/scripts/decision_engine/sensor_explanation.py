@@ -86,47 +86,6 @@ def enrich_evidence_badges(sensor_evidence: Dict[str, Any]) -> Dict[str, Any]:
     return enriched
 
 
-def format_evidence_for_llm(
-    fault_id: str,
-    enriched_evidence: Dict[str, Any],
-) -> str:
-    """Build a concise sensor evidence string for LLM context injection.
-
-    Parameters
-    ----------
-    fault_id : str
-        NavicEngine fault ID (e.g. ``"FAULT_INJ_DUR"``).
-    enriched_evidence : dict
-        Fault-keyed dict with ``*_enriched`` lists (from
-        ``enrich_evidence_badges``).
-
-    Returns
-    -------
-    str
-        Human-readable summary (e.g. *"Actual Inj Duration (amp_mes):
-        CRITICAL — deviation in injection current duration. Charge Air
-        Pressure (prs_cmpr_up): WARNING."*).
-    """
-    ev = enriched_evidence.get(fault_id, {})
-    parts = []
-
-    for level, label in [("critical", "CRITICAL"), ("warning", "WARNING")]:
-        items = ev.get(f"{level}_enriched", [])
-        if items:
-            for item in items:
-                desc = item["description"]
-                desc_str = f" — {desc}" if desc else ""
-                parts.append(
-                    f"{item['display_name']} ({item['raw_name']}): "
-                    f"{label}{desc_str}"
-                )
-
-    if not parts:
-        return "All sensor readings are within the normal range."
-
-    return "; ".join(parts)
-
-
 # ---------------------------------------------------------------------------
 # EDA visualisation helpers
 # ---------------------------------------------------------------------------
@@ -598,8 +557,22 @@ def get_sensor_boxplot_path(
     return str(path) if path.exists() else None
 
 
-# ---------------------------------------------------------------------------
-# Histogram generation (on-the-fly, no pre-rendered images)
+def get_sensor_histogram_path(
+    speed: int, sensor_name: str, condition: str = "NOMINAL"
+) -> "Optional[str]":
+    """Return the absolute path to the pre-rendered histogram PNG, or None."""
+    here = Path(__file__).resolve().parent
+    path = (
+        here.parent.parent
+        / "outputs"
+        / "eda"
+        / f"INCA_SPEED_{speed}_{condition}"
+        / "histograms"
+        / f"{sensor_name}.png"
+    )
+    return str(path) if path.exists() else None
+
+
 # ---------------------------------------------------------------------------
 
 _NOMINAL_CSV_CACHE: Dict[int, "pd.DataFrame"] = {}
@@ -659,31 +632,6 @@ def generate_sensor_histogram(
     col = df[sensor_name].dropna()
     if len(col) < 2:
         return None
-
-    # TEMPORARY DEBUG: identify the Python environment at runtime
-    import sys as _sys, os as _os
-    _dbg = (
-        f"\n=== HISTOGRAM DEBUG ===\n"
-        f"sys.executable: {_sys.executable}\n"
-        f"sys.version: {_sys.version}\n"
-        f"PYTHONNOUSERSITE={_os.environ.get('PYTHONNOUSERSITE', '(not set)')}\n"
-        f"PYTHONPATH={_os.environ.get('PYTHONPATH', '(not set)')}\n"
-        f"VIRTUAL_ENV={_os.environ.get('VIRTUAL_ENV', '(not set)')}\n"
-        f"sys.path:\n"
-    )
-    for _p in _sys.path:
-        _dbg += f"  {_p}\n"
-    # Try importing
-    try:
-        import matplotlib as _mpl
-        _dbg += f"matplotlib.__file__: {_mpl.__file__}\n"
-        import matplotlib.pyplot
-        _dbg += "matplotlib.pyplot: OK\n"
-    except ImportError as _e:
-        _dbg += f"IMPORT FAILED: {_e}\n"
-    _dbg += "=== END DEBUG ===\n"
-    _sys.stderr.write(_dbg)
-    _sys.stderr.flush()
 
     import matplotlib.pyplot as plt
 

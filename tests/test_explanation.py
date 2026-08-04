@@ -37,11 +37,6 @@ class TestBriefSummary:
         assert "Spongy Brake Pedal" in result
         assert "FAULT_INJ_PRS" in result
 
-    def test_inferred(self):
-        result = generate_brief_summary("INFERRED", _top_candidate(), 0.55)
-        assert "Best guess" in result
-        assert "Spongy Brake Pedal" in result
-
     def test_ambiguous(self):
         result = generate_brief_summary("AMBIGUOUS", _top_candidate(), 0.25)
         assert "Insufficient" in result
@@ -52,7 +47,7 @@ class TestBriefSummary:
         assert "FAULT_INJ_PRS" in result
 
     def test_non_empty_string(self):
-        for mode in ["EXTRACTED", "INFERRED", "AMBIGUOUS"]:
+        for mode in ["EXTRACTED", "AMBIGUOUS"]:
             result = generate_brief_summary(mode, _top_candidate(), 0.5)
             assert isinstance(result, str)
             assert len(result) > 0

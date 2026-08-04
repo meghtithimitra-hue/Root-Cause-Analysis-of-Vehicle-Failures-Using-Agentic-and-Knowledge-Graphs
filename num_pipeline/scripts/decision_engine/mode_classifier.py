@@ -1,6 +1,6 @@
 """Mode classification and threshold-band candidate selection.
 
-Determines whether a diagnosis is EXTRACTED, INFERRED, or AMBIGUOUS
+Determines whether a diagnosis is EXTRACTED or AMBIGUOUS
 based on the top candidate's calibrated confidence, then selects
 which candidates to display (all within the mode's threshold band).
 """
@@ -11,11 +11,8 @@ from typing import List
 # Mode thresholds
 # ---------------------------------------------------------------------------
 
-THRESHOLD_EXTRACTED = 0.75
-"""Confidence at or above this value → EXTRACTED."""
-
-THRESHOLD_INFERRED = 0.40
-"""Confidence at or above this value (but below EXTRACTED) → INFERRED.
+THRESHOLD_EXTRACTED = 0.30
+"""Confidence at or above this value → EXTRACTED.
 
 Below this → AMBIGUOUS."""
 
@@ -38,12 +35,10 @@ def classify_mode(confidence: float) -> str:
     Returns
     -------
     str
-        "EXTRACTED", "INFERRED", or "AMBIGUOUS".
+        "EXTRACTED" or "AMBIGUOUS".
     """
     if confidence >= THRESHOLD_EXTRACTED:
         return "EXTRACTED"
-    if confidence >= THRESHOLD_INFERRED:
-        return "INFERRED"
     return "AMBIGUOUS"
 
 
@@ -53,7 +48,7 @@ def get_mode_description(mode: str) -> str:
     Parameters
     ----------
     mode : str
-        One of "EXTRACTED", "INFERRED", "AMBIGUOUS".
+        One of "EXTRACTED" or "AMBIGUOUS".
 
     Returns
     -------
@@ -65,10 +60,6 @@ def get_mode_description(mode: str) -> str:
             "High-confidence diagnosis supported by strong evidence "
             "across retrieval, symptom coverage, and (if available) "
             "sensor data."
-        ),
-        "INFERRED": (
-            "Best-guess diagnosis with moderate evidence. Additional "
-            "symptoms may improve confidence."
         ),
         "AMBIGUOUS": (
             "Insufficient evidence to identify a clear diagnosis. "
@@ -85,15 +76,12 @@ def get_mode_description(mode: str) -> str:
 def _get_band_bounds(mode: str) -> tuple[float, float]:
     """Return (low, high) bounds for the mode's confidence band.
 
-    EXTRACTED band: [0.75, 1.01)   — includes the threshold itself
-    INFERRED band:  [0.40, 0.75)
-    AMBIGUOUS band: [0.00, 0.40)
+    EXTRACTED band: [0.30, 1.01)   — includes the threshold itself
+    AMBIGUOUS band: [0.00, 0.30)
     """
     if mode == "EXTRACTED":
-        return (THRESHOLD_EXTRACTED, THRESHOLD_EXTRACTED + 0.26)
-    if mode == "INFERRED":
-        return (THRESHOLD_INFERRED, THRESHOLD_EXTRACTED)
-    return (0.0, THRESHOLD_INFERRED)
+        return (THRESHOLD_EXTRACTED, THRESHOLD_EXTRACTED + 0.71)
+    return (0.0, THRESHOLD_EXTRACTED)
 
 
 def select_display_candidates(
@@ -108,7 +96,7 @@ def select_display_candidates(
     candidates : list[dict]
         Fused candidates, each with a ``"confidence"`` key.
     mode : str
-        The determined mode ("EXTRACTED", "INFERRED", "AMBIGUOUS").
+        The determined mode ("EXTRACTED" or "AMBIGUOUS").
     max_display : int
         Maximum number of candidates to return.
 

@@ -88,14 +88,14 @@ class TestChainStructure:
     def test_returns_list(self):
         result = build_reasoning_chain(
             _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
+            [], _components(), "EXTRACTED",
         )
         assert isinstance(result, list)
 
     def test_steps_are_dicts_with_required_keys(self):
         result = build_reasoning_chain(
             _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
+            [], _components(), "EXTRACTED",
         )
         for step in result:
             assert "step" in step
@@ -105,7 +105,7 @@ class TestChainStructure:
     def test_metrics_are_dicts(self):
         result = build_reasoning_chain(
             _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
+            [], _components(), "EXTRACTED",
         )
         for step in result:
             assert isinstance(step["metrics"], dict)
@@ -113,7 +113,7 @@ class TestChainStructure:
     def test_steps_have_string_values(self):
         result = build_reasoning_chain(
             _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
+            [], _components(), "EXTRACTED",
         )
         for step in result:
             assert isinstance(step["step"], str)
@@ -146,14 +146,6 @@ class TestCoreSteps:
         step_names = [s["step"] for s in result]
         assert "Symptom Gap Analysis" not in step_names
 
-    def test_inferred_has_symptom_gap(self):
-        result = build_reasoning_chain(
-            _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
-        )
-        step_names = [s["step"] for s in result]
-        assert "Symptom Gap Analysis" in step_names
-
     def test_ambiguous_has_symptom_gap(self):
         result = build_reasoning_chain(
             _preprocessed(), _retrieval_result(), _mapped_faults(),
@@ -161,13 +153,6 @@ class TestCoreSteps:
         )
         step_names = [s["step"] for s in result]
         assert "Symptom Gap Analysis" in step_names
-
-    def test_chain_length_inferred(self):
-        result = build_reasoning_chain(
-            _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
-        )
-        assert len(result) == 6
 
     def test_chain_length_extracted(self):
         result = build_reasoning_chain(
@@ -268,12 +253,12 @@ class TestMetricsStructure:
         m = md["metrics"]
         assert m["mode"] == "EXTRACTED"
         assert abs(m["confidence"] - 0.82) < 1e-9
-        assert "0.75" in m["threshold_applied"]
+        assert "0.30" in m["threshold_applied"]
 
     def test_symptom_gap_metrics(self):
         result = build_reasoning_chain(
             _preprocessed(), _retrieval_result(), _mapped_faults(),
-            [], _components(), "INFERRED",
+            [], _components(), "AMBIGUOUS",
         )
         sg = next(s for s in result if s["step"] == "Symptom Gap Analysis")
         m = sg["metrics"]
@@ -320,7 +305,7 @@ class TestChainContent:
             [], _components(final=0.82), "EXTRACTED",
         )
         md = next(s for s in result if s["step"] == "Mode Determination")
-        assert ">= 0.75" in md["detail"]
+        assert ">= 0.30" in md["detail"]
         assert "EXTRACTED" in md["detail"]
 
     def test_symptom_gap_ambiguous_no_entities(self):

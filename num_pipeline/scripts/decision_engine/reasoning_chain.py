@@ -41,7 +41,7 @@ def build_reasoning_chain(
         ``coverage``, ``sensor_boost``, ``raw_retrieval_score``,
         ``final_confidence``.
     mode : str
-        Determined mode ("EXTRACTED", "INFERRED", "AMBIGUOUS").
+        Determined mode ("EXTRACTED" or "AMBIGUOUS").
 
     Returns
     -------
@@ -57,7 +57,7 @@ def build_reasoning_chain(
     chain.append(_step_confidence(confidence_components))
     chain.append(_step_mode_determination(mode, confidence_components))
 
-    if mode in ("INFERRED", "AMBIGUOUS"):
+    if mode == "AMBIGUOUS":
         chain.append(_step_symptom_gap(preprocessed))
 
     return chain
@@ -213,9 +213,8 @@ def _step_mode_determination(
     final = components.get("final_confidence", 0.0)
 
     thresholds = {
-        "EXTRACTED": ">= 0.75",
-        "INFERRED": ">= 0.40",
-        "AMBIGUOUS": "< 0.40",
+        "EXTRACTED": ">= 0.30",
+        "AMBIGUOUS": "< 0.30",
     }
     threshold_desc = thresholds.get(mode, "unknown")
 
