@@ -1,16 +1,16 @@
-# Graph Report - Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs  (2026-07-29)
+# Graph Report - Root-Cause-Analysis-of-Vehicle-Failures-Using-Agentic-and-Knowledge-Graphs  (2026-08-05)
 
 ## Corpus Check
-- 139 files · ~627,327 words
+- 140 files · ~657,100 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2015 nodes · 2567 edges · 192 communities (181 shown, 11 thin omitted)
+- 2029 nodes · 2557 edges · 193 communities (182 shown, 11 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `23e58c60`
+- Built from commit: `c1b5c634`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -188,18 +188,19 @@
 - [[_COMMUNITY_Community 174|Community 174]]
 - [[_COMMUNITY_Community 175|Community 175]]
 - [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 192|Community 192]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `build_reasoning_chain()` - 36 edges
+1. `build_reasoning_chain()` - 34 edges
 2. `Automotive Fault Knowledge Base` - 27 edges
-3. `_preprocessed()` - 26 edges
-4. `_retrieval_result()` - 26 edges
-5. `_components()` - 26 edges
+3. `_preprocessed()` - 24 edges
+4. `_retrieval_result()` - 24 edges
+5. `_components()` - 24 edges
 6. `run_diagnostic_engine()` - 23 edges
-7. `_mapped_faults()` - 23 edges
+7. `_mapped_faults()` - 21 edges
 8. `preprocess_query()` - 18 edges
 9. `compute_coverage()` - 16 edges
-10. `compute_confidence()` - 16 edges
+10. `Engine Components` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `DiagnosticReport` --uses--> `DiagnosticReport`  [INFERRED]
@@ -216,7 +217,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (192 total, 11 thin omitted)
+## Communities (193 total, 11 thin omitted)
 
 ### Community 0 - "Fuel (Full Category)"
 Cohesion: 0.18
@@ -327,16 +328,16 @@ Cohesion: 0.18
 Nodes (11): Coolant Leak Diagnosis, Coolant odor in cabin, Inspect radiator, hoses, and water pump for leaks, Components are intact, Leaking component found, Pressure test cooling system, Leaking system, No leaks detected (+3 more)
 
 ### Community 27 - "Cooling - System"
-Cohesion: 0.18
-Nodes (11): Diagnosis Steps, Engine Cooling System, Check radiator for blockage or damage, Blocked/damaged radiator, Clear/intact radiator, Engine overheating, Temperature gauge in red zone, Test thermostat operation (+3 more)
+Cohesion: 0.17
+Nodes (12): Cooling System, Diagnosis Steps, Engine Cooling System, Check radiator for blockage or damage, Blocked/damaged radiator, Clear/intact radiator, Engine overheating, Temperature gauge in red zone (+4 more)
 
 ### Community 28 - "Cooling - System"
 Cohesion: 0.18
 Nodes (11): Diagnosis Steps, Heater Core, Check coolant flow through heater core, Good coolant flow, Restricted flow, Inspect heater core for leaks, Leaking heater core, No leaks detected (+3 more)
 
 ### Community 29 - "Cooling - System"
-Cohesion: 0.17
-Nodes (12): Cooling System, Diagnosis Steps, Heater Hose, Coolant odor in cabin, Inspect heater hose connections, Loose/damaged connections, Secure/intact connections, Pressure test heater hoses (+4 more)
+Cohesion: 0.18
+Nodes (11): Diagnosis Steps, Heater Hose, Coolant odor in cabin, Inspect heater hose connections, Loose/damaged connections, Secure/intact connections, Pressure test heater hoses, Leaking hose detected (+3 more)
 
 ### Community 30 - "Cooling - System"
 Cohesion: 0.18
@@ -411,8 +412,8 @@ Cohesion: 0.18
 Nodes (11): Check Engine Light Diagnosis, Check engine light on, Check sensors related to DTCs, Faulty sensor, Sensor working properly, Poor engine performance, Scan for diagnostic trouble codes (DTCs), DTCs present (+3 more)
 
 ### Community 48 - "Electrical - System"
-Cohesion: 0.07
-Nodes (24): classify_mode(), _get_band_bounds(), get_mode_description(), Mode classification and threshold-band candidate selection.  Determines whether, Select candidates within the mode's threshold band for display.      Parameters, Determine the diagnostic mode from the top candidate's confidence.      Paramete, Return a short human-readable description of the mode.      Parameters     -----, Return (low, high) bounds for the mode's confidence band.      EXTRACTED band: [ (+16 more)
+Cohesion: 0.08
+Nodes (22): classify_mode(), _get_band_bounds(), get_mode_description(), Mode classification and threshold-band candidate selection.  Determines whether, Determine the diagnostic mode from the top candidate's confidence.      Paramete, Return a short human-readable description of the mode.      Parameters     -----, Return (low, high) bounds for the mode's confidence band.      EXTRACTED band: [, Select candidates within the mode's threshold band for display.      Parameters (+14 more)
 
 ### Community 49 - "Electrical - System"
 Cohesion: 0.18
@@ -484,7 +485,7 @@ Nodes (11): Diagnosis Steps, Engine Control Unit (ECU), Check ECU for fault code
 
 ### Community 66 - "Engine - Compartment"
 Cohesion: 0.22
-Nodes (9): Diagnosis Steps, Engine Compartment, Engine Oil, Inspect for oil leaks, No leaks detected, Oil leaks present, Loud engine noise, Low oil pressure warning light (+1 more)
+Nodes (9): Diagnosis Steps, Engine Compartment, Engine Oil, Check engine oil level and condition, Clean/sufficient oil, Low/dirty oil, Loud engine noise, Low oil pressure warning light (+1 more)
 
 ### Community 67 - "Engine - Compartment"
 Cohesion: 0.18
@@ -500,7 +501,7 @@ Nodes (11): Diagnosis Steps, Symptoms, Throttle Body, Inspect throttle body for 
 
 ### Community 70 - "Engine - Components"
 Cohesion: 0.18
-Nodes (11): Balance Shaft, Check balance shaft alignment, Misaligned shaft, Properly aligned shaft, Engine vibration, Inspect balance shaft for wear or damage, Shaft in good condition, Worn/damaged shaft (+3 more)
+Nodes (11): Diagnosis Steps, Exhaust Valve, Check valve clearance, Correct clearance, Incorrect clearance, Engine misfires, Inspect exhaust valve for carbon buildup, Buildup on valve (+3 more)
 
 ### Community 71 - "Engine - Components"
 Cohesion: 0.18
@@ -520,7 +521,7 @@ Nodes (11): Diagnosis Steps, Engine Mounts, Check mounting bolts for tightness, 
 
 ### Community 75 - "Engine - Components"
 Cohesion: 0.09
-Nodes (23): Diagnosis Steps, Diagnosis Steps, Engine Components, Exhaust Valve, Check valve clearance, Correct clearance, Incorrect clearance, Engine misfires (+15 more)
+Nodes (23): Balance Shaft, Check balance shaft alignment, Misaligned shaft, Properly aligned shaft, Engine vibration, Inspect balance shaft for wear or damage, Shaft in good condition, Worn/damaged shaft (+15 more)
 
 ### Community 76 - "Engine - Components"
 Cohesion: 0.18
@@ -531,8 +532,8 @@ Cohesion: 0.18
 Nodes (11): Diagnosis Steps, Fuel Injector, Engine misfires, Inspect injector for leaks or clogs, Clean/in-tolerance injector, Leaking/clogged injector, Poor fuel economy, Test fuel injector spray pattern (+3 more)
 
 ### Community 78 - "Engine - Components"
-Cohesion: 0.17
-Nodes (20): build_reasoning_chain(), Reasoning chain builder.  Produces a step-by-step reasoning chain documenting ho, Build the reasoning chain from pipeline outputs.      Parameters     ----------, _step_confidence(), _step_fault_mapping(), _step_kg_retrieval(), _step_mode_determination(), _step_query_analysis() (+12 more)
+Cohesion: 0.11
+Nodes (34): _compute_sensor_badges(), _extract_matched_symptoms(), _extract_original_symptoms(), _get_retrieval_scores(), _get_top_fault(), Diagnostic engine orchestrator.  Thin coordinator that sequences the decision en, Extract original user text as individual words for coverage.      Returns indivi, Extract individual words from matched entity labels for coverage.      Returns i (+26 more)
 
 ### Community 79 - "Engine - Components"
 Cohesion: 0.18
@@ -559,7 +560,7 @@ Cohesion: 0.09
 Nodes (40): community_search(), embed_query(), _get_collection(), _get_model(), graph_search(), hybrid_retrieve(), _load_community_map(), _load_graph() (+32 more)
 
 ### Community 85 - "Community 85"
-Cohesion: 0.08
+Cohesion: 0.09
 Nodes (28): _build_ai_assisted_context(), _build_ai_assisted_prompt(), _format_sensor_detail(), generate_ai_assisted_analysis(), generate_brief_summary(), generate_diagnosis_summary(), generate_inspection_steps(), _get_disclaimer() (+20 more)
 
 ### Community 86 - "Community 86"
@@ -567,24 +568,24 @@ Cohesion: 0.07
 Nodes (23): Detailed confidence component audit for every evaluation query., extract_candidate_keys(), extract_sensor_evidence(), main(), print_diff(), Comprehensive functional audit of the Refine Diagnosis workflow.  Simulates the, Test every refinement option individually., Test all 31 non-empty checkbox combinations (2^5 - 1). (+15 more)
 
 ### Community 87 - "Community 87"
-Cohesion: 0.12
-Nodes (26): _build_overall_narrative(), build_sensor_interpretations(), _describe_z(), enrich_evidence_badges(), enrich_sensor(), enrich_sensor_list(), format_evidence_for_llm(), get_eda_paths() (+18 more)
+Cohesion: 0.13
+Nodes (24): _build_overall_narrative(), build_sensor_interpretations(), _describe_z(), enrich_evidence_badges(), enrich_sensor(), enrich_sensor_list(), get_eda_paths(), interpret_flagged_sensor() (+16 more)
 
 ### Community 88 - "Community 88"
 Cohesion: 0.08
 Nodes (23): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+15 more)
 
 ### Community 89 - "Community 89"
-Cohesion: 0.09
-Nodes (22): 1. Data Source, 2.1 KG Build Pipeline (`build_kg.py`), 2.2 Graph Schema, 2.3 Graph Normalization (`02_normalize_graph.py`), 2. Knowledge Graph Construction, 3. Embedding Generation (`03_build_embeddings.py`), 4. The Complete Diagnosis Pipeline, 5. Visualization (+14 more)
+Cohesion: 0.05
+Nodes (40): 4.10 Summary and Outlook, 4.1 Introduction, 4.2.1 Knowledge graphs in diagnostic reasoning, 4.2.2 Hybrid retrieval, 4.2.3 Retrieval-augmented generation and GraphRAG, 4.2.4 Uncertainty and probabilistic evidence fusion, 4.2 Related Work and Theoretical Foundations, 4.3.1 Overview (+32 more)
 
 ### Community 90 - "Community 90"
-Cohesion: 0.15
-Nodes (21): _build_kg_chain(), _clear_session(), _display_ambiguous_followup(), display_diagnosis(), _display_extracted_followup(), _display_inferred_followup(), _display_refinement_comparison(), main() (+13 more)
+Cohesion: 0.21
+Nodes (12): _build_kg_chain(), _clear_session(), display_history(), _display_refinement_comparison(), main(), app.py — Streamlit Vehicle Fault Diagnosis Assistant  Two-mode diagnostic assist, Build a colored KG context chain as HTML node pills.      Node colors match the, Show original and refined reports side by side for user choice. (+4 more)
 
 ### Community 91 - "Community 91"
 Cohesion: 0.13
-Nodes (12): compute_confidence(), Compute the calibrated confidence for the top-ranked candidate.      Parameters, All components at maximum → confidence capped at 1.0., All components at zero → confidence = 0.0., Moderate inputs should land in the INFERRED band [0.40, 0.75)., Strong inputs should reach EXTRACTED (>= 0.75)., Weak inputs should fall into AMBIGUOUS (< 0.40)., Same inputs always produce the same output. (+4 more)
+Nodes (12): compute_confidence(), Compute the calibrated confidence for the top-ranked candidate.      Parameters, All components at maximum → confidence capped at 1.0., All components at zero → confidence = 0.0., Moderate inputs should land in the EXTRACTED range (>= 0.30)., Strong inputs should reach EXTRACTED (>= 0.75)., Weak inputs should fall into AMBIGUOUS (< 0.40)., Same inputs always produce the same output. (+4 more)
 
 ### Community 92 - "Community 92"
 Cohesion: 0.14
@@ -595,8 +596,8 @@ Cohesion: 0.16
 Nodes (9): compute_coverage(), Compute the fraction of original user words found in matched entities.      Para, Only one of three original symptoms matched., No original symptoms matched., No original symptoms provided — returns 0., Original symptoms exist but none were matched., Coverage is computed against original entity labels,         NOT the preprocesso, All original symptoms matched by entity detection. (+1 more)
 
 ### Community 94 - "Community 94"
-Cohesion: 0.15
-Nodes (18): _annotate_candidates(), _check_contradicted(), _compute_sensor_badges(), _extract_matched_symptoms(), _extract_original_symptoms(), _get_retrieval_scores(), _get_top_fault(), Diagnostic engine orchestrator.  Thin coordinator that sequences the decision en (+10 more)
+Cohesion: 0.50
+Nodes (4): _annotate_candidates(), _check_contradicted(), Check whether sensor data contradicts this fault.      A fault is contradicted o, Add confidence and metadata to each candidate for display.      Each candidate g
 
 ### Community 95 - "Community 95"
 Cohesion: 0.16
@@ -643,8 +644,8 @@ Cohesion: 0.19
 Nodes (7): LLMProvider, LLM Provider — abstraction layer for LLM calls.  Supports Ollama (local) with fa, Abstraction for LLM inference.      Supports:     - Ollama (local, via HTTP API, Check if the LLM provider is available., Generate a response from the LLM.          Args:             prompt: The user pr, Check if Ollama is running and has the model., Generate using Ollama API.
 
 ### Community 106 - "Community 106"
-Cohesion: 0.15
-Nodes (12): Architecture, CLI, Configuration, Dependencies, Design Principles, JSON Output, Key Modules, Running (+4 more)
+Cohesion: 0.10
+Nodes (19): Architectural Decisions & Design Rationale, Architecture, Batch evaluation, End-to-End Pipeline, Getting Started, Install, Key Features, Legacy components (+11 more)
 
 ### Community 107 - "Community 107"
 Cohesion: 0.21
@@ -716,7 +717,7 @@ Nodes (10): _call_ollama(), format_graph_answer(), _format_subsystem_summary(), 
 
 ### Community 124 - "Community 124"
 Cohesion: 0.24
-Nodes (8): Batch analysis of confidence components across representative queries., DiagnosticReport, Single output object returned by the decision engine.      Consumed by the pipel, DiagnosticReport, main(), run_diagnostic.py — Pipeline wrapper for the new decision engine.  Runs the exis, Run the full diagnostic pipeline with the new decision engine.      Parameters, run_diagnostic()
+Nodes (8): DiagnosticReport, Single output object returned by the decision engine.      Consumed by the pipel, Batch analysis of confidence components across representative queries., DiagnosticReport, main(), run_diagnostic.py — Pipeline wrapper for the new decision engine.  Runs the exis, Run the full diagnostic pipeline with the new decision engine.      Parameters, run_diagnostic()
 
 ### Community 125 - "Community 125"
 Cohesion: 0.22
@@ -763,8 +764,8 @@ Cohesion: 0.22
 Nodes (8): graphify reference: extra exports and benchmark, Step 6b - Wiki (only if --wiki flag), Step 7 - Neo4j export (only if --neo4j or --neo4j-push flag), Step 7a - FalkorDB export (only if --falkordb or --falkordb-push flag), Step 7b - SVG export (only if --svg flag), Step 7c - GraphML export (only if --graphml flag), Step 7d - MCP server (only if --mcp flag), Step 8 - Token reduction benchmark (only if total_words > 5000)
 
 ### Community 136 - "Community 136"
-Cohesion: 0.25
-Nodes (8): _display_candidates(), _format_sensor_badge(), _get_sensor_detail(), Extract per-sensor detail from ``sensor_results_raw``., Display all candidates in the mode's threshold band., Format sensor status as an inline badge., get_sensor_boxplot_path(), Return the absolute path to the pre-rendered box plot PNG, or None.
+Cohesion: 0.20
+Nodes (10): _display_candidates(), _format_sensor_badge(), _get_sensor_detail(), Extract per-sensor detail from ``sensor_results_raw``., Display all candidates in the mode's threshold band., Format sensor status as an inline badge., get_sensor_boxplot_path(), get_sensor_histogram_path() (+2 more)
 
 ### Community 137 - "Community 137"
 Cohesion: 0.36
@@ -847,8 +848,8 @@ Cohesion: 0.83
 Nodes (3): build_profile(), process_file(), save_profile()
 
 ### Community 160 - "Community 160"
-Cohesion: 0.67
-Nodes (3): Check engine oil level and condition, Clean/sufficient oil, Low/dirty oil
+Cohesion: 0.31
+Nodes (9): _display_ambiguous_followup(), display_diagnosis(), _display_extracted_followup(), DiagnosticReport, Render the diagnosis report.      Order: Mode badge → Symptoms → Diagnosis summa, Clarification form for AMBIGUOUS mode., Post-diagnosis actions for EXTRACTED mode., Generate and display AI-assisted analysis. (+1 more)
 
 ### Community 161 - "Community 161"
 Cohesion: 0.67
@@ -866,25 +867,29 @@ Nodes (3): Check transmission fluid level and condition, Clean/sufficient fluid,
 Cohesion: 0.67
 Nodes (3): Inspect bearing for signs of damage or corrosion, Clean/intact bearing, Damaged/corroded bearing
 
+### Community 165 - "Community 165"
+Cohesion: 0.67
+Nodes (3): Inspect for oil leaks, No leaks detected, Oil leaks present
+
 ## Knowledge Gaps
-- **926 isolated node(s):** `$schema`, `plugin`, `model`, `name`, `baseURL` (+921 more)
+- **945 isolated node(s):** `$schema`, `plugin`, `model`, `name`, `baseURL` (+940 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Automotive Fault Knowledge Base` connect `Community 99` to `Community 128`, `Engine - Compartment`, `Category: , Wheels, Steering`, `Air - Conditioning`, `Emissions - System`, `Drivetrain - Universal`, `Abs - System`, `Electrical - System`, `Engine - Components`, `Community 125`, `Cooling - System`, `Community 126`, `Community 127`?**
-  _High betweenness centrality (0.253) - this node is a cross-community bridge._
-- **Why does `run_diagnostic_engine()` connect `Community 94` to `Community 130`, `Community 103`, `Engine - Components`, `Electrical - System`, `Community 85`, `Community 121`, `Community 91`, `Community 124`, `Community 93`?**
-  _High betweenness centrality (0.030) - this node is a cross-community bridge._
-- **Why does `Exhaust Manifold` connect `Emissions - System` to `Emissions - System`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Automotive Fault Knowledge Base` connect `Community 99` to `Community 128`, `Engine - Compartment`, `Category: , Wheels, Steering`, `Air - Conditioning`, `Emissions - System`, `Drivetrain - Universal`, `Abs - System`, `Electrical - System`, `Engine - Components`, `Cooling - System`, `Community 125`, `Community 126`, `Community 127`?**
+  _High betweenness centrality (0.238) - this node is a cross-community bridge._
+- **Why does `run_diagnostic_engine()` connect `Engine - Components` to `Community 130`, `Community 103`, `Electrical - System`, `Community 85`, `Community 121`, `Community 91`, `Community 124`, `Community 93`, `Community 94`?**
+  _High betweenness centrality (0.028) - this node is a cross-community bridge._
+- **Why does `Brake Rotor` connect `Abs - System` to `Abs - System`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **What connects `$schema`, `plugin`, `model` to the rest of the system?**
-  _1161 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1178 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Electrical - System` be split into smaller, more focused modules?**
   _Cohesion score 0.09486166007905138 - nodes in this community are weakly interconnected._
 - **Should `Electrical - System` be split into smaller, more focused modules?**
-  _Cohesion score 0.06775510204081632 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07781649245063879 - nodes in this community are weakly interconnected._
 - **Should `Engine - Components` be split into smaller, more focused modules?**
   _Cohesion score 0.09057971014492754 - nodes in this community are weakly interconnected._

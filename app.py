@@ -98,6 +98,9 @@ st.markdown("""
         background: #e2e3e5;
         color: #383d41;
     }
+    .stContainer {
+        margin-bottom: 1rem;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -150,20 +153,33 @@ def main():
     # ── Sensor Data (sidebar) ──────────────────────────────────
 
     with st.sidebar:
+        with st.expander("ℹ️ How this works", expanded=False):
+            st.markdown(
+                "- Describe the symptoms you're experiencing.\n"
+                "- Symptoms are matched against the knowledge graph of faults.\n"
+                "- Likely causes are ranked, with optional sensor validation.\n"
+                "- You get a diagnosis plus recommended inspection steps."
+            )
         st.markdown("### Sensor Data")
         st.session_state.engine_speed = st.selectbox(
             "Engine speed (RPM)",
             options=[1000, 1200, 1400, 1600],
             index=0,
+            help="RPM used to compare sensor readings against nominal ranges for this engine speed.",
         )
         sensor_mode = st.radio(
             "Sensor data source",
             ["Simulated (from knowledge graph)", "Upload ECU CSV", "None (skip sensor analysis)"],
             index=0,
+            help="Choose whether to use simulated sensor data from the knowledge graph, upload real ECU CSV data, or skip sensor validation entirely.",
         )
         uploaded_csv = None
         if sensor_mode == "Upload ECU CSV":
-            uploaded_csv = st.file_uploader("Upload ECU data CSV", type=["csv"])
+            uploaded_csv = st.file_uploader(
+                "Upload ECU data CSV",
+                type=["csv"],
+                help="CSV with one row of ECU sensor readings matching the expected sensor columns.",
+            )
 
     with st.form("symptom_form"):
         symptoms_input = st.text_area(
@@ -207,6 +223,7 @@ def main():
                     "mode": report.mode,
                     "summary": report.summary,
                 })
+                st.toast(f"Diagnosis complete — mode: {report.mode}", icon="✅")
             except Exception as e:
                 st.error(f"Analysis failed: {e}")
                 return
@@ -267,13 +284,20 @@ def display_diagnosis(report: DiagnosticReport):
     # ── Plain-English diagnosis summary (from engine) ─────────────
     if report.diagnosis_summary:
         st.markdown(report.diagnosis_summary)
+        with st.expander("Copy summary", expanded=False):
+            st.code(report.diagnosis_summary, language="text")
 
 
     # ── Recommended inspection steps (from engine) ────────────────
     if report.inspection_steps:
-        st.markdown("**Recommended inspection steps:**")
-        for step in report.inspection_steps:
-            st.markdown(f"- {step}")
+        with st.status("Recommended inspection steps", expanded=True) as status:
+            for step in report.inspection_steps:
+                st.write(f"- {step}")
+            status.update(
+                label="Recommended inspection steps",
+                state="complete",
+                expanded=True,
+            )
 
     # ── Candidates ────────────────────────────────────────────────
     _display_candidates(report)
@@ -391,164 +415,165 @@ def _display_candidates(report: DiagnosticReport):
     ) if report.sensor_evidence else False
 
     for i, c in enumerate(candidates):
-        label = c.get("label", "Unknown")
-        sensor_status = c.get("sensor_status", "No Evidence")
+        with st.container(border=True):
+            label = c.get("label", "Unknown")
+            sensor_status = c.get("sensor_status", "No Evidence")
 
-        # Rank and badge
-        rank = f"#{i+1}"
-        badge_html = (
-            '<span class="badge-top">Top Match</span>' if i == 0
-            else '<span class="badge-related">Related</span>'
-        )
+            # Rank and badge
+            rank = f"#{i+1}"
+            badge_html = (
+                '<span class="badge-top">Top Match</span>' if i == 0
+                else '<span class="badge-related">Related</span>'
+            )
 
-        # Sensor badge (only when sensor data was provided)
-        sensor_badge = _format_sensor_badge(sensor_status) if has_sensor else ""
+            # Sensor badge (only when sensor data was provided)
+            sensor_badge = _format_sensor_badge(sensor_status) if has_sensor else ""
 
-        # Candidate header
-        st.markdown(
-            f"**{rank}** {label} {badge_html} {sensor_badge}",
-            unsafe_allow_html=True,
-        )
+            # Candidate header
+            st.markdown(
+                f"**{rank}** {label} {badge_html} {sensor_badge}",
+                unsafe_allow_html=True,
+            )
 
-        # KG context chain
-        chain_html = _build_kg_chain(c)
-        if chain_html:
-            st.markdown(chain_html, unsafe_allow_html=True)
+            # KG context chain
+            chain_html = _build_kg_chain(c)
+            if chain_html:
+                st.markdown(chain_html, unsafe_allow_html=True)
 
-        # Expandable sensor detail — interpretation narrative + EDA visuals
-        fault = c.get("navic_fault", "")
-        if has_sensor and fault and fault in report.sensor_evidence:
-            se = report.sensor_evidence[fault]
-            if se.get("critical") or se.get("warning"):
-                speed = getattr(report, "sensor_debug", {}).get("speed", 1000)
+            # Expandable sensor detail — interpretation narrative + EDA visuals
+            fault = c.get("navic_fault", "")
+            if has_sensor and fault and fault in report.sensor_evidence:
+                se = report.sensor_evidence[fault]
+                if se.get("critical") or se.get("warning"):
+                    speed = getattr(report, "sensor_debug", {}).get("speed", 1000)
 
-                # Build grounded interpretations from existing data
-                interp_result = build_sensor_interpretations(
-                    fault_id=fault,
-                    sensor_results_raw=getattr(report, "sensor_results_raw", {}),
-                    sensor_evidence=report.sensor_evidence,
-                    speed=speed,
-                )
+                    # Build grounded interpretations from existing data
+                    interp_result = build_sensor_interpretations(
+                        fault_id=fault,
+                        sensor_results_raw=getattr(report, "sensor_results_raw", {}),
+                        sensor_evidence=report.sensor_evidence,
+                        speed=speed,
+                    )
 
-                with st.expander(f"Sensor detail — {label}", expanded=False):
+                    with st.expander(f"Sensor detail — {label}", expanded=False):
 
-                    # ── Overall narrative ─────────────────────────────
-                    st.markdown(interp_result["overall_narrative"])
+                        # ── Overall narrative ─────────────────────────────
+                        st.markdown(interp_result["overall_narrative"])
 
-                    # ── Per-sensor evidence summaries ────────────────
-                    for s_name in se.get("critical", []):
-                        si = interp_result["interpretations"].get(s_name, {})
-                        st.markdown(
-                            f"🔴 **{si.get('display_name', s_name)}**: CRITICAL"
-                        )
-                        st.markdown(
-                            f"   *{si.get('abnormality', '')}*"
-                        )
-                        if si.get("relevance"):
-                            st.markdown(f"   **Relevance:** {si['relevance']}")
-                        if si.get("contribution"):
-                            st.markdown(f"   **Contribution:** {si['contribution']}")
-
-                    for s_name in se.get("warning", []):
-                        si = interp_result["interpretations"].get(s_name, {})
-                        st.markdown(
-                            f"🟡 **{si.get('display_name', s_name)}**: WARNING"
-                        )
-                        st.markdown(
-                            f"   *{si.get('abnormality', '')}*"
-                        )
-                        if si.get("relevance"):
-                            st.markdown(f"   **Relevance:** {si['relevance']}")
-                        if si.get("contribution"):
-                            st.markdown(f"   **Contribution:** {si['contribution']}")
-
-                    for s_name in se.get("normal", []):
-                        info = enrich_sensor(s_name)
-                        st.markdown(
-                            f"⚪ **{info['display_name']}** ({s_name}): Normal"
-                        )
-
-                    # ── Sensor visualisations (pre-rendered PNGs) ──
-                    flagged = se.get("critical", []) + se.get("warning", [])
-                    sensor_vis = []
-                    for s_name in flagged:
-                        bx_path = get_sensor_boxplot_path(speed, s_name)
-                        hist_path = get_sensor_histogram_path(speed, s_name)
-                        detail = _get_sensor_detail(s_name, report, fault)
-                        if bx_path or hist_path:
-                            sensor_vis.append((s_name, bx_path, hist_path, detail))
-
-                    if sensor_vis:
-                        st.markdown("---")
-                        st.markdown(
-                            "**Distributions of flagged sensors "
-                            "(nominal condition):**"
-                        )
-                        st.caption(
-                            "Box plots and histograms show the nominal "
-                            "distribution for each flagged sensor. "
-                            "The numerical metrics below (Current Reading, "
-                            "Nominal Mean, Deviation, Percentage Change, "
-                            "and Z-Score) provide the comparison between "
-                            "the current observation and the nominal condition."
-                        )
-                        for s_name, bx_path, hist_path, detail in sensor_vis:
-                            sen_info = enrich_sensor(s_name)
-                            display_name = sen_info["display_name"]
-                            expander_label = (
-                                f"Distribution: {display_name} ({s_name})"
-                                if display_name != s_name
-                                else f"Distribution: {s_name}"
+                        # ── Per-sensor evidence summaries ────────────────
+                        for s_name in se.get("critical", []):
+                            si = interp_result["interpretations"].get(s_name, {})
+                            st.markdown(
+                                f"🔴 **{si.get('display_name', s_name)}**: CRITICAL"
                             )
-                            with st.expander(expander_label, expanded=False):
-                                col_left, col_right = st.columns(2)
-                                with col_left:
-                                    if bx_path:
-                                        st.image(
-                                            bx_path,
-                                            caption=f"Box Plot — {display_name} ({s_name})",
-                                            use_container_width=True,
-                                        )
-                                    else:
-                                        st.caption(
-                                            "Box plot not available "
-                                            "for this sensor."
-                                        )
-                                with col_right:
-                                    if hist_path:
-                                        st.image(
-                                            hist_path,
-                                            caption=f"Histogram — {display_name} ({s_name})",
-                                            use_container_width=True,
-                                        )
-                                    else:
-                                        st.caption(
-                                            "Histogram not available "
-                                            "for this sensor."
-                                        )
-                                cv = detail.get("current_value")
-                                nm = detail.get("nominal_mean")
-                                pct = detail.get("percent_change")
-                                z = detail.get("z_score")
-                                if any(x is not None for x in (cv, nm, pct, z)):
-                                    parts = []
-                                    if cv is not None and nm is not None:
-                                        diff = abs(cv - nm)
-                                        direction = "above" if cv > nm else "below"
-                                        parts.append(
-                                            f"Current: **{cv:.2f}** | "
-                                            f"Nominal: **{nm:.2f}** | "
-                                            f"Deviation: **{diff:.2f}** ({direction})"
-                                        )
-                                    elif cv is not None:
-                                        parts.append(f"Current: **{cv:.2f}**")
-                                    elif nm is not None:
-                                        parts.append(f"Nominal: **{nm:.2f}**")
-                                    if pct is not None:
-                                        parts.append(f"Change: **{pct:+.1f}%**")
-                                    if z is not None:
-                                        parts.append(f"Z-score: **{z:.2f}**")
-                                    st.markdown(" | ".join(parts))
+                            st.markdown(
+                                f"   *{si.get('abnormality', '')}*"
+                            )
+                            if si.get("relevance"):
+                                st.markdown(f"   **Relevance:** {si['relevance']}")
+                            if si.get("contribution"):
+                                st.markdown(f"   **Contribution:** {si['contribution']}")
+
+                        for s_name in se.get("warning", []):
+                            si = interp_result["interpretations"].get(s_name, {})
+                            st.markdown(
+                                f"🟡 **{si.get('display_name', s_name)}**: WARNING"
+                            )
+                            st.markdown(
+                                f"   *{si.get('abnormality', '')}*"
+                            )
+                            if si.get("relevance"):
+                                st.markdown(f"   **Relevance:** {si['relevance']}")
+                            if si.get("contribution"):
+                                st.markdown(f"   **Contribution:** {si['contribution']}")
+
+                        for s_name in se.get("normal", []):
+                            info = enrich_sensor(s_name)
+                            st.markdown(
+                                f"⚪ **{info['display_name']}** ({s_name}): Normal"
+                            )
+
+                        # ── Sensor visualisations (pre-rendered PNGs) ──
+                        flagged = se.get("critical", []) + se.get("warning", [])
+                        sensor_vis = []
+                        for s_name in flagged:
+                            bx_path = get_sensor_boxplot_path(speed, s_name)
+                            hist_path = get_sensor_histogram_path(speed, s_name)
+                            detail = _get_sensor_detail(s_name, report, fault)
+                            if bx_path or hist_path:
+                                sensor_vis.append((s_name, bx_path, hist_path, detail))
+
+                        if sensor_vis:
+                            st.markdown("---")
+                            st.markdown(
+                                "**Distributions of flagged sensors "
+                                "(nominal condition):**"
+                            )
+                            st.caption(
+                                "Box plots and histograms show the nominal "
+                                "distribution for each flagged sensor. "
+                                "The numerical metrics below (Current Reading, "
+                                "Nominal Mean, Deviation, Percentage Change, "
+                                "and Z-Score) provide the comparison between "
+                                "the current observation and the nominal condition."
+                            )
+                            for s_name, bx_path, hist_path, detail in sensor_vis:
+                                sen_info = enrich_sensor(s_name)
+                                display_name = sen_info["display_name"]
+                                expander_label = (
+                                    f"Distribution: {display_name} ({s_name})"
+                                    if display_name != s_name
+                                    else f"Distribution: {s_name}"
+                                )
+                                with st.expander(expander_label, expanded=False):
+                                    col_left, col_right = st.columns(2)
+                                    with col_left:
+                                        if bx_path:
+                                            st.image(
+                                                bx_path,
+                                                caption=f"Box Plot — {display_name} ({s_name})",
+                                                use_container_width=True,
+                                            )
+                                        else:
+                                            st.caption(
+                                                "Box plot not available "
+                                                "for this sensor."
+                                            )
+                                    with col_right:
+                                        if hist_path:
+                                            st.image(
+                                                hist_path,
+                                                caption=f"Histogram — {display_name} ({s_name})",
+                                                use_container_width=True,
+                                            )
+                                        else:
+                                            st.caption(
+                                                "Histogram not available "
+                                                "for this sensor."
+                                            )
+                                    cv = detail.get("current_value")
+                                    nm = detail.get("nominal_mean")
+                                    pct = detail.get("percent_change")
+                                    z = detail.get("z_score")
+                                    if any(x is not None for x in (cv, nm, pct, z)):
+                                        parts = []
+                                        if cv is not None and nm is not None:
+                                            diff = abs(cv - nm)
+                                            direction = "above" if cv > nm else "below"
+                                            parts.append(
+                                                f"Current: **{cv:.2f}** | "
+                                                f"Nominal: **{nm:.2f}** | "
+                                                f"Deviation: **{diff:.2f}** ({direction})"
+                                            )
+                                        elif cv is not None:
+                                            parts.append(f"Current: **{cv:.2f}**")
+                                        elif nm is not None:
+                                            parts.append(f"Nominal: **{nm:.2f}**")
+                                        if pct is not None:
+                                            parts.append(f"Change: **{pct:+.1f}%**")
+                                        if z is not None:
+                                            parts.append(f"Z-score: **{z:.2f}**")
+                                        st.markdown(" | ".join(parts))
 
     if not has_sensor:
         st.info("No sensor data provided — sensor validation skipped.")
