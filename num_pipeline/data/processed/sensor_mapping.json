@@ -1,0 +1,851 @@
+{
+    "FAULT_INJ_DUR": {
+        "1000": {
+            "speed": 1000,
+            "fault": "FAULT_INJ_DUR",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.701,
+                    "effect_size": 5.913,
+                    "percent_change": -0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.699,
+                    "effect_size": 5.891,
+                    "percent_change": -0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.642,
+                    "effect_size": 5.216,
+                    "percent_change": -0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.579,
+                    "effect_size": 4.478,
+                    "percent_change": -0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_eg_mes[0]",
+                    "importance_score": 0.283,
+                    "effect_size": 0.952,
+                    "percent_change": 0.74,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_eg[0]",
+                    "importance_score": 0.283,
+                    "effect_size": 0.952,
+                    "percent_change": 0.74,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.278,
+                    "effect_size": 0.886,
+                    "percent_change": 1.1,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.277,
+                    "effect_size": 0.88,
+                    "percent_change": 1.11,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map_mes",
+                    "importance_score": 0.277,
+                    "effect_size": 0.879,
+                    "percent_change": 1.09,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_sp_bpa",
+                    "importance_score": 0.277,
+                    "effect_size": 0.877,
+                    "percent_change": 1.11,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1200": {
+            "speed": 1200,
+            "fault": "FAULT_INJ_DUR",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 1.0,
+                    "effect_size": 17.497,
+                    "percent_change": 129.34,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.352,
+                    "effect_size": 5.291,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.345,
+                    "effect_size": 5.05,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.345,
+                    "effect_size": 5.05,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.345,
+                    "effect_size": 5.05,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.335,
+                    "effect_size": 4.69,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.329,
+                    "effect_size": 4.484,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.311,
+                    "effect_size": 3.858,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.311,
+                    "effect_size": 3.858,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_sp_bpa",
+                    "importance_score": 0.311,
+                    "effect_size": 3.857,
+                    "percent_change": -0.21,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1400": {
+            "speed": 1400,
+            "fault": "FAULT_INJ_DUR",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 0.81,
+                    "effect_size": 13.284,
+                    "percent_change": 40.1,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.282,
+                    "effect_size": 2.162,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.279,
+                    "effect_size": 2.099,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.279,
+                    "effect_size": 2.097,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.278,
+                    "effect_size": 2.074,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.276,
+                    "effect_size": 2.022,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_eg[0]",
+                    "importance_score": 0.276,
+                    "effect_size": 1.996,
+                    "percent_change": -0.42,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_eg_mes[0]",
+                    "importance_score": 0.276,
+                    "effect_size": 1.996,
+                    "percent_change": -0.42,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.272,
+                    "effect_size": 1.9,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.263,
+                    "effect_size": 1.676,
+                    "percent_change": -0.08,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1600": {
+            "speed": 1600,
+            "fault": "FAULT_INJ_DUR",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 0.806,
+                    "effect_size": 11.981,
+                    "percent_change": 39.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.263,
+                    "effect_size": 1.51,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.262,
+                    "effect_size": 1.478,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.262,
+                    "effect_size": 1.476,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.262,
+                    "effect_size": 1.475,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.261,
+                    "effect_size": 1.456,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.257,
+                    "effect_size": 1.371,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.251,
+                    "effect_size": 1.213,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_bpa",
+                    "importance_score": 0.251,
+                    "effect_size": 1.213,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_sp_bpa",
+                    "importance_score": 0.251,
+                    "effect_size": 1.213,
+                    "percent_change": -0.06,
+                    "p_value": 0.0
+                }
+            ]
+        }
+    },
+    "FAULT_INJ_PRS": {
+        "1000": {
+            "speed": 1000,
+            "fault": "FAULT_INJ_PRS",
+            "top_k": 5,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.701,
+                    "effect_size": 9.954,
+                    "percent_change": -0.29,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.698,
+                    "effect_size": 9.901,
+                    "percent_change": -0.29,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.643,
+                    "effect_size": 8.795,
+                    "percent_change": -0.29,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.58,
+                    "effect_size": 7.547,
+                    "percent_change": -0.29,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 0.3,
+                    "effect_size": 0.832,
+                    "percent_change": -21.13,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1200": {
+            "speed": 1200,
+            "fault": "FAULT_INJ_PRS",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 0.888,
+                    "effect_size": 13.377,
+                    "percent_change": -80.15,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.52,
+                    "effect_size": 8.549,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.505,
+                    "effect_size": 8.142,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.505,
+                    "effect_size": 8.142,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.505,
+                    "effect_size": 8.139,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.481,
+                    "effect_size": 7.5,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.47,
+                    "effect_size": 7.201,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.431,
+                    "effect_size": 6.167,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.431,
+                    "effect_size": 6.165,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_bpa",
+                    "importance_score": 0.431,
+                    "effect_size": 6.161,
+                    "percent_change": -0.26,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1400": {
+            "speed": 1400,
+            "fault": "FAULT_INJ_PRS",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 0.716,
+                    "effect_size": 1.929,
+                    "percent_change": 6.08,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "pfu_l_mes",
+                    "importance_score": 0.574,
+                    "effect_size": 1.408,
+                    "percent_change": -3.33,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.546,
+                    "effect_size": 1.333,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.537,
+                    "effect_size": 1.298,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.537,
+                    "effect_size": 1.298,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.536,
+                    "effect_size": 1.297,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.526,
+                    "effect_size": 1.257,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.509,
+                    "effect_size": 1.192,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.476,
+                    "effect_size": 1.063,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.475,
+                    "effect_size": 1.062,
+                    "percent_change": -0.05,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1600": {
+            "speed": 1600,
+            "fault": "FAULT_INJ_PRS",
+            "top_k": 0,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": []
+        }
+    },
+    "FAULT_SOI": {
+        "1000": {
+            "speed": 1000,
+            "fault": "FAULT_SOI",
+            "top_k": 5,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.7,
+                    "effect_size": 3.47,
+                    "percent_change": -0.14,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.698,
+                    "effect_size": 3.458,
+                    "percent_change": -0.14,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.644,
+                    "effect_size": 3.082,
+                    "percent_change": -0.14,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.583,
+                    "effect_size": 2.654,
+                    "percent_change": -0.14,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "pfu_l_mes",
+                    "importance_score": 0.349,
+                    "effect_size": 1.016,
+                    "percent_change": -1.77,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1200": {
+            "speed": 1200,
+            "fault": "FAULT_SOI",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 0.869,
+                    "effect_size": 10.588,
+                    "percent_change": -72.43,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.29,
+                    "effect_size": 1.905,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.286,
+                    "effect_size": 1.819,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.286,
+                    "effect_size": 1.818,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.286,
+                    "effect_size": 1.818,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.279,
+                    "effect_size": 1.678,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.276,
+                    "effect_size": 1.612,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.266,
+                    "effect_size": 1.385,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.266,
+                    "effect_size": 1.385,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_bpa",
+                    "importance_score": 0.266,
+                    "effect_size": 1.385,
+                    "percent_change": -0.07,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1400": {
+            "speed": 1400,
+            "fault": "FAULT_SOI",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 1.0,
+                    "effect_size": 80.864,
+                    "percent_change": -171.75,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.251,
+                    "effect_size": 8.215,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.25,
+                    "effect_size": 7.965,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.249,
+                    "effect_size": 7.918,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.249,
+                    "effect_size": 7.914,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.248,
+                    "effect_size": 7.661,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.245,
+                    "effect_size": 7.224,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.239,
+                    "effect_size": 6.32,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up_sp",
+                    "importance_score": 0.239,
+                    "effect_size": 6.318,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_sp_bpa",
+                    "importance_score": 0.239,
+                    "effect_size": 6.318,
+                    "percent_change": 0.21,
+                    "p_value": 0.0
+                }
+            ]
+        },
+        "1600": {
+            "speed": 1600,
+            "fault": "FAULT_SOI",
+            "top_k": 10,
+            "selection": {
+                "top_k_requested": 10,
+                "p_value_threshold": 0.05,
+                "effect_size_threshold": 0.8
+            },
+            "sensors": [
+                {
+                    "sensor": "prs_bpa_dif",
+                    "importance_score": 1.0,
+                    "effect_size": 66.097,
+                    "percent_change": -176.43,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "map",
+                    "importance_score": 0.257,
+                    "effect_size": 7.432,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_up_cmp_prot[0]",
+                    "importance_score": 0.255,
+                    "effect_size": 7.205,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_down",
+                    "importance_score": 0.255,
+                    "effect_size": 7.201,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_down",
+                    "importance_score": 0.255,
+                    "effect_size": 7.158,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "amp_mes",
+                    "importance_score": 0.254,
+                    "effect_size": 7.11,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_cmpr_up",
+                    "importance_score": 0.251,
+                    "effect_size": 6.634,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_thr_up",
+                    "importance_score": 0.245,
+                    "effect_size": 5.887,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_tur_down",
+                    "importance_score": 0.245,
+                    "effect_size": 5.886,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                },
+                {
+                    "sensor": "prs_bpa",
+                    "importance_score": 0.245,
+                    "effect_size": 5.886,
+                    "percent_change": 0.24,
+                    "p_value": 0.0
+                }
+            ]
+        }
+    }
+}

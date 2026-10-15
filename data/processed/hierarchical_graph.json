@@ -1,0 +1,5975 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {},
+  "nodes": [
+    {
+      "node_type": "Category",
+      "label": "ABS System",
+      "id": "cat:abs_system"
+    },
+    {
+      "node_type": "Category",
+      "label": "Air Conditioning System",
+      "id": "cat:air_conditioning_system"
+    },
+    {
+      "node_type": "Category",
+      "label": "Cooling System",
+      "id": "cat:cooling_system"
+    },
+    {
+      "node_type": "Category",
+      "label": "Drivetrain",
+      "id": "cat:drivetrain"
+    },
+    {
+      "node_type": "Category",
+      "label": "Electrical System",
+      "id": "cat:electrical_system"
+    },
+    {
+      "node_type": "Category",
+      "label": "Emissions System",
+      "id": "cat:emissions_system"
+    },
+    {
+      "node_type": "Category",
+      "label": "Engine Compartment",
+      "id": "cat:engine_compartment"
+    },
+    {
+      "node_type": "Category",
+      "label": "Engine Components",
+      "id": "cat:engine_components"
+    },
+    {
+      "node_type": "Category",
+      "label": "Fuel System",
+      "id": "cat:fuel_system"
+    },
+    {
+      "node_type": "Category",
+      "label": "Liquid Systems",
+      "id": "cat:liquid_systems"
+    },
+    {
+      "node_type": "Category",
+      "label": "Steering",
+      "id": "cat:steering"
+    },
+    {
+      "node_type": "Category",
+      "label": "Transmission",
+      "id": "cat:transmission"
+    },
+    {
+      "node_type": "Category",
+      "label": "Wheels & Tires",
+      "id": "cat:wheels_tires"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "ABS Control Module",
+      "id": "subcat:abs_control_module"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "ABS warning light on",
+      "id": "sym:a11fbcda9f77"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Brake pedal pulsation",
+      "id": "sym:99737b2009da"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check ABS fuse",
+      "id": "step:7956ba497b60"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect wiring to ABS module",
+      "id": "step:9729b81b076f"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "ABS Wheel Speed Sensor",
+      "id": "subcat:abs_wheel_speed_sensor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "ABS light stays on",
+      "id": "sym:20f9b35d7a20"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Erratic speedometer",
+      "id": "sym:d15a29b1c4f8"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect wheel speed sensor connections",
+      "id": "step:2e0a9f0106e8"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check wheel speed sensor for debris or damage",
+      "id": "step:aff999575846"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Booster",
+      "id": "subcat:brake_booster"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Spongy brake pedal",
+      "id": "sym:23ff23bbb49b"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Hard brake pedal",
+      "id": "sym:8234aec7d85c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check brake booster vacuum hose",
+      "id": "step:87958ea7aabe"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test brake booster vacuum pressure",
+      "id": "step:ed2a416882ed"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Caliper",
+      "id": "subcat:brake_caliper"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Brake pulling to one side",
+      "id": "sym:f1924b395a91"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Brake dragging",
+      "id": "sym:421da69620a9"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect brake caliper for leaks",
+      "id": "step:8859a1327d80"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check brake caliper piston operation",
+      "id": "step:8063a4847da3"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Hose",
+      "id": "subcat:brake_hose"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Brake fluid leak",
+      "id": "sym:ae02b4b54c2a"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Soft brake pedal",
+      "id": "sym:995f7b70026d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect brake hose for cracks or leaks",
+      "id": "step:6ac078bd5f07"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Pressure test brake hose",
+      "id": "step:363a81dfef95"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Master Cylinder",
+      "id": "subcat:brake_master_cylinder"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Brake fluid leaks",
+      "id": "sym:3e5fa53e08ea"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check brake fluid level in master cylinder",
+      "id": "step:5ad68ca075a4"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect master cylinder for leaks or damage",
+      "id": "step:fd7efc13ba6a"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Pad",
+      "id": "subcat:brake_pad"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Squealing brakes",
+      "id": "sym:b5497871b53e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check brake pad thickness",
+      "id": "step:9b560e289e10"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect brake pad condition",
+      "id": "step:2e9a12a88729"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Rotor",
+      "id": "subcat:brake_rotor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Steering wheel vibration",
+      "id": "sym:a6481cf03751"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Measure brake rotor thickness",
+      "id": "step:b9e199a7a7a7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect brake rotor for scoring or warping",
+      "id": "step:5f0419267f83"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Shoe & Drum",
+      "id": "subcat:brake_shoe_drum"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect brake shoes for wear",
+      "id": "step:9eee69b5dc1f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check brake drum for scoring or cracks",
+      "id": "step:76ac58f8b562"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "AC Compressor",
+      "id": "subcat:ac_compressor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "No cold air from vents",
+      "id": "sym:c25ba5003592"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loud noise when AC is on",
+      "id": "sym:801288c99cac"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check AC compressor clutch operation",
+      "id": "step:f361bf0aac8a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect AC compressor for leaks or damage",
+      "id": "step:097642254862"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "AC Condenser",
+      "id": "subcat:ac_condenser"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Warm air from AC vents",
+      "id": "sym:0a12d9d25041"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "AC system not cooling",
+      "id": "sym:5d92361af29d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect AC condenser for debris or blockage",
+      "id": "step:aaf24169d9da"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check for leaks in AC condenser",
+      "id": "step:15d6e2ce6356"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "AC Evaporator",
+      "id": "subcat:ac_evaporator"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Musty odor from vents",
+      "id": "sym:eb1899fffb2e"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Weak airflow from vents",
+      "id": "sym:66f15288dfd4"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect AC evaporator for mold or mildew buildup",
+      "id": "step:21f843e0c9b0"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check AC evaporator temperature sensor",
+      "id": "step:74797be39fee"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "AC Recharge",
+      "id": "subcat:ac_recharge"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Warm air from vents",
+      "id": "sym:6f18934a447d"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Low AC system pressure",
+      "id": "sym:c2757e2d7b2a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check AC system pressure with gauge",
+      "id": "step:025251aed996"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect for leaks in AC system",
+      "id": "step:7156413156f9"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Air Conditioning Diagnosis",
+      "id": "subcat:air_conditioning_diagnosis"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "AC system not working",
+      "id": "sym:8f49dd155eba"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Unusual noise from AC system",
+      "id": "sym:3378ddbac822"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Perform AC system diagnostic scan",
+      "id": "step:4b1241d78ce7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check AC system components for proper operation",
+      "id": "step:53053257db6b"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Cabin Air Filter",
+      "id": "subcat:cabin_air_filter"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Reduced airflow from vents",
+      "id": "sym:82be999ac1f5"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect and replace cabin air filter",
+      "id": "step:f77dec003a90"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check for debris in cabin air intake",
+      "id": "step:de9820402ec1"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Heater Blower Motor",
+      "id": "subcat:heater_blower_motor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "No air from vents",
+      "id": "sym:1606c4bb4a2e"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loud noise from HVAC system",
+      "id": "sym:ecb47a289b57"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test blower motor operation",
+      "id": "step:ffc3d7d95b31"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect blower motor for debris or damage",
+      "id": "step:d01d17a7f549"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Heater Blower Motor Resistor",
+      "id": "subcat:heater_blower_motor_resistor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "HVAC fan speed erratic",
+      "id": "sym:1eea96bbcb8b"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "HVAC fan only works on certain settings",
+      "id": "sym:05139ec02fc3"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test blower motor resistor continuity",
+      "id": "step:e5e126e41eb3"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect resistor for overheating or burn marks",
+      "id": "step:554342730cc6"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Coolant/Antifreeze",
+      "id": "subcat:coolant_antifreeze"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine overheating",
+      "id": "sym:f01d7f425375"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Coolant leaks under the vehicle",
+      "id": "sym:e413ddd77d82"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check coolant level and condition",
+      "id": "step:18bb423673b4"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect radiator and hoses for leaks",
+      "id": "step:ba03bb898ddd"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Coolant Leak Diagnosis",
+      "id": "subcat:coolant_leak_diagnosis"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Visible coolant puddle under vehicle",
+      "id": "sym:7d6bbbe07d13"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Coolant odor in cabin",
+      "id": "sym:4622674d3c2d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Pressure test cooling system",
+      "id": "step:357b51c7be3d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect radiator, hoses, and water pump for leaks",
+      "id": "step:870363452daf"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Engine Cooling System",
+      "id": "subcat:engine_cooling_system"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Temperature gauge in red zone",
+      "id": "sym:e3327cc49f17"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check radiator for blockage or damage",
+      "id": "step:052f4ee96a9f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test thermostat operation",
+      "id": "step:193d5b7d01a8"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Heater Core",
+      "id": "subcat:heater_core"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "No heat from vents",
+      "id": "sym:5c16b5a0d3b7"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Sweet smell in cabin",
+      "id": "sym:148474a6f3c6"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect heater core for leaks",
+      "id": "step:03f2a60bdbc7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check coolant flow through heater core",
+      "id": "step:7f06e8eb1f0d"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Heater Hose",
+      "id": "subcat:heater_hose"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Visible coolant leak under vehicle",
+      "id": "sym:cc3af59c27e6"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect heater hose connections",
+      "id": "step:f523b3dea076"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Pressure test heater hoses",
+      "id": "step:f4407b0d33dc"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Radiator/Cooling Fan",
+      "id": "subcat:radiator_cooling_fan"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "AC not cooling at idle",
+      "id": "sym:b706669a99f0"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test radiator fan operation",
+      "id": "step:6c067d7be6e9"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect radiator fan motor and relay",
+      "id": "step:39a1616e62fc"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Radiator Hose",
+      "id": "subcat:radiator_hose"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Coolant leak under vehicle",
+      "id": "sym:b4b4da634ae6"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Visible wear/cracks on hoses",
+      "id": "sym:d2c96fff2f0d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect radiator hoses for damage",
+      "id": "step:e05285eb9bcf"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check hose connections for leaks",
+      "id": "step:a3a8c84ae309"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Water Pump",
+      "id": "subcat:water_pump"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Coolant leak near front of engine",
+      "id": "sym:00f75190f462"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect water pump for leaks",
+      "id": "step:a678d9289ccc"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test water pump for proper operation",
+      "id": "step:21084c89afb6"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Bevel Gears",
+      "id": "subcat:bevel_gears"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Whining noise from drivetrain",
+      "id": "sym:c575ab1d36f7"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Difficulty shifting gears",
+      "id": "sym:20599e105e7e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect bevel gears for wear or damage",
+      "id": "step:d8bd34b8a8f2"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check gear oil level and condition",
+      "id": "step:630ef3374f99"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Center Differential",
+      "id": "subcat:center_differential"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Vehicle binding on turns",
+      "id": "sym:516d57d15130"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Noise from drivetrain while turning",
+      "id": "sym:04f5fd1670ba"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect center differential fluid",
+      "id": "step:28c7d592c5c0"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check for excessive play in center differential",
+      "id": "step:d2941d4bc0a2"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Clutch Cable",
+      "id": "subcat:clutch_cable"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clutch pedal feels loose",
+      "id": "sym:744b057eb320"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Difficulty engaging gears",
+      "id": "sym:d9090e8a354c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect clutch cable for fraying or stretching",
+      "id": "step:42ef81fffb0c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Adjust clutch cable tension",
+      "id": "step:04b328045739"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Clutch Slave Cylinder",
+      "id": "subcat:clutch_slave_cylinder"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clutch pedal feels spongy",
+      "id": "sym:421109a4d310"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Fluid leak near clutch pedal",
+      "id": "sym:c1c51d985a5c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check clutch slave cylinder for leaks",
+      "id": "step:14f1768f5869"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect clutch fluid level and condition",
+      "id": "step:20796f767b34"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Differential",
+      "id": "subcat:differential"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Whining noise from rear end",
+      "id": "sym:faf4c6fddd10"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Vehicle vibration at high speeds",
+      "id": "sym:a3421e54cf32"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect differential fluid level and condition",
+      "id": "step:1a7090aed761"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check for differential bearing wear",
+      "id": "step:4a783d59fa74"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Live Axle",
+      "id": "subcat:live_axle"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Axle noise while turning",
+      "id": "sym:e05f5561dae2"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Vehicle leans to one side",
+      "id": "sym:9810ba8ec7c5"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect live axle for cracks or bending",
+      "id": "step:42060f8e1de7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check axle bearings for wear",
+      "id": "step:eee8c2a1a544"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Rigid Axle",
+      "id": "subcat:rigid_axle"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Vehicle bounces over bumps",
+      "id": "sym:e4cdeaf85fab"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loud noise from rear axle",
+      "id": "sym:9841936ad216"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect rigid axle for cracks or damage",
+      "id": "step:00353fcfa63c"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Slushbox",
+      "id": "subcat:slushbox"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Transmission slipping",
+      "id": "sym:c04eaf8d1133"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Delay in gear engagement",
+      "id": "sym:2baaf012a652"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check transmission fluid level and condition",
+      "id": "step:0956072cd77c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect transmission for leaks",
+      "id": "step:e88dd12220bf"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Universal Joint",
+      "id": "subcat:universal_joint"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Driveline vibration",
+      "id": "sym:64aa67445bda"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clunking noise when shifting",
+      "id": "sym:3c31ff09df2f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect universal joint for wear or play",
+      "id": "step:37aaf805cd33"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check driveline alignment",
+      "id": "step:746df4088c1d"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Viscous Coupling",
+      "id": "subcat:viscous_coupling"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Vehicle binding during turns",
+      "id": "sym:35c81a2f9e6d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test viscous coupling operation",
+      "id": "step:58fcdd85e751"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect viscous coupling fluid",
+      "id": "step:8e5cbdce6141"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Battery Replacement",
+      "id": "subcat:battery_replacement"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine cranks slowly",
+      "id": "sym:aed5ae2d7ffb"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clicking sound when starting",
+      "id": "sym:27a13561417f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test battery voltage",
+      "id": "step:cc81d06837be"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect battery terminals for corrosion",
+      "id": "step:32083295b36a"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Charging System",
+      "id": "subcat:charging_system"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Battery warning light on",
+      "id": "sym:8585b02bd67e"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Dim headlights",
+      "id": "sym:42ac1b664a3e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test alternator output",
+      "id": "step:bf58e69323b5"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check alternator belt tension",
+      "id": "step:a94a84957c68"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Check Engine Light Diagnosis",
+      "id": "subcat:check_engine_light_diagnosis"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Check engine light on",
+      "id": "sym:ff6f09962e32"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Poor engine performance",
+      "id": "sym:68f2639e29ca"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Scan for diagnostic trouble codes (DTCs)",
+      "id": "step:fef4b0cb8afb"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check sensors related to DTCs",
+      "id": "step:97c3e10ff50e"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Door Window Motor",
+      "id": "subcat:door_window_motor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Window does not move",
+      "id": "sym:82535eef41d7"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Window moves intermittently",
+      "id": "sym:fc19e2dfdc8f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test power to window motor",
+      "id": "step:706242511542"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect window regulator for damage",
+      "id": "step:f229fcf8f905"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Door Window Regulator",
+      "id": "subcat:door_window_regulator"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Window off track",
+      "id": "sym:08091ee660d5"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Window stuck in one position",
+      "id": "sym:036e04123657"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect window regulator mechanism",
+      "id": "step:b86871820ddb"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check window alignment in tracks",
+      "id": "step:87403a50ab16"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Headlamp Bulb",
+      "id": "subcat:headlamp_bulb"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Headlight not working",
+      "id": "sym:c34a84f9e4f3"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Dim headlight",
+      "id": "sym:43928de29cee"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect headlamp bulb for filament condition",
+      "id": "step:2b2d89a989d6"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check headlamp socket for corrosion",
+      "id": "step:72e7c6a50a93"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Ignition Distributor Cap",
+      "id": "subcat:ignition_distributor_cap"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine misfires",
+      "id": "sym:363586f1c4c5"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Difficulty starting engine",
+      "id": "sym:5398a29d5e0c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect distributor cap for cracks or carbon tracks",
+      "id": "step:57c068a30b38"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check distributor rotor for wear",
+      "id": "step:805f9f464094"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Ignition Wire Set",
+      "id": "subcat:ignition_wire_set"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Poor fuel economy",
+      "id": "sym:c38c758d42c1"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test ignition wires for continuity",
+      "id": "step:396400f1b507"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect spark plug boots for damage",
+      "id": "step:4bc2596034ce"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Power Door Lock Actuator",
+      "id": "subcat:power_door_lock_actuator"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Door lock not responding",
+      "id": "sym:c7e22df2f324"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clicking sound from door",
+      "id": "sym:55db6d6d0a10"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test power to door lock actuator",
+      "id": "step:3fcbc5967004"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect actuator mechanism for obstruction",
+      "id": "step:7ae0d0f8fad5"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Starter Motor",
+      "id": "subcat:starter_motor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine does not crank",
+      "id": "sym:613435b6d9cd"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clicking sound when key is turned",
+      "id": "sym:21b0bf99e5fe"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test starter motor solenoid",
+      "id": "step:344135ea69ff"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect starter motor brushes for wear",
+      "id": "step:73229de7af75"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Windshield Washer Pump",
+      "id": "subcat:windshield_washer_pump"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "No washer fluid spray",
+      "id": "sym:a686712d27e0"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Weak washer fluid spray",
+      "id": "sym:8b87934191be"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test power to washer pump",
+      "id": "step:a4825371f57b"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect washer pump for clogs or damage",
+      "id": "step:9ad1ea2d28d3"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Wiper Motor",
+      "id": "subcat:wiper_motor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Wipers not working",
+      "id": "sym:75bcbb05a4ab"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Wipers operate intermittently",
+      "id": "sym:75756297685c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test power to wiper motor",
+      "id": "step:c83c12dbeed7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect wiper motor linkage for wear",
+      "id": "step:04e624a7ab72"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Canister Purge Valve",
+      "id": "subcat:canister_purge_valve"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Rough idle",
+      "id": "sym:80924af823d8"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test canister purge valve operation",
+      "id": "step:89845a2d0b91"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check for leaks in purge valve hoses",
+      "id": "step:bc03adf01afb"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Catalytic Converter",
+      "id": "subcat:catalytic_converter"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Rotten egg smell from exhaust",
+      "id": "sym:876dc56e7d59"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect catalytic converter for physical damage",
+      "id": "step:5e10fdaaf877"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check catalytic converter efficiency",
+      "id": "step:2eee0930ea83"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Charcoal Canister",
+      "id": "subcat:charcoal_canister"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Fuel odor from vehicle",
+      "id": "sym:5254dbce4126"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test charcoal canister purge valve",
+      "id": "step:3fe3a65dac45"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect canister for cracks or damage",
+      "id": "step:a408178be8df"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Exhaust Manifold",
+      "id": "subcat:exhaust_manifold"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loud exhaust noise",
+      "id": "sym:5a05f5dc4d2b"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Exhaust smell in cabin",
+      "id": "sym:c677271f9a8c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect exhaust manifold for cracks or leaks",
+      "id": "step:8eb1271b26a2"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check exhaust manifold gasket for leaks",
+      "id": "step:ce11eb1400bf"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Exhaust Manifold Gasket",
+      "id": "subcat:exhaust_manifold_gasket"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Visible exhaust leaks",
+      "id": "sym:77f164c402e3"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect exhaust manifold gasket for leaks",
+      "id": "step:51cfa5d7a679"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check exhaust manifold bolts for tightness",
+      "id": "step:b222883c3870"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fuel Tank Pressure Sensor",
+      "id": "subcat:fuel_tank_pressure_sensor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Gas cap warning light",
+      "id": "sym:17936a10f073"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test fuel tank pressure sensor",
+      "id": "step:cac5a5b242a4"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check fuel tank cap for proper seal",
+      "id": "step:008bccd2b553"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Knock Sensor",
+      "id": "subcat:knock_sensor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine knocking/pinging",
+      "id": "sym:9a859b204216"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test knock sensor operation",
+      "id": "step:436a9d3299f1"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect for engine misfire codes",
+      "id": "step:69e3b65efdc9"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "M.A.P. Sensor",
+      "id": "subcat:m_a_p_sensor"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test M.A.P. sensor voltage",
+      "id": "step:a2039e74ffd7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect M.A.P. sensor vacuum hose",
+      "id": "step:0a56e9b0bcb1"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Oxygen Sensor",
+      "id": "subcat:oxygen_sensor"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test oxygen sensor voltage",
+      "id": "step:9ece0a0adaf2"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect oxygen sensor wiring for damage",
+      "id": "step:5a6c04d43326"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Balance Shaft",
+      "id": "subcat:balance_shaft"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine vibration",
+      "id": "sym:c48851108daa"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect balance shaft for wear or damage",
+      "id": "step:43f3035cad30"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check balance shaft alignment",
+      "id": "step:d237821e25ed"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Boost Pressure",
+      "id": "subcat:boost_pressure"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loss of power",
+      "id": "sym:5cd97c422f5c"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Turbo lag",
+      "id": "sym:40b8349cb487"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check boost pressure with gauge",
+      "id": "step:dd254bfd1720"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect intercooler for leaks or damage",
+      "id": "step:e102e57bb97f"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Diesel Injection Pump",
+      "id": "subcat:diesel_injection_pump"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Black smoke from exhaust",
+      "id": "sym:d37e15434e30"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test diesel injection pump pressure",
+      "id": "step:979ad98b85cd"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect diesel injectors for leaks or clogs",
+      "id": "step:a9e26e01ab46"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Diesel Glow Plug",
+      "id": "subcat:diesel_glow_plug"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Hard starting in cold weather",
+      "id": "sym:2c3a35f1896c"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Glow plug indicator light stays on",
+      "id": "sym:8d027b64a533"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test glow plug resistance",
+      "id": "step:f47eeca7832f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect glow plug for carbon buildup",
+      "id": "step:0d248aff0983"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Engine Mounts",
+      "id": "subcat:engine_mounts"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Excessive engine movement",
+      "id": "sym:e5741922d33b"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clunking noise when accelerating",
+      "id": "sym:90f7f4bc4760"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect engine mounts for wear or damage",
+      "id": "step:e4224c07de0d"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check mounting bolts for tightness",
+      "id": "step:79a6a1a2352c"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Exhaust Valve",
+      "id": "subcat:exhaust_valve"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect exhaust valve for carbon buildup",
+      "id": "step:5ed825741ad4"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check valve clearance",
+      "id": "step:1a26c935d9ae"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fuel Injector",
+      "id": "subcat:fuel_injector"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test fuel injector spray pattern",
+      "id": "step:4140aea50d15"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect injector for leaks or clogs",
+      "id": "step:b5826df72752"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Idle Air Control Valve",
+      "id": "subcat:idle_air_control_valve"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Erratic idle speed",
+      "id": "sym:38a0563f2412"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Stalling at idle",
+      "id": "sym:58d8751e51c7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test IAC valve for proper operation",
+      "id": "step:5611ee70d18c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Clean throttle body and IAC valve",
+      "id": "step:b626469fa2d9"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Intake Valve",
+      "id": "subcat:intake_valve"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect intake valve for carbon buildup",
+      "id": "step:913eb896d97e"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Oil Pump",
+      "id": "subcat:oil_pump"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Low oil pressure warning light",
+      "id": "sym:1ffb7c2ff8eb"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine knocking noise",
+      "id": "sym:79755c84e41c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test oil pressure with gauge",
+      "id": "step:b5caff78b52e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect oil pump for wear or damage",
+      "id": "step:210534356987"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Piston Rings",
+      "id": "subcat:piston_rings"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Blue smoke from exhaust",
+      "id": "sym:ad0096f0645c"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loss of engine power",
+      "id": "sym:51da2ea0374c"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Perform compression test",
+      "id": "step:0357e1dc2325"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect piston rings for wear or damage",
+      "id": "step:5fda875fb285"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Timing Belt",
+      "id": "subcat:timing_belt"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine won't start",
+      "id": "sym:2b3c5022406a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect timing belt for wear or damage",
+      "id": "step:19bc1c337f3a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check timing marks for alignment",
+      "id": "step:a50d0e2824c0"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Valve Cover Gasket",
+      "id": "subcat:valve_cover_gasket"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Oil leak around valve cover",
+      "id": "sym:a71e2159e59f"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Burning oil smell from engine bay",
+      "id": "sym:22a8517a4a27"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect valve cover gasket for leaks",
+      "id": "step:22d3eae922e2"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check valve cover bolts for tightness",
+      "id": "step:6b378bc53595"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fan Belt",
+      "id": "subcat:fan_belt"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Squealing noise from engine bay",
+      "id": "sym:71b36af1bac6"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect fan belt for cuts or wear",
+      "id": "step:8356085c3778"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check belt tension and alignment",
+      "id": "step:47dd29d6a2cb"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Horn",
+      "id": "subcat:horn"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "No sound when horn button pressed",
+      "id": "sym:96e1f5f31ce5"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check horn fuse",
+      "id": "step:159cca626094"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test horn relay for operation",
+      "id": "step:d906541bcea2"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Battery Charging",
+      "id": "subcat:battery_charging"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Low voltage",
+      "id": "sym:97864112b7e3"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect alternator for proper operation",
+      "id": "step:c79c72b9b893"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Engine Belt",
+      "id": "subcat:engine_belt"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine performance issues",
+      "id": "sym:f53e188e9e6e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect engine belt for cuts or wear",
+      "id": "step:08ff56ffcaa1"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Steering Noise",
+      "id": "subcat:steering_noise"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Noise when turning steering wheel",
+      "id": "sym:6e6a75b908a7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect power steering fluid level",
+      "id": "step:380424dba82a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check power steering pump and hoses for leaks",
+      "id": "step:5b49bfe965ae"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Shaft and Tires",
+      "id": "subcat:shaft_and_tires"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Uneven tire wear",
+      "id": "sym:f2e0595b8332"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Vibration while driving",
+      "id": "sym:c9c81ff930a0"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect shaft for balance and alignment",
+      "id": "step:cbff242892ee"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check tire pressure and condition",
+      "id": "step:d424f27356f0"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Air Filter",
+      "id": "subcat:air_filter"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Decreased engine performance",
+      "id": "sym:071b5fdcd67b"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect air filter for clogs or dirt",
+      "id": "step:241f461e8a0f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Replace air filter if necessary",
+      "id": "step:5fff870c7577"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Engine Control Unit (ECU)",
+      "id": "subcat:engine_control_unit_ecu"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check ECU for fault codes",
+      "id": "step:e5c3e13e9c48"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect ECU wiring harness for damage",
+      "id": "step:bde43e7b6f01"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Engine Oil",
+      "id": "subcat:engine_oil"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Loud engine noise",
+      "id": "sym:7b1ea838aea7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check engine oil level and condition",
+      "id": "step:f8c4cfb8ab08"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect for oil leaks",
+      "id": "step:b92d3d1e242f"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fuel Filter",
+      "id": "subcat:fuel_filter"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine stalls at high speeds",
+      "id": "sym:f72c21a1580e"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Poor acceleration",
+      "id": "sym:e5810b92033e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect fuel filter for clogs or debris",
+      "id": "step:a3ddac69a519"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Replace fuel filter if necessary",
+      "id": "step:d0a6644b9d1e"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "PCV Valve",
+      "id": "subcat:pcv_valve"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Oil leaks",
+      "id": "sym:943ea94f9624"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect PCV valve for clogs",
+      "id": "step:5db1fed152a7"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check PCV valve hose for cracks",
+      "id": "step:1700433efade"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Throttle Body",
+      "id": "subcat:throttle_body"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect throttle body for carbon buildup",
+      "id": "step:dca60df87f11"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test throttle position sensor (TPS)",
+      "id": "step:368217ba5ae8"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fuel Pressure Regulator",
+      "id": "subcat:fuel_pressure_regulator"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine stalls",
+      "id": "sym:5d0ca7772efa"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test fuel pressure regulator operation",
+      "id": "step:e6ee5ad131b2"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check fuel pressure at regulator",
+      "id": "step:4a874d24f6d1"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fuel Pump",
+      "id": "subcat:fuel_pump"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine sputters at high speeds",
+      "id": "sym:4952dece7c70"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test fuel pump pressure",
+      "id": "step:1ed7f427b325"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect fuel pump for leaks or damage",
+      "id": "step:2bdcb35ad008"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Fuel Tank",
+      "id": "subcat:fuel_tank"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Fuel odor inside vehicle",
+      "id": "sym:1fc191b883ff"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Visible fuel leak under vehicle",
+      "id": "sym:4bf605d7907a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect fuel tank for leaks or damage",
+      "id": "step:78a545889902"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check fuel filler cap for seal",
+      "id": "step:148a6551449d"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Throttle Position Sensor",
+      "id": "subcat:throttle_position_sensor"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Engine hesitates on acceleration",
+      "id": "sym:74396e35a900"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test throttle position sensor (TPS) voltage",
+      "id": "step:728e2d0b868a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect TPS wiring for damage or corrosion",
+      "id": "step:974f6381fe28"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Brake Fluid",
+      "id": "subcat:brake_fluid"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Brake warning light on",
+      "id": "sym:794dfa69d3a3"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check brake fluid level and condition",
+      "id": "step:cc3ddcc10acb"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect brake lines for leaks",
+      "id": "step:19f77792222d"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Coolant Reservoir",
+      "id": "subcat:coolant_reservoir"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Low coolant warning light",
+      "id": "sym:66176d47417a"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check coolant level in reservoir",
+      "id": "step:9cf65b92bfbe"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect reservoir for cracks or leaks",
+      "id": "step:94063f849700"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Power Steering Fluid",
+      "id": "subcat:power_steering_fluid"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Whining noise when turning",
+      "id": "sym:e6dc2ebb64be"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Stiff steering wheel",
+      "id": "sym:e260c9cd0922"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check power steering fluid level",
+      "id": "step:538f2456ea03"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect power steering hoses for leaks",
+      "id": "step:2e715334f46e"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Radiator",
+      "id": "subcat:radiator"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Coolant leak",
+      "id": "sym:5bec993ebed4"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect radiator for leaks or damage",
+      "id": "step:448f62c50442"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check radiator cap for proper seal",
+      "id": "step:9fff5ae76f4d"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Windshield Washer Fluid",
+      "id": "subcat:windshield_washer_fluid"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check washer fluid level",
+      "id": "step:0c3e230c3c55"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect washer fluid pump for operation",
+      "id": "step:10cc1c6ed6e1"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Clutch Master Cylinder",
+      "id": "subcat:clutch_master_cylinder"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Soft clutch pedal",
+      "id": "sym:6f98356aaeb3"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clutch slipping",
+      "id": "sym:05178bdf186e"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check clutch fluid level",
+      "id": "step:b742beb9fab3"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect master cylinder for leaks",
+      "id": "step:f96e300a0078"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Torque Converter",
+      "id": "subcat:torque_converter"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Slipping gears",
+      "id": "sym:b6ce85a91d51"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Shuddering during acceleration",
+      "id": "sym:832d5477caab"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect torque converter for leaks or damage",
+      "id": "step:5b49a39ed242"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Transmission Fluid",
+      "id": "subcat:transmission_fluid"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Gears slipping",
+      "id": "sym:b4ca8943101f"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Transmission overheating",
+      "id": "sym:3b48714222de"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect transmission pan and seals for leaks",
+      "id": "step:05b1c6ca0325"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Transmission Filter",
+      "id": "subcat:transmission_filter"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Delayed shifting",
+      "id": "sym:705966521bfe"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect transmission filter for clogs or debris",
+      "id": "step:81df48f5861b"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Replace transmission filter if necessary",
+      "id": "step:b4226fd8f123"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Transmission Solenoid",
+      "id": "subcat:transmission_solenoid"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Erratic shifting",
+      "id": "sym:b05afd0ff709"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Transmission won't shift gears",
+      "id": "sym:7ef4b25fda94"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Test transmission solenoids for electrical continuity",
+      "id": "step:6fa64c94d6b0"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect wiring harness for damage or corrosion",
+      "id": "step:756fcb32cab2"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Wheel Bearing",
+      "id": "subcat:wheel_bearing"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Grinding noise from wheels",
+      "id": "sym:3a267846b1d5"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check wheel bearing for play",
+      "id": "step:e2127115de34"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect bearing for signs of damage or corrosion",
+      "id": "step:95c72fa856fa"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Tire Pressure Monitoring System (TPMS)",
+      "id": "subcat:tire_pressure_monitoring_system_tpms"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "TPMS warning light on",
+      "id": "sym:22395e71f486"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Low tire pressure",
+      "id": "sym:320c9b35d76f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check tire pressures with gauge",
+      "id": "step:302ec9d89d08"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect TPMS sensors for damage or corrosion",
+      "id": "step:b82fbb3ea67e"
+    },
+    {
+      "node_type": "Subcategory",
+      "label": "Wheel Hub",
+      "id": "subcat:wheel_hub"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Clicking or popping noise when turning",
+      "id": "sym:0e06eae6536e"
+    },
+    {
+      "node_type": "Symptom",
+      "label": "Wheel wobbling",
+      "id": "sym:bcc143d3103f"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Inspect wheel hub for play or bearing noise",
+      "id": "step:3941bee62b80"
+    },
+    {
+      "node_type": "DiagnosisStep",
+      "label": "Check wheel bearings for wear",
+      "id": "step:35680af0c33f"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:abs_control_module",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:abs_wheel_speed_sensor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_booster",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_caliper",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_hose",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_master_cylinder",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_pad",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_rotor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:abs_system",
+      "target": "subcat:brake_shoe_drum",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:ac_compressor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:ac_condenser",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:ac_evaporator",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:ac_recharge",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:air_conditioning_diagnosis",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:cabin_air_filter",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:heater_blower_motor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:air_conditioning_system",
+      "target": "subcat:heater_blower_motor_resistor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:coolant_antifreeze",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:coolant_leak_diagnosis",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:engine_cooling_system",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:heater_core",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:heater_hose",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:radiator_cooling_fan",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:radiator_hose",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:cooling_system",
+      "target": "subcat:water_pump",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:bevel_gears",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:center_differential",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:clutch_cable",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:clutch_slave_cylinder",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:differential",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:live_axle",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:rigid_axle",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:slushbox",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:universal_joint",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:viscous_coupling",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:drivetrain",
+      "target": "subcat:shaft_and_tires",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:battery_replacement",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:charging_system",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:check_engine_light_diagnosis",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:door_window_motor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:door_window_regulator",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:headlamp_bulb",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:ignition_distributor_cap",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:ignition_wire_set",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:power_door_lock_actuator",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:starter_motor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:windshield_washer_pump",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:wiper_motor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:horn",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:electrical_system",
+      "target": "subcat:battery_charging",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:canister_purge_valve",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:catalytic_converter",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:charcoal_canister",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:exhaust_manifold",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:exhaust_manifold_gasket",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:fuel_tank_pressure_sensor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:knock_sensor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:m_a_p_sensor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:emissions_system",
+      "target": "subcat:oxygen_sensor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_compartment",
+      "target": "subcat:air_filter",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_compartment",
+      "target": "subcat:engine_control_unit_ecu",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_compartment",
+      "target": "subcat:engine_oil",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_compartment",
+      "target": "subcat:fuel_filter",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_compartment",
+      "target": "subcat:pcv_valve",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_compartment",
+      "target": "subcat:throttle_body",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:balance_shaft",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:boost_pressure",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:diesel_injection_pump",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:diesel_glow_plug",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:engine_mounts",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:exhaust_valve",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:fuel_injector",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:idle_air_control_valve",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:intake_valve",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:oil_pump",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:piston_rings",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:timing_belt",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:valve_cover_gasket",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:fan_belt",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:engine_components",
+      "target": "subcat:engine_belt",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:fuel_system",
+      "target": "subcat:fuel_injector",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:fuel_system",
+      "target": "subcat:fuel_pressure_regulator",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:fuel_system",
+      "target": "subcat:fuel_pump",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:fuel_system",
+      "target": "subcat:fuel_tank",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:fuel_system",
+      "target": "subcat:throttle_position_sensor",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:liquid_systems",
+      "target": "subcat:brake_fluid",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:liquid_systems",
+      "target": "subcat:coolant_reservoir",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:liquid_systems",
+      "target": "subcat:power_steering_fluid",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:liquid_systems",
+      "target": "subcat:radiator",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:liquid_systems",
+      "target": "subcat:windshield_washer_fluid",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:steering",
+      "target": "subcat:steering_noise",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:transmission",
+      "target": "subcat:clutch_master_cylinder",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:transmission",
+      "target": "subcat:torque_converter",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:transmission",
+      "target": "subcat:transmission_fluid",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:transmission",
+      "target": "subcat:transmission_filter",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:transmission",
+      "target": "subcat:transmission_solenoid",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:wheels_tires",
+      "target": "subcat:wheel_bearing",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:wheels_tires",
+      "target": "subcat:tire_pressure_monitoring_system_tpms",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SUBCATEGORY",
+      "source": "cat:wheels_tires",
+      "target": "subcat:wheel_hub",
+      "key": "HAS_SUBCATEGORY"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:abs_control_module",
+      "target": "sym:a11fbcda9f77",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:abs_control_module",
+      "target": "sym:99737b2009da",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:abs_control_module",
+      "target": "step:7956ba497b60",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:abs_control_module",
+      "target": "step:9729b81b076f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "brake pedal pulsation",
+      "source": "subcat:abs_control_module",
+      "target": "subcat:brake_pad",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "brake pedal pulsation",
+      "source": "subcat:abs_control_module",
+      "target": "subcat:brake_rotor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:abs_wheel_speed_sensor",
+      "target": "sym:20f9b35d7a20",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:abs_wheel_speed_sensor",
+      "target": "sym:d15a29b1c4f8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:abs_wheel_speed_sensor",
+      "target": "step:2e0a9f0106e8",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:abs_wheel_speed_sensor",
+      "target": "step:aff999575846",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_booster",
+      "target": "sym:23ff23bbb49b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_booster",
+      "target": "sym:8234aec7d85c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_booster",
+      "target": "step:87958ea7aabe",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_booster",
+      "target": "step:ed2a416882ed",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "spongy brake pedal",
+      "source": "subcat:brake_booster",
+      "target": "subcat:brake_master_cylinder",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "spongy brake pedal",
+      "source": "subcat:brake_booster",
+      "target": "subcat:brake_shoe_drum",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_caliper",
+      "target": "sym:f1924b395a91",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_caliper",
+      "target": "sym:421da69620a9",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_caliper",
+      "target": "step:8859a1327d80",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_caliper",
+      "target": "step:8063a4847da3",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "brake dragging",
+      "source": "subcat:brake_caliper",
+      "target": "subcat:brake_shoe_drum",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_hose",
+      "target": "sym:ae02b4b54c2a",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_hose",
+      "target": "sym:995f7b70026d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_hose",
+      "target": "step:6ac078bd5f07",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_hose",
+      "target": "step:363a81dfef95",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_master_cylinder",
+      "target": "sym:23ff23bbb49b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_master_cylinder",
+      "target": "sym:3e5fa53e08ea",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_master_cylinder",
+      "target": "step:5ad68ca075a4",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_master_cylinder",
+      "target": "step:fd7efc13ba6a",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "spongy brake pedal",
+      "source": "subcat:brake_master_cylinder",
+      "target": "subcat:brake_shoe_drum",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_pad",
+      "target": "sym:b5497871b53e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_pad",
+      "target": "sym:99737b2009da",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_pad",
+      "target": "step:9b560e289e10",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_pad",
+      "target": "step:2e9a12a88729",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "brake pedal pulsation",
+      "source": "subcat:brake_pad",
+      "target": "subcat:brake_rotor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_rotor",
+      "target": "sym:99737b2009da",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_rotor",
+      "target": "sym:a6481cf03751",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_rotor",
+      "target": "step:b9e199a7a7a7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_rotor",
+      "target": "step:5f0419267f83",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_shoe_drum",
+      "target": "sym:23ff23bbb49b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_shoe_drum",
+      "target": "sym:421da69620a9",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_shoe_drum",
+      "target": "step:9eee69b5dc1f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_shoe_drum",
+      "target": "step:76ac58f8b562",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_compressor",
+      "target": "sym:c25ba5003592",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_compressor",
+      "target": "sym:801288c99cac",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_compressor",
+      "target": "step:f361bf0aac8a",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_compressor",
+      "target": "step:097642254862",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_condenser",
+      "target": "sym:0a12d9d25041",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_condenser",
+      "target": "sym:5d92361af29d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_condenser",
+      "target": "step:aaf24169d9da",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_condenser",
+      "target": "step:15d6e2ce6356",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_evaporator",
+      "target": "sym:eb1899fffb2e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_evaporator",
+      "target": "sym:66f15288dfd4",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_evaporator",
+      "target": "step:21f843e0c9b0",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_evaporator",
+      "target": "step:74797be39fee",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "musty odor from vents",
+      "source": "subcat:ac_evaporator",
+      "target": "subcat:cabin_air_filter",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_recharge",
+      "target": "sym:6f18934a447d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ac_recharge",
+      "target": "sym:c2757e2d7b2a",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_recharge",
+      "target": "step:025251aed996",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ac_recharge",
+      "target": "step:7156413156f9",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:air_conditioning_diagnosis",
+      "target": "sym:8f49dd155eba",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:air_conditioning_diagnosis",
+      "target": "sym:3378ddbac822",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:air_conditioning_diagnosis",
+      "target": "step:4b1241d78ce7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:air_conditioning_diagnosis",
+      "target": "step:53053257db6b",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:cabin_air_filter",
+      "target": "sym:eb1899fffb2e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:cabin_air_filter",
+      "target": "sym:82be999ac1f5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:cabin_air_filter",
+      "target": "step:f77dec003a90",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:cabin_air_filter",
+      "target": "step:de9820402ec1",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_blower_motor",
+      "target": "sym:1606c4bb4a2e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_blower_motor",
+      "target": "sym:ecb47a289b57",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_blower_motor",
+      "target": "step:ffc3d7d95b31",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_blower_motor",
+      "target": "step:d01d17a7f549",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_blower_motor_resistor",
+      "target": "sym:1eea96bbcb8b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_blower_motor_resistor",
+      "target": "sym:05139ec02fc3",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_blower_motor_resistor",
+      "target": "step:e5e126e41eb3",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_blower_motor_resistor",
+      "target": "step:554342730cc6",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:coolant_antifreeze",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:coolant_antifreeze",
+      "target": "sym:e413ddd77d82",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:coolant_antifreeze",
+      "target": "step:18bb423673b4",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:coolant_antifreeze",
+      "target": "step:ba03bb898ddd",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_antifreeze",
+      "target": "subcat:engine_cooling_system",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_antifreeze",
+      "target": "subcat:fan_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_antifreeze",
+      "target": "subcat:radiator",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_antifreeze",
+      "target": "subcat:radiator_cooling_fan",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_antifreeze",
+      "target": "subcat:water_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:coolant_leak_diagnosis",
+      "target": "sym:7d6bbbe07d13",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:coolant_leak_diagnosis",
+      "target": "sym:4622674d3c2d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:coolant_leak_diagnosis",
+      "target": "step:357b51c7be3d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:coolant_leak_diagnosis",
+      "target": "step:870363452daf",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "coolant odor in cabin",
+      "source": "subcat:coolant_leak_diagnosis",
+      "target": "subcat:heater_hose",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_cooling_system",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_cooling_system",
+      "target": "sym:e3327cc49f17",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_cooling_system",
+      "target": "step:052f4ee96a9f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_cooling_system",
+      "target": "step:193d5b7d01a8",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:engine_cooling_system",
+      "target": "subcat:fan_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:engine_cooling_system",
+      "target": "subcat:radiator",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:engine_cooling_system",
+      "target": "subcat:radiator_cooling_fan",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:engine_cooling_system",
+      "target": "subcat:water_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_core",
+      "target": "sym:5c16b5a0d3b7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_core",
+      "target": "sym:148474a6f3c6",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_core",
+      "target": "step:03f2a60bdbc7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_core",
+      "target": "step:7f06e8eb1f0d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_hose",
+      "target": "sym:4622674d3c2d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:heater_hose",
+      "target": "sym:cc3af59c27e6",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_hose",
+      "target": "step:f523b3dea076",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:heater_hose",
+      "target": "step:f4407b0d33dc",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:radiator_cooling_fan",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:radiator_cooling_fan",
+      "target": "sym:b706669a99f0",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:radiator_cooling_fan",
+      "target": "step:6c067d7be6e9",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:radiator_cooling_fan",
+      "target": "step:39a1616e62fc",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:radiator_cooling_fan",
+      "target": "subcat:water_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:radiator_hose",
+      "target": "sym:b4b4da634ae6",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:radiator_hose",
+      "target": "sym:d2c96fff2f0d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:radiator_hose",
+      "target": "step:e05285eb9bcf",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:radiator_hose",
+      "target": "step:a3a8c84ae309",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:water_pump",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:water_pump",
+      "target": "sym:00f75190f462",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:water_pump",
+      "target": "step:a678d9289ccc",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:water_pump",
+      "target": "step:21084c89afb6",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:bevel_gears",
+      "target": "sym:c575ab1d36f7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:bevel_gears",
+      "target": "sym:20599e105e7e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:bevel_gears",
+      "target": "step:d8bd34b8a8f2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:bevel_gears",
+      "target": "step:630ef3374f99",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:center_differential",
+      "target": "sym:516d57d15130",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:center_differential",
+      "target": "sym:04f5fd1670ba",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:center_differential",
+      "target": "step:28c7d592c5c0",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:center_differential",
+      "target": "step:d2941d4bc0a2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "noise from drivetrain while turning",
+      "source": "subcat:center_differential",
+      "target": "subcat:viscous_coupling",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:clutch_cable",
+      "target": "sym:744b057eb320",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:clutch_cable",
+      "target": "sym:d9090e8a354c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:clutch_cable",
+      "target": "step:42ef81fffb0c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:clutch_cable",
+      "target": "step:04b328045739",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:clutch_slave_cylinder",
+      "target": "sym:421109a4d310",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:clutch_slave_cylinder",
+      "target": "sym:c1c51d985a5c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:clutch_slave_cylinder",
+      "target": "step:14f1768f5869",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:clutch_slave_cylinder",
+      "target": "step:20796f767b34",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:differential",
+      "target": "sym:faf4c6fddd10",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:differential",
+      "target": "sym:a3421e54cf32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:differential",
+      "target": "step:1a7090aed761",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:differential",
+      "target": "step:4a783d59fa74",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:live_axle",
+      "target": "sym:e05f5561dae2",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:live_axle",
+      "target": "sym:9810ba8ec7c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:live_axle",
+      "target": "step:42060f8e1de7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:live_axle",
+      "target": "step:eee8c2a1a544",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:rigid_axle",
+      "target": "sym:e4cdeaf85fab",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:rigid_axle",
+      "target": "sym:9841936ad216",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:rigid_axle",
+      "target": "step:00353fcfa63c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:rigid_axle",
+      "target": "step:eee8c2a1a544",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:slushbox",
+      "target": "sym:c04eaf8d1133",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:slushbox",
+      "target": "sym:2baaf012a652",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:slushbox",
+      "target": "step:0956072cd77c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:slushbox",
+      "target": "step:e88dd12220bf",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "transmission slipping",
+      "source": "subcat:slushbox",
+      "target": "subcat:transmission_filter",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:universal_joint",
+      "target": "sym:64aa67445bda",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:universal_joint",
+      "target": "sym:3c31ff09df2f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:universal_joint",
+      "target": "step:37aaf805cd33",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:universal_joint",
+      "target": "step:746df4088c1d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:viscous_coupling",
+      "target": "sym:35c81a2f9e6d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:viscous_coupling",
+      "target": "sym:04f5fd1670ba",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:viscous_coupling",
+      "target": "step:58fcdd85e751",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:viscous_coupling",
+      "target": "step:8e5cbdce6141",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:battery_replacement",
+      "target": "sym:aed5ae2d7ffb",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:battery_replacement",
+      "target": "sym:27a13561417f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:battery_replacement",
+      "target": "step:cc81d06837be",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:battery_replacement",
+      "target": "step:32083295b36a",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:charging_system",
+      "target": "sym:8585b02bd67e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:charging_system",
+      "target": "sym:42ac1b664a3e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:charging_system",
+      "target": "step:bf58e69323b5",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:charging_system",
+      "target": "step:a94a84957c68",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "sym:68f2639e29ca",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "step:fef4b0cb8afb",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "step:97c3e10ff50e",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "subcat:fuel_tank_pressure_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:check_engine_light_diagnosis",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:door_window_motor",
+      "target": "sym:82535eef41d7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:door_window_motor",
+      "target": "sym:fc19e2dfdc8f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:door_window_motor",
+      "target": "step:706242511542",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:door_window_motor",
+      "target": "step:f229fcf8f905",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:door_window_regulator",
+      "target": "sym:08091ee660d5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:door_window_regulator",
+      "target": "sym:036e04123657",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:door_window_regulator",
+      "target": "step:b86871820ddb",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:door_window_regulator",
+      "target": "step:87403a50ab16",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:headlamp_bulb",
+      "target": "sym:c34a84f9e4f3",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:headlamp_bulb",
+      "target": "sym:43928de29cee",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:headlamp_bulb",
+      "target": "step:2b2d89a989d6",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:headlamp_bulb",
+      "target": "step:72e7c6a50a93",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "sym:5398a29d5e0c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "step:57c068a30b38",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "step:805f9f464094",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "subcat:ignition_wire_set",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:ignition_distributor_cap",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ignition_wire_set",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:ignition_wire_set",
+      "target": "sym:c38c758d42c1",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ignition_wire_set",
+      "target": "step:396400f1b507",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:ignition_wire_set",
+      "target": "step:4bc2596034ce",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:ignition_wire_set",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:ignition_wire_set",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:ignition_wire_set",
+      "target": "subcat:knock_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:ignition_wire_set",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:power_door_lock_actuator",
+      "target": "sym:c7e22df2f324",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:power_door_lock_actuator",
+      "target": "sym:55db6d6d0a10",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:power_door_lock_actuator",
+      "target": "step:3fcbc5967004",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:power_door_lock_actuator",
+      "target": "step:7ae0d0f8fad5",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:starter_motor",
+      "target": "sym:613435b6d9cd",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:starter_motor",
+      "target": "sym:21b0bf99e5fe",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:starter_motor",
+      "target": "step:344135ea69ff",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:starter_motor",
+      "target": "step:73229de7af75",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:windshield_washer_pump",
+      "target": "sym:a686712d27e0",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:windshield_washer_pump",
+      "target": "sym:8b87934191be",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:windshield_washer_pump",
+      "target": "step:a4825371f57b",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:windshield_washer_pump",
+      "target": "step:9ad1ea2d28d3",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:wiper_motor",
+      "target": "sym:75bcbb05a4ab",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:wiper_motor",
+      "target": "sym:75756297685c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:wiper_motor",
+      "target": "step:c83c12dbeed7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:wiper_motor",
+      "target": "step:04e624a7ab72",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:canister_purge_valve",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:canister_purge_valve",
+      "target": "sym:80924af823d8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:canister_purge_valve",
+      "target": "step:89845a2d0b91",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:canister_purge_valve",
+      "target": "step:bc03adf01afb",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:catalytic_converter",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:charcoal_canister",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:check_engine_light_diagnosis",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:fuel_tank_pressure_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:exhaust_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:canister_purge_valve",
+      "target": "subcat:pcv_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:catalytic_converter",
+      "target": "sym:876dc56e7d59",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:catalytic_converter",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:catalytic_converter",
+      "target": "step:5e10fdaaf877",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:catalytic_converter",
+      "target": "step:2eee0930ea83",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:catalytic_converter",
+      "target": "subcat:charcoal_canister",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:catalytic_converter",
+      "target": "subcat:check_engine_light_diagnosis",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:catalytic_converter",
+      "target": "subcat:fuel_tank_pressure_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:catalytic_converter",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:catalytic_converter",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:charcoal_canister",
+      "target": "sym:5254dbce4126",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:charcoal_canister",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:charcoal_canister",
+      "target": "step:3fe3a65dac45",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:charcoal_canister",
+      "target": "step:a408178be8df",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:charcoal_canister",
+      "target": "subcat:check_engine_light_diagnosis",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:charcoal_canister",
+      "target": "subcat:fuel_tank_pressure_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:charcoal_canister",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:charcoal_canister",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:exhaust_manifold",
+      "target": "sym:5a05f5dc4d2b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:exhaust_manifold",
+      "target": "sym:c677271f9a8c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:exhaust_manifold",
+      "target": "step:8eb1271b26a2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:exhaust_manifold",
+      "target": "step:ce11eb1400bf",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "loud exhaust noise",
+      "source": "subcat:exhaust_manifold",
+      "target": "subcat:exhaust_manifold_gasket",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:exhaust_manifold_gasket",
+      "target": "sym:5a05f5dc4d2b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:exhaust_manifold_gasket",
+      "target": "sym:77f164c402e3",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:exhaust_manifold_gasket",
+      "target": "step:51cfa5d7a679",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:exhaust_manifold_gasket",
+      "target": "step:b222883c3870",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_tank_pressure_sensor",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_tank_pressure_sensor",
+      "target": "sym:17936a10f073",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_tank_pressure_sensor",
+      "target": "step:cac5a5b242a4",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_tank_pressure_sensor",
+      "target": "step:008bccd2b553",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:fuel_tank_pressure_sensor",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:fuel_tank_pressure_sensor",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:knock_sensor",
+      "target": "sym:9a859b204216",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:knock_sensor",
+      "target": "sym:c38c758d42c1",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:knock_sensor",
+      "target": "step:436a9d3299f1",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:knock_sensor",
+      "target": "step:69e3b65efdc9",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:knock_sensor",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:m_a_p_sensor",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:m_a_p_sensor",
+      "target": "sym:80924af823d8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:m_a_p_sensor",
+      "target": "step:a2039e74ffd7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:m_a_p_sensor",
+      "target": "step:0a56e9b0bcb1",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "check engine light on",
+      "source": "subcat:m_a_p_sensor",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:m_a_p_sensor",
+      "target": "subcat:pcv_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:oxygen_sensor",
+      "target": "sym:ff6f09962e32",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:oxygen_sensor",
+      "target": "sym:c38c758d42c1",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:oxygen_sensor",
+      "target": "step:9ece0a0adaf2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:oxygen_sensor",
+      "target": "step:5a6c04d43326",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:balance_shaft",
+      "target": "sym:c48851108daa",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:balance_shaft",
+      "target": "sym:80924af823d8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:balance_shaft",
+      "target": "step:43f3035cad30",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:balance_shaft",
+      "target": "step:d237821e25ed",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:balance_shaft",
+      "target": "subcat:canister_purge_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:balance_shaft",
+      "target": "subcat:exhaust_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:balance_shaft",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:balance_shaft",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:balance_shaft",
+      "target": "subcat:pcv_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:boost_pressure",
+      "target": "sym:5cd97c422f5c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:boost_pressure",
+      "target": "sym:40b8349cb487",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:boost_pressure",
+      "target": "step:dd254bfd1720",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:boost_pressure",
+      "target": "step:e102e57bb97f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "loss of power",
+      "source": "subcat:boost_pressure",
+      "target": "subcat:fuel_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:diesel_injection_pump",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:diesel_injection_pump",
+      "target": "sym:d37e15434e30",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:diesel_injection_pump",
+      "target": "step:979ad98b85cd",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:diesel_injection_pump",
+      "target": "step:a9e26e01ab46",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:engine_control_unit_ecu",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:exhaust_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:fuel_injector",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:ignition_distributor_cap",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:ignition_wire_set",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "black smoke from exhaust",
+      "source": "subcat:diesel_injection_pump",
+      "target": "subcat:fuel_pressure_regulator",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:diesel_glow_plug",
+      "target": "sym:2c3a35f1896c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:diesel_glow_plug",
+      "target": "sym:8d027b64a533",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:diesel_glow_plug",
+      "target": "step:f47eeca7832f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:diesel_glow_plug",
+      "target": "step:0d248aff0983",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_mounts",
+      "target": "sym:e5741922d33b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_mounts",
+      "target": "sym:90f7f4bc4760",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_mounts",
+      "target": "step:e4224c07de0d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_mounts",
+      "target": "step:79a6a1a2352c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:exhaust_valve",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:exhaust_valve",
+      "target": "sym:80924af823d8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:exhaust_valve",
+      "target": "step:5ed825741ad4",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:exhaust_valve",
+      "target": "step:1a26c935d9ae",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:fuel_injector",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:ignition_distributor_cap",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:ignition_wire_set",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:exhaust_valve",
+      "target": "subcat:pcv_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_injector",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_injector",
+      "target": "sym:c38c758d42c1",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_injector",
+      "target": "step:4140aea50d15",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_injector",
+      "target": "step:b5826df72752",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:fuel_injector",
+      "target": "subcat:ignition_distributor_cap",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:fuel_injector",
+      "target": "subcat:ignition_wire_set",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:fuel_injector",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:fuel_injector",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:fuel_injector",
+      "target": "subcat:knock_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:fuel_injector",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:idle_air_control_valve",
+      "target": "sym:38a0563f2412",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:idle_air_control_valve",
+      "target": "sym:58d8751e51c7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:idle_air_control_valve",
+      "target": "step:5611ee70d18c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:idle_air_control_valve",
+      "target": "step:b626469fa2d9",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "stalling at idle",
+      "source": "subcat:idle_air_control_valve",
+      "target": "subcat:throttle_body",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "stalling at idle",
+      "source": "subcat:idle_air_control_valve",
+      "target": "subcat:throttle_position_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:intake_valve",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:intake_valve",
+      "target": "sym:80924af823d8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:intake_valve",
+      "target": "step:913eb896d97e",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:intake_valve",
+      "target": "step:1a26c935d9ae",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:intake_valve",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:intake_valve",
+      "target": "subcat:m_a_p_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "rough idle",
+      "source": "subcat:intake_valve",
+      "target": "subcat:pcv_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:oil_pump",
+      "target": "sym:1ffb7c2ff8eb",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:oil_pump",
+      "target": "sym:79755c84e41c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:oil_pump",
+      "target": "step:b5caff78b52e",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:oil_pump",
+      "target": "step:210534356987",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:piston_rings",
+      "target": "sym:ad0096f0645c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:piston_rings",
+      "target": "sym:51da2ea0374c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:piston_rings",
+      "target": "step:0357e1dc2325",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:piston_rings",
+      "target": "step:5fda875fb285",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:timing_belt",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:timing_belt",
+      "target": "sym:2b3c5022406a",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:timing_belt",
+      "target": "step:19bc1c337f3a",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:timing_belt",
+      "target": "step:a50d0e2824c0",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:valve_cover_gasket",
+      "target": "sym:a71e2159e59f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:valve_cover_gasket",
+      "target": "sym:22a8517a4a27",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:valve_cover_gasket",
+      "target": "step:22d3eae922e2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:valve_cover_gasket",
+      "target": "step:6b378bc53595",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fan_belt",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fan_belt",
+      "target": "sym:71b36af1bac6",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fan_belt",
+      "target": "step:8356085c3778",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fan_belt",
+      "target": "step:47dd29d6a2cb",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:fan_belt",
+      "target": "subcat:radiator",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:fan_belt",
+      "target": "subcat:radiator_cooling_fan",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:fan_belt",
+      "target": "subcat:water_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:horn",
+      "target": "sym:96e1f5f31ce5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:horn",
+      "target": "step:159cca626094",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:horn",
+      "target": "step:d906541bcea2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:battery_charging",
+      "target": "sym:8585b02bd67e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:battery_charging",
+      "target": "sym:97864112b7e3",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:battery_charging",
+      "target": "step:cc81d06837be",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:battery_charging",
+      "target": "step:c79c72b9b893",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "battery warning light on",
+      "source": "subcat:battery_charging",
+      "target": "subcat:charging_system",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_belt",
+      "target": "sym:f53e188e9e6e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_belt",
+      "target": "sym:71b36af1bac6",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_belt",
+      "target": "step:08ff56ffcaa1",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_belt",
+      "target": "step:47dd29d6a2cb",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "squealing noise from engine bay",
+      "source": "subcat:engine_belt",
+      "target": "subcat:fan_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:steering_noise",
+      "target": "sym:6e6a75b908a7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:steering_noise",
+      "target": "step:380424dba82a",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:steering_noise",
+      "target": "step:5b49bfe965ae",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:shaft_and_tires",
+      "target": "sym:f2e0595b8332",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:shaft_and_tires",
+      "target": "sym:c9c81ff930a0",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:shaft_and_tires",
+      "target": "step:cbff242892ee",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:shaft_and_tires",
+      "target": "step:d424f27356f0",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "uneven tire wear",
+      "source": "subcat:shaft_and_tires",
+      "target": "subcat:wheel_bearing",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:air_filter",
+      "target": "sym:071b5fdcd67b",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:air_filter",
+      "target": "sym:d37e15434e30",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:air_filter",
+      "target": "step:241f461e8a0f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:air_filter",
+      "target": "step:5fff870c7577",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "black smoke from exhaust",
+      "source": "subcat:air_filter",
+      "target": "subcat:diesel_injection_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "black smoke from exhaust",
+      "source": "subcat:air_filter",
+      "target": "subcat:fuel_pressure_regulator",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "sym:363586f1c4c5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "sym:c38c758d42c1",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "step:e5c3e13e9c48",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "step:bde43e7b6f01",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:exhaust_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:fuel_injector",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:ignition_distributor_cap",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:ignition_wire_set",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:intake_valve",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine misfires",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:timing_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:knock_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor fuel economy",
+      "source": "subcat:engine_control_unit_ecu",
+      "target": "subcat:oxygen_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_oil",
+      "target": "sym:1ffb7c2ff8eb",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:engine_oil",
+      "target": "sym:7b1ea838aea7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_oil",
+      "target": "step:f8c4cfb8ab08",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:engine_oil",
+      "target": "step:b92d3d1e242f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "low oil pressure warning light",
+      "source": "subcat:engine_oil",
+      "target": "subcat:oil_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_filter",
+      "target": "sym:f72c21a1580e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_filter",
+      "target": "sym:e5810b92033e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_filter",
+      "target": "step:a3ddac69a519",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_filter",
+      "target": "step:d0a6644b9d1e",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "poor acceleration",
+      "source": "subcat:fuel_filter",
+      "target": "subcat:throttle_body",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:pcv_valve",
+      "target": "sym:943ea94f9624",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:pcv_valve",
+      "target": "sym:80924af823d8",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:pcv_valve",
+      "target": "step:5db1fed152a7",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:pcv_valve",
+      "target": "step:1700433efade",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:throttle_body",
+      "target": "sym:e5810b92033e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:throttle_body",
+      "target": "sym:58d8751e51c7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:throttle_body",
+      "target": "step:dca60df87f11",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:throttle_body",
+      "target": "step:368217ba5ae8",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "stalling at idle",
+      "source": "subcat:throttle_body",
+      "target": "subcat:throttle_position_sensor",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_pressure_regulator",
+      "target": "sym:5d0ca7772efa",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_pressure_regulator",
+      "target": "sym:d37e15434e30",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_pressure_regulator",
+      "target": "step:e6ee5ad131b2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_pressure_regulator",
+      "target": "step:4a874d24f6d1",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_pump",
+      "target": "sym:4952dece7c70",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_pump",
+      "target": "sym:5cd97c422f5c",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_pump",
+      "target": "step:1ed7f427b325",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_pump",
+      "target": "step:2bdcb35ad008",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_tank",
+      "target": "sym:1fc191b883ff",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:fuel_tank",
+      "target": "sym:4bf605d7907a",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_tank",
+      "target": "step:78a545889902",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:fuel_tank",
+      "target": "step:148a6551449d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:throttle_position_sensor",
+      "target": "sym:74396e35a900",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:throttle_position_sensor",
+      "target": "sym:58d8751e51c7",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:throttle_position_sensor",
+      "target": "step:728e2d0b868a",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:throttle_position_sensor",
+      "target": "step:974f6381fe28",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_fluid",
+      "target": "sym:995f7b70026d",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:brake_fluid",
+      "target": "sym:794dfa69d3a3",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_fluid",
+      "target": "step:cc3ddcc10acb",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:brake_fluid",
+      "target": "step:19f77792222d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "soft brake pedal",
+      "source": "subcat:brake_fluid",
+      "target": "subcat:brake_hose",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:coolant_reservoir",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:coolant_reservoir",
+      "target": "sym:66176d47417a",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:coolant_reservoir",
+      "target": "step:9cf65b92bfbe",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:coolant_reservoir",
+      "target": "step:94063f849700",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_reservoir",
+      "target": "subcat:coolant_antifreeze",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_reservoir",
+      "target": "subcat:engine_cooling_system",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_reservoir",
+      "target": "subcat:fan_belt",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_reservoir",
+      "target": "subcat:radiator",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_reservoir",
+      "target": "subcat:radiator_cooling_fan",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:coolant_reservoir",
+      "target": "subcat:water_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:power_steering_fluid",
+      "target": "sym:e6dc2ebb64be",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:power_steering_fluid",
+      "target": "sym:e260c9cd0922",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:power_steering_fluid",
+      "target": "step:538f2456ea03",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:power_steering_fluid",
+      "target": "step:2e715334f46e",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:radiator",
+      "target": "sym:f01d7f425375",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:radiator",
+      "target": "sym:5bec993ebed4",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:radiator",
+      "target": "step:448f62c50442",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:radiator",
+      "target": "step:9fff5ae76f4d",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:radiator",
+      "target": "subcat:radiator_cooling_fan",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "engine overheating",
+      "source": "subcat:radiator",
+      "target": "subcat:water_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:windshield_washer_fluid",
+      "target": "sym:a686712d27e0",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:windshield_washer_fluid",
+      "target": "sym:8b87934191be",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:windshield_washer_fluid",
+      "target": "step:0c3e230c3c55",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:windshield_washer_fluid",
+      "target": "step:10cc1c6ed6e1",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "SIMILAR_SYMPTOM_TO",
+      "symptom_label": "weak washer fluid spray",
+      "source": "subcat:windshield_washer_fluid",
+      "target": "subcat:windshield_washer_pump",
+      "key": "SIMILAR_SYMPTOM_TO"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:clutch_master_cylinder",
+      "target": "sym:6f98356aaeb3",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:clutch_master_cylinder",
+      "target": "sym:05178bdf186e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:clutch_master_cylinder",
+      "target": "step:b742beb9fab3",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:clutch_master_cylinder",
+      "target": "step:f96e300a0078",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:torque_converter",
+      "target": "sym:b6ce85a91d51",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:torque_converter",
+      "target": "sym:832d5477caab",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:torque_converter",
+      "target": "step:5b49a39ed242",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:torque_converter",
+      "target": "step:0956072cd77c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:transmission_fluid",
+      "target": "sym:b4ca8943101f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:transmission_fluid",
+      "target": "sym:3b48714222de",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:transmission_fluid",
+      "target": "step:0956072cd77c",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:transmission_fluid",
+      "target": "step:05b1c6ca0325",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:transmission_filter",
+      "target": "sym:705966521bfe",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:transmission_filter",
+      "target": "sym:c04eaf8d1133",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:transmission_filter",
+      "target": "step:81df48f5861b",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:transmission_filter",
+      "target": "step:b4226fd8f123",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:transmission_solenoid",
+      "target": "sym:b05afd0ff709",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:transmission_solenoid",
+      "target": "sym:7ef4b25fda94",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:transmission_solenoid",
+      "target": "step:6fa64c94d6b0",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:transmission_solenoid",
+      "target": "step:756fcb32cab2",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:wheel_bearing",
+      "target": "sym:3a267846b1d5",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:wheel_bearing",
+      "target": "sym:f2e0595b8332",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:wheel_bearing",
+      "target": "step:e2127115de34",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:wheel_bearing",
+      "target": "step:95c72fa856fa",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:tire_pressure_monitoring_system_tpms",
+      "target": "sym:22395e71f486",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:tire_pressure_monitoring_system_tpms",
+      "target": "sym:320c9b35d76f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:tire_pressure_monitoring_system_tpms",
+      "target": "step:302ec9d89d08",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:tire_pressure_monitoring_system_tpms",
+      "target": "step:b82fbb3ea67e",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:wheel_hub",
+      "target": "sym:0e06eae6536e",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_SYMPTOM",
+      "source": "subcat:wheel_hub",
+      "target": "sym:bcc143d3103f",
+      "key": "HAS_SYMPTOM"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:wheel_hub",
+      "target": "step:3941bee62b80",
+      "key": "HAS_DIAGNOSIS_STEP"
+    },
+    {
+      "relation": "HAS_DIAGNOSIS_STEP",
+      "source": "subcat:wheel_hub",
+      "target": "step:35680af0c33f",
+      "key": "HAS_DIAGNOSIS_STEP"
+    }
+  ]
+}

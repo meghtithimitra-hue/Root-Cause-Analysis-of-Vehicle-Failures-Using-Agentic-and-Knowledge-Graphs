@@ -1,0 +1,28 @@
+# Vehicle Fault Diagnosis System - Dependencies
+# Core
+streamlit>=1.28.0
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.8.0
+
+# NLP / Embeddings
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# Search
+rank-bm25>=0.2.2
+rapidfuzz>=3.0.0
+
+# Vector store & graph (required by hybrid_retrieval)
+chromadb>=0.4.0
+networkx>=3.0
+scipy>=1.10.0
+
+# Graph (historical - the current pipeline is file-based, Neo4j is NOT required)
+neo4j>=5.0.0
+
+# LLM (optional)
+requests>=2.31.0
+
+# Utilities
+python-dotenv>=1.0.0
